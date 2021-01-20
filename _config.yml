@@ -16,17 +16,16 @@ launch_buttons:
 repository:
   url                       : https://github.com/raptistasos/CFD_python_GR  # Online location of your book
   branch                    : master  # Which branch of the repository should be used when creating links (optional)
-launch_buttons:
   
 
 latex:
   latex_engine              : xelatex
 
-# parse:
-#   myst_extended_syntax: true
-# sphinx:
-#     extra_extensions:
-#         - jupyterbook_latex
+html:
+  comments:
+    hypothesis              : true
+    utterances:
+      repo                  : "https://github.com/raptistasos/CFD_python_GR"
 
 sphinx:
   config:
