@@ -2,15 +2,15 @@
 
 - file: intro
   sections:
-    - file: Chapters/ch1/Chapter1
-    - file: Chapters/ch2/Chapter2
-    - file: Chapters/ch3/Chapter3
-    - file: Chapters/ch4/Chapter4
-    - file: Chapters/ch5/Chapter5
-    - file: Chapters/ch6/Chapter6
-    - file: Chapters/ch7/Chapter7
-    - file: Chapters/ch8/Chapter8
-    - file: Chapters/ch9/Chapter9
-    - file: Chapters/ch10/Chapter10
-    - file: Chapters/ch11/Chapter11
+    - file: Chapter1
+    - file: Chapter2
+    - file: Chapter3
+    - file: Chapter4
+    - file: Chapter5
+    - file: Chapter6
+    - file: Chapter7
+    - file: Chapter8
+    - file: Chapter9
+    - file: Chapter10
+    - file: Chapter11
     - file: zreferences.md
