@@ -6,16 +6,15 @@ copyright                   : "2021"  # Copyright year to be placed in the foote
 logo                        : logo.png  # A path to the book logo
 only_build_toc_files        : true 
 
-# execute:
-#   execute_notebooks         : auto
 
 launch_buttons:
   binderhub_url             : "https://mybinder.org"
   thebe                     : true
+  colab_url                 : ""
 
 repository:
-  url                       : https://github.com/raptistasos/CFD_python_GR  # Online location of your book
-  branch                    : master  # Which branch of the repository should be used when creating links (optional)
+  url                       : https://github.com/raptistasos/CFD_python_GR 
+  branch                    : master
 
 latex:
   latex_engine              : xelatex
@@ -25,11 +24,10 @@ html:
   comments:
     hypothesis              : true
     utterances:
-      repo                  : "https://github.com/ratpistasos/CFD_python_GR"
+      repo                  : raptistasos/CFD_python_GR
 
 parse:
    myst_url_schemes         : [mailto, http, https]
-
 
 sphinx:
   extra_extensions:

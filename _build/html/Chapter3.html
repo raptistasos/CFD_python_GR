@@ -47,7 +47,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "https://github.com/ratpistasos/CFD_python_GR");
+    script.setAttribute("repo", "raptistasos/CFD_python_GR");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -257,11 +257,6 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/raptistasos/CFD_python_GR/blob/master/Chapter3.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
         <button type="button" class="btn btn-secondary topbarbtn"
             onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
                 class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
@@ -315,6 +310,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="section" id="id1">
 <h1>Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p><strong>Περίληψη</strong>. Στην πρώτη ενότητα αυτού του κεφαλαίου αποδεικνύονται με την βοήθεια του αναπτύγματος Taylor τα βασικά αριθμητικά σχήματα της μεθόδου πεπερασμένων διαφορών (ΠΔ), όπως οι εμπρόσθιες, οπίσθιες και κεντρικές διαφορές. Παρουσιάζονται επίσης αριθμητικά σχήματα που μπορούν να χρησιμοποιούν διαφορετικά σημεία του πλέγματος από αυτά που χρησιμοποιούν τα βασικά αριθμητικά σχήματα των ΠΔ. Παρουσιάζονται οι έννοιες του σφάλματος αποκοπής, δηλ. η διαφορά μεταξύ της μερικής παραγώγου ή και ολόκληρης της ΜΔΕ και της αναπαράστασής της μέσω των πεπερασμένων διαφορών, και η έννοια της συμβατότητας του αριθμητικού σχήματος. Ένα αριθμητικό σχήμα είναι συμβατό όταν το όριο του σφάλματος αποκοπής τείνει και αυτό στο μηδέν καθώς οι χωρικές διαστάσεις των αποστάσεων των σημείων τείνουν στο μηδέν. Παρουσιάζονται οι έννοιες της ευστάθειας και σύγκλισης ενός αριθμητικού σχήματος. Εισάγεται η μέθοδος των πεπερασμένων όγκων (ΠΟ) και τα αριθμητικά σχήματα που προκύπτουν από αυτή τη μέθοδο. Η μέθοδος ΠΟ έχει αναπτυχθεί κυρίως για προβλήματα Ρευστοδυναμικής. Τέλος παρουσιάζεται η φασματική μέθοδος η οποία είναι μια αριθμητική μέθοδος υψηλής ακρίβειας σε σχέση με τις μεθόδους ΠΔ και ΠΟ.</p>
 <div class="section" id="id2">
 <h2>Μέθοδος των Πεπερασμένων Διαφορών<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 </div>
