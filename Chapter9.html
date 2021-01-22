@@ -5,26 +5,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Οι εξισώσεις Laplace και Poisson &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV) &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -69,11 +70,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Η εξίσωση Μεταφοράς" href="../ch6/Chapter6.html" />
-    <link rel="prev" title="Η εξίσωση Διάχυσης" href="../ch4/Chapter4.html" />
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Οι εξισώσεις των Navier και Stokes" href="Chapter10.html" />
+    <link rel="prev" title="Μη-μόνιμη Μεταφορά &amp; Διάχυση" href="Chapter8.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -90,9 +91,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
+<a class="navbar-brand text-wrap" href="index.html">
   
-  <img src="../../_static/logo.png" class="logo" alt="logo">
+  <img src="_static/logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</h1>
@@ -100,7 +101,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </a>
 </div>
 
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
@@ -108,64 +109,64 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
+  <a class="reference internal" href="intro.html">
    Περίληψη
   </a>
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch1/Chapter1.html">
+  <a class="reference internal" href="Chapter1.html">
    Εισαγωγή στη γλώσσα προγραμματισμού Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch2/Chapter2.html">
+  <a class="reference internal" href="Chapter2.html">
    Εισαγωγή στις Αριθμητικές Μεθόδους
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch3/Chapter3.html">
+  <a class="reference internal" href="Chapter3.html">
    Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch4/Chapter4.html">
+  <a class="reference internal" href="Chapter4.html">
    Η εξίσωση Διάχυσης
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter5.html">
    Οι εξισώσεις Laplace και Poisson
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch6/Chapter6.html">
+  <a class="reference internal" href="Chapter6.html">
    Η εξίσωση Μεταφοράς
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch7/Chapter7.html">
+  <a class="reference internal" href="Chapter7.html">
    Μόνιμη Μεταφορά &amp; Διάχυση
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch8/Chapter8.html">
+  <a class="reference internal" href="Chapter8.html">
    Μη-μόνιμη Μεταφορά &amp; Διάχυση
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ch9/Chapter9.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch10/Chapter10.html">
+  <a class="reference internal" href="Chapter10.html">
    Οι εξισώσεις των Navier και Stokes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../ch11/Chapter11.html">
+  <a class="reference internal" href="Chapter11.html">
    Εφαρμογές
   </a>
  </li>
@@ -211,7 +212,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Chapters/ch5/Chapter5.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Chapter9.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -248,18 +249,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/raptistasos/CFD_python_GR/master?urlpath=tree/Chapters/ch5/Chapter5.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/raptistasos/CFD_python_GR/master?urlpath=tree/Chapter9.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
+                    src="_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/raptistasos/CFD_python_GR/blob/master/Chapters/ch5/Chapter5.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
         
         <button type="button" class="btn btn-secondary topbarbtn"
             onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
@@ -278,23 +274,43 @@ commentsRunWhenDOMLoaded(addUtterances);
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#burger">
+   Εξίσωση του Burger
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kdv">
+   Εξίσωση των KdV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lax-friedrichs">
+   Το σχήμα των Lax-Friedrichs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lax-wendroff">
+   Το σχήμα των Lax-Wendroff
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maccormack">
+   Το σχήμα του MacCormack
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#godunov">
+   Προσέγγιση του Godunov
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Διακριτοποίηση
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jacobi">
-   Μέθοδος του Jacobi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gauss-seidel">
-   Μέθοδος των Gauss-Seidel
+   Φασματική Μέθοδος
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   Μέθοδος διαδοχικής υπερ-χαλάρωσης
+   Εφαρμογές &amp; ασκήσεις
   </a>
  </li>
 </ul>
@@ -307,19 +323,31 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="laplace-poisson">
-<h1>Οι εξισώσεις Laplace και Poisson<a class="headerlink" href="#laplace-poisson" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="burger-korteweg-de-vries-kdv">
+<h1>Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)<a class="headerlink" href="#burger-korteweg-de-vries-kdv" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="burger">
+<h2>Εξίσωση του Burger<a class="headerlink" href="#burger" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="kdv">
+<h2>Εξίσωση των KdV<a class="headerlink" href="#kdv" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="lax-friedrichs">
+<h2>Το σχήμα των Lax-Friedrichs<a class="headerlink" href="#lax-friedrichs" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="lax-wendroff">
+<h2>Το σχήμα των Lax-Wendroff<a class="headerlink" href="#lax-wendroff" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="maccormack">
+<h2>Το σχήμα του MacCormack<a class="headerlink" href="#maccormack" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="godunov">
+<h2>Προσέγγιση του Godunov<a class="headerlink" href="#godunov" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="id1">
-<h2>Διακριτοποίηση<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="jacobi">
-<h2>Μέθοδος του Jacobi<a class="headerlink" href="#jacobi" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="gauss-seidel">
-<h2>Μέθοδος των Gauss-Seidel<a class="headerlink" href="#gauss-seidel" title="Permalink to this headline">¶</a></h2>
+<h2>Φασματική Μέθοδος<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id2">
-<h2>Μέθοδος διαδοχικής υπερ-χαλάρωσης<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -336,7 +364,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Chapters\ch5"
+            path: "./."
         },
         predefinedOutput: true
     }
@@ -351,8 +379,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../ch4/Chapter4.html" title="previous page">Η εξίσωση Διάχυσης</a>
-    <a class='right-next' id="next-link" href="../ch6/Chapter6.html" title="next page">Η εξίσωση Μεταφοράς</a>
+    <a class='left-prev' id="prev-link" href="Chapter8.html" title="previous page">Μη-μόνιμη Μεταφορά &amp; Διάχυση</a>
+    <a class='right-next' id="next-link" href="Chapter10.html" title="next page">Οι εξισώσεις των Navier και Stokes</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -371,7 +399,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    <script src="_static/js/index.js"></script>
     
   </body>
 </html>
