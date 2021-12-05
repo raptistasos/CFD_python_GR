@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -78,7 +79,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
@@ -185,6 +186,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter11.html">
    Εφαρμογές
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="zreferences.html">
+   Βιβλιογραφία
   </a>
  </li>
 </ul>
@@ -297,7 +303,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
+  <a class="reference internal nav-link" href="#id4">
    Ταξινόμηση των προβλημάτων της Ρευστοδυναμικής
   </a>
   <ul class="nav section-nav flex-column">
@@ -307,34 +313,34 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
+    <a class="reference internal nav-link" href="#id5">
      Χαρακτηριστικές καμπύλες ΜΔΕ 2ης τάξης
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id7">
+  <a class="reference internal nav-link" href="#id6">
    Ταξινόμηση με βάση τις ιδιοτιμές του πίνακα των συντελεστών
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id12">
+  <a class="reference internal nav-link" href="#id9">
    Ταξινόμηση συστημάτων ΜΔΕ
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id15">
+  <a class="reference internal nav-link" href="#id11">
    Το καλά τοποθετημένο πρόβλημα και οι αρχικές και συνοριακές συνθήκες
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id28">
+  <a class="reference internal nav-link" href="#id18">
    Αδιαστατοποίηση των εξισώσεων της Ρευστοδυναμικής
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id31">
+  <a class="reference internal nav-link" href="#id20">
    Εφαρμογές
   </a>
  </li>
@@ -355,14 +361,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="id2">
 <h2>Σύντομη Εισαγωγή<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Τα περισσότερα προβλήματα της Ρευστοδυναμικής περιγράφονται από μη-γραμμικά, συζευγμένα, συστήματα μερικών διαφορικών εξισώσεων (ΜΔΕ). Γι’ αυτό το λόγο, είναι πολύ δύσκολο να λυθούν αναλυτικά και χρειάζονται υπολογιστικές μέθοδοι για την επίλυση τους. Στόχος αυτού του κεφαλαίου είναι η ταξινόμηση των Ρευστοδυναμικών προβλημάτων (συστήματα ΜΔΕ) με τη βοήθεια των χαρακτηριστικών και της ορίζουσας των συντελεστών των αγνώστων. Εισάγεται επίσης η έννοια του καλά τοποθετημένου προβλήματος και γίνεται περιγραφή των αρχικών και συνοριακών συνθηκών ενός προβλήματος που περιγράφεται από ΜΔΕ.</p>
-<div class="admonition- admonition">
-<p class="admonition-title">Ορισμός</p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<div class="definition-content section" id="proof-content">
 <p>Μια μερική διαφορική εξίσωση (ΜΔΕ) είναι μια σχέση/εξίσωση που αφορά την άγνωστη συνάρτηση χωρικών ή χρονικών ανεξάρτητων μεταβλητών και τις μερικές παραγώγους της συνάρτησης αυτής ως προς αυτές τις μεταβλητές.</p>
 </div>
-<p>Οι μερικές διαφορικές εξισώσεις συναντώνται στην διατύπωση και συνεπώς στην επίλυση φυσικών φαινομένων (προβλημάτων), όπως η ροή των ρευστών, η διάδοση της θερμότητας, η διάδοση των κυμάτων, η διάχυση χημικών ουσιών, η ταλάντωση και η παραμόρφωση των στερεών καθώς και σε άλλα προβλήματα Μηχανικής και Ρευστοδυναμικής. Οι εξισώσεις αυτές περιγράφουν κατά μοναδικό τρόπο τα φαινόμενα που μοντελοποιούν, εαν συμπληρωθούν με κατάλληλες οριακές συνθήκες, αρχικές και συνοριακές συνθήκες <a href="#id3"><span class="problematic" id="id4">:cite:`kaf1,xenostzirtzi`</span></a>.</p>
+</div><p>Οι μερικές διαφορικές εξισώσεις συναντώνται στην διατύπωση και συνεπώς στην επίλυση φυσικών φαινομένων (προβλημάτων), όπως η ροή των ρευστών, η διάδοση της θερμότητας, η διάδοση των κυμάτων, η διάχυση χημικών ουσιών, η ταλάντωση και η παραμόρφωση των στερεών καθώς και σε άλλα προβλήματα Μηχανικής και Ρευστοδυναμικής. Οι εξισώσεις αυτές περιγράφουν κατά μοναδικό τρόπο τα φαινόμενα που μοντελοποιούν, εαν συμπληρωθούν με κατάλληλες οριακές συνθήκες, αρχικές και συνοριακές συνθήκες <span id="id3">[<a class="reference internal" href="zreferences.html#id3">89a</a>, <a class="reference internal" href="zreferences.html#id4">89b</a>]</span>.</p>
 </div>
-<div class="section" id="id5">
-<h2>Ταξινόμηση των προβλημάτων της Ρευστοδυναμικής<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>Ταξινόμηση των προβλημάτων της Ρευστοδυναμικής<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cauchy">
 <h3>Χαρακτηριστικές καμπύλες ΜΔΕ 1ης τάξης, το πρόβλημα του Cauchy<a class="headerlink" href="#cauchy" title="Permalink to this headline">¶</a></h3>
 <p>Έστω η ημιγραμμική ΜΔΕ πρώτης τάξης,</p>
@@ -409,8 +416,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 	\frac{dz}{dt} = c(x(t), y(t)) \, z + d(x(t), y(t))
 \]</div>
 </div>
-<div class="section" id="id6">
-<h3>Χαρακτηριστικές καμπύλες ΜΔΕ 2ης τάξης<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>Χαρακτηριστικές καμπύλες ΜΔΕ 2ης τάξης<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>Σε αυτή την ενότητα θα ασχοληθούμε με ΜΔΕ 2ης τάξης με δυο ανεξάρτητες μεταβλητές, οι οποίες περιέχουν ως άγνωστο μια τουλάχιστον από τις παραγώγους 2ης τάξης της εξαρτημένης μεταβλητής.</p>
 <p>Θεωρούμε την ημιγραμμική ΜΔΕ, για την συνάρηση <span class="math notranslate nohighlight">\(u(x,y)\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
@@ -485,8 +492,9 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
     a x^2  + b xy + c y^2  + d x + e y + f = 0
 \]</div>
 </div></blockquote>
-<div class="admonition- admonition">
-<p class="admonition-title">Ορισμός</p>
+<div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span class="caption-number">Definition 2 </span></p>
+<div class="definition-content section" id="proof-content">
 <p>Η γενική μορφή μιας ΜΔΕ 2ης τάξης είναι:</p>
 <div class="math notranslate nohighlight" id="equation-konikitomi">
 <span class="eqno">(18)<a class="headerlink" href="#equation-konikitomi" title="Permalink to this equation">¶</a></span>\[
@@ -509,7 +517,7 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
     a_{12}^2 - a_{11} a_{22}=0
 \]</div>
 </div>
-<blockquote class="epigraph">
+</div><blockquote class="epigraph">
 <div><p>Ο τύπος της εξίσωσης <a class="reference internal" href="#equation-konikitomi">(18)</a> καθορίζεται μόνο απο τους συντελεστές των όρων δεύτερης τάξης. Οι συντελεστές των όρων χαμηλότερης τάξης δεν παίζουν κανένα ρόλο.</p>
 </div></blockquote>
 <p><strong>Επεξήγηση ονοματολογίας:</strong> Η ονοματολογία της ΜΔΕ οφείλεται στο γεγονός ότι η καμπύλη είναι  υπερβολή, έλλειψη, και παραβολή αντίστοιχα σε κάθε περίπτωση. Σ αυτό το γεγονός οφείλουν την ονομασία τους οι διάφορες μορφές της εξίσωσης.</p>
@@ -521,8 +529,8 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
 </ul>
 </div>
 </div>
-<div class="section" id="id7">
-<h2>Ταξινόμηση με βάση τις ιδιοτιμές του πίνακα των συντελεστών<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>Ταξινόμηση με βάση τις ιδιοτιμές του πίνακα των συντελεστών<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>Η ημιγραμμική ΜΔΕ 2ης τάξης μπορεί να γραφεί στη γενική μορφή ως,</p>
 <div class="math notranslate nohighlight" id="equation-eq18">
 <span class="eqno">(19)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
@@ -543,15 +551,16 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
 <p>Θεωρούμε την γενική περίπτωση όπου ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι <span class="math notranslate nohighlight">\(n\)</span>-τάξης και ας θεωρήσουμε ένα συγκεκριμένο σημείο <span class="math notranslate nohighlight">\(\bar r\)</span> του πεδίου ορισμού της <span class="math notranslate nohighlight">\(u\)</span>. Έστω λοιπόν ότι ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> έχει <span class="math notranslate nohighlight">\(\alpha\)</span> θετικές ιδοτιμές, <span class="math notranslate nohighlight">\(\beta\)</span> αρνητικές και <span class="math notranslate nohighlight">\(\gamma\)</span> μηδενικές, τέτοιες ώστε,</p>
 <div class="math notranslate nohighlight" id="equation-eq21">
 <span class="eqno">(22)<a class="headerlink" href="#equation-eq21" title="Permalink to this equation">¶</a></span>\[
-	\alpha + \beta + \gamma = n
+\alpha + \beta + \gamma = n
 \]</div>
 <p>Θα λέμε ότι η εξίσωση <a class="reference internal" href="#equation-eq18">(19)</a> είναι τύπου <span class="math notranslate nohighlight">\((\alpha, \beta, \gamma)\)</span> στο σημείο <span class="math notranslate nohighlight">\(\bar r\)</span>. Θα λέμε επίσης ότι είναι τύπου <span class="math notranslate nohighlight">\((\alpha, \beta, \gamma)\)</span> στο δύνολο <span class="math notranslate nohighlight">\(\Omega \in \mathbb{R}^n\)</span> όταν είναι τύπου <span class="math notranslate nohighlight">\((\alpha, \beta, \gamma)\)</span>, <span class="math notranslate nohighlight">\(\forall \, \bar r \, \in \, \Omega\)</span>. Όταν η εξίσωση μας έχει σταθερούς συντελεστές τότε προφανώς ο τύπος της δεν αλλάζει από σημέιο σε σημείο. Αν πολλαπλασιάσουμε την εξίσωση με -1 τότε προφανώς τα <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> εναλλάσσονται. Με αυτή την έννοια θεωρούμε ότι οι τύπο <span class="math notranslate nohighlight">\((\alpha, \beta, \gamma)\)</span> και <span class="math notranslate nohighlight">\((\beta, \alpha, \gamma)\)</span> είναι ίδιοι</p>
 <div class="tip admonition">
 <p class="admonition-title">Παρατήρηση</p>
-<p>Αποδεικνύεται ότι ο τύπος μιας ΜΔΕ παραμένει αναλλοίωτος ως προς οποιονδήποτε μετασχηματσμό συντεταγμένων, γιατί το ίδιο ισχύει και για το είδος των ιδιοτιμών του αντίστοιχου πίνακα <a href="#id8"><span class="problematic" id="id9">:cite:`kaf3`</span></a>. Αυτό έχει μεγάλη σημασία γιατί σε πολλά προβλήματα της Ρευστομηχανικής ο μετασχηματισμός συντεταγμένων είναι αναπόφευκτος. Άρα, ο τύπος <span class="math notranslate nohighlight">\((\alpha, \beta, \gamma)\)</span> χαρακτηρίζει πλήρως μια ΜΔΕ και κατ’ επέκταση το αντίστοιχο φυσικό πρόβλημα που περιγράφει.</p>
+<p>Αποδεικνύεται ότι ο τύπος μιας ΜΔΕ παραμένει αναλλοίωτος ως προς οποιονδήποτε μετασχηματσμό συντεταγμένων, γιατί το ίδιο ισχύει και για το είδος των ιδιοτιμών του αντίστοιχου πίνακα <span id="id7">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>. Αυτό έχει μεγάλη σημασία γιατί σε πολλά προβλήματα της Ρευστομηχανικής ο μετασχηματισμός συντεταγμένων είναι αναπόφευκτος. Άρα, ο τύπος <span class="math notranslate nohighlight">\((\alpha, \beta, \gamma)\)</span> χαρακτηρίζει πλήρως μια ΜΔΕ και κατ’ επέκταση το αντίστοιχο φυσικό πρόβλημα που περιγράφει.</p>
 </div>
-<div class="admonition- admonition">
-<p class="admonition-title">Ορισμός</p>
+<div class="proof definition admonition" id="definition-2">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
+<div class="definition-content section" id="proof-content">
 <p>Αν έχουμε,</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\((n,0,0)\)</span> ή <span class="math notranslate nohighlight">\((0,n,0)\)</span> η εξίσωση <a class="reference internal" href="#equation-eq18">(19)</a> θα χαρακτηρίζεται ως ελλειπτικού τύπου. Δηλαδή, στην περίπτωση αυτή όλες οι ιδιοτιμές του πίνακα <span class="math notranslate nohighlight">\(A\)</span> είναι ομόσημες.</p></li>
@@ -559,7 +568,7 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
 <li><p><span class="math notranslate nohighlight">\((n-1,1,0)\)</span> ή <span class="math notranslate nohighlight">\((1,n-1,0)\)</span> η εξίσωση <a class="reference internal" href="#equation-eq18">(19)</a> θα χαρακτηρίζεται ως υπερβολικού τύπου. Δηλαδή, στην περίπτωση αυτή έχουμε <span class="math notranslate nohighlight">\(n-1\)</span> ιδιοτιμές  με το ίδιο πρόσημο και μια με αντίθετο πρόσημο.</p></li>
 </ol>
 </div>
-<p><strong>Παράδειγμμα:</strong> Ο χαρακτηρισμός της εξίσωσης εξαρτάται από το σημείο του πεδίου ορισμού της άγνωστης συνάρτησης. Είναι δυνατόν λοιπόν ο τύπος της ίδιας εξίσωσης να αλλάζει σε διαφορετικά σημεία <span class="math notranslate nohighlight">\(\bar r \in \Omega\)</span> του πεδίου ορισμού. Ας θεωρήσουμε για παράδειγμα την εξίσωση <a class="reference internal" href="#equation-eq22">(23)</a> που περιγράφει την διδιάστατη συμπιεστή υποηχητική ροή γύρω από λεπτό σώμα/πτέρυγα που παράγει ‘’ασθενείς διαταραχές’’ <a href="#id10"><span class="problematic" id="id11">:cite:`kaf3`</span></a>. Η άγνωστη συνάρτηση εδώ είναι η <span class="math notranslate nohighlight">\(\phi\)</span>, όπου αναπαριστά το δυναμικό της ταχύτητας για τα ομογενή ασυμπίεστα ιδανικά ρευστά. Έτσι, είναι δυνατόν ένα αεροσκάφος να κινείται με ταχύτητα <span class="math notranslate nohighlight">\(v &lt; c\)</span>, όπου <span class="math notranslate nohighlight">\(c\)</span> η ταχύτητα του ήχου, δηλαδή, <span class="math notranslate nohighlight">\(M&lt;1\)</span>, όπου <span class="math notranslate nohighlight">\(M = v/c\)</span> ο αριθμός Mach, αλλά να υπάρχουν περιοχές της ροής που λόγω της καμπυλότητας της επιφάνειας του αεροσκάφους, π.χ. η καλύπτρα του αεροσκάφους ή η ράχη της πτέρυγας του, όπου <span class="math notranslate nohighlight">\(v &gt; c\)</span> ή <span class="math notranslate nohighlight">\(M &gt; 1\)</span>. Τότε η εξίσωση που περιγράφει την ροή είναι,</p>
+</div><p><strong>Παράδειγμμα:</strong> Ο χαρακτηρισμός της εξίσωσης εξαρτάται από το σημείο του πεδίου ορισμού της άγνωστης συνάρτησης. Είναι δυνατόν λοιπόν ο τύπος της ίδιας εξίσωσης να αλλάζει σε διαφορετικά σημεία <span class="math notranslate nohighlight">\(\bar r \in \Omega\)</span> του πεδίου ορισμού. Ας θεωρήσουμε για παράδειγμα την εξίσωση <a class="reference internal" href="#equation-eq22">(23)</a> που περιγράφει την διδιάστατη συμπιεστή υποηχητική ροή γύρω από λεπτό σώμα/πτέρυγα που παράγει ‘’ασθενείς διαταραχές’’ <span id="id8">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>. Η άγνωστη συνάρτηση εδώ είναι η <span class="math notranslate nohighlight">\(\phi\)</span>, όπου αναπαριστά το δυναμικό της ταχύτητας για τα ομογενή ασυμπίεστα ιδανικά ρευστά. Έτσι, είναι δυνατόν ένα αεροσκάφος να κινείται με ταχύτητα <span class="math notranslate nohighlight">\(v &lt; c\)</span>, όπου <span class="math notranslate nohighlight">\(c\)</span> η ταχύτητα του ήχου, δηλαδή, <span class="math notranslate nohighlight">\(M&lt;1\)</span>, όπου <span class="math notranslate nohighlight">\(M = v/c\)</span> ο αριθμός Mach, αλλά να υπάρχουν περιοχές της ροής που λόγω της καμπυλότητας της επιφάνειας του αεροσκάφους, π.χ. η καλύπτρα του αεροσκάφους ή η ράχη της πτέρυγας του, όπου <span class="math notranslate nohighlight">\(v &gt; c\)</span> ή <span class="math notranslate nohighlight">\(M &gt; 1\)</span>. Τότε η εξίσωση που περιγράφει την ροή είναι,</p>
 <div class="math notranslate nohighlight" id="equation-eq22">
 <span class="eqno">(23)<a class="headerlink" href="#equation-eq22" title="Permalink to this equation">¶</a></span>\[
 (1 - M^2 ) \frac{\partial ^2 \phi }{\partial x^2}+\frac{\partial ^2 \phi }{\partial y^2} = 0
@@ -567,25 +576,25 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
 <p>όπου <span class="math notranslate nohighlight">\(\phi\)</span> είναι το δυναμικό της ταχύτητας για τα ομογενή ασυμπίεστα ιδανικά ρευστά. Eίναι δυνατόν σε άλλες περιοχές να έχει ο πίνακας ομόσημες ιδιοτιμές (θετικές), δηλαδή <span class="math notranslate nohighlight">\(\lambda_1 =1\)</span> και <span class="math notranslate nohighlight">\(\lambda_2 =1 - ^2\)</span> , <span class="math notranslate nohighlight">\(M&lt;1\)</span> και σε άλλες περιοχές ετερόσημες, δηλαδή <span class="math notranslate nohighlight">\(\lambda_1 =1\)</span> και <span class="math notranslate nohighlight">\(\lambda_2 = 1 - M^2\)</span> , <span class="math notranslate nohighlight">\(M&gt;1\)</span>, αφού ισχύει ότι,</p>
 <div class="math notranslate nohighlight" id="equation-eq23">
 <span class="eqno">(24)<a class="headerlink" href="#equation-eq23" title="Permalink to this equation">¶</a></span>\[\begin{split}
-A = \left[ {\begin{array}{*{20}c}
-   {1 - M^2 } &amp; 0  \\
-   0 &amp; 1  \\
-\end{array}} \right],\,\,\,\,\lambda _1  = 1 - M^2 ,\,\,\,\lambda _2  = 1
+    A = \left[ {\begin{array}{*{20}c}
+       {1 - M^2 } &amp; 0  \\
+       0 &amp; 1  \\
+    \end{array}} \right],\,\,\,\,\lambda _1  = 1 - M^2 ,\,\,\,\lambda _2  = 1
 \end{split}\]</div>
 </div>
-<div class="section" id="id12">
-<h2>Ταξινόμηση συστημάτων ΜΔΕ<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h2>Ταξινόμηση συστημάτων ΜΔΕ<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <p>Το σύνολο των προβλημάτων της Ρευστομηχανικής περιγράφεται από συστήματα ΜΔΕ και όχι από μια απλή ΜΔΕ. Ακόμα και στην περίπτωση που το ρευτομηχανικό πρόβλημα περιγράφεται από ΜΔΕ 2ης τουλάχιστον τάξης, αυτή ανάγεται σ’ ένα σύστημα εξισώσεων 1ης τάξης. Θεωρούμε το ημιγραμμικό σύστημα,</p>
 <div class="math notranslate nohighlight" id="equation-eq24">
 <span class="eqno">(25)<a class="headerlink" href="#equation-eq24" title="Permalink to this equation">¶</a></span>\[\begin{split}
- \begin{gathered}
- a_1 \,u_x  + b_1 \,u_y  + c_1 \,v_x  + d_1 \,v_y  = f_1  \\ 
- a_2 \,u_x  + b_2 \,u_y  + c_2 \,v_x  + d_2 \,v_y  = f_2  \\ 
- \end{gathered}
+     \begin{gathered}
+         a_1 \,u_x  + b_1 \,u_y  + c_1 \,v_x  + d_1 \,v_y  = f_1  \\ 
+         a_2 \,u_x  + b_2 \,u_y  + c_2 \,v_x  + d_2 \,v_y  = f_2  \\ 
+     \end{gathered}
 \end{split}\]</div>
 <p>όπου οι συντελεστές <span class="math notranslate nohighlight">\(a_i\)</span>, <span class="math notranslate nohighlight">\(b_i\)</span>, <span class="math notranslate nohighlight">\(c_i\)</span> και <span class="math notranslate nohighlight">\(f_i\)</span>, <span class="math notranslate nohighlight">\(i = 1, 2\)</span> είναι συναρτήσεις των ανεξάρτητων μεταβλητών, <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> αλλά και των άγνωστων συναρτήσεων <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span>. Υποθέτουμε ότι η λύση του συστήματος, δηλ. τα <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span>, έχει υπολογισθεί με την βοήθεια των αρχικών και συνοριακών συνθηκών σε όλα τα σημεία <span class="math notranslate nohighlight">\((x,y)\)</span>, της περιοχής ΑΒΓΔΕΑ, <a class="reference internal" href="#figure1"><span class="std std-numref">Fig. 2</span></a>, αλλά και πάνω στην καμπύλη <span class="math notranslate nohighlight">\(c\)</span>. Γνωρίζουμε λοιπόν στο τυχόν σημείο <span class="math notranslate nohighlight">\(\Gamma\)</span> της καμπύλης <span class="math notranslate nohighlight">\(c\)</span> τις τιμές των, συνεχώς διαφορίσιμων, συναρτήσεων <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span> καθώς και των παραγώγων αυτών πάνω σε οποιαδήποτε διεύθυνση που οδηγεί προς το εσωτερικό του χωρίου ΑΒΓΔΕΑ.</p>
 <div class="figure align-default" id="figure1">
-<a class="reference internal image-reference" href="_images/Figure1.png"><img alt="_images/Figure1.png" src="_images/Figure1.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="_images/Figure_2_1.png"><img alt="_images/Figure_2_1.png" src="_images/Figure_2_1.png" style="height: 250px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Η λύση του συστήματος, <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, υπολογίζεται με την βοήθεια αρχικών και συνοριακών συνθηκών στα σημεία του συνόρου ΑΒΓΔΕΑ.</span><a class="headerlink" href="#figure1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Έστω <span class="math notranslate nohighlight">\(\theta\)</span> είναι η γωνία που σχηματίζει η τυχούσα διεύθυνση <span class="math notranslate nohighlight">\(\delta\)</span> με την παράλληλη στον <span class="math notranslate nohighlight">\(x\)</span>-άξονα στο σημείο <span class="math notranslate nohighlight">\(\Gamma\)</span>. Έστω <span class="math notranslate nohighlight">\(s\)</span> επίσης μετρά το μήκος επί της <span class="math notranslate nohighlight">\(\delta\)</span> από το <span class="math notranslate nohighlight">\(\Gamma\)</span>. Εάν <span class="math notranslate nohighlight">\(u_x\)</span> και <span class="math notranslate nohighlight">\(u_y\)</span> είναι γνωστά στο <span class="math notranslate nohighlight">\(\Gamma\)</span> τότε η κατά διεύθυνση παράγωγος της <span class="math notranslate nohighlight">\(u\)</span> στο <span class="math notranslate nohighlight">\(\Gamma\)</span> είναι επίσης γνωστή και δίνεται από την παρακάτω σχέση,</p>
@@ -596,10 +605,10 @@ u_{s,\theta }  = u_x \cos \theta  + u_y \sin \theta  = u_x \frac{dx}{ds} + u_y \
 <p>Μπορούμε να θέσουμε το εξής ερώτημα, κάτω από ποιές συνθήκες οι τιμές των <span class="math notranslate nohighlight">\(u_x\)</span>, <span class="math notranslate nohighlight">\(u_y\)</span>, <span class="math notranslate nohighlight">\(v_x\)</span>, και <span class="math notranslate nohighlight">\(v_y\)</span> καθορίζονται μονισήμαντα από τις τιμές των άγνωστων συναρτήσεων, <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span> στο σημείο <span class="math notranslate nohighlight">\(\Gamma\)</span>; Για να απαντήσουμε, θεωρούμε το αρχικό σύστημα των εξισώσεων <a class="reference internal" href="#equation-eq24">(25)</a> καθώς και τις παρακάτω σχέσεις,</p>
 <div class="math notranslate nohighlight" id="equation-eq26">
 <span class="eqno">(27)<a class="headerlink" href="#equation-eq26" title="Permalink to this equation">¶</a></span>\[\begin{split}
-	 \begin{gathered}
- 		u_x \,dx + u_y \,dy = du = u_s \,ds \\ 
-		 v_x \,dx + v_y \,dy = dv = v_s \,ds \\ 
-	 \end{gathered} 
+    \begin{gathered}
+        u_x \,dx + u_y \,dy = du = u_s \,ds \\ 
+         v_x \,dx + v_y \,dy = dv = v_s \,ds \\ 
+    \end{gathered} 
 \end{split}\]</div>
 <p>που ικανοποιούνται στο σημείο <span class="math notranslate nohighlight">\(\Gamma\)</span> της <span class="math notranslate nohighlight">\(c\)</span> και μπορούν να γραφούν στη μορφή,</p>
 <div class="math notranslate nohighlight" id="equation-eq27">
@@ -633,24 +642,25 @@ u_{s,\theta }  = u_x \cos \theta  + u_y \sin \theta  = u_x \frac{dx}{ds} + u_y \
     (a_1 c_2  - a_2 c_1 )\,(dy)^2  - (a_1 d_2  - a_2 d_1  + b_1 c_2  - b_2 c_1 )\,dx\,dy + (b_1 d_2  - b_2 d_1 )\,(dx)^2  = 0
 \]</div>
 <p>η οποία καλείται ‘’χαρακτηριστική εξίσωση’’ και η οποία μας προσδιορίζει τις κλίσεις, <span class="math notranslate nohighlight">\(\frac{dy}{dx}\)</span>, εκείνες της καμπύλης <span class="math notranslate nohighlight">\(c\)</span> στο σημαίο <span class="math notranslate nohighlight">\(\Gamma\)</span> κατά μήκος των οποίων δεν μπορεί να υπολογιστεί η λύση του συστήματος <a class="reference internal" href="#equation-eq24">(25)</a>. Με άλλα λόγια η δευτεροβάθμια εξίσωση ως προς <span class="math notranslate nohighlight">\(\frac{dy}{dx}\)</span>, εξίσωση~ <a class="reference internal" href="#equation-eq29">(30)</a>, προσδιορίζει τις διευθύνσεις εκείνες που αν υπάρχουν υπάρχει ασυνέχεια των λύσεων <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span>.</p>
-<div class="admonition- admonition">
-<p class="admonition-title">Ορισμός</p>
+<div class="proof definition admonition" id="definition-3">
+<p class="admonition-title"><span class="caption-number">Definition 4 </span></p>
+<div class="definition-content section" id="proof-content">
 <p>Εάν η διακρίνουσα <span class="math notranslate nohighlight">\(\Delta\)</span> της <a class="reference internal" href="#equation-eq29">(30)</a> είναι μικρότερη του μηδενός το σύστημα χαρακτηρίζεται ως ελλειπτικού τύπου και δεν υπάρχουν πραγματικές χαρακτηριστικές διευθύνσεις. Εάν <span class="math notranslate nohighlight">\(\Delta = 0\)</span> το σύστημα <a class="reference internal" href="#equation-eq24">(25)</a> είναι παραβολικού τύπου και αν η διακρίνουσα <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span> υπάρχουν δύο χαρακτηριστικές διευθύνσεις και το σύστημα χαρακτηρίζεται ως υπερβολικού τύπου. Κατά μήκος των διευθύνσεων αυτών έχουμε την διάδοση των ασυνεχειών του πεδίου ροής δηλαδή των κρουστικών κυμάτων, shock waves.</p>
 </div>
-<p>Για περισσότερες λεπτομέρειες σχετικά με το πρόβλημα της ύπαρξης και διάδοσης ασυνεχειών στη Ρευστομηχανικη καθώς και στην ταξινόμηση των ΜΔΕ ο αναγνώστης μπορεί να ανατρέξει στα συγγράμματα <a href="#id13"><span class="problematic" id="id14">:cite:`kaf3,Fletcher`</span></a>.</p>
+</div><p>Για περισσότερες λεπτομέρειες σχετικά με το πρόβλημα της ύπαρξης και διάδοσης ασυνεχειών στη Ρευστομηχανικη καθώς και στην ταξινόμηση των ΜΔΕ ο αναγνώστης μπορεί να ανατρέξει στα συγγράμματα <span id="id10">[<a class="reference internal" href="zreferences.html#id5">92</a>, <a class="reference internal" href="zreferences.html#id6">Fle98</a>]</span>.</p>
 </div>
-<div class="section" id="id15">
-<h2>Το καλά τοποθετημένο πρόβλημα και οι αρχικές και συνοριακές συνθήκες<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h2>Το καλά τοποθετημένο πρόβλημα και οι αρχικές και συνοριακές συνθήκες<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <p>Ενα πρόβλημα της Ρευστοδυναμικής, αλλά και γενικότερα ένα μαθηματικό πρόβλημα, που περιγράφεται από μια ΜΔΕ ή ένα σύστημα ΜΔΕ και τις αντίστοιχες αρχικές ή/και συνοριακές συνθήκες θα λέμε ότι είναι ‘’καλά τοποθετημένο’’, well-posed, όταν ικανοποιούνται τα παρακάτω,</p>
 <ul class="simple">
 <li><p>Υπάρχει η λύση του προβλήματος,</p></li>
 <li><p>Η λύση είναι μοναδική, και</p></li>
 <li><p>Η λύση εξαρτάται κατά συνεχή τρόπο από τα βοηθητικά δεδομένα / συνθήκες.</p></li>
 </ul>
-<p>Για την περίπτωση που το φυσικό πρόβλημα περιγράφεται από μια ΜΔΕ με τις αντίστοιχες συνθήκες το θέμα της ύπαρξης της λύσης δεν παρουσιάζει ιδιαίτερες δυσκολίες. Υπάρχουν βέβαια και εξαιρέσεις όπως παραδείγματος χάρη στην ύπαρξη αναλυτικών λύσεων της εξίσωσης Laplace σε μεμονωμένα σημεία του πεδίου ροής, όπως πηγές, αναρροφήσεις κ.α. Στην πράξη το πρόβλημα αυτό αντιμετωπίζεται με μετατόπιση των σημείων αυτών έξω από το χωρίο υπολογισμού της λύσης <a href="#id16"><span class="problematic" id="id17">:cite:`kaf3`</span></a>.</p>
+<p>Για την περίπτωση που το φυσικό πρόβλημα περιγράφεται από μια ΜΔΕ με τις αντίστοιχες συνθήκες το θέμα της ύπαρξης της λύσης δεν παρουσιάζει ιδιαίτερες δυσκολίες. Υπάρχουν βέβαια και εξαιρέσεις όπως παραδείγματος χάρη στην ύπαρξη αναλυτικών λύσεων της εξίσωσης Laplace σε μεμονωμένα σημεία του πεδίου ροής, όπως πηγές, αναρροφήσεις κ.α. Στην πράξη το πρόβλημα αυτό αντιμετωπίζεται με μετατόπιση των σημείων αυτών έξω από το χωρίο υπολογισμού της λύσης <span id="id12">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
 <p>Για να είναι ένα πρόβλημα καλά τοποθετημένο, θα λέμε ότι η λύση θα εξαρτάται κατά συνεχή τρόπο από τα δεδομένα, όταν μικρή μεταβολή των αρχικών και συνοριακών συνθηκών έχει σαν αποτέλεσμα μικρή μεταβολή της λύσης. Η συνθήκη αυτή έχει ιδιαίτερη σημασία στην Υπολογιστική Ρευστοδυναμική όπου τα βοηθητικά δεδομένα εισάγονται προσεγγιστικά, με κάποιο σφάλμα, μέσω κάποιου υπολογιστικού αλγορίθμου. Εάν η συνθήκη αυτή δεν ικανοποιείται είναι δυνατόν το σφάλμα των δεδομένων να δημιουργήσει προβλήματα στην σύγκλιση της λύσης.</p>
-<p>Από την άποψη της Αριθμητικής Ανάλυσης ένα πρόβλημα θα λέγεται ‘’καλά τοποθετημένο’’ όταν <span class="math notranslate nohighlight">\((i)\)</span> υπάρχει η υπολογιστική λύση, <span class="math notranslate nohighlight">\((ii)\)</span> η υπολογιστική αυτή λύση είναι μοναδική, και <span class="math notranslate nohighlight">\((iii)\)</span> η υπολογιστική αυτή λύση εξαρτάται συνεχώς από τα προσεγγιστικά βοηθητικά δεδομένα. Για την αριθμητική επίλυση ενός προβλήματος της Ρευστοδυναμικής το αριθμητικό σχήμα που επιλέγεται και ο αλγόριθμος επίλυσης που κατασκευάζεται εξαρτάται από τον τύπο της ΜΔΕ που διέπει το πρόβλημα. Το όλο αριθμητικό σχήμα όμως θα πρέπει να είναι ευσταθές. Η ευστάθεια ενός αριθμητικού σχήματος αναπτύσσεται σε επόμενο κεφάλαιο. Όταν όλα τα ανωτέρω ικανοποιούνται τότε το πρόβλημα θα λέγεται ‘’καλά τοποθετημένο’’ από απόψεως Αριθμητικής Ανάλυσης, computationally well–posed problem <a href="#id18"><span class="problematic" id="id19">:cite:`kaf3,Fletcher`</span></a>.</p>
-<p>Η έννοια του καλά τοποθετημένου προβλήματος για την περίπτωση συστήματος ΜΔΕ παραμένει ακόμα και σήμερα ένα ανοικτό θέμα. Η Ladyzhenskaya μελετά το πρόβλημα της ύπαρξης και της μοναδικότητας των λύσεων προβλημάτων μόνιμης και ασυμπίεστης ροής πραγματικών ρευστών <a href="#id20"><span class="problematic" id="id21">:cite:`Ladyzhenskaya`</span></a>. Για τα προβλήματα της συμπιεστής ροής τα οποία περιγράφονται από υπερβολικές εξισώσεις, υπερηχητική ροή, η δυνατότητα απάντησης στο πρόβλημα της ύπαρξης και μοναδικότητας είναι πιό περιορισμένη. Για πιό γενικές καταστάσεις και για προβλήματα ροής μικτού τύπου δεν φαίνεται να υπάρχει προς το παρόν κάτι ουσιαστικό. Περισσότερες πληροφορίες μπορεί να βρει ο αναγνώστης στα βιβλία <a href="#id22"><span class="problematic" id="id23">:cite:`kaf3,Fletcher`</span></a>.</p>
+<p>Από την άποψη της Αριθμητικής Ανάλυσης ένα πρόβλημα θα λέγεται ‘’καλά τοποθετημένο’’ όταν <span class="math notranslate nohighlight">\((i)\)</span> υπάρχει η υπολογιστική λύση, <span class="math notranslate nohighlight">\((ii)\)</span> η υπολογιστική αυτή λύση είναι μοναδική, και <span class="math notranslate nohighlight">\((iii)\)</span> η υπολογιστική αυτή λύση εξαρτάται συνεχώς από τα προσεγγιστικά βοηθητικά δεδομένα. Για την αριθμητική επίλυση ενός προβλήματος της Ρευστοδυναμικής το αριθμητικό σχήμα που επιλέγεται και ο αλγόριθμος επίλυσης που κατασκευάζεται εξαρτάται από τον τύπο της ΜΔΕ που διέπει το πρόβλημα. Το όλο αριθμητικό σχήμα όμως θα πρέπει να είναι ευσταθές. Η ευστάθεια ενός αριθμητικού σχήματος αναπτύσσεται σε επόμενο κεφάλαιο. Όταν όλα τα ανωτέρω ικανοποιούνται τότε το πρόβλημα θα λέγεται ‘’καλά τοποθετημένο’’ από απόψεως Αριθμητικής Ανάλυσης, computationally well–posed problem <span id="id13">[<a class="reference internal" href="zreferences.html#id5">92</a>, <a class="reference internal" href="zreferences.html#id6">Fle98</a>]</span>.</p>
+<p>Η έννοια του καλά τοποθετημένου προβλήματος για την περίπτωση συστήματος ΜΔΕ παραμένει ακόμα και σήμερα ένα ανοικτό θέμα. Η Ladyzhenskaya μελετά το πρόβλημα της ύπαρξης και της μοναδικότητας των λύσεων προβλημάτων μόνιμης και ασυμπίεστης ροής πραγματικών ρευστών <span id="id14">[<a class="reference internal" href="zreferences.html#id12">Lad69</a>]</span>. Για τα προβλήματα της συμπιεστής ροής τα οποία περιγράφονται από υπερβολικές εξισώσεις, υπερηχητική ροή, η δυνατότητα απάντησης στο πρόβλημα της ύπαρξης και μοναδικότητας είναι πιό περιορισμένη. Για πιό γενικές καταστάσεις και για προβλήματα ροής μικτού τύπου δεν φαίνεται να υπάρχει προς το παρόν κάτι ουσιαστικό. Περισσότερες πληροφορίες μπορεί να βρει ο αναγνώστης στα βιβλία <span id="id15">[<a class="reference internal" href="zreferences.html#id5">92</a>, <a class="reference internal" href="zreferences.html#id6">Fle98</a>]</span>.</p>
 <p><strong>Αρχικές και Συνοριακές συνθήκες</strong>
 Τα βοηθητικά δεδομένα ή συνθήκες αποτελούν το σημείο εκίνησης υπολογισμού της λύσης στο εσωτερικό του “χωρίου” <span class="math notranslate nohighlight">\(\Omega\)</span> όπου ορίζεται αυτή. Για τα χρονοεξαρτώμενα προβλήματα, όπου η μια από τις ανεξάρτητες μεταβλητές είναι ο χρόνος <span class="math notranslate nohighlight">\(t\)</span>, οι συνθήκες που δίνονται για κάποια τιμή του <span class="math notranslate nohighlight">\(t = t_0\)</span> λέγονται ‘’αρχικές συνθήκες’’, σε αντιδιαστολή με τις συνθήκες που δίνονται για κάποιες τιμές των χωρικών μεταβλητών <span class="math notranslate nohighlight">\(x, y, z\)</span> που λέγονται ‘’συνοριακές συνθήκες’’. Εάν δεν κάνουμε διάκριση μεταξύ των χρονικών και χωρικών μεταβλητών τότε τα δεδομένα που δίνονται, για την προς προσδιορισμό άγνωστη συνάρτηση <span class="math notranslate nohighlight">\(u\)</span>, στο σύνορο, <span class="math notranslate nohighlight">\(\partial \Omega\)</span> του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>, εφ’ όσον αυτό είναι κλειστό μπορούν να χωρισθούν σε τρεις κατηγορίες,</p>
 <ul class="simple">
@@ -661,13 +671,13 @@ u_{s,\theta }  = u_x \cos \theta  + u_y \sin \theta  = u_x \frac{dx}{ds} + u_y \
 <span class="math notranslate nohighlight">\( \frac{{\partial u}}{{\partial \eta }} + ku = f,\,\,\,\sigma \tau o\,\,\,\partial \Omega ,\,\,\mu \varepsilon \,\,k &gt; 0\,\,\kappa \alpha \iota \,\,f = \delta \varepsilon \delta o\mu \varepsilon \nu \eta\)</span>.</p></li>
 </ul>
 <p>Σε πολλά προβλήματα ροής όπου προσπαθούμε να επιλύσουμε τις εξισώσεις Navier-Stokes ως προς τις άγνωστες συναρτήσεις της ταχύτητας <span class="math notranslate nohighlight">\(\bar q = (u, v)\)</span> και της πίεσης <span class="math notranslate nohighlight">\(p\)</span> μας δίνεται η κατανομή μιας τουλάχιστον συνιστώσας της ταχύτητας σε κάποιο σύνορο, συνήθως την συνοριακή “επιφάνεια” εισροής, inflow boundary condition. Μία τέτοια συνθήκη που αφορά την ταχύτητα είναι συνθήκη Dirichlet.</p>
-<p>Επίσης το δυναμικό <span class="math notranslate nohighlight">\(\Phi\)</span> της ταχύτητας σ’ ένα πρόβλημα αστρόβιλης ροής ιδανικού ρευστού, γύρω από κάποιο στερεό όριο, ικανοποιεί την συνθήκη <span class="math notranslate nohighlight">\(\frac{\partial \Phi}{\partial \eta}= 0\)</span> επί του στερεού ορίου. Μια τέτοια συνθήκη για την άγνωστη συνάρτηση <span class="math notranslate nohighlight">\(\Phi\)</span> είναι συνθήκη Neumann. Τέλος μικτού τύπου συνθήκες εμφανίζονται συνήθως σε προβλήματα μεταφοράς θερμότητας στην Ρευστομηχανική <a href="#id24"><span class="problematic" id="id25">:cite:`kaf3`</span></a>.</p>
+<p>Επίσης το δυναμικό <span class="math notranslate nohighlight">\(\Phi\)</span> της ταχύτητας σ’ ένα πρόβλημα αστρόβιλης ροής ιδανικού ρευστού, γύρω από κάποιο στερεό όριο, ικανοποιεί την συνθήκη <span class="math notranslate nohighlight">\(\frac{\partial \Phi}{\partial \eta}= 0\)</span> επί του στερεού ορίου. Μια τέτοια συνθήκη για την άγνωστη συνάρτηση <span class="math notranslate nohighlight">\(\Phi\)</span> είναι συνθήκη Neumann. Τέλος μικτού τύπου συνθήκες εμφανίζονται συνήθως σε προβλήματα μεταφοράς θερμότητας στην Ρευστομηχανική <span id="id16">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
 <p>Ο διαχωρισμός των συνθηκών σε αρχικές και συνοριακές δεν είναι πάντοτε προφανής και εξαρτάται από πολλά πράγματα. Για τον λόγο αυτό χρειάζεται προσοχή στον χαρακτηρισμό του είδους των συνθηκών.</p>
-<p>Επίσης θα πρέπει να τονισθεί ότι στην αριθμητική επίλυση ενός προβλήματος, του οποίου οι συνθήκες είναι τύπου Dirichlet ή Robin, η εισαγωγή των συνθηκών αυτών εισάγει αμέσως και κάποιο σφάλμα το οποίο εξαρτάται από τον τρόπο (αριθμητικό σχήμα) με τον οποίο αντιπροσωπεύουμε την παράγωγο αυτή. Μια πληρέστερη παρουσίαση των μαθηματικών απαιτήσεων που πρέπει να ικανοποιούνται για την εισαγωγή κατάλληλων συνθηκών, σε σχέση με την ΜΔΕ που περιγράφει ένα πρόβλημα μπορεί να βρει ο αναγνώστης στα συγράμματα <a href="#id26"><span class="problematic" id="id27">:cite:`Fletcher,Pletcher`</span></a>.</p>
+<p>Επίσης θα πρέπει να τονισθεί ότι στην αριθμητική επίλυση ενός προβλήματος, του οποίου οι συνθήκες είναι τύπου Dirichlet ή Robin, η εισαγωγή των συνθηκών αυτών εισάγει αμέσως και κάποιο σφάλμα το οποίο εξαρτάται από τον τρόπο (αριθμητικό σχήμα) με τον οποίο αντιπροσωπεύουμε την παράγωγο αυτή. Μια πληρέστερη παρουσίαση των μαθηματικών απαιτήσεων που πρέπει να ικανοποιούνται για την εισαγωγή κατάλληλων συνθηκών, σε σχέση με την ΜΔΕ που περιγράφει ένα πρόβλημα μπορεί να βρει ο αναγνώστης στα συγράμματα <span id="id17">[<a class="reference internal" href="zreferences.html#id6">Fle98</a>, <a class="reference internal" href="zreferences.html#id8">PTA12</a>]</span>.</p>
 <p>Γενικά, για τις ελλειπτικές ΜΔΕ καθορίζονται συνοριακές συνθήκες τύπου Dirichlet ή Neumann σ’ όλα τα σύνορα. Για τις ΜΔΕ παραβολικού τύπου καθορίζονται συνθήκες τύπου Dirichlet ή Neumann στα σύνορα καθώς και μια κατανομή της προς προσδιορισμό συνάρτησης για κάποια δεδομένη αρχική τιμή της μεταβλητής εκείνης ως προς την οποία θα ακολουθηθεί μια αριθμητική διαδικασία επίλυσης και η οποία είναι συνήθως ο χρόνος, <span class="math notranslate nohighlight">\(t\)</span>. Τέλος για τις ΜΔΕ 2ης τάξης, υπερβολικού τύπου, που ισχύουν σε κάποιο πεπερασμένο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span>, καθορίζονται συνθήκες τύπου Dirichlet ή Neumann στα σύνορα του χωρίου <span class="math notranslate nohighlight">\(Omega\)</span>, καθώς επίσης και μια κατανομή της προς προσδιορισμό συνάρτησης και της πρώτης παραγώγου της για καποια αρχικη τιμή του χρόνου, <span class="math notranslate nohighlight">\(t\)</span>.</p>
 </div>
-<div class="section" id="id28">
-<h2>Αδιαστατοποίηση των εξισώσεων της Ρευστοδυναμικής<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h2>Αδιαστατοποίηση των εξισώσεων της Ρευστοδυναμικής<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <p>Πολλές φορές είναι πιο εύκολο να εξετάσουμε στη Ρευστομηχανική την αδιάστατη μορφή των εξισώσεων. Κατά την αδιαστατοποίηση οι εξαρτημένες και ανεξάρτητες μεταβλητές επιπλέον κανονικοποιούνται για να παίρνουν τιμές από 0 έως 1. Με την αδιαστατοποίηση εμφανίζονται αδιάστατοι παράμετροι που με τη βοήθεια τους μπορούμε να ομαδοποιήσουμε το φυσικό μας πρόβλημα. Για παράδειγμα, θεωρούμε τις εξισώσεις συνέχειας και ορμής στις τρεις διαστάσεις, στη συμπιεστή, χρονοεξαρτώμενη περίπτωση:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\bar \nabla \cdot\bar q = 0 \)</span>, εξίσωση συνέχειας.</p></li>
@@ -687,14 +697,14 @@ x' = \frac{x}{L},\,\,y' = \frac{y}{L},\,\,z' = \frac{z}{L},\,\,u' = \frac{u}{U},
 <p>Ομοίως για την <span class="math notranslate nohighlight">\(x\)</span> εξίσωση ορμής θα έχουμε ότι:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{gathered} \displaystyle
-  \frac{{U^2 }}{L}\left( {\frac{{\partial u'}}{{\partial t'}}} \right) + \frac{{U^2 }}{L}\left( {u'\frac{{\partial u'}}{{\partial x'}} + v'\frac{{\partial u'}}
-{{\partial y'}} + w'\frac{{\partial u'}}{{\partial z'}}} \right) =  - \frac{{U^2 }}{L}\left( {\frac{{\partial p'}}{{\partial x'}}} \right) + \left( {\frac{{\mu U}}{{\rho L^2 }}} \right)\left( {\frac{{\partial ^2 u'}}{{\partial x'^2 }} + \frac{{\partial ^2 u'}}{{\partial y'^2 }} + \frac{{\partial ^2 u'}}{{\partial z'^2 }}} \right) \Rightarrow \\
-\displaystyle \frac{{\partial u'}}{{\partial t'}} + u'\frac{{\partial u'}}{{\partial x'}} + v'\frac{{\partial u'}}{{\partial y'}} + w'\frac{{\partial u'}}{{\partial z'}} =  - \; \frac{{\partial p'}}{{\partial x'}} + \frac{\mu }{{\rho UL}}\left( {\frac{{\partial ^2 u'}}{{\partial x'^2 }} + \frac{{\partial ^2 u'}}{{\partial y'^2 }} + \frac{{\partial ^2 u'}}{{\partial z'^2 }}} \right)
-\end{gathered}
+    \begin{gathered}
+      \frac{{U^2 }}{L}\left( {\frac{{\partial u'}}{{\partial t'}}} \right) + \frac{{U^2 }}{L}\left( {u'\frac{{\partial u'}}{{\partial x'}} + v'\frac{{\partial u'}}
+    {{\partial y'}} + w'\frac{{\partial u'}}{{\partial z'}}} \right) =  - \frac{{U^2 }}{L}\left( {\frac{{\partial p'}}{{\partial x'}}} \right) + \left( {\frac{{\mu U}}{{\rho L^2 }}} \right)\left( {\frac{{\partial ^2 u'}}{{\partial x'^2 }} + \frac{{\partial ^2 u'}}{{\partial y'^2 }} + \frac{{\partial ^2 u'}}{{\partial z'^2 }}} \right) \Rightarrow \\
+    \displaystyle \frac{{\partial u'}}{{\partial t'}} + u'\frac{{\partial u'}}{{\partial x'}} + v'\frac{{\partial u'}}{{\partial y'}} + w'\frac{{\partial u'}}{{\partial z'}} =  - \; \frac{{\partial p'}}{{\partial x'}} + \frac{\mu }{{\rho UL}}\left( {\frac{{\partial ^2 u'}}{{\partial x'^2 }} + \frac{{\partial ^2 u'}}{{\partial y'^2 }} + \frac{{\partial ^2 u'}}{{\partial z'^2 }}} \right)
+    \end{gathered}
 \end{split}\]</div>
 <p>Όμοια αποτελέσματα δίνουν και οι άλλες δύο εξισώσεις ορμής κατά την <span class="math notranslate nohighlight">\(y\)</span> και <span class="math notranslate nohighlight">\(z\)</span> διεύθυνση.</p>
-<p>Ο αριθμός <span class="math notranslate nohighlight">\(\displaystyle \frac{\rho U L}{\mu} = \displaystyle \frac{U L}{\nu}\)</span>, ονομάζεται <strong>αριθμός Reynolds</strong> και εκφράζει:</p>
+<p>Ο αριθμός <span class="math notranslate nohighlight">\(\frac{\rho U L}{\mu} = \displaystyle \frac{U L}{\nu}\)</span>, ονομάζεται <strong>αριθμός Reynolds</strong> και εκφράζει:</p>
 <div class="math notranslate nohighlight">
 \[
 Re = \frac{{\rho UL}}{\mu } =\frac{\mbox{Δυνάμεις αδρανείας}}{\mbox{Δυνάμεις τριβής}}
@@ -702,7 +712,7 @@ Re = \frac{{\rho UL}}{\mu } =\frac{\mbox{Δυνάμεις αδρανείας}}{\
 <p>άρα τελικά οι εξισώσεις ορμής σε <strong>αδιάστατη μορφή</strong> γράφονται :</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{{\partial \bar q'}}{{\partial t'}} + \bar q'\cdot\bar \nabla \bar q' =  - \bar \nabla  p' + \frac{1}{{Re}}\bar \nabla ^2 \bar q'
+    \frac{{\partial \bar q'}}{{\partial t'}} + \bar q'\cdot\bar \nabla \bar q' =  - \bar \nabla  p' + \frac{1}{{Re}}\bar \nabla ^2 \bar q'
 \]</div>
 <p>όπου <span class="math notranslate nohighlight">\(q'\)</span>, <span class="math notranslate nohighlight">\(p'\)</span> είναι η αδιάστατη ταχύτητα και πίεση, αντίστοιχα.</p>
 <div class="tip admonition">
@@ -710,29 +720,29 @@ Re = \frac{{\rho UL}}{\mu } =\frac{\mbox{Δυνάμεις αδρανείας}}{\
 <p>Οι αδιάστατες εξισώσεις ορμής ασυμπίεστου ρευστού με σταθερό ιξώδες, όταν ο αριθμός Reynolds (<span class="math notranslate nohighlight">\(Re\)</span>) είναι υψηλός, χωρίς επίδρασης εξωτερικού πεδίου δυνάμεων, παίρνουν την εξής μορφή:</p>
 <div class="math notranslate nohighlight">
 \[
-\displaystyle \frac{D \bar q'}{Dt} =  - \displaystyle  \bar \nabla p'
+    \displaystyle \frac{D \bar q'}{Dt} =  - \displaystyle  \bar \nabla p'
 \]</div>
 <p>δηλαδή, το ρευστό συμπεριφέρεται σαν <strong>ιδανικό  ρευστό</strong> και μπορούμε να χρησιμοποιήσουμε τις εξισώσεις Euler.</p>
 <p>Όταν ο αριθμός <span class="math notranslate nohighlight">\(Re &lt;&lt; 1\)</span>, οι εξισώσεις Navier-Stokes παίρνουν την  εξής μορφή:</p>
 <div class="math notranslate nohighlight">
 \[
-0 =  - \displaystyle  \bar \nabla p'+\frac{1}{Re} \bar \nabla^2 \bar q'
+    0 =  - \displaystyle  \bar \nabla p'+\frac{1}{Re} \bar \nabla^2 \bar q'
 \]</div>
 <p>Σε αυτή την περίπτωση έχουμε τις λεγόμενες <strong>βραδείες ή έρπουσες ροές ή ροές Stokes</strong>.</p>
 </div>
-<p>Περισσότερες πληροφορίες σχετικά με την αδιαστατοποίηση των εξισώσεων Navier - Stokes ο αναγνώστης μπορεί να βρει στα συγγράμματα <a href="#id29"><span class="problematic" id="id30">:cite:`kaf1,xenostzirtzi,kaf3,Patankar,Schlichting,White`</span></a>.</p>
+<p>Περισσότερες πληροφορίες σχετικά με την αδιαστατοποίηση των εξισώσεων Navier - Stokes ο αναγνώστης μπορεί να βρει στα συγγράμματα <span id="id19">[<a class="reference internal" href="zreferences.html#id3">89a</a>, <a class="reference internal" href="zreferences.html#id4">89b</a>, <a class="reference internal" href="zreferences.html#id5">92</a>, <a class="reference internal" href="zreferences.html#id7">Pat09</a>, <a class="reference internal" href="zreferences.html#id9">SG17</a>, <a class="reference internal" href="zreferences.html#id11">Whi98</a>]</span>.</p>
 </div>
-<div class="section" id="id31">
-<h2>Εφαρμογές<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id20">
+<h2>Εφαρμογές<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
 <div class="admonition- admonition">
-<p class="admonition-title">Άσκηση 1 </p>
+<p class="admonition-title">Εφαρμογή 1 </p>
 <p>Θεωρήστε την ανιξωδική εξίσωση του Burger,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{gathered}
- u_t  + u \, u_x  = 0 \\ 
- u(x,0) = u_0 (x) \\ 
- \end{gathered}
+    \begin{gathered}
+         u_t  + u \, u_x  = 0 \\ 
+         u(x,0) = u_0 (x) \\ 
+     \end{gathered}
 \end{split}\]</div>
 <p>Με εφαρμογή της μεθόδου των χαρακτηριστικών να βρεθεί το <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <details class="sphinx-bs dropdown card mb-3">
@@ -745,21 +755,21 @@ Re = \frac{{\rho UL}}{\mu } =\frac{\mbox{Δυνάμεις αδρανείας}}{\
 <p class="card-text">Κίνηση σε καμπύλη, πάνω στη χαρακτηριστική,</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{dx}{ds} = u\,,\,\,\,\,\frac{dt}{ds} = 1,\,\,\,\,\delta \eta \lambda .\,\,\,\,\,\frac{du}{ds} = u\frac{\partial u}{\partial x} + \frac{\partial u}{\partial t} = 0 ,
+    \frac{dx}{ds} = u\,,\,\,\,\,\frac{dt}{ds} = 1,\,\,\,\,\delta \eta \lambda .\,\,\,\,\,\frac{du}{ds} = u\frac{\partial u}{\partial x} + \frac{\partial u}{\partial t} = 0 ,
 \]</div>
 <p class="card-text">Οπότε, από την παραπάνω σχέση μπορούμε να γράψουμε ότι,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
- \begin{gathered}
- \frac{{dx}}{{dt}} = u(x(t),t) \\ 
- x(0) = x_0  \\ 
- \end{gathered} 
+     \begin{gathered}
+         \frac{{dx}}{{dt}} = u(x(t),t) \\ 
+         x(0) = x_0  \\ 
+     \end{gathered} 
 \end{split}\]</div>
 <p class="card-text">Ολοκληρώνοντας έχουμε ότι, <span class="math notranslate nohighlight">\(x(t) = x_0  + \int_{t_0 }^t {u(x,t)dt}\)</span>.</p>
 </div>
 </details></div>
 <div class="admonition- admonition">
-<p class="admonition-title">Άσκηση 2</p>
+<p class="admonition-title">Εφαρμογή 2</p>
 <p>Να βρεθεί το είδος των εξισώσεων, (α) μονοδιάστατη εξίσωση διάχυσης, <span class="math notranslate nohighlight">\(u_t  = k \, u_{xx}\)</span>, (β) μονοδιάστατη κυματική εξίσωση, <span class="math notranslate nohighlight">\(u_{tt}  = a^2 \, u_{xx}\)</span>, (γ) εξίσωση Laplace, <span class="math notranslate nohighlight">\(u_{xx} + u_{yy} = 0\)</span>, (δ) εξίσωση Poisson, <span class="math notranslate nohighlight">\(u_{xx} + u_{yy} = f(x,y)\)</span>, (ε) εξίσωση διάχυσης στο χώρο, <span class="math notranslate nohighlight">\(u_t  = k \, \nabla ^2 u\)</span>, (ζ) κυματική εξίσωση στο χώρο, <span class="math notranslate nohighlight">\(u_{tt}  = a^2 \, \nabla ^2 u\)</span>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -774,66 +784,66 @@ Re = \frac{{\rho UL}}{\mu } =\frac{\mbox{Δυνάμεις αδρανείας}}{\
 <p class="card-text">(γ) Για την εξίσωση Laplace, <span class="math notranslate nohighlight">\(u_{xx} + u_{yy} = 0\)</span>, έχουμε, <span class="math notranslate nohighlight">\(a = 1\)</span>, <span class="math notranslate nohighlight">\(b = 0\)</span>, <span class="math notranslate nohighlight">\(c = 1\)</span>, οπότε, <span class="math notranslate nohighlight">\(\Delta = b^2 - a \, c = -1 &lt; 0\)</span>, άρα η ΜΔΕ είναι ελλειπτικού τύπου. Όμοια με το πρόσημο των ιδιοτιμών του πίνακα <span class="math notranslate nohighlight">\(A\)</span>. Οπότε,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \left[ {\begin{array}{*{20}c}
-   1 &amp; 0  \\
-   0 &amp; 1  \\
-\end{array}} \right]
+    A = \left[ {\begin{array}{*{20}c}
+       1 &amp; 0  \\
+       0 &amp; 1  \\
+    \end{array}} \right]
 \end{split}\]</div>
 <p class="card-text">με <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2 = 1\)</span>. Δηλαδή, δύο ρίζες ομόσημες, άρα ελλειπτικού τύπου.</p>
 <p class="card-text">(δ) Για την εξίσωση Poisson, <span class="math notranslate nohighlight">\(u_{xx} + u_{yy} = f(x,y)\)</span>, όμοια με την παραπάνω, έχουμε, <span class="math notranslate nohighlight">\( u_{xx}  + 0\,u_{xy}  + u_{yy}  - f(x,y) = 0 \)</span>, ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι και σε αυτή την περίπτωση,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \left[ {\begin{array}{*{20}c}
-   1 &amp; 0  \\
-   0 &amp; 1  \\
-\end{array}} \right]
+    A = \left[ {\begin{array}{*{20}c}
+       1 &amp; 0  \\
+       0 &amp; 1  \\
+    \end{array}} \right]
 \end{split}\]</div>
 <p class="card-text">Δηλαδή, δύο ρίζες ομόσημες, άρα ελλειπτικού τύπου.</p>
 <p class="card-text">(ε) Για την εξίσωση διάχυσης στο χώρο, <span class="math notranslate nohighlight">\(u_t  = k \, \nabla ^2 u\)</span>, έχουμε τέσσερις ανεξάρτητες μεταβλητές, <span class="math notranslate nohighlight">\(x, y, z, t\)</span>, οπότε,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
- u_{xx}  + 0\,u_{xy}  + 0\,u_{xz}  + 0\,u_{xt}  + 0\,u_{yx}  + u_{yy}  + 0\,u_{yz}  + 0\,u_{yt} + \\
- + 0\,u_{zx}  + 0\,u_{zy}  + u_{zz}  + 0\,u_{zt}  + 0\,u_{tx}  + 0\,u_{ty}  + 0\,u_{tz}  + 0\,u_{tt}  - \frac{1}{k}u_t  = 0
+     u_{xx}  + 0\,u_{xy}  + 0\,u_{xz}  + 0\,u_{xt}  + 0\,u_{yx}  + u_{yy}  + 0\,u_{yz}  + 0\,u_{yt} + \\
+     + 0\,u_{zx}  + 0\,u_{zy}  + u_{zz}  + 0\,u_{zt}  + 0\,u_{tx}  + 0\,u_{ty}  + 0\,u_{tz}  + 0\,u_{tt}  - \frac{1}{k}u_t  = 0
 \end{split}\]</div>
 <p class="card-text">Συνεπώς ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \left[ {\begin{array}{*{20}c}
-   1 &amp; 0 &amp; 0 &amp; 0  \\
-   0 &amp; 1 &amp; 0 &amp; 0  \\
-   0 &amp; 0 &amp; 1 &amp; 0  \\
-   0 &amp; 0 &amp; 0 &amp; 0  \\
-\end{array}} \right]
+    A = \left[ {\begin{array}{*{20}c}
+       1 &amp; 0 &amp; 0 &amp; 0  \\
+       0 &amp; 1 &amp; 0 &amp; 0  \\
+       0 &amp; 0 &amp; 1 &amp; 0  \\
+       0 &amp; 0 &amp; 0 &amp; 0  \\
+    \end{array}} \right]
 \end{split}\]</div>
 <p class="card-text">με ιδιοτιμές <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2 = \lambda_3 = 1\)</span>, <span class="math notranslate nohighlight">\(\lambda_4 = 0\)</span>. Δηλαδή, τρείς ιδιοτιμές ομόσημες και μια μηδενική, άρα παραβολικού τύπου.</p>
 <p class="card-text">(ζ) Για την κυματική εξίσωση στο χώρο, <span class="math notranslate nohighlight">\(u_{tt}  = a^2 \, \nabla ^2 u\)</span>, έχουμε,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
- u_{xx}  + 0\,u_{xy}  + 0\,u_{xz}  + 0\,u_{xt}  + 0\,u_{yx}  + u_{yy}  + 0\,u_{yz}  + 0\,u_{yt} + \\
- + 0\,u_{zx}  + 0\,u_{zy}  + u_{zz}  + 0\,u_{zt}  + 0\,u_{tx}  + 0\,u_{ty}  + 0\,u_{tz} - \frac{1}{{a^2 }}u_{tt}  = 0
+     u_{xx}  + 0\,u_{xy}  + 0\,u_{xz}  + 0\,u_{xt}  + 0\,u_{yx}  + u_{yy}  + 0\,u_{yz}  + 0\,u_{yt} + \\
+     + 0\,u_{zx}  + 0\,u_{zy}  + u_{zz}  + 0\,u_{zt}  + 0\,u_{tx}  + 0\,u_{ty}  + 0\,u_{tz} - \frac{1}{{a^2 }}u_{tt}  = 0
 \end{split}\]</div>
 <p class="card-text">Συνεπώς ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \left[ {\begin{array}{*{20}c}
-   1 &amp; 0 &amp; 0 &amp; 0  \\
-   0 &amp; 1 &amp; 0 &amp; 0  \\
-   0 &amp; 0 &amp; 1 &amp; 0  \\
-   0 &amp; 0 &amp; 0 &amp; -1/a^2  \\
-\end{array}} \right]
+    A = \left[ {\begin{array}{*{20}c}
+       1 &amp; 0 &amp; 0 &amp; 0  \\
+       0 &amp; 1 &amp; 0 &amp; 0  \\
+       0 &amp; 0 &amp; 1 &amp; 0  \\
+       0 &amp; 0 &amp; 0 &amp; -1/a^2  \\
+    \end{array}} \right]
 \end{split}\]</div>
 <p class="card-text">με ιδιοτιμές <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2 = \lambda_3 = 1\)</span>, <span class="math notranslate nohighlight">\(\lambda_4 = -\frac{1}{a^2}\)</span>. Δηλαδή, τρείς ιδιοτιμές με το ίδιο πρόσημο και μια με αντίθετο, άρα υπερβολικού τύπου.</p>
 </div>
 </details></div>
 <div class="admonition- admonition">
-<p class="admonition-title">Άσκηση 3</p>
+<p class="admonition-title">Εφαρμογή 3</p>
 <p>Η επίπεδη και αστρόβιλη ροή ομογενούς και ασυμπιέστου ρευστού περιγράφεται από το σύστημα των εξισώσεων, σε διανυσματική και καρτεσιανή μορφή,</p>
 <div class="math notranslate nohighlight" id="equation-ex1">
 <span class="eqno">(32)<a class="headerlink" href="#equation-ex1" title="Permalink to this equation">¶</a></span>\[\begin{split}
-  \begin{gathered}
-  \bar \nabla  \cdot \bar q = 0 \Rightarrow \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0   \\
-  \bar \nabla \times \bar q = 0 \Rightarrow \frac{\partial u}{\partial y} - \frac{\partial v}{\partial x} = 0   \\ 
-\end{gathered} 
+    \begin{gathered}
+        \bar \nabla  \cdot \bar q = 0 \Rightarrow \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0   \\
+        \bar \nabla \times \bar q = 0 \Rightarrow \frac{\partial u}{\partial y} - \frac{\partial v}{\partial x} = 0   \\ 
+    \end{gathered} 
 \end{split}\]</div>
 <p>με <span class="math notranslate nohighlight">\(\bar q = (u,v)\)</span> το διάνυσμα της ταχύτητας. Να δείξετε ότι το παραπάνω σύστημα είναι ελλειπτικού τύπου με τη μεθοδο χαρακτηρισμού συστημάτων. Να οδηγηθείτε στο ίδιο αποτέλεσμα εισάγοντας τη συνάρτηση δυναμικού <span class="math notranslate nohighlight">\(\Phi\)</span> και ανάγοντας το σύστημα σε μια ΜΔΕ 2ης τάξης.</p>
 <details class="sphinx-bs dropdown card mb-3">
@@ -846,48 +856,48 @@ A = \left[ {\begin{array}{*{20}c}
 <p class="card-text">Έχουμε ότι, <span class="math notranslate nohighlight">\(u=u(x,y)\)</span> και <span class="math notranslate nohighlight">\(v=v(x,y)\)</span>, οπότε,</p>
 <div class="math notranslate nohighlight" id="equation-ex2">
 <span class="eqno">(33)<a class="headerlink" href="#equation-ex2" title="Permalink to this equation">¶</a></span>\[
-du = u_x dx + u_y dy,\,\,\,\,\,\,dv = v_x dx + v_y dy
+    du = u_x dx + u_y dy,\,\,\,\,\,\,dv = v_x dx + v_y dy
 \]</div>
 <p class="card-text">άρα το σύστημα των εξισώσεων <a class="reference internal" href="#equation-ex1">(32)</a>-<a class="reference internal" href="#equation-ex2">(33)</a>, γράφεται,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
- \begin{array}{l}
- u_x  + 0\,u_y  + 0\,v_x  + v_y  = 0 \\ 
- 0\,u_x  + u_y  - v_x  + 0\,v_y  = 0 \\ 
- dx\,u_x  + dy\,u_y  + 0\,v_x  + 0\,v_y  = du \\ 
- 0\,u_x  + 0\,u_y  + dx\,v_x  + dy\,v_y  = dv \\ 
- \end{array}
+    \begin{array}{l}
+        u_x  + 0\,u_y  + 0\,v_x  + v_y  = 0 \\ 
+        0\,u_x  + u_y  - v_x  + 0\,v_y  = 0 \\ 
+        dx\,u_x  + dy\,u_y  + 0\,v_x  + 0\,v_y  = du \\ 
+        0\,u_x  + 0\,u_y  + dx\,v_x  + dy\,v_y  = dv \\ 
+    \end{array}
 \end{split}\]</div>
 <p class="card-text">με</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \left[ {\begin{array}{*{20}c}
-   1 &amp; 0 &amp; 0 &amp; 1  \\
-   0 &amp; 1 &amp; { - 1} &amp; 0  \\
-   {dx} &amp; {dy} &amp; 0 &amp; 0  \\
-   0 &amp; 0 &amp; {dx} &amp; {dy}  \\
-\end{array}} \right]
+    A = \left[ {\begin{array}{*{20}c}
+       1 &amp; 0 &amp; 0 &amp; 1  \\
+       0 &amp; 1 &amp; { - 1} &amp; 0  \\
+       {dx} &amp; {dy} &amp; 0 &amp; 0  \\
+       0 &amp; 0 &amp; {dx} &amp; {dy}  \\
+    \end{array}} \right]
 \end{split}\]</div>
 <p class="card-text">Θέτοντας την ορίζουσα <span class="math notranslate nohighlight">\(A\)</span> ίση με μηδέν και αναπτύσσοντας, καταλήγουμε στην χαρακτηριστική εξίσωση,</p>
 <div class="math notranslate nohighlight">
 \[
-\left( {\frac{{dy}}{{dx}}} \right)^2  + 1 = 0,\,\,\,\mu \varepsilon \,\,\,\Delta  &lt; 0
+    \left( {\frac{{dy}}{{dx}}} \right)^2  + 1 = 0,\,\,\,\mu \varepsilon \,\,\,\Delta  &lt; 0
 \]</div>
 <p class="card-text">οπότε το δοθέν σύστημα είναι ελλειπτικού τύπου. Εισάγοντας τη συνάρτηση δυναμικού <span class="math notranslate nohighlight">\(\Phi\)</span>, επειδή η ροή είναι αστρόβιλή, υπάρχει το δυναμικό της ταχύτητας, έτσι ώστε,</p>
 <div class="math notranslate nohighlight">
 \[
-u =  - \frac{{\partial \Phi }}{{\partial x}}\,\,\,\,\,\kappa \alpha \iota \,\,\,\,\,v =  - \frac{{\partial \Phi }}{{\partial y}}
+    u =  - \frac{{\partial \Phi }}{{\partial x}}\,\,\,\,\,\kappa \alpha \iota \,\,\,\,\,v =  - \frac{{\partial \Phi }}{{\partial y}}
 \]</div>
 <p class="card-text">Η εξίσωση του αστρόβιλου πεδίου ροής ικανοποιείται αυτόματα, ενώ η εξίσωση συνέχειας γίνεται,</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{\partial }{{\partial x}}\left( { - \frac{{\partial \Phi }}{{\partial x}}} \right) + \frac{\partial }{{\partial y}}\left( { - \frac{{\partial \Phi }}{{\partial y}}} \right) = 0 \Rightarrow  - \Phi _{xx}  - \Phi _{yy}  = 0 \Rightarrow \nabla ^2 \Phi  = 0
+    \frac{\partial }{{\partial x}}\left( { - \frac{{\partial \Phi }}{{\partial x}}} \right) + \frac{\partial }{{\partial y}}\left( { - \frac{{\partial \Phi }}{{\partial y}}} \right) = 0 \Rightarrow  - \Phi _{xx}  - \Phi _{yy}  = 0 \Rightarrow \nabla ^2 \Phi  = 0
 \]</div>
 <p class="card-text">που είναι η εξίσωση Laplace, προφανώς ελλειπτικου τύπου.</p>
 </div>
 </details></div>
 <div class="admonition- admonition">
-<p class="admonition-title">Άσκηση 4 </p>
+<p class="admonition-title">Εφαρμογή 4   </p>
 <p>Οι αδιάστατες εξισώσεις που περιγράφουν τη μόνιμη, διδιάστατη ροή, ιδανικού και ασυμπιέστου ρευστού, χωρίς πεδίο εξωτερικών δυνάμεων είναι,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
