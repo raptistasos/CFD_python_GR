@@ -314,12 +314,12 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id7">
-     Βασικά Σχήματα της Μεθόδου Π.Δ.
+     Βασικά Σχήματα της ΜΠΔ
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id8">
-     Άλλα αριθμητικά σχήματα Π.Δ.
+     Άλλα αριθμητικά σχήματα ΠΔ
     </a>
    </li>
   </ul>
@@ -364,14 +364,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>Σύντομη εισαγωγή<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Στην πρώτη ενότητα αυτού του κεφαλαίου αποδεικνύονται με την βοήθεια του αναπτύγματος Taylor τα βασικά αριθμητικά σχήματα της μεθόδου πεπερασμένων διαφορών (Μ.Π.Δ.), όπως οι εμπρόσθιες, οπίσθιες και κεντρικές διαφορές. Παρουσιάζονται επίσης αριθμητικά σχήματα που μπορούν να χρησιμοποιούν διαφορετικά σημεία του πλέγματος από αυτά που χρησιμοποιούν τα βασικά αριθμητικά σχήματα των Π.Δ. Παρουσιάζονται οι έννοιες του σφάλματος αποκοπής, δηλ. η διαφορά μεταξύ της μερικής παραγώγου ή και ολόκληρης της Μ.Δ.Ε. και της αναπαράστασής της μέσω των πεπερασμένων διαφορών, και η έννοια της συμβατότητας του αριθμητικού σχήματος. Ένα αριθμητικό σχήμα είναι συμβατό όταν, καθώς οι χωρικές διαστάσεις των αποστάσεων των σημείων τείνουν στο μηδέν, το όριο του σφάλματος αποκοπής (<span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span>) τείνει και αυτό στο μηδέν.</p>
-<p>Παρουσιάζονται οι έννοιες της ευστάθειας και σύγκλισης ενός αριθμητικού σχήματος. Εισάγεται η μέθοδος των πεπερασμένων όγκων (Μ.Π.Ο.) και τα αριθμητικά σχήματα που προκύπτουν από αυτή τη μέθοδο. Η μέθοδος Π.Ο. έχει αναπτυχθεί κυρίως για προβλήματα Ρευστοδυναμικής. Τέλος παρουσιάζεται η φασματική μέθοδος η οποία είναι μια αριθμητική μέθοδος υψηλής ακρίβειας σε σχέση με τις μεθόδους Π.Δ. και Π.Ο.</p>
+<p>Στην πρώτη ενότητα αυτού του κεφαλαίου αποδεικνύονται με την βοήθεια του αναπτύγματος Taylor τα βασικά αριθμητικά σχήματα της μεθόδου πεπερασμένων διαφορών (ΜΠΔ), όπως οι εμπρόσθιες, οπίσθιες και κεντρικές πεπερασμένες διαφορές (ΠΔ). Παρουσιάζονται επίσης αριθμητικά σχήματα που μπορούν να χρησιμοποιούν διαφορετικά σημεία του πλέγματος από αυτά που χρησιμοποιούν τα βασικά αριθμητικά σχήματα των ΠΔ. Παρουσιάζονται οι έννοιες του σφάλματος αποκοπής, δηλ. η διαφορά μεταξύ της μερικής παραγώγου ή και ολόκληρης της ΜΔΕ και της αναπαράστασής της μέσω των ΠΔ, και η έννοια της συμβατότητας του αριθμητικού σχήματος. Ένα αριθμητικό σχήμα είναι συμβατό όταν το όριο του σφάλματος αποκοπής (<span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span>) τείνει στο μηδέν καθώς οι χωρικές διαστάσεις των αποστάσεων των σημείων τείνουν στο μηδέν.</p>
+<p>Παρουσιάζονται οι έννοιες της ευστάθειας και σύγκλισης ενός αριθμητικού σχήματος. Εισάγεται η μέθοδος των πεπερασμένων όγκων (ΜΠΟ) και τα αριθμητικά σχήματα που προκύπτουν από αυτή τη μέθοδο. Η ΜΠΟ έχει αναπτυχθεί κυρίως για προβλήματα Ρευστοδυναμικής. Τέλος παρουσιάζεται η φασματική μέθοδος η οποία είναι μια αριθμητική μέθοδος υψηλότερης ακρίβειας σε σχέση με τις ΜΠΔ και ΜΠΟ.</p>
 </div>
 <div class="section" id="id3">
 <h2>Μέθοδος των Πεπερασμένων Διαφορών<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id4">
 <h3>Βασικές Ορισμοί και Έννοιες<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>Η βασική ιδέα της Μ.Π.Δ. για την αριθμητική επίλυση Μ.Δ.Ε. είναι η μετατροπή του συνεχούς συστήματος σε διακριτό, το οποίο μπορούμε να επιλύσουμε με την βοήθεια του Η/Υ. Με τη Μ.Π.Δ. το συνεχές χωρίο ορισμού, <span class="math notranslate nohighlight">\(\Omega\)</span>, της άγνωστης συνάρτησης, χωρίζεται σ’ ένα σύνολο διακεκριμένων σημείων <span class="math notranslate nohighlight">\(P_{i,j}\)</span> και η Μ.Δ.Ε. που διέπει το πρόβλημα προσεγγίζεται από μια αντίστοιχη εξίσωση διαφορών σε κάθε κομβικό σημείο. Η διακριτοποίηση, descritization, του συνεχούς χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>, σε μεμονωμένα κομβικά σημεία, grid points, <span class="math notranslate nohighlight">\(P_{i,j}\)</span> και η προσέγγιση των παραγώγων της προς προσδιορισμό συνάρτησης, <span class="math notranslate nohighlight">\(u\)</span>, μέσω διαφορών, καθώς και των συνθηκών που ικανοποιεί αυτή, ανάγει το όλο πρόβλημα σ’ ένα σύστημα αλγεβρικών εξισώσεων. Η φύση του συστήματος αυτού, γραμμικό ή μη γραμμικό, εξαρτάται από την φύση της Μ.Δ.Ε. που περιγράφει το πρόβλημα.</p>
+<p>Η βασική ιδέα της ΜΠΔ για την αριθμητική επίλυση ΜΔΕ είναι η μετατροπή του συνεχούς συστήματος σε διακριτό, το οποίο μπορούμε να επιλύσουμε με την βοήθεια του Η/Υ. Με τη ΜΠΔ, το συνεχές χωρίο ορισμού, <span class="math notranslate nohighlight">\(\Omega\)</span>, της άγνωστης συνάρτησης, χωρίζεται σ’ ένα σύνολο διακεκριμένων σημείων <span class="math notranslate nohighlight">\(P_{i,j}\)</span> και η ΜΔΕ που διέπει το πρόβλημα προσεγγίζεται από μια αντίστοιχη εξίσωση διαφορών σε κάθε κομβικό σημείο. Η διακριτοποίηση, descritization, του συνεχούς χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>, σε μεμονωμένα κομβικά σημεία, grid points, <span class="math notranslate nohighlight">\(P_{i,j}\)</span> και η προσέγγιση των παραγώγων της προς προσδιορισμό συνάρτησης, <span class="math notranslate nohighlight">\(u\)</span>, μέσω διαφορών, καθώς και των συνθηκών που ικανοποιεί αυτή, ανάγει το όλο πρόβλημα σε ένα σύστημα αλγεβρικών εξισώσεων. Η φύση του συστήματος αυτού, γραμμικό ή μη γραμμικό, εξαρτάται από την φύση της ΜΔΕ που περιγράφει το πρόβλημα.</p>
 <p>Ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> δύο μεταβλητών, <span class="math notranslate nohighlight">\(u = u(x,y)\)</span>, η οποία ορίζεται στο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του σχήματος <a class="reference internal" href="#sxima-cont-discr"><span class="std std-numref">Fig. 3</span></a>. Η συνάρτηση αυτή ικανοποιεί την εξίσωση,</p>
 <div class="math notranslate nohighlight" id="equation-k2-1">
 <span class="eqno">(34)<a class="headerlink" href="#equation-k2-1" title="Permalink to this equation">¶</a></span>\[
@@ -381,7 +381,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <a class="reference internal image-reference" href="_images/Sxima_Cont_Discr.png"><img alt="_images/Sxima_Cont_Discr.png" src="_images/Sxima_Cont_Discr.png" style="height: 250px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">(α) Το συνεχές χωρίο ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span> με σύνορο <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, (β) Διακριτοποίηση του χωρίου ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span>.</span><a class="headerlink" href="#sxima-cont-discr" title="Permalink to this image">¶</a></p>
 </div>
-<p>Έπειτα προσεγγίζουμε την Μ.Δ.Ε., εξίσωση <a class="reference internal" href="#equation-k2-1">(34)</a>, καθώς και τις συνοριακές συνθήκες που ικανοποιεί η <span class="math notranslate nohighlight">\(u\)</span> στο σύνορο <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, με κάποιο σχήμα πεπερασμένων διαφορών. Αν για παράδειγμμα ο διαφορικός τελεστής <span class="math notranslate nohighlight">\(L\)</span>, περιέχει την παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x}\)</span> μπορούμε να αντικαταστήσουμε την μερική παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> με την διαφορά,</p>
+<p>Έπειτα προσεγγίζουμε την ΜΔΕ, εξίσωση <a class="reference internal" href="#equation-k2-1">(34)</a>, καθώς και τις συνοριακές συνθήκες που ικανοποιεί η <span class="math notranslate nohighlight">\(u\)</span> στο σύνορο <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, με κάποιο σχήμα ΠΔ. Αν για παράδειγμμα ο διαφορικός τελεστής <span class="math notranslate nohighlight">\(L\)</span>, περιέχει την παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x}\)</span> μπορούμε να αντικαταστήσουμε την μερική παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> με την διαφορά,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2">
 <span class="eqno">(35)<a class="headerlink" href="#equation-k2-2" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x} = \frac{u(x+\Delta x, y) - u(x, y)}{\Delta x} = \frac{u_{i+1,j} - u_{i,j}}{h}
@@ -389,17 +389,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Οπότε, αντί του συνεχούς προβλήματος, έχουμε τώρα να επιλύσουμε ένα σύνολο αλγεβρικών εξισώσεων, για τις τιμές της συνάρτησης <span class="math notranslate nohighlight">\(u\)</span>, που ορίζονται στα διακεκριμένα σημεία του πλέγματος, εσωτερικά του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>. Η επίλυση του συστήματος αυτού, εφ’ όσον αυτό είναι εφικτό, θα μας δώσει προσεγγιστικές τιμές της <span class="math notranslate nohighlight">\(u\)</span> στα σημεία <span class="math notranslate nohighlight">\(P_{i,j}\)</span> του <span class="math notranslate nohighlight">\(\Omega\)</span> και όχι σε κάθε σημείο <span class="math notranslate nohighlight">\(P \in \Omega\)</span>. Εάν πρέπει να γνωρίζουμε τις τιμές της συνάρτησης <span class="math notranslate nohighlight">\(u\)</span> και των παραγώγων της σε ενδιάμεσα σημεία, τότε αυτό μπορεί να γίνει με εφαρμογή κατάλληλων μεθόδων της Αριθμητικής Ανάλυσης <span id="id5">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Παρατήρηση</p>
-<p>Η εφαρμογή της Μ.Π.Δ. είναι απλή και αποτελεσματική. Η σωστή όμως εφαρμογή της απαιτεί γνώσεις και εμπειρία. Η αντικατάσταση του συνεχούς προβλήματος με ένα αλγεβρικό σύστημα, οδηγεί πολλές φορές σε σοβαρά μαθηματικά προβλήματα, όπως η επάρκεια, η ακρίβεια, η σύγκλιση και η ευστάθεια της μεθόδου, προβλήματα που πολλές φορές δεν αντιμετωπίζονται εύκολα <span id="id6">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
+<p>Η εφαρμογή της ΜΠΔ είναι απλή και αποτελεσματική. Η σωστή όμως εφαρμογή της απαιτεί γνώσεις και εμπειρία. Η αντικατάσταση του συνεχούς προβλήματος με ένα αλγεβρικό σύστημα, οδηγεί πολλές φορές σε σοβαρά μαθηματικά προβλήματα, όπως η επάρκεια, η ακρίβεια, η σύγκλιση και η ευστάθεια της μεθόδου, τα οπο΄΄ία πολλές φορές δεν αντιμετωπίζονται εύκολα <span id="id6">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
 </div>
 </div>
 <div class="section" id="id7">
-<h3>Βασικά Σχήματα της Μεθόδου Π.Δ.<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>Για την ανάπτυξη των προσεγγίσεων ή των αριθμητικών σχημάτων, ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u = u(x,y)\)</span> δύο μεταβλητών που ικανοποιεί κάποια Μ.Δ.Ε. σ’ ένα ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του <span class="math notranslate nohighlight">\(xy\)</span>-επιπέδου. Ένα απλοποιημένο παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> φαίνεται στο παρακάτω σχήμα, <a class="reference internal" href="#sxima-grid"><span class="std std-numref">Fig. 4</span></a>. Τα διάφορα σημεία του πλέγματος μέσα στο <span class="math notranslate nohighlight">\(\Omega\)</span> και επίσ του συνόρου <span class="math notranslate nohighlight">\(\partial \Omega\)</span> προσδιορίζονται τώρα από τις τιμές <span class="math notranslate nohighlight">\((i, j)\)</span> στα κομβικά σημεία του υπολογιστικού πλέγματος.</p>
+<h3>Βασικά Σχήματα της ΜΠΔ<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Για την ανάπτυξη των προσεγγίσεων ή των αριθμητικών σχημάτων, ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u = u(x,y)\)</span> δύο μεταβλητών που ικανοποιεί κάποια ΜΔΕ σε ένα ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του <span class="math notranslate nohighlight">\(xy\)</span>-επιπέδου. Ένα απλοποιημένο παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> φαίνεται στο παρακάτω σχήμα, <a class="reference internal" href="#sxima-grid"><span class="std std-numref">Fig. 4</span></a>. Τα διάφορα σημεία του πλέγματος μέσα στο <span class="math notranslate nohighlight">\(\Omega\)</span> και επί του συνόρου <span class="math notranslate nohighlight">\(\partial \Omega\)</span> προσδιορίζονται τώρα από τις τιμές <span class="math notranslate nohighlight">\((i, j)\)</span> στα κομβικά σημεία του πλέγματος.</p>
 <div class="figure align-default" id="sxima-grid">
 <a class="reference internal image-reference" href="_images/Sxima_grid.png"><img alt="_images/Sxima_grid.png" src="_images/Sxima_grid.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Aπλοποιημένο παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> με την μέθοδο των Π.Δ.</span><a class="headerlink" href="#sxima-grid" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Aπλοποιημένο παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> με τη ΜΠΔ</span><a class="headerlink" href="#sxima-grid" title="Permalink to this image">¶</a></p>
 </div>
-<p>Με αυτό τον τρόπο οι εξισώσεις διαφορών (finite differences) που προσεγγίζουν τις παραγώγους της <span class="math notranslate nohighlight">\(u\)</span> στο κομβικό σημείο <span class="math notranslate nohighlight">\((i, j)\)</span> εκφράζονται μέσω της τιμής της <span class="math notranslate nohighlight">\(u\)</span> στο σημείο <span class="math notranslate nohighlight">\((i, j)\)</span> αλλά και των γειτονικών του. Συμβολίζουμε με <span class="math notranslate nohighlight">\(u(x , y) = u_{i,j}\)</span>, όπου το σημείο <span class="math notranslate nohighlight">\((x , y)\)</span> είναι το “σημέιο αναφοράς” ως προς τα γειτονικά σημεία στο υπολογιστικό πλέγμα. Έτσι έχουμε για τα γειτονικά κομβικά σημεία ότι,</p>
+<p>Με αυτό τον τρόπο οι εξισώσεις ΠΔ (finite differences) που προσεγγίζουν τις παραγώγους της <span class="math notranslate nohighlight">\(u\)</span> στο κομβικό σημείο <span class="math notranslate nohighlight">\((i, j)\)</span> εκφράζονται μέσω της τιμής της <span class="math notranslate nohighlight">\(u\)</span> στο σημείο <span class="math notranslate nohighlight">\((i, j)\)</span> αλλά και των γειτονικών του. Συμβολίζουμε με <span class="math notranslate nohighlight">\(u(x , y) = u_{i,j}\)</span>, όπου το σημείο <span class="math notranslate nohighlight">\((x , y)\)</span> είναι το “σημέιο αναφοράς” ως προς τα γειτονικά σημεία στο υπολογιστικό πλέγμα. Έτσι έχουμε για τα γειτονικά κομβικά σημεία ότι,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2b">
 <span class="eqno">(36)<a class="headerlink" href="#equation-k2-2b" title="Permalink to this equation">¶</a></span>\[\begin{split}
     \begin{gathered}
@@ -407,8 +407,8 @@ commentsRunWhenDOMLoaded(addUtterances);
          u_{i , j+1} = u(x , y + \Delta y), \,\,\, u_{i , j-1} = u(x , y - \Delta y) 
     \end{gathered}	
 \end{split}\]</div>
-<p>Σε πολλά προβλήματα της Ρευστομηχανικής, όπου αναπτύσσεται μια πορεία αριθμητικής ολοκλήρωσης σε διαδοχικά χρονικά βήματα της μεταβλητής του χρόνου (marching problems), η μεταβολή της χωρικής μεταβλητής, π.χ. <span class="math notranslate nohighlight">\(x\)</span>-μεταβλητή, συμβολίζεται με τον δείκτη <span class="math notranslate nohighlight">\(i\)</span>, ενώ η μεταβολή της χρονικής μεταβλητής, <span class="math notranslate nohighlight">\(t\)</span>-μεταβλητή, συμβολίζεται με τον δείκτη <span class="math notranslate nohighlight">\(n\)</span>. Δηλαδή, <span class="math notranslate nohighlight">\(u_j^n\)</span>, <span class="math notranslate nohighlight">\(u_j^{n+1}\)</span>, <span class="math notranslate nohighlight">\(u_{j-1}^{n-1}\)</span> κ.λπ.</p>
-<p>Η αντικατάσταση ή καλύτερα η προσέγγιση μιας παραγώγου από μια “πεπερασμένη διαφορά” επιβάλλεται από τον ίδιο τον ορισμό της παραγώγου,</p>
+<p>Σε πολλά προβλήματα της Ρευστομηχανικής, όπου αναπτύσσεται μια πορεία αριθμητικής ολοκλήρωσης σε διαδοχικά χρονικά βήματα (marching problems), η μεταβολή της χωρικής μεταβλητής, π.χ. <span class="math notranslate nohighlight">\(x\)</span>-μεταβλητή, συμβολίζεται με τον δείκτη <span class="math notranslate nohighlight">\(i\)</span>, ενώ η μεταβολή της χρονικής μεταβλητής, <span class="math notranslate nohighlight">\(t\)</span>-μεταβλητή, συμβολίζεται με τον δείκτη <span class="math notranslate nohighlight">\(n\)</span>. Δηλαδή, <span class="math notranslate nohighlight">\(u_j^n\)</span>, <span class="math notranslate nohighlight">\(u_j^{n+1}\)</span>, <span class="math notranslate nohighlight">\(u_{j-1}^{n-1}\)</span> κ.λπ.</p>
+<p>Η αντικατάσταση ή καλύτερα η προσέγγιση μιας παραγώγου από μια ΠΔ επιβάλλεται από τον ίδιο τον ορισμό της παραγώγου,</p>
 <div class="math notranslate nohighlight">
 \[
     \frac{\partial u}{\partial x}|_{(x , y)} = lim_{\Delta x \to 0} \frac{u(x + \Delta x , y) - u(x , y)}{\Delta x} 
@@ -418,12 +418,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="eqno">(37)<a class="headerlink" href="#equation-k2-2c" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x}|_{(\xi , y)} = \frac{u(x + \Delta x , y) - u(x , y)}{\Delta x} 
 \]</div>
-<p>Η προσέγγιση αυτή μέσω των Π.Δ. μπορεί να εκφραστεί καλύτερα μέσω των αναπτυγμάτων των συναρτήσεων σε σειρά Taylor, όπως περιγράφεται παρακάτω,</p>
+<p>Η προσέγγιση αυτή μέσω των ΠΔ μπορεί να εκφραστεί καλύτερα μέσω των αναπτυγμάτων των συναρτήσεων σε σειρά Taylor, όπως περιγράφεται παρακάτω,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2d">
 <span class="eqno">(38)<a class="headerlink" href="#equation-k2-2d" title="Permalink to this equation">¶</a></span>\[
     u(x + \Delta x , y) = u(x , y) + \frac{\partial u}{\partial x}|_{(x , y)} \Delta x + \frac{\partial^2 u}{\partial x^2}|_{(x , y)} \frac{(\Delta x)^2}{2!} + ... + \frac{\partial^n u}{\partial x^n}|_{\xi} \frac{(\Delta x)^n}{n!},  
 \]</div>
-<p>όπου <span class="math notranslate nohighlight">\(x &lt; \xi &lt; x + \Delta x\)</span>. Ο τελευταίος όρος της εξίσωσης <a class="reference internal" href="#equation-k2-2d">(38)</a> είναι το υπόλοιπο της σειράς Taylor της <span class="math notranslate nohighlight">\(u(x + \Delta x , y) \)</span>. Οπότε η προσέγγιση της <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}|_{(x , y)}\)</span> στη γειτονιά του σημείου <span class="math notranslate nohighlight">\((x , y)\)</span> με μια προς τα εμπρός πεπερασμένη διαφορά (forward finite difference) δίνεται μέσω της παρακάτω σχέσης,</p>
+<p>όπου <span class="math notranslate nohighlight">\(x &lt; \xi &lt; x + \Delta x\)</span>. Ο τελευταίος όρος της εξίσωσης <a class="reference internal" href="#equation-k2-2d">(38)</a> είναι το υπόλοιπο της σειράς Taylor της <span class="math notranslate nohighlight">\(u(x + \Delta x , y) \)</span>. Οπότε η προσέγγιση της <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}|_{(x , y)}\)</span> στη γειτονιά του σημείου <span class="math notranslate nohighlight">\((x , y)\)</span> με μια προς τα εμπρός ΠΔ (forward finite difference) δίνεται μέσω της παρακάτω σχέσης,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2e">
 <span class="eqno">(39)<a class="headerlink" href="#equation-k2-2e" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x}|_{(x , y)} = \frac{u(x + \Delta x , y) - u(x , y)}{\Delta x} - \frac{\partial^2 u}{\partial x^2}|_{(x , y)} \frac{(\Delta x)}{2!} - ... 
@@ -433,7 +433,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="eqno">(40)<a class="headerlink" href="#equation-k2-2f" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x}|_{(i , j)} = \frac{u_{i + 1 , j} - u_{i , j}}{\Delta x} + \sigma. \alpha.   
 \]</div>
-<p>Όπου <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> ορίζουμε το σφάλμα αποκοπής του αριθμητικού σχήματος. Οπότε, ως σφάλμα αποκοπής (<span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span>) θεωρούμε το άθροισμα όλων εκείνων των όρων που παραλείπονται από την σχέση <a class="reference internal" href="#equation-k2-2e">(39)</a> για να γραφεί η σχέση <a class="reference internal" href="#equation-k2-2f">(40)</a>. Είναι ουσιαστικά η διαφορά μεταξύ των τιμών της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> στο σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> και της αντίστοιχης προσέγγισης της με την μέθοδο των Π.Δ.</p>
+<p>Όπου <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> ορίζουμε το σφάλμα αποκοπής του αριθμητικού σχήματος. Οπότε, ως  <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> θεωρούμε το άθροισμα όλων εκείνων των όρων που παραλείπονται από την σχέση <a class="reference internal" href="#equation-k2-2e">(39)</a> για να γραφεί η σχέση <a class="reference internal" href="#equation-k2-2f">(40)</a>. Είναι ουσιαστικά η διαφορά μεταξύ των τιμών της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> στο σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> και της αντίστοιχης προσέγγισης της με την ΜΠΔ.</p>
 <p>Είναι χρήσιμο και σκόπιμο να χαρακτηρίσουμε την οριακή συμπεριφορά του <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> χρησιμοπιόντας τον συμβολισμό του “μεγάλου όμικρον του Landau” (<span class="math notranslate nohighlight">\(O\)</span>), δηλαδή για την συγκεκριμένη περίπτωση να γράψουμε ότι,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2g">
 <span class="eqno">(41)<a class="headerlink" href="#equation-k2-2g" title="Permalink to this equation">¶</a></span>\[
@@ -444,12 +444,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="eqno">(42)<a class="headerlink" href="#equation-k2-2h" title="Permalink to this equation">¶</a></span>\[
   |\sigma. \alpha.| \le k |\Delta x| , \,\,\, \Delta x \to 0, \,\,\, k = \sigma \tau \alpha \theta.     
 \]</div>
-<p>Το σύμβολο <span class="math notranslate nohighlight">\(\approx\)</span> δεν αντιπροσψπεύει την έννοια της ισότητας αλλά την έννοια της προσέγγισης. Ο παραπάνω τρόπος προσέγγισης της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> δεν είναι ο μοναδικός. Μπορούσαμε εναλλακτικά να αντικαταστήσουμε την μερική παράγωγο με το ανάπτυγμα κατά Taylor της <span class="math notranslate nohighlight">\(u(x - \Delta x , y)\)</span>. Σε αυτή την περίπτωση,</p>
+<p>Το σύμβολο <span class="math notranslate nohighlight">\(\approx\)</span> δεν αντιπροσωπεύει την έννοια της ισότητας αλλά την έννοια της προσέγγισης. Ο παραπάνω τρόπος προσέγγισης της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> δεν είναι ο μοναδικός. Μπορούμε εναλλακτικά να αντικαταστήσουμε την μερική παράγωγο με το ανάπτυγμα κατά Taylor της <span class="math notranslate nohighlight">\(u(x - \Delta x , y)\)</span>. Σε αυτή την περίπτωση,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2i">
 <span class="eqno">(43)<a class="headerlink" href="#equation-k2-2i" title="Permalink to this equation">¶</a></span>\[
     u(x - \Delta x , y) = u(x , y) - \frac{\partial u}{\partial x}|_{(x , y)} \Delta x + \frac{\partial^2 u}{\partial x^2}|_{(x , y)} \frac{(\Delta x)^2}{2!} - \frac{\partial^3 u}{\partial x^3}|_{(x , y)} \frac{(\Delta x)^3}{3!} + ... ,  
 \]</div>
-<p>Οπότε, η αναπαράσταση της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> μέσω μιας προς τα πίσω πεπερασμένης διαφορά (backward finite difference) θα είναι η εξής,</p>
+<p>Οπότε, η αναπαράσταση της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> μέσω μιας προς τα πίσω ΠΔ (backward finite difference) θα είναι η εξής,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2j">
 <span class="eqno">(44)<a class="headerlink" href="#equation-k2-2j" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x}|_{(\xi , y)} = \frac{u(x , y) - u(x - \Delta x , y)}{\Delta x} + O(\Delta x) 
@@ -464,14 +464,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="eqno">(46)<a class="headerlink" href="#equation-k2-2l" title="Permalink to this equation">¶</a></span>\[
     u(x + \Delta x , y) - u(x - \Delta x , y) = 2 \frac{\partial u}{\partial x}|_{(x , y)} \Delta x +  \frac{\partial^3 u}{\partial x^3}|_{(x , y)} \frac{(\Delta x)^3}{3!} + ...
 \]</div>
-<p>απ’ όπου τελικά προκύπτει η αναπαράσταση της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> μέσω της “κεντρικής πεπερασμένης διαφοράς” (central finite difference), δηλαδή η έκφραση,</p>
+<p>απ’ όπου τελικά προκύπτει η αναπαράσταση της μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> μέσω της κεντρικής ΠΔ (central finite difference), δηλαδή η έκφραση,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2m">
 <span class="eqno">(47)<a class="headerlink" href="#equation-k2-2m" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x}|_{(i , j)} = \frac{u_{i + 1 , j} - u_{i - 1 , j}}{2 \Delta x} + O(\Delta x)^2 \approx \frac{u_{i + 1 , j} - u_{i - 1 , j}}{2 \Delta x}
 \]</div>
 <div class="tip admonition">
 <p class="admonition-title">Παρατήρηση</p>
-<p>Θα πρέπει να σημειώσουμε ότι παρ’ όλο που η προσέγγιση της εξίσωσης <a class="reference internal" href="#equation-k2-2m">(47)</a> έχει σφάλμα αποκοπής δεύτερης τάξης αυτό δεν σημαίνει αναγκαστικά ότι η εφαρμογή της θα οδηγήσει σε ακριβέστερες και πιο χρήσιμες αριθμητικές τεχνικές. Θα δούμε πιο κάτω ότι η αντικατάσταση της μερικής παραγώγου του χρόνου, δηλαδή <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial t}\)</span>, στην εξίσωση διάχυσης, <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} = D \frac{\partial^2 u}{\partial x^2}\)</span>, με κεντρικές πεπερασμένες διαφορές δίνει πάντοτε ένα ασταθές αριθμητικό σχήμα.</p>
+<p>Θα πρέπει να σημειώσουμε ότι παρ’ όλο που η προσέγγιση της εξίσωσης <a class="reference internal" href="#equation-k2-2m">(47)</a> έχει σφάλμα αποκοπής δεύτερης τάξης αυτό δεν σημαίνει αναγκαστικά ότι η εφαρμογή της θα οδηγήσει σε ακριβέστερες και πιο χρήσιμες αριθμητικές τεχνικές. Θα δούμε πιο κάτω ότι η αντικατάσταση της μερικής παραγώγου του χρόνου, δηλαδή <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial t}\)</span>, στην εξίσωση διάχυσης, <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} = D \frac{\partial^2 u}{\partial x^2}\)</span>, με κεντρικές ΠΔ δίνει πάντοτε ένα ασταθές αριθμητικό σχήμα.</p>
 </div>
 <p>Προσθέτοντας τώρα τις σχέσεις <a class="reference internal" href="#equation-k2-2i">(43)</a> και <a class="reference internal" href="#equation-k2-2d">(38)</a> παίρνουμε την εξής έκφραση για την δεύτερης τάξης παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2n">
@@ -500,9 +500,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 \]</div>
 <div class="tip admonition">
 <p class="admonition-title">Παρατήρηση</p>
-<p>Σε πολλά προβλήματα της Ρευτομηχανικής εμφανίζονται μικτές μερικές παράγωγοι στις Μ.Δ.Ε. που προκύπτουν, όπως για παράδειγμα <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span>, <span class="math notranslate nohighlight">\(\frac{\partial^3 u}{\partial x^2 \partial y}\)</span>, κ.λπ. Οι μικτές αυτές παράγωγοι εμφανίζονται ακόμα και σε απλές εξισώσεις όπως για παράδειγμα η εξίσωση του Laplace όταν εφαρμόσουμε κάποιο μετασχηματισμό συντεταγμένων που δεν είναι ορθογώνιες.</p>
+<p>Σε πολλά προβλήματα της Ρευτομηχανικής εμφανίζονται μικτές μερικές παράγωγοι στις ΜΔΕ που προκύπτουν, όπως για παράδειγμα <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span>, <span class="math notranslate nohighlight">\(\frac{\partial^3 u}{\partial x^2 \partial y}\)</span>, κ.λπ. Οι μικτές αυτές παράγωγοι εμφανίζονται ακόμα και σε απλές εξισώσεις όπως για παράδειγμα η εξίσωση του Laplace όταν εφαρμόσουμε κάποιο μετασχηματισμό συντεταγμένων που δεν είναι ορθογώνιες.</p>
 </div>
-<p>Για να προσεγγίσουμε τις μικτές μερικές παραγώγους μέσω των Π.Δ. αναπτύσσουμε την συνάρτηση μας σε σειρές Taylor για δύο ή περισσότερες ανεξάρτητες μεταβλητές. Η έκφραση που παίρνουμε είναι σαφώς πιο πολύπλοκη, όπως χαρακτηριστικά φαίνεται στην παρακάτω έκφραση,</p>
+<p>Για να προσεγγίσουμε τις μικτές μερικές παραγώγους μέσω των ΠΔ αναπτύσσουμε την συνάρτηση μας σε σειρές Taylor για δύο ή περισσότερες ανεξάρτητες μεταβλητές. Η έκφραση που παίρνουμε είναι σαφώς πιο πολύπλοκη, όπως χαρακτηριστικά φαίνεται στην παρακάτω έκφραση,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2s">
 <span class="eqno">(53)<a class="headerlink" href="#equation-k2-2s" title="Permalink to this equation">¶</a></span>\[\begin{split}
     \begin{gathered}
@@ -519,7 +519,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         \frac{\partial^2 u}{\partial x^2} (\Delta x)^2 + 2 \frac{\partial^2 u}{\partial x \partial y} \Delta x \Delta y + \frac{\partial^2 u}{\partial y^2} (\Delta y)^2 
     \end{gathered}   
 \end{split}\]</div>
-<p>Για τον υπολογισμό της μικτής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span>, που συνήθως συναντάμε στις ρευστομηχανικές εφαρμογές, μπορούμε να εφαρμόσουμε τη σχέση <a class="reference internal" href="#equation-k2-2t">(54)</a> και να καταλήξουμε στην παρακάτω έκφραση κεντρικών διαφορών,</p>
+<p>Για τον υπολογισμό της μικτής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span>, που συνήθως συναντάμε στις εφαρμογές της Ρευστομηχανικής, μπορούμε να εφαρμόσουμε τη σχέση <a class="reference internal" href="#equation-k2-2t">(54)</a> και να καταλήξουμε στην παρακάτω έκφραση κεντρικών διαφορών,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2u">
 <span class="eqno">(55)<a class="headerlink" href="#equation-k2-2u" title="Permalink to this equation">¶</a></span>\[
      \frac{\partial^2 u}{\partial x \partial y} |_{(i , j)} = \frac{u_{i + 1 , j + 1} - u_{i + 1 , j - 1} - u_{i - 1 , j + 1} + u_{i - 1 , j - 1}}{4 (\Delta y)^2} + O(\Delta x)^2 + O(\Delta y)^2
@@ -532,16 +532,16 @@ commentsRunWhenDOMLoaded(addUtterances);
             \frac{1}{2 (\Delta x)} \left[\frac{u_{i + 1 , j + 1} - u_{i + 1 , j - 1}}{2 (\Delta y)} - \frac{u_{i - 1 , j + 1} - u_{i - 1 , j - 1}}{2 (\Delta y)} \right] + O(\Delta x)^2 + O(\Delta y)^2
     \end{gathered}   
  \end{split}\]</div>
-<p>Εφαρμόζοντας δηλαδή τον ορισμό των κεντρικών πεπερασμένων διαφορών για την <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x} |_ {(i , j)}\)</span> μιας συνάρτησης που είναι η <span class="math notranslate nohighlight">\((\frac{\partial u}{\partial y})\)</span> και εφαρμόζοντας πάλι τον ίδιο ορισμό για τα κομβικά σημεία <span class="math notranslate nohighlight">\((i + 1 , j)\)</span> και <span class="math notranslate nohighlight">\((i - 1 , j)\)</span>, αντίστοιχα.</p>
+<p>Εφαρμόζοντας δηλαδή τον ορισμό των κεντρικών ΠΔ για την <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x} |_ {(i , j)}\)</span> μιας συνάρτησης που είναι η <span class="math notranslate nohighlight">\((\frac{\partial u}{\partial y})\)</span> και εφαρμόζοντας πάλι τον ίδιο ορισμό για τα κομβικά σημεία <span class="math notranslate nohighlight">\((i + 1 , j)\)</span> και <span class="math notranslate nohighlight">\((i - 1 , j)\)</span>, αντίστοιχα.</p>
 <div class="tip admonition">
 <p class="admonition-title">Παρατήρηση</p>
-<p>Οι τρείς προσεγγίσεις που αναπτύχθηκαν σε αυτή την ενότητα για τις μερικές παραγώγους, εμπρόσθιες, κεντρικές και οπίσθιες πεπερασμένες διαφορές, οδηγούν σε τρια αντίστοιχα αριθμητικά σχήματα που εφαρμόζονται για την αριθμητική επίλυση Μ.Δ.Ε. ή και συστημάτων αυτών. Το καθε ένα αριθμητικό σχήμα έχει τις δικές του ιδιαιτερότητες στη λύση διαφόρων φυσικών προβλημάτων.</p>
+<p>Οι τρείς προσεγγίσεις που αναπτύχθηκαν σε αυτή την ενότητα για τις μερικές παραγώγους, εμπρόσθιες, κεντρικές και οπίσθιες ΠΔ, οδηγούν σε τρια αντίστοιχα αριθμητικά σχήματα που εφαρμόζονται για την αριθμητική επίλυση ΜΔΕ ή και συστημάτων αυτών. Το καθε ένα αριθμητικό σχήμα έχει τις δικές του ιδιαιτερότητες στη λύση διαφόρων φυσικών προβλημάτων.</p>
 </div>
 </div>
 <div class="section" id="id8">
-<h3>Άλλα αριθμητικά σχήματα Π.Δ.<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<p>Είναι πολλές φορές αναγκαίο να προσεγγίσουμε παραγώγους σ’ ένα σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> μέσω της μεθόδου των Π.Δ. χρησιμοποιώντας σημεία του πλέγματος που βρίσκονται προς τη μια πλευρά του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span> και όχι εκατέρωθεν αυτού. Αυτό πολλές φορές γίνεται αναγκαίο όταν το σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> βρίσκεται κοντά στο σύνορο του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
-<p>Έστω ότι θέλουμε να προσεγγίσουμε την μερική παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_ {(i , j)}\)</span> με την βοήθεια μιας μεθόδου Π.Δ. που χρησιμοποιεί σημεία που βρίσκονται μόνο προς τα αριστερα του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span> και επί της ίδιας ευθείας, όπως για παράδειγμμα τα κομβικά σημεία <span class="math notranslate nohighlight">\((i-1, j)\)</span>, <span class="math notranslate nohighlight">\((i-2, j)\)</span> κ.λπ. Έστω ότι θα θέλαμε επίσης η ακρίβεια της αναπαράστασης αυτής να είναι δεύτερης τάξης και γι’ αυτό θα χρησιμοποιήσουμε όσα κομβικά σημεία του πλέγματος είναι απαραίτητο. Συνεπώς, είναι απαραίτητο να αναπτύξουμε σε σειρά Taylor τις συναρτήσεις <span class="math notranslate nohighlight">\(u_{i-1, j}\)</span>, <span class="math notranslate nohighlight">\(u_{i-2, j}\)</span> κ.λπ. γύρω από το σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> και να λύσουμε ως προς την <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_ {(i , j)}\)</span> από τις εκφράσεις αυτές, κατά τέτοιο τρόπο ώστε το σφάλμα αποκοπής να είναι <span class="math notranslate nohighlight">\(O(\Delta x)^2\)</span>. Έτσι λοιπόν έχουμε ότι,</p>
+<h3>Άλλα αριθμητικά σχήματα ΠΔ<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Είναι πολλές φορές αναγκαίο να προσεγγίσουμε παραγώγους σ’ ένα σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> μέσω της μεθόδου των ΠΔ χρησιμοποιώντας σημεία του πλέγματος που βρίσκονται προς τη μια πλευρά του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span> και όχι εκατέρωθεν αυτού. Αυτό πολλές φορές γίνεται αναγκαίο όταν το σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> βρίσκεται κοντά στο σύνορο του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+<p>Έστω ότι θέλουμε να προσεγγίσουμε την μερική παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_ {(i , j)}\)</span> με την βοήθεια μιας ΜΠΔ που χρησιμοποιεί σημεία που βρίσκονται μόνο προς τα αριστερα του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span> και επί της ίδιας ευθείας, όπως για παράδειγμμα τα κομβικά σημεία <span class="math notranslate nohighlight">\((i-1, j)\)</span>, <span class="math notranslate nohighlight">\((i-2, j)\)</span> κ.λπ. Έστω ότι θα θέλαμε επίσης η ακρίβεια της αναπαράστασης αυτής να είναι δεύτερης τάξης και γι’ αυτό πρέπει να χρησιμοποιήσουμε όσα κομβικά σημεία του πλέγματος είναι απαραίτητο. Συνεπώς, είναι απαραίτητο να αναπτύξουμε σε σειρά Taylor τις συναρτήσεις <span class="math notranslate nohighlight">\(u_{i-1, j}\)</span>, <span class="math notranslate nohighlight">\(u_{i-2, j}\)</span> κ.λπ. γύρω από το σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> και να λύσουμε ως προς την <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_ {(i , j)}\)</span> από τις εκφράσεις αυτές, κατά τέτοιο τρόπο ώστε το σφάλμα αποκοπής να είναι <span class="math notranslate nohighlight">\(O(\Delta x)^2\)</span>. Έτσι λοιπόν έχουμε ότι,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2w1">
 <span class="eqno">(57)<a class="headerlink" href="#equation-k2-2w1" title="Permalink to this equation">¶</a></span>\[
     u_{i-1, j} = u_{i, j} + \frac{\partial u}{\partial x} |_{(i , j)} (- \Delta x) + \frac{\partial^2 u}{\partial x^2} |_{(i , j)} \frac{(- \Delta x)^2}{2 !} + \frac{\partial^3 u}{\partial x^3} |_{(i , j)} \frac{(- \Delta x)^3}{3 !} + ... 
@@ -555,7 +555,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="eqno">(59)<a class="headerlink" href="#equation-k2-2x" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x} |_{(i , j)} = \frac{1}{2 \Delta x} (u_{i , j} - u_{i-2 , j}) + \frac{\partial^2 u}{\partial x^2} |_{(i , j)} \Delta x + O(\Delta x)^2  
 \]</div>
-<p>Η ανωτέρω έκφραση αποτελεί προσέγγιση με <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> της τάξης του <span class="math notranslate nohighlight">\(\Delta x\)</span> λόγω της εμφάνισης του όρου <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2} |_{(i , j)} \Delta x\)</span>. Για να βελτιώσουμε λοιπόν την ακρίβεια επιλύουμε την σχέση~\eqref{k2_2w1} ως προς τον όρο αυτό παίρνοντας,</p>
+<p>Η ανωτέρω έκφραση αποτελεί προσέγγιση με <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> της τάξης του <span class="math notranslate nohighlight">\(\Delta x\)</span> λόγω της εμφάνισης του όρου <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2} |_{(i , j)} \Delta x\)</span>. Για να βελτιώσουμε λοιπόν την ακρίβεια επιλύουμε την σχέση <a class="reference internal" href="#equation-k2-2w1">(57)</a> ως προς τον όρο αυτό παίρνοντας,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2x2">
 <span class="eqno">(60)<a class="headerlink" href="#equation-k2-2x2" title="Permalink to this equation">¶</a></span>\[
     (\Delta x) \frac{\partial^2 u}{\partial x^2} |_{(i , j)} = \frac{2}{\Delta x} (u_{i-1 , j} - u_{i , j}) + 2 \frac{\partial u}{\partial x} |_{(i , j)} + O(\Delta x)^2
@@ -567,16 +567,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 \]</div>
 <p>Η ανωτέρω αναπαράσταση της <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_{(i , j)}\)</span> είναι τάξης <span class="math notranslate nohighlight">\((\Delta x)^2\)</span> και περιέχει τα σημεία <span class="math notranslate nohighlight">\((i-1, j)\)</span>, <span class="math notranslate nohighlight">\((i-2, j)\)</span>, τα οποία βρίσκονται και τα δύο αριστερά του θεωρούμενου σημείου <span class="math notranslate nohighlight">\((i , j)\)</span>.</p>
 <p>Υπάρχει και ένας άλλος τρόπος, πιο σύντομος και αποτελεσματικός, που μπορεί να μας οδηγήσει στο ίδιο αποτέλεσμα. Αν πολλαπλασιάσουμε την σχέση <a class="reference internal" href="#equation-k2-2w2">(58)</a> με <span class="math notranslate nohighlight">\(\alpha\)</span> και την σχέση <a class="reference internal" href="#equation-k2-2w1">(57)</a> με <span class="math notranslate nohighlight">\(\beta\)</span> και προσθέσουμε τις σχέσεις που προκύπτουν κατά μέλη τότε ο συντελεστής της μερικής παραγώγου, <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_{(i , j)}\)</span> είναι <span class="math notranslate nohighlight">\(- 2 \alpha - \beta\)</span>, ενώ της δεύτερης μερικής παραγώγου <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2} |_{(i , j)}\)</span>, είναι <span class="math notranslate nohighlight">\(\frac{2 \alpha + \beta}{2}\)</span>. Αν απαιτήσουμε τώρα να έχουμε <span class="math notranslate nohighlight">\(- 2 \alpha - \beta = 1\)</span> και <span class="math notranslate nohighlight">\(\frac{2 \alpha + \beta}{2} = 0\)</span>, η λύσης του συστήματος μας δίνει, <span class="math notranslate nohighlight">\(\alpha = 1/2\)</span> και <span class="math notranslate nohighlight">\(\beta = - 2\)</span>.</p>
-<p>Έτσι πολλαπλασιάζοντας την σχέση <a class="reference internal" href="#equation-k2-2w1">(57)</a> με <span class="math notranslate nohighlight">\(-2\)</span> και την σχέση <a class="reference internal" href="#equation-k2-2w2">(58)</a> με <span class="math notranslate nohighlight">\(1/2\)</span>, προσθέτοντας κατά μέλη και λύνοντας ως προς <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_{(i , j)}\)</span> παίρνουμε την σχέση <a class="reference internal" href="#equation-k2-2x3">(61)</a>.</p>
+<p>Έτσι πολλαπλασιάζοντας την σχέση <a class="reference internal" href="#equation-k2-2w1">(57)</a> με <span class="math notranslate nohighlight">\(-2\)</span> και την σχέση <a class="reference internal" href="#equation-k2-2w2">(58)</a> με <span class="math notranslate nohighlight">\(1/2\)</span>, προσθέτοντας κατά μέλη και λύνοντας ως προς <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_{(i , j)}\)</span>, παίρνουμε την σχέση <a class="reference internal" href="#equation-k2-2x3">(61)</a>.</p>
 <p>Εργαζόμενοι με τον ίδιο τρόπο μπορούμε να βρούμε αντίστοιχη έκφραση για την πρώτης τάξης παράγωγο, <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_{(i , j)}\)</span>, η οποία να περιέχει σημεία που βρίσκονται μόνο προς τα δεξιά του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span>. Μια τέτοια έκφραση είναι η παρακάτω,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2x4">
 <span class="eqno">(62)<a class="headerlink" href="#equation-k2-2x4" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x} |_{(i , j)} = \frac{1}{2 \Delta x} (- 3 u_{i , j} + 4 u_{i+1 , j} - u_{i+2 , j}) + O(\Delta x)^2  
 \]</div>
-<p>Χρησιμοποιώντας σαν βασικό εργαλείο το ανάπτυγμα σε σειρά Taylor μιας συνάρτησης, μπορούμε να πάρουμε προσεγγίσεις των παραγώγων μιας συνάρτησης, οποιασδήποτε τάξης, με Π.Δ. και οι οποίες θα περιέχουν κομβικά σημεία προς την μια πλευρά μόνο του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span>. Έτσι, μπορεί να δειχθεί ότι η <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2} |_{(i , j)}\)</span> μπορεί να προσεγγισθεί μέσω των εκφράσεων,</p>
+<p>Χρησιμοποιώντας σαν βασικό εργαλείο το ανάπτυγμα σε σειρά Taylor μιας συνάρτησης, μπορούμε να πάρουμε προσεγγίσεις των παραγώγων μιας συνάρτησης, οποιασδήποτε τάξης, με ΠΔ και οι οποίες θα περιέχουν κομβικά σημεία προς την μια πλευρά μόνο του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span>. Έτσι, μπορεί να δειχθεί ότι η <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2} |_{(i , j)}\)</span> μπορεί να προσεγγισθεί μέσω των εκφράσεων,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2x5">
 <span class="eqno">(63)<a class="headerlink" href="#equation-k2-2x5" title="Permalink to this equation">¶</a></span>\[
-    frac{\partial^2 u}{\partial x^2} |_{(i , j)} = \frac{1}{(\Delta x)^2} (u_{i , j} - 2 u_{i-1 , j} + u_{i-2 , j}) + O(\Delta x) ,   
+    \frac{\partial^2 u}{\partial x^2} |_{(i , j)} = \frac{1}{(\Delta x)^2} (u_{i , j} - 2 u_{i-1 , j} + u_{i-2 , j}) + O(\Delta x) ,   
 \]</div>
 <div class="math notranslate nohighlight" id="equation-k2-2x6">
 <span class="eqno">(64)<a class="headerlink" href="#equation-k2-2x6" title="Permalink to this equation">¶</a></span>\[
@@ -592,19 +592,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="id9">
 <h2>Σφάλμα αποκοπής και η έννοια της συμβατότητας αριθμητικού σχήματος<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
-<p>Βασική ιδέα της Μ.Π.Δ. είναι η αντικατάσταση της Μ.Δ.Ε. και των συνθηκών που την συνοδεύουν για να περιγράψουν το υπό μελέτη πρόβλημα, μ’ ένα αλγερικό σύστημα εξισώσεων το οποίο θα επιλυθεί αριθμητικά δίνοντας μας τις τιμές της άγνωστης συνάρτησης στα κομβικά σημεία του υπολογιστικού πλέγματος <span class="math notranslate nohighlight">\((i, j)\)</span>. Έστω λοιπόν μια Μ.Δ.Ε. της οποίας οι όροι, δηλαδοί οι μερικές παράγωγοι, αναπαρίστονται από ένα αριθμητικό σχήμα πεπρεσμένων διαφορών με σφάλμα αποκοπής να το συμβολίζουμε ως <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span></p>
+<p>Βασική ιδέα της ΜΠΔ είναι η αντικατάσταση της ΜΔΕ και των συνθηκών που την συνοδεύουν για να περιγράψουν το υπό μελέτη πρόβλημα, μ’ ένα αλγεβρικό σύστημα εξισώσεων το οποίο θα επιλυθεί αριθμητικά δίνοντας μας τις τιμές της άγνωστης συνάρτησης στα κομβικά σημεία του υπολογιστικού πλέγματος <span class="math notranslate nohighlight">\((i, j)\)</span>. Έστω λοιπόν μια ΜΔΕ της οποίας οι όροι, δηλαδή οι μερικές παράγωγοι, αναπαριστώνται από ένα αριθμητικό σχήμα ΠΔ με σφάλμα αποκοπής, <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span></p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 5 </span></p>
 <div class="definition-content section" id="proof-content">
-<p>Το σφάλμα αποκοπής, <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span>, ενός αριθμητικού σχήματος είναι η διαφορά μεταξύ της μερικής παραγώγου ή ολοκλήρωσης της Μ.Δ.Ε. και της αναπαράστασης της μέσω της Μ.Π.Δ. Η αναπαράσταση αυτή των πεπερασμένων διαφορών θα λέμε ότι είναι “συμβατή” ή “συνεπής”, consistent, προς την αντίστοιχη Μ.Δ.Ε. ή την μερική παράγωγο, εάν η διαφορά μεταξύ της αναπαριστάμενης ποσότητας και της αντίστοιχης πεπερασμένης διαφοράς, δηλαδή το σφάλμα αποκοπής, τείνει στο μηδέν καθώς το βήμα του πλέγματος συνεχώς εκλεπτύνεται, δηλ. <span class="math notranslate nohighlight">\(h, k \to 0\)</span>.</p>
+<p>Το σφάλμα αποκοπής, <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span>, ενός αριθμητικού σχήματος είναι η διαφορά μεταξύ της μερικής παραγώγου ή ολοκλήρωσης της ΜΔΕ και της αναπαράστασης της μέσω της ΜΠΔ. Η αναπαράσταση αυτή των ΠΔ θα λέμε ότι είναι “συμβατή” ή “συνεπής”, consistent, προς την αντίστοιχη ΜΔΕ ή την μερική παράγωγο, εάν η διαφορά μεταξύ της αναπαριστώμενης ποσότητας και της αντίστοιχης ΠΔ, δηλαδή το σφάλμα αποκοπής, τείνει στο μηδέν καθώς το βήμα του πλέγματος συνεχώς εκλεπτύνεται, δηλ. <span class="math notranslate nohighlight">\(h, k \to 0\)</span>.</p>
 </div>
-</div><p>Αυτό σημαίνει ότι η λύση του αλγεβρικού συστήματος θα τείνει προς την αναλυτική λύση της Μ.Δ.Ε. σε κάθε κομβικό σημείο του πλέγματος <span class="math notranslate nohighlight">\((i,j)\)</span> καθώς το πλέγμα συνεχώς εκλεπτύνεται. Μπορούμε λοιπόν να πούμε ότι μια αριθμητική αναπαράσταση ή ένα σχήμα Π.Δ. είναι συμβατό όταν,</p>
+</div><p>Αυτό σημαίνει ότι η λύση του αλγεβρικού συστήματος θα τείνει προς την αναλυτική λύση της ΜΔΕ σε κάθε κομβικό σημείο του πλέγματος <span class="math notranslate nohighlight">\((i,j)\)</span> καθώς το πλέγμα συνεχώς εκλεπτύνεται. Μπορούμε λοιπόν να πούμε ότι μια αριθμητική αναπαράσταση ή ένα σχήμα ΠΔ είναι συμβατό όταν,</p>
 <div class="math notranslate nohighlight" id="equation-k2-3">
 <span class="eqno">(66)<a class="headerlink" href="#equation-k2-3" title="Permalink to this equation">¶</a></span>\[
     lim_{h,k \to 0} (\sigma. \alpha.) = 0
 \]</div>
-<p>Σε όλα τα αριθμητικά σχήματα που ανατύχθηκαν στις προηγούμενες ενότητες αυτόυ του κεφαλαίου, το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> προσδιορίζεται από κάποιον όρο που περιείχε τον παράγοντα <span class="math notranslate nohighlight">\(h = \Delta x\)</span> ή <span class="math notranslate nohighlight">\(k = \Delta y\)</span> ή δυνάμεις αυτών. Οι όροι αυτοί τείνουν στο μηδέν τα <span class="math notranslate nohighlight">\(h, k \to 0\)</span>. Υπάρχουν όμως και αριθμητικά σχήματα Π.Δ., τα οποία συναντάμε πολλές φορές σε διάφορες εφαρμογές με εμπρόσθιες χρονικές διαφορές και κεντρικές χωρικές, όπου το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> είναι <span class="math notranslate nohighlight">\(O(\Delta t / \Delta x)\)</span>. Σε αυτή την περίπτωση το σχήμα θα είναι συμβατό όταν ο λόγος <span class="math notranslate nohighlight">\((\Delta t / \Delta x) \to 0\)</span> καθώς τα <span class="math notranslate nohighlight">\(\Delta t, \Delta x \to 0\)</span>.</p>
-<p>Για την μελέτη του <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> και της συμβατότητας ενός αριθμητικού σχήματος ένα πολύ σημαντικό εργαλείο είναι οι σειρές Taylor της άγνωστης συνάρτησης <span class="math notranslate nohighlight">\(u\)</span>. Για να το δείξουμε θα χησιμοποιήσουμε το αριθμητικό σχήμα της εξίσωσης <a class="reference internal" href="#equation-k2-4">(67)</a>, για το οποίο θα υποθέσουμε ότι δεν γνωρίζουμε την τάξη του <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> Γράφουμε λοιπόν το εξής,</p>
+<p>Σε όλα τα αριθμητικά σχήματα που ανατύχθηκαν στις προηγούμενες ενότητες αυτού του κεφαλαίου, το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> προσδιορίζεται από κάποιον όρο που περιείχε τον παράγοντα <span class="math notranslate nohighlight">\(h = \Delta x\)</span> ή <span class="math notranslate nohighlight">\(k = \Delta y\)</span> ή δυνάμεις αυτών. Οι όροι αυτοί τείνουν στο μηδέν όταν <span class="math notranslate nohighlight">\(h, k \to 0\)</span>. Υπάρχουν όμως και αριθμητικά σχήματα ΠΔ, τα οποία συναντάμε πολλές φορές σε διάφορες εφαρμογές με εμπρόσθιες χρονικές  και κεντρικές χωρικές διαφορές, όπου το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> είναι <span class="math notranslate nohighlight">\(O(\Delta t / \Delta x)\)</span>. Σε αυτή την περίπτωση το σχήμα θα είναι συμβατό όταν ο λόγος <span class="math notranslate nohighlight">\((\Delta t / \Delta x) \to 0\)</span> καθώς τα <span class="math notranslate nohighlight">\(\Delta t, \Delta x \to 0\)</span>.</p>
+<p>Για την μελέτη του <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> και της συμβατότητας ενός αριθμητικού σχήματος ένα πολύ σημαντικό εργαλείο είναι οι σειρές Taylor της άγνωστης συνάρτησης <span class="math notranslate nohighlight">\(u\)</span>. Για να το δείξουμε θα χρησιμοποιήσουμε το αριθμητικό σχήμα της εξίσωσης <a class="reference internal" href="#equation-k2-4">(67)</a>, για το οποίο θα υποθέσουμε ότι δεν γνωρίζουμε την τάξη του <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> Γράφουμε λοιπόν το εξής,</p>
 <div class="math notranslate nohighlight" id="equation-k2-4">
 <span class="eqno">(67)<a class="headerlink" href="#equation-k2-4" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial x}|_{i , j} = - \frac{1}{2 \Delta x} (u_{i+2 , j} - 4 u_{i+1 , j} + 3 u_{i , j}) + \sigma. \alpha.
@@ -633,17 +633,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     \sigma. \alpha. = \frac{\partial u}{\partial x}|_{i , j} - u_x + \frac{1}{3} u_{xxx} \Delta x^2 + ... = \frac{1}{3} u_{xxx} \Delta x^2 + ...
 \]</div>
 <p>Από αυτό έπεται ότι το εν λόγω αριθμητικό σχήμα είναι συμβατό αφού το <span class="math notranslate nohighlight">\(\sigma. \alpha. \to 0\)</span> καθώς το <span class="math notranslate nohighlight">\(\Delta x \to 0\)</span>. \</p>
-<p>Αυτά που αναπτύξαμε για το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> και τη συμβατότητα ενός αριθμητικού σχήματος για την μερική παράγωγο μπορούν να επεκταθούν και σε μια Μ.Δ.Ε. Έστω η γενική μορφή μιας 2ης τάξης Μ.Δ.Ε.,</p>
+<p>Αυτά που αναπτύξαμε για το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> και τη συμβατότητα ενός αριθμητικού σχήματος για την μερική παράγωγο μπορούν να επεκταθούν και σε μια ΜΔΕ. Έστω η γενική μορφή μιας 2ης τάξης ΜΔΕ,</p>
 <div class="math notranslate nohighlight" id="equation-k2-9">
 <span class="eqno">(72)<a class="headerlink" href="#equation-k2-9" title="Permalink to this equation">¶</a></span>\[
     a u_{xx} + b u_{xy} + c u_{yy} + d u_x + e u_y + f u = g(x,y)
 \]</div>
-<p>Οι όροι της εξίσωσης <a class="reference internal" href="#equation-k2-9">(72)</a> που δεν περιέχουν παραγώγους της άφνωστης συνάρτησης <span class="math notranslate nohighlight">\(u\)</span> καλούνται πηγές, source terms. Το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> για μια Μ.Δ.Ε. είναι το άθροισμα των <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> καθενός όρου της που εισάγει σφάλμα αποκοπής. Για να περιγράψουμε ακριβώς τη διαδικασία θα θεωρήσουμε μια απλή Μ.Δ.Ε. όπως είναι η εξίσωση διάχυσης σε μια διάσταση,</p>
+<p>Οι όροι της εξίσωσης <a class="reference internal" href="#equation-k2-9">(72)</a> που δεν περιέχουν παραγώγους της άγνωστης συνάρτησης <span class="math notranslate nohighlight">\(u\)</span> καλούνται πηγές, source terms. Το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> για μια ΜΔΕ είναι το άθροισμα των <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> καθενός όρου της που εισάγει σφάλμα αποκοπής. Για να περιγράψουμε ακριβώς τη διαδικασία, θα θεωρήσουμε μια απλή ΜΔΕ όπως είναι η εξίσωση διάχυσης σε μια διάσταση,</p>
 <div class="math notranslate nohighlight" id="equation-k2-10">
 <span class="eqno">(73)<a class="headerlink" href="#equation-k2-10" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}
 \]</div>
-<p>Εφαρμόζοντας εμπρόσθιες περερασμένες διαφορές για τις χρονικές παραγώγους και κεντρικές για τις χωρικές, Forward Time Central Space, FTCS, η εξίσωση <a class="reference internal" href="#equation-k2-10">(73)</a> προσεγγίζεται από την εξίσωση διαφορών ή την παρακάτω αλγεβρική εξίσωση για το εκάστοτε κομβικό σημέιο,</p>
+<p>Εφαρμόζοντας εμπρόσθιες ΠΔ για τις χρονικές παραγώγους και κεντρικές για τις χωρικές, Forward Time Central Space, FTCS, η εξίσωση <a class="reference internal" href="#equation-k2-10">(73)</a> προσεγγίζεται από την εξίσωση διαφορών ή την παρακάτω αλγεβρική εξίσωση για το εκάστοτε κομβικό σημέιο,</p>
 <div class="math notranslate nohighlight" id="equation-k2-11">
 <span class="eqno">(74)<a class="headerlink" href="#equation-k2-11" title="Permalink to this equation">¶</a></span>\[
     \frac{1}{\Delta t} (u_j ^{n+1} - u_j ^n) = \frac{k}{\Delta x^2} (u_{j+1} ^n - 2 u_j ^n + u_{j-1} ^n)
@@ -659,7 +659,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     \sigma. \alpha. = - \frac{1}{2} \Delta t \frac{\partial^2 u}{\partial t^2}|_{n , j} + k \frac{1}{12} \Delta x^2 \frac{\partial^n u}{\partial x^n}|_{n , j} + ... 
 \]</div>
 <p>Από την παραπάνω εξίσωση <a class="reference internal" href="#equation-k2-13">(76)</a> συμπεραίνουμε ότι το <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> είναι <span class="math notranslate nohighlight">\(O(\Delta t) + O(\Delta x^2)\)</span> και το εν λόγω αριθμητικό σχήμα είναι συμβατό με την εξίσωση διάχυσης <a class="reference internal" href="#equation-k2-10">(73)</a>.</p>
-<p>Πρακτικά, επιλύουμε την αλγεβρική εξίσωση <a class="reference internal" href="#equation-k2-11">(74)</a> την οποία εφαρμόζουμε σε κάθε εσωτερικό σημείο <span class="math notranslate nohighlight">\((n , j)\)</span> του χωρίο ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span> στο οποίο ορίζεται η συνάρτηση <span class="math notranslate nohighlight">\(u\)</span>, εφ’ όσον έχουν δοθεί οι κατάλληλες αρχικές (<span class="math notranslate nohighlight">\(n = 1\)</span>) και συνοριακές (<span class="math notranslate nohighlight">\(j = 1 , j = J\)</span>) συνθήκες που συνοδεύουν την Μ.Δ.Ε. <a class="reference internal" href="#equation-k2-10">(73)</a>.</p>
+<p>Πρακτικά, επιλύουμε την αλγεβρική εξίσωση <a class="reference internal" href="#equation-k2-11">(74)</a> την οποία εφαρμόζουμε σε κάθε εσωτερικό σημείο <span class="math notranslate nohighlight">\((n , j)\)</span> του χωρίου ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span> στο οποίο ορίζεται η συνάρτηση <span class="math notranslate nohighlight">\(u\)</span>, εφόσον έχουν δοθεί οι κατάλληλες αρχικές (<span class="math notranslate nohighlight">\(n = 1\)</span>) και συνοριακές (<span class="math notranslate nohighlight">\(j = 1 , j = J\)</span>) συνθήκες που συνοδεύουν την ΜΔΕ <a class="reference internal" href="#equation-k2-10">(73)</a>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Παρατήρηση</p>
 <p>Παρατηρούμε ότι το FTCS αριθμητικό σχήμα για την εξίσωση <a class="reference internal" href="#equation-k2-10">(73)</a> δίνει το “εκπεφρασμένο”, explicit numerical scheme, αριθμητικό σχήμα <a class="reference internal" href="#equation-k2-11">(74)</a> το οποίο γράφεται και ως εξής,</p>
@@ -669,17 +669,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 \]</div>
 <p>όπου <span class="math notranslate nohighlight">\(\lambda = k \frac{\Delta t}{(\Delta x)^2}\)</span>, το οποίο ονομάζεται εκπεφρασμένο γιατί ο όρος <span class="math notranslate nohighlight">\(u_j^{n+1}\)</span>, δίνεται εκπεφρασμένα μέσω των γνωστών, από την προηγούμενη εκτίμηση, όρων του δεύτερου μέλους της εξίσωσης <a class="reference internal" href="#equation-k2-14">(77)</a>.</p>
 </div>
-<p>Τέτοια προβλήματα που αναπτύσσουν βήμα προς βήμα μια υπολογιστική διαδικασία μέσα στον χρόνο καλούνται “marching problems” (προβλήματα βηματισμού). Στις επόμενες ενότητες θα παρουσιάσουμε αριθμητικά σχήματα που οδηγούν σε ένα συζευγμένο (implicit) αλγεβρικό σύστημα το οποίο θα απαιτεί την ταυτόχρονη επίλυση όλων τως εξισώσεων που προκύπτουν από την εφαρμογή του αριθμητικού σχήματος σε όλα τα κομβικά σημεία του πλέγματος του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> στο οποίο ορίζεται η λύση <span class="math notranslate nohighlight">\(u\)</span> του προβλήματος υπό μελέτη. Συμφέρει πολλές φορές να εφαρμόσουμε μια επαναληπτική διαδικασία επίλυσης του συζευγμένου συστήματος η οποία θα οδηγήσει πιο γρήγορα στη λύση απ΄ότι μια άμεση μέθοδος.</p>
+<p>Τέτοια προβλήματα που αναπτύσσουν βήμα προς βήμα μια υπολογιστική διαδικασία μέσα στον χρόνο καλούνται “marching problems” (προβλήματα βηματισμού). Στις επόμενες ενότητες θα παρουσιάσουμε αριθμητικά σχήματα που οδηγούν σε ένα συζευγμένο (implicit) αλγεβρικό σύστημα το οποίο θα απαιτεί την ταυτόχρονη επίλυση όλων τως εξισώσεων που προκύπτουν από την εφαρμογή του αριθμητικού σχήματος σε όλα τα κομβικά σημεία του πλέγματος του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> στο οποίο ορίζεται η λύση <span class="math notranslate nohighlight">\(u\)</span> του προβλήματος υπό μελέτη. Συμφέρει πολλές φορές να εφαρμόσουμε μια επαναληπτική διαδικασία επίλυσης του συζευγμένου συστήματος η οποία θα οδηγήσει πιο γρήγορα στη λύση από ότι μια άμεση μέθοδος.</p>
 </div>
 <div class="section" id="id10">
 <h2>Ευστάθεια και σύγκλιση<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
-<p>Κάθε σχήμα πεπερασμένων διαφορών πρέπει κατ’ αρχάς να είναι συνεπές ή συμβατό, consistent.  Αν ικανοποιείται η προϋπόθεση της συνέπειας του αριθμητικού σχήματος τότε θα πρέπει όλη η διαδικασία επίλυσης ενός προβλήματος να αποτρέπει την ανάπτυξη σφαλμάτων στρογγύλευσης (roundoff errors). Η μέθοδος των Π.Δ. ανάγει την επίλυση μιας Μ.Δ.Ε. ή ενός συστήματος Μ.Δ.Ε. στην επίλυση ενός αλγεβρικού συστήματος. Η μη ακριβής επίλυση των αριθμητικών προσεγγίσεων που προκύπτουν από την διακριτοποίηση της Μ.Δ.Ε. εκδηλώνεται ως ένα πρόσθετο σφάλμα που ονομάζεται σφάλμα στρογγύλευσης. Το σφάλμα στρογγύλευσης είναι γενικά μικρό, όμως σε διάφορες διαδικασίες επίλυσης, κυρίως επαναληπτικές, είναι δυνατόν να αυξάνει πάρα πολύ. Αν συμβαίνει αυτό τότε δημιουργεί το λεγόμενο σφάλμα συσσώρευσης, που μπορεί να οδηγήσει στη λεγόμενη αριθμητική αστάθεια της λύσης (induced instability) <span id="id11">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
-<p>Όπως τα σφάλματα αποκοπής εξαρτώνται από τα βήματα της διαμέρισης <span class="math notranslate nohighlight">\(h\)</span> και <span class="math notranslate nohighlight">\(k\)</span> του πλέγματος και την σχέση που έχουν μεταξύ τους, έτσι και τα σφάλματα συσσώρευσης επηρεάζονται από τα μεγέθη των βημάτων αυτών κατ’ αντίθετη όμως έννοια. Πράγματι, όταν τα βήματα της διαμέρισης <span class="math notranslate nohighlight">\(h\)</span> και <span class="math notranslate nohighlight">\(k\)</span> μειώνονται και τα σφάλματα αποκοπής μειώνονται, τα σφάλματα συσσώρευσης αυξάνουν.</p>
+<p>Κάθε σχήμα ΠΔ πρέπει κατ’ αρχάς να είναι συνεπές ή συμβατό, consistent.  Αν ικανοποιείται η προϋπόθεση της συνέπειας του αριθμητικού σχήματος τότε θα πρέπει όλη η διαδικασία επίλυσης ενός προβλήματος να αποτρέπει την ανάπτυξη σφαλμάτων στρογγύλευσης (roundoff errors). Η ΜΠΔ ανάγει την επίλυση μιας ΜΔΕ ή ενός συστήματος ΜΔΕ στην επίλυση ενός αλγεβρικού συστήματος. Η μη ακριβής επίλυση των αριθμητικών προσεγγίσεων που προκύπτουν από την διακριτοποίηση της ΜΔΕ εκδηλώνεται ως ένα πρόσθετο σφάλμα που ονομάζεται σφάλμα στρογγύλευσης. Το σφάλμα στρογγύλευσης είναι γενικά μικρό, όμως σε διάφορες διαδικασίες επίλυσης, κυρίως επαναληπτικές, είναι δυνατόν να αυξάνει πάρα πολύ. Αν συμβαίνει αυτό τότε δημιουργεί το λεγόμενο σφάλμα συσσώρευσης, που μπορεί να οδηγήσει στη λεγόμενη αριθμητική αστάθεια της λύσης (induced instability) <span id="id11">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
+<p>Όπως τα σφάλματα αποκοπής εξαρτώνται από την διαμέριση <span class="math notranslate nohighlight">\(h\)</span> και <span class="math notranslate nohighlight">\(k\)</span> του πλέγματος και την σχέση που έχουν μεταξύ τους, έτσι και τα σφάλματα συσσώρευσης επηρεάζονται από τα μεγέθη των βημάτων αυτών κατ’ αντίθετη όμως έννοια. Πράγματι, όταν τα βήματα της διαμέρισης <span class="math notranslate nohighlight">\(h\)</span> και <span class="math notranslate nohighlight">\(k\)</span> μειώνονται και τα σφάλματα αποκοπής μειώνονται, τα σφάλματα συσσώρευσης αυξάνουν.</p>
 <div class="tip admonition">
 <p class="admonition-title">Παρατήρηση</p>
 <p>Συνεχής λοιπόν μείωση του υπολογιστικού βήματος δεν οδηγεί κατ’ ανάγκη σε ακριβέστερη λύση</p>
 </div>
-<p>Θεωρούμε πάλι την εξίσωση διάχυσης <span class="math notranslate nohighlight">\(u_t = k u_{xx}\)</span>, η οποία αποτελεί ένα αντιπροσωπευτικό παράδειγμα Μ.Δ.Ε. που εφαρμόζεται μια υπολογιστική διαδικασία στον χρόνο, αυτό που καλέσαμε πιο πριν marching problem. Υποθέτουμε ότι <span class="math notranslate nohighlight">\(\hat{u} (x , t)\)</span> είναι η ακριβής λύση της εξίσωσης διάχυσης που υπόκειται σε κάποιες αρχικές και συνοριακές συνθήκες, και <span class="math notranslate nohighlight">\(u_j^n = u(x_j , t_n)\)</span> με <span class="math notranslate nohighlight">\(t_n = (n-1) k\)</span>, <span class="math notranslate nohighlight">\(x_j = (j-1) h\)</span> είναι εκείνη που προκύπτει από μια προσέγγιση της Μ.Δ.Ε. με την μέθοδο Π.Δ. Οι τιμές της αναλυτικής <span class="math notranslate nohighlight">\(\hat{u} (x_j , t_n)\)</span> και προσεγγιστικής λύσης <span class="math notranslate nohighlight">\(u_j^n\)</span> στο τυχαίο σημείο <span class="math notranslate nohighlight">\((j , n)\)</span> γενικά δεν ταυτίζονται και έστω <span class="math notranslate nohighlight">\(\epsilon\)</span> η διαφορά των τιμών τους, δηλαδή,</p>
+<p>Θεωρούμε πάλι την εξίσωση διάχυσης <span class="math notranslate nohighlight">\(u_t = k u_{xx}\)</span>, η οποία αποτελεί ένα αντιπροσωπευτικό παράδειγμα ΜΔΕ που εφαρμόζεται μια υπολογιστική διαδικασία στον χρόνο, αυτό που καλέσαμε πιο πριν marching problem. Υποθέτουμε ότι <span class="math notranslate nohighlight">\(\hat{u} (x , t)\)</span> είναι η ακριβής λύση της εξίσωσης διάχυσης που υπόκειται σε κάποιες αρχικές και συνοριακές συνθήκες, και <span class="math notranslate nohighlight">\(u_j^n = u(x_j , t_n)\)</span> με <span class="math notranslate nohighlight">\(t_n = (n-1) k\)</span>, <span class="math notranslate nohighlight">\(x_j = (j-1) h\)</span> είναι εκείνη που προκύπτει από μια προσέγγιση της ΜΔΕ με την ΜΠΔ Οι τιμές της αναλυτικής <span class="math notranslate nohighlight">\(\hat{u} (x_j , t_n)\)</span> και προσεγγιστικής λύσης <span class="math notranslate nohighlight">\(u_j^n\)</span> στο τυχαίο σημείο <span class="math notranslate nohighlight">\((j , n)\)</span> γενικά δεν ταυτίζονται και έστω <span class="math notranslate nohighlight">\(\epsilon\)</span> η διαφορά των τιμών τους, δηλαδή,</p>
 <div class="math notranslate nohighlight" id="equation-k2-15">
 <span class="eqno">(78)<a class="headerlink" href="#equation-k2-15" title="Permalink to this equation">¶</a></span>\[
     \varepsilon = \hat{u} (x_j , t_n) - u_j^n   
@@ -689,37 +689,37 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Ποιό είναι το <span class="math notranslate nohighlight">\(lim_{n \to \infty} |\varepsilon|\)</span> για <span class="math notranslate nohighlight">\(h, \, k =\)</span> σταθερά, και</p></li>
 <li><p>Ποιό είναι το <span class="math notranslate nohighlight">\(lim_{h, k \to 0} |\varepsilon|\)</span> για <span class="math notranslate nohighlight">\(n =\)</span> σταθερό</p></li>
 </ol>
-<p>Το δεύτερο ερώτημα συνδέεται άμεσα με τα σφάλματα αποκοπής και στρογγύλευσης και συσσώρευσης. Τα σφάλματα αποκοπής συνδέονται άμεσα με το αριθμητικό σχήμα που προσεγγίζει την αντίστοιχη Μ.Δ.Ε. ενώ τα σφάλματα συσσώρευσης συνδέονται με την αριθμητική διαδικασία ή τον αλγόριθμο επίλυσης του προβλήματος. Η συνεχής εκλέπτυνση του βήματος δεν οδηγεί κατ’ ανάγκη σε ακριβέστερα αποτελέσματα και μάλιστα είναι δυνατόν η μείωση του υπολογιστικού βήματος να οδηγεί σε λύση η οποία να συγκλίνει στη λύση διαφορετικής εξίσωσης από αυτή που μελετάμε.</p>
-<p>Η μελέτη του πρώτου ερωτήματος, μας δείχνει το πως προχωράει η λύση στον χρόνο με σταθερό βήμα, επιτυγχάνεται για ένα ικανοποιητικό αριθμό Μ.Δ.Ε. με την βοήθεια της ανάλυσης Fourier. Το ίδιο θέμα αντιμετωπίζεται επίσης με την μελέτη των ιδιοτιμών του πίνακα που συνδέεται με το εφαρμοζόμενο αριθμητικό σχήμα. Η έννοια της ευστάθειας δεν είναι απόλυτα ξεκαθαρισμένη και με το αντικέιμενο αυτό έχουν ασχοληθεί πολλοί ερευνητές. Περισσότερες λεπτομέρειες επί του θέματος αυτο΄θ μπορεί ο αναγνώστης να βρεί στα συγγράμματα και τις εργασίες <span id="id12">[<a class="reference internal" href="zreferences.html#id5">92</a>, <a class="reference internal" href="zreferences.html#id15">RM67</a>, <a class="reference internal" href="zreferences.html#id16">Str04</a>, <a class="reference internal" href="zreferences.html#id17">SSS85</a>, <a class="reference internal" href="zreferences.html#id18">LR56</a>]</span>.</p>
-<p>Για τα προβλήματα εκείνα όπου αναπτύσσεται μια πορεία αριθμητικής επίλυσης με διαδοχικά χρονικά βήματα (marching problems) το αριθμητικό σχήμα θα ονομάζεται ευσταθές (Stable) όταν τα υπάρχοντα σφάλματα δεν αυξάνονται κατά την εκτέλεση της αριθμητικής διαδικασίας από το ένα βήμα στο άλλο.</p>
+<p>Το δεύτερο ερώτημα συνδέεται άμεσα με τα σφάλματα αποκοπής και στρογγύλευσης και συσσώρευσης. Τα σφάλματα αποκοπής συνδέονται άμεσα με το αριθμητικό σχήμα που προσεγγίζει την αντίστοιχη ΜΔΕ ενώ τα σφάλματα συσσώρευσης συνδέονται με την αριθμητική διαδικασία ή τον αλγόριθμο επίλυσης του προβλήματος. Η συνεχής εκλέπτυνση του βήματος δεν οδηγεί κατ’ ανάγκη σε ακριβέστερα αποτελέσματα και μάλιστα είναι δυνατόν η μείωση του υπολογιστικού βήματος να οδηγεί σε λύση η οποία να συγκλίνει στη λύση διαφορετικής εξίσωσης από αυτή που μελετάμε.</p>
+<p>Η μελέτη του πρώτου ερωτήματος, μας δείχνει το πως προχωράει η λύση στον χρόνο με σταθερό βήμα, επιτυγχάνεται για ένα ικανοποιητικό αριθμό ΜΔΕ με την βοήθεια της ανάλυσης Fourier. Το ίδιο θέμα αντιμετωπίζεται επίσης με την μελέτη των ιδιοτιμών του πίνακα που συνδέεται με το εφαρμοζόμενο αριθμητικό σχήμα. Η έννοια της ευστάθειας δεν είναι απόλυτα ξεκαθαρισμένη και με το αντικέιμενο αυτό έχουν ασχοληθεί πολλοί ερευνητές. Περισσότερες λεπτομέρειες επί του θέματος αυτο΄θ μπορεί ο αναγνώστης να βρεί στα συγγράμματα και τις εργασίες <span id="id12">[<a class="reference internal" href="zreferences.html#id5">92</a>, <a class="reference internal" href="zreferences.html#id15">RM67</a>, <a class="reference internal" href="zreferences.html#id16">Str04</a>, <a class="reference internal" href="zreferences.html#id17">SSS85</a>, <a class="reference internal" href="zreferences.html#id18">LR56</a>]</span>.</p>
+<p>Για τα προβλήματα εκείνα όπου αναπτύσσεται μια πορεία αριθμητικής επίλυσης με διαδοχικά χρονικά βήματα (marching problems) το αριθμητικό σχήμα θα ονομάζεται ευσταθές (stable) όταν τα υπάρχοντα σφάλματα δεν αυξάνονται κατά την εκτέλεση της αριθμητικής διαδικασίας από το ένα βήμα στο άλλο.</p>
 <div class="proof definition admonition" id="definition-1">
 <p class="admonition-title"><span class="caption-number">Definition 6 </span></p>
 <div class="definition-content section" id="proof-content">
-<p>Ένα αριθμητικό σχήμα Π.Δ. θα είναι αποδεκτό, για ένα το είδος των προβλημάτων που μελετάμαι, όταν ικανοποιεί τις έννοιες της συνέπειας (συμβατότητας) και της ευστάθειας (stability). Ένα τέτοιο αριθμητικό σχήμα που ικανοποιεί τα παραπάνω είναι ένα συγκλίνον σχήμα. Η σύγκλιση εδώ έχει την έννοια ότι η λύση της εξίσωσης τον Π.Δ. προσεγγίζει την ακριβή λύση της αντίστοιχης Μ.Δ.Ε., με τις ίδιες αρχικές και συνοριακές συνθήκες καθώς το υπολογιστικό πλέγμα συνεχώς εκλεπτύνεται, δηλ. <span class="math notranslate nohighlight">\(h, k \to 0\)</span>.</p>
+<p>Ένα αριθμητικό σχήμα ΠΔ θα είναι αποδεκτό, για ένα το είδος των προβλημάτων που μελετάμαι, όταν ικανοποιεί τις έννοιες της συνέπειας (συμβατότητας) και της ευστάθειας (stability). Ένα τέτοιο αριθμητικό σχήμα που ικανοποιεί τα παραπάνω είναι ένα συγκλίνον σχήμα. Η σύγκλιση εδώ έχει την έννοια ότι η λύση της εξίσωσης τον ΠΔ προσεγγίζει την ακριβή λύση της αντίστοιχης ΜΔΕ, με τις ίδιες αρχικές και συνοριακές συνθήκες καθώς το υπολογιστικό πλέγμα συνεχώς εκλεπτύνεται, δηλ. <span class="math notranslate nohighlight">\(h, k \to 0\)</span>.</p>
 </div>
 </div><p>Την σχέση μεταξύ συνέπειας, ευστάθειας και σύγκλισης μιας αριθμητικής μεθόδου διετύπωσε ο Peter Lax στο ακόλουθο θεώρημα.</p>
 <div class="proof theorem admonition" id="Lax-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 1 </span> (θεώρημα ισοδυναμίας του Lax)</p>
 <div class="theorem-content section" id="proof-content">
-<p>Εάν σ’ ένα καλά τοποθετημένο πρόβλημα αρχικών τιμών, το οποίο περιγράφεται από γραμμική Μ.Δ.Ε., η επιλεγείσα Μ.Π.Δ. είναι συνεπής, τότε η ευστάθεια είναι ικανή και αναγκαία συνθήκη για την σύγκλιση.</p>
+<p>Εάν σ’ ένα καλά τοποθετημένο πρόβλημα αρχικών τιμών, το οποίο περιγράφεται από γραμμική ΜΔΕ, η επιλεγείσα ΜΠΔ είναι συνεπής, τότε η ευστάθεια είναι ικανή και αναγκαία συνθήκη για την σύγκλιση.</p>
 </div>
 </div><p>Το θεώρημα <a class="reference internal" href="#Lax-theorem">Theorem 1</a> είναι επίσης γνωστό ως θεώρημα Lax-Richtmyer, από τους Peter Lax και Robert D. Richtmyer. Περισσότερες πληροφορίες ο αναγνώστης μπορεί να βρεί στα συγγράμματα και τις εργασίες <span id="id13">[<a class="reference internal" href="zreferences.html#id5">92</a>, <a class="reference internal" href="zreferences.html#id15">RM67</a>, <a class="reference internal" href="zreferences.html#id18">LR56</a>]</span>.</p>
 </div>
 <div class="section" id="id14">
 <h2>Μέθοδος των Πεπερασμένων Όγκων<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
-<p>Η μέθοδος διακριτοποίησης των πεπερασμένων όγκων (Π.Ο.) αποτελεί την κύρια μέθοδο διακριτοποίησης για την επίλυση προβλημάτων υπολογιστικής ρευστομηχανικής. Τα κύρια πλεονεκτήματα της μεθόδου είναι: (α) είναι ολοκληρωτική η μέθοδος και υπερτερεί σε σχέση με παλιαότερες μεθόδους, όπως είναι η μέθοδος των Πεπερασμένω Διαφορών, (β) η μέθοδος των Π.Ο. βρίσκει εφαρμογή σε κάθε τύπο υπολογιστικού πλέγματος αλλά και σε πολύπλοκες γεωμετρικές δομές <span id="id15">[<a class="reference internal" href="zreferences.html#id7">Pat09</a>]</span>.</p>
-<p>Η μέθοδος εφαρμόζεται χωρίζοντας αρχικά το πεδίο ορισμού σε μικρότερα χωρία, δηλαδή σε πεπερασμένους όγκους αναφοράς, έτσι ώστε κάθε υπολογιστικός κόμβος του πλέγματος να περιβάλλεται από έναν όγκο αναφοράς. Στη συνέχεια η Μ.Δ.Ε. ολοκληρώνεται στον όγκο αναφοράς. Τα ολοκληρώματα υπολογίζονται αναλυτικά υποθέτοντας ότι οι τιμές της άγνωστης εξαρτημένης μεταβλητής π.χ. η <span class="math notranslate nohighlight">\(u(x,y)\)</span> είναι σταθερές ή ότι μεταβάλλονται γραμμικά σε κάθε όγκο αναφοράς. Οι αλγεβρικές εξισώσεις που προκύπτουν ονομάζονται εξισώσεις πεπερασμένων όγκων και το σύστημα μπορεί να επιλυθυεί χρησιμοποιώντας άμεσες ή επαναληπτικές τεχνικές επίλυσης αλγεβρικών συστημάτων. Η μεθοδολογία και ο τρόπος διατύπωσης της μεθόδου συνδέεεται άμεσα με τη φυσική του προβλήματος και κατ’ επέκταση με τη φύση της Μ.Δ.Ε.</p>
-<p>Θεωρούμε οτι οι εξισώσεις πεπερασμένων όγκων, δηλαδή οι εξισώσεις διαφορών που προκύπτουν από τη διακριτοποίηση, ικανοποιούν τις ίδιες φυσικές αρχές και νόμους, με αυτές που ικανοποιούν οι διαφορικές εξισώσεις από τις οποίες έχουν προκύψει. Μια βασική διαφορά ανάμεσα στις μεθόδους πεπερασμένων όγκων και διαφορών είναι ότι στις πεπερασμένες διαφορές η λύση βασίζεται μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους του πλέγματος ενώ στους πεπερασμένους όγκους η λύση βασίζεται όχι μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους αλλά και σε συνεχείς υποθετικές κατανομές ανάμεσα στους κόμβους.</p>
+<p>Η ΜΠΟ αποτελεί την κύρια μέθοδο διακριτοποίησης προβλημάτων Ρευστομηχανικής. Τα κύρια πλεονεκτήματα είναι ότι η ΜΠΟ: (α) είναι ολοκληρωτική και υπερτερεί σε σχέση με παλαιότερες μεθόδους, όπως  η ΜΠΔ, (β) βρίσκει εφαρμογή σε κάθε τύπο υπολογιστικού πλέγματος αλλά και σε πολύπλοκες γεωμετρικές δομές <span id="id15">[<a class="reference internal" href="zreferences.html#id7">Pat09</a>]</span>.</p>
+<p>Η μέθοδος εφαρμόζεται χωρίζοντας αρχικά το πεδίο ορισμού σε μικρότερα χωρία, δηλαδή σε πεπερασμένους όγκους (ΠΟ) αναφοράς, έτσι ώστε κάθε υπολογιστικός κόμβος του πλέγματος να περιβάλλεται από έναν όγκο αναφοράς. Στη συνέχεια η ΜΔΕ ολοκληρώνεται στον όγκο αναφοράς. Τα ολοκληρώματα υπολογίζονται αναλυτικά υποθέτοντας ότι οι τιμές της άγνωστης εξαρτημένης μεταβλητής π.χ. η <span class="math notranslate nohighlight">\(u(x,y)\)</span> είναι σταθερές ή ότι μεταβάλλονται γραμμικά σε κάθε όγκο αναφοράς. Οι αλγεβρικές εξισώσεις που προκύπτουν ονομάζονται εξισώσεις ΠΟ και το σύστημα μπορεί να επιλυθυεί χρησιμοποιώντας άμεσες ή επαναληπτικές τεχνικές επίλυσης αλγεβρικών συστημάτων. Η μεθοδολογία και ο τρόπος διατύπωσης της μεθόδου συνδέεεται άμεσα με τη φυσική του προβλήματος και κατ’ επέκταση με τη φύση της ΜΔΕ.</p>
+<p>Θεωρούμε οτι οι εξισώσεις ΠΟ, δηλαδή οι εξισώσεις διαφορών που προκύπτουν από τη διακριτοποίηση, ικανοποιούν τις ίδιες φυσικές αρχές και νόμους, με αυτές που ικανοποιούν οι διαφορικές εξισώσεις από τις οποίες έχουν προκύψει. Μια βασική διαφορά ανάμεσα στην ΜΠΟ και την ΜΠΔ είναι ότι στην ΜΠΔ η λύση βασίζεται μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους του πλέγματος ενώ στην ΜΠΟ η λύση βασίζεται όχι μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους αλλά και σε συνεχείς υποθετικές κατανομές ανάμεσα στους κόμβους.</p>
 <div class="figure align-default" id="fig34-fv">
 <a class="reference internal image-reference" href="_images/Fig34_FV.png"><img alt="_images/Fig34_FV.png" src="_images/Fig34_FV.png" style="height: 250px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Σχηματική αναπαράσταση των όγκων αναφοράς για ένα υπολογιστικό πλέγμα και το αριθμητικό σχήμα στον όγκο αναφοράς</span><a class="headerlink" href="#fig34-fv" title="Permalink to this image">¶</a></p>
 </div>
-<p>Για να περιγράψουμε και να κατανοήσουμε τη μέθοδο των Π.Ο., θα εφαρμόσουμε τη μέθοδο για την διακριτοποίηση μιας σχετικά απλής Μ.Δ.Ε., της διδιάστατης εξίσωσης Poisson, όπου <span class="math notranslate nohighlight">\(u(x,y) \in \Omega \subseteq \mathbb{R}^2\)</span>, όπου <span class="math notranslate nohighlight">\(f(x,y)\)</span> είναι μια συνεχής συνάρτηση με πεπερασμένο αριθμό ασυνεχειών.</p>
+<p>Για να περιγράψουμε και να κατανοήσουμε τη ΜΠΟ, θα την εφαρμόσουμε για την διακριτοποίηση μιας σχετικά απλής ΜΔΕ, της διδιάστατης εξίσωσης Poisson, όπου <span class="math notranslate nohighlight">\(u(x,y) \in \Omega \subseteq \mathbb{R}^2\)</span>, όπου <span class="math notranslate nohighlight">\(f(x,y)\)</span> είναι μια συνεχής συνάρτηση με πεπερασμένο αριθμό ασυνεχειών.</p>
 <div class="math notranslate nohighlight" id="equation-laplace">
 <span class="eqno">(79)<a class="headerlink" href="#equation-laplace" title="Permalink to this equation">¶</a></span>\[
 - \nabla^2 u = -(u_{xx}  + u_{yy})  = f(x,y)
 \]</div>
-<p>Ολοκληρώνοντας την εξίσωση <a class="reference internal" href="#equation-laplace">(79)</a> έχουμε:</p>
+<p>Ολοκληρώνοντας την εξίσωση <a class="reference internal" href="#equation-laplace">(79)</a> έχουμε,</p>
 <div class="math notranslate nohighlight">
 \[ 
     - \int\limits_\Omega  {\nabla ^2 u}  = \int\limits_\Omega  f
@@ -732,7 +732,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="eqno">(80)<a class="headerlink" href="#equation-laplace2" title="Permalink to this equation">¶</a></span>\[
 \int \limits_s^n {\int\limits_w^e {} \frac{{\partial u^2 }}{{\partial x^2 }}} dxdy + \int\limits_s^n {\int\limits_w^e {} \frac{\partial u^2 }{\partial y^2 }} dxdy =  - \int\limits_s^n {\int\limits_w^e {} f(x,y)} dxdy
 \]</div>
-<p>Αρχικά υπολογίζουμε:</p>
+<p>Αρχικά υπολογίζουμε,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{gathered}
@@ -740,7 +740,7 @@ commentsRunWhenDOMLoaded(addUtterances);
          \left[ {\left. {\frac{{\partial u}}{{\partial x}}} \right|_e  - \left. {\frac{{\partial u}}{{\partial x}}} \right|_w } \right]\Delta y = (\frac{{u_E  - u_p }}{{\Delta x}} - \frac{{u_p  - u_W }}{{\Delta x}})\Delta y = \frac{{u_E  - 2u_p  + u_W }}{{\Delta x}}\Delta y
      \end{gathered}
 \end{split}\]</div>
-<p>Στη συνέχεια υπολογίζουμε:</p>
+<p>Στη συνέχεια υπολογίζουμε,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{gathered}
@@ -748,7 +748,7 @@ commentsRunWhenDOMLoaded(addUtterances);
          \left[ {\left. {\frac{{\partial u}}{{\partial y}}} \right|_n  - \left. {\frac{{\partial u}}{{\partial y}}} \right|_s } \right]\Delta x = (\frac{{u_N  - u_p }}{{\Delta Y}} - \frac{{u_p  - u_S }}{{\Delta y}})\Delta x = \frac{{u_N  - 2u_p  + u_S }}{{\Delta y}}\Delta x \\ 
     \end{gathered}
 \end{split}\]</div>
-<p>Με αντικατάσταση στην <a class="reference internal" href="#equation-laplace2">(80)</a> έχουμε:</p>
+<p>Με αντικατάσταση στην <a class="reference internal" href="#equation-laplace2">(80)</a> έχουμε,</p>
 <div class="math notranslate nohighlight">
 \[
     \frac{{u_E  - 2 u_p  + u_W }}{{\Delta x}} \Delta y+\frac{{u_N  - 2 u_p  + u_S }}{{\Delta y}}\Delta x= - f(x,y) \Delta x \Delta y
@@ -759,7 +759,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 2(\frac{{\alpha ^2  + 1}}{\alpha })u_p  - \alpha u_E  - \alpha u_{W}  - \frac{1}{\alpha }u_{N}  - \frac{1}{\alpha }u_S  = -\gamma f
 \]</div>
 <p>όπου <span class="math notranslate nohighlight">\(u_P =u_{i,j}\)</span> , <span class="math notranslate nohighlight">\(u_E = u_{i+1,j}\)</span>, <span class="math notranslate nohighlight">\(u_W =u_{i-1,j}\)</span>, <span class="math notranslate nohighlight">\(u_N =u_{i,j+1}\)</span> και <span class="math notranslate nohighlight">\(u_S =u_{i,j-1}\)</span>.</p>
-<p>Τα στοιχεία του συστήματος όταν αυτά γραφτούν σε block μορφή είναι:</p>
+<p>Τα στοιχεία του συστήματος σε block μορφή είναι,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     {A} = \left[ {\begin{array}{*{20}c}
@@ -781,18 +781,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">Παρατήρηση</p>
 <p>Οι φασματικές μέθοδοι και οι μέθοδοι πεπερασμένων στοιχείων συνδέονται στενά και βασίζονται στις ίδιες ιδέες. Η κύρια διαφορά τους είναι ότι οι φασματικές μέθοδοι χρησιμοποιούν συναρτήσεις βάσης που δεν είναι μηδενικές σε ολόκληρο τον χωρίο ολοκλήρωσης, ενώ οι μέθοδοι πεπερασμένων στοιχείων χρησιμοποιούν συναρτήσεις βάσης που δεν είναι μηδενικές μόνο σε υποτομείς, δηλ. στα εκάστοτε στοιχεία του πλέγματος. Με άλλα λόγια, οι φασματικές μέθοδοι λαμβάνουν μια σφαιρική προσέγγιση ενώ οι μέθοδοι πεπερασμένων στοιχείων χρησιμοποιούν μια τοπική προσέγγιση. Για το λόγο αυτό, οι φασματικές μέθοδοι έχουν εξαιρετικές ιδιότητες σφάλματος, με τη λεγόμενη “εκθετική σύγκλιση” να είναι η γρηγορότερη δυνατή, όταν η λύση είναι ομαλή. Στη μέθοδο των πεπερασμένων στοιχείων, μια μέθοδος όπου ο βαθμός των στοιχείων είναι πολύ υψηλός ή αυξάνεται καθώς η παράμετρος πλέγματος <span class="math notranslate nohighlight">\(h\)</span> μειώνεται στο μηδέν, μερικές φορές ονομάζεται μέθοδος φασματικών στοιχείων.</p>
 </div>
-<p>Οι φασματικές μέθοδοι μπορούν να χρησιμοποιηθούν για την επίλυση συνήθων διαφορικών εξισώσεων (Σ.Δ.Ε.), μερικών διαφορικών εξισώσεων (Μ.Δ.Ε.) και προβλημάτων ιδιοτιμής που περιλαμβάνουν διαφορικές εξισώσεις. Κατά την εφαρμογή των φασματικών μεθόδων σε Μ.Δ.Ε. που εξαρτώνται από το χρόνο, η λύση συνήθως γράφεται ως άθροισμα συναρτήσεων βάσης με συντελεστές που εξαρτώνται από το χρόνο.</p>
-<p>Οι φασματικές μέθοδοι αναπτύχθηκαν σε μια σειρά εργασιών από τον Steven Orszag από το 1969, συμπεριλαμβανομένων, αλλά χωρίς περιορισμό, μεθόδων της σειράς Fourier για προβλήματα περιοδικών συνθηκών, φασματικές μεθόδους για πεπερασμένα και ανοιχτά προβλήματα συνορικών τιμών, ψευδοφασματικές μεθόδους για εξαιρετικά μη γραμμικά προβλήματα κ.α. <span id="id17">[<a class="reference internal" href="zreferences.html#id14">Ors71</a>]</span>. Ένα σύγραμμα που μπορεί να επισκευτεί ο αναγνώστης για περισσότερες λεπτομέρειες σχετικά με την φασματική μέθοδο είναι το σύγγραμμα του Trefethen <span id="id18">[<a class="reference internal" href="zreferences.html#id13">Tre00</a>]</span>. Σε αυτό το σύγγραμμα μπορεί κανέις να βρει εφαρμογές της μεθόδου σε απλές Μ.Δ.Ε. και εφαρμογή τους στο πρόγραμμα Matlab.</p>
+<p>Οι φασματικές μέθοδοι μπορούν να χρησιμοποιηθούν για την επίλυση συνήθων διαφορικών εξισώσεων (ΣΔΕ), ΜΔΕ και προβλημάτων ιδιοτιμής που περιλαμβάνουν διαφορικές εξισώσεις. Κατά την εφαρμογή των φασματικών μεθόδων σε ΜΔΕ που εξαρτώνται από το χρόνο, η λύση συνήθως γράφεται ως άθροισμα συναρτήσεων βάσης με συντελεστές που εξαρτώνται από το χρόνο.</p>
+<p>Οι φασματικές μέθοδοι αναπτύχθηκαν σε μια σειρά εργασιών από τον Steven Orszag από το 1969, συμπεριλαμβανομένων, αλλά χωρίς περιορισμό, μεθόδων της σειράς Fourier για προβλήματα περιοδικών συνθηκών, φασματικές μεθόδους για πεπερασμένα και ανοιχτά προβλήματα συνορικών τιμών, ψευδοφασματικές μεθόδους για εξαιρετικά μη γραμμικά προβλήματα κ.α. <span id="id17">[<a class="reference internal" href="zreferences.html#id14">Ors71</a>]</span>. Ένα σύγραμμα που μπορεί να επισκευθεί ο αναγνώστης για περισσότερες λεπτομέρειες σχετικά με την φασματική μέθοδο είναι το σύγγραμμα του Trefethen <span id="id18">[<a class="reference internal" href="zreferences.html#id13">Tre00</a>]</span>. Σε αυτό το σύγγραμμα μπορεί κανέις να βρει εφαρμογές της μεθόδου σε απλές ΜΔΕ και εφαρμογή τους στο Matlab.</p>
 <p>Οι φασματικές μέθοδοι είναι υπολογιστικά λιγότερο δαπανηρές από τις μεθόδους πεπερασμένων στοιχείων, αλλά καθίστανται λιγότερο ακριβείς για προβλήματα με πολύπλοκες γεωμετρίες και ασυνεχείς συντελεστές. Αυτή η αύξηση του σφάλματος είναι συνέπεια του φαινομένου Gibbs.</p>
 <div class="proof example admonition" id="my-example">
 <p class="admonition-title"><span class="caption-number">Example 1 </span></p>
 <div class="example-content section" id="proof-content">
-<p>Παραθέτουμε μια εφαρμογή της φασματικής μεθόδου. Θα εφαρμόσουμε την μέθοδο στην μερική διαφορική εξίσωση KdV-B (Korteweg de Vries - Burgers). Η διαφορική αυτή εξίσωση έχει πολλές εφαρμογές, π.χ. στην Εμβιομηχανική, και περιγράφει μοναxικά ή κρουστικά κύμματα. Αρχικά, γράφουμε τον μηγραμμικό όρο της Μ.Δ.Ε. σε κλειστή μορφή και η KdV-B δίνεται στην παρακάτω μορφή,</p>
+<p>Παραθέτουμε μια εφαρμογή της φασματικής μεθόδου. Θα εφαρμόσουμε την μέθοδο στην μερική διαφορική εξίσωση KdV-B (Korteweg de Vries - Burgers). Η διαφορική αυτή εξίσωση έχει πολλές εφαρμογές, π.χ. στην Εμβιομηχανική, και περιγράφει μοναxικά ή κρουστικά κύμματα. Αρχικά, γράφουμε τον μη γραμμικό όρο της ΜΔΕ σε κλειστή μορφή και η KdV-B δίνεται στην παρακάτω μορφή,</p>
 <div class="math notranslate nohighlight" id="equation-ex-3">
 <span class="eqno">(81)<a class="headerlink" href="#equation-ex-3" title="Permalink to this equation">¶</a></span>\[
  	{u_t} + a{\left[ {\frac{{{u^2}}}{2}} \right]_x} + b{u_{xx}} + c{u_{xxx}} = 0
 \]</div>
-<p>Η εξίσωση <code class="xref eq docutils literal notranslate"><span class="pre">E3</span></code> αποτελεί μια μηγραμμική Μ.Δ.Ε., όπου η άγνωση συνάρτηση, <span class="math notranslate nohighlight">\(u(x, t)\)</span> περιγράφει το πλάτος του κύματος. Με εφαρμογή του μετασχηματισμού Fourier  παίρνουμε την παρακάτω εξίσωση,</p>
+<p>Η εξίσωση <a class="reference internal" href="#equation-ex-3">(81)</a> αποτελεί μια μη γραμμική ΜΔΕ, όπου η άγνωση συνάρτηση, <span class="math notranslate nohighlight">\(u(x, t)\)</span> περιγράφει το πλάτος του κύματος. Με εφαρμογή του μετασχηματισμού Fourier παίρνουμε την παρακάτω εξίσωση,</p>
 <div class="math notranslate nohighlight">
 \[
 {{\hat u}_t} + a\frac{i}{2}k{{\hat u}^2} - b{k^2}\hat u - ic{k^3}\hat u = 0
@@ -824,7 +824,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Εφαρμογές<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
 <div class="admonition- admonition">
 <p class="admonition-title">Εφαρμογή 1</p>
-<p>Έστω ότι έχουμε ένα τετραγωνικό πλέγμα με διαμέριση <span class="math notranslate nohighlight">\(\Delta x = \Delta y = h\)</span> και την εξίσωση του Laplace που ισχύει σε κάθε κομβικό σημείο του πλέγματος. Να αναπαραστήσετε την εξίσωση του Laplace με κεντρικές Π.Δ., να εκτιμήσετε το σφάλμα αποκοπής της αναπαράστασης αυτής και να σχεδιάσετε το υπολογιστικό σχήμα που δημιουργείται γύρω από το κεντρικό κομβικό σημείο.</p>
+<p>Έστω ότι έχουμε ένα τετραγωνικό πλέγμα με διαμέριση <span class="math notranslate nohighlight">\(\Delta x = \Delta y = h\)</span> και την εξίσωση του Laplace που ισχύει σε κάθε κομβικό σημείο του πλέγματος. Να αναπαραστήσετε την εξίσωση του Laplace με κεντρικές ΠΔ, να εκτιμήσετε το σφάλμα αποκοπής της αναπαράστασης αυτής και να σχεδιάσετε το υπολογιστικό σχήμα που δημιουργείται γύρω από το κεντρικό κομβικό σημείο.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Απάντηση</strong><div class="summary-down docutils">
@@ -837,7 +837,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="eqno">(83)<a class="headerlink" href="#equation-k2-ex1" title="Permalink to this equation">¶</a></span>\[
  \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0
 \]</div>
-<p class="card-text">Θα αναπαραστήσουμε τις <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2}\)</span> και <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial y^2}\)</span> με την βοήθεια κεντρικών Π.Δ., δηλαδή,</p>
+<p class="card-text">Θα αναπαραστήσουμε τις <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x^2}\)</span> και <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial y^2}\)</span> με την βοήθεια κεντρικών ΠΔ, δηλαδή,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex1b">
 <span class="eqno">(84)<a class="headerlink" href="#equation-k2-ex1b" title="Permalink to this equation">¶</a></span>\[
  \frac{\partial^2 u}{\partial x^2}|_{(i,j)} = \frac{1}{h^2} (u_{i+1 , j} - 2 u_{i , j} + u_{i-1 , j}) + O(h^2), 
@@ -854,9 +854,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="card-text">με <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> της τάξης του <span class="math notranslate nohighlight">\(h^2\)</span>. Το υπολογιστικό πλέγμα της αναπαράστασης αυτής φαίνεται στο παρακάτω σχήμα, Σχήμα <a class="reference internal" href="#fig1-ex1"><span class="std std-numref">Fig. 7</span></a>.</p>
 <div class="figure align-default" id="fig1-ex1">
 <a class="reference internal image-reference" href="_images/Fig1_ex1.png"><img alt="_images/Fig1_ex1.png" src="_images/Fig1_ex1.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της εξίσωσης του Laplace με κεντρικές Π.Δ. στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig1-ex1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της εξίσωσης του Laplace με κεντρικές ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig1-ex1" title="Permalink to this image">¶</a></p>
 </div>
-<p class="card-text">Το υπολογιστικό πλέγμα του αριθμητικού σχήματος που προκύπτει από την διακριτοποίηση της εξίσωσης του Laplace με κεντρικές Π.Δ. στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> έχει ιδιαίτερη σημασία και προσφέρει ταυτόχρονα μια καλή εποπτική εικόνα αυτού. Οι αριθμοί μέσα στους κύκλους είναι οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>, για το εν λόγω υπολογιστικό σχήμα. O ενδιαφερόμενος αναγνώστης μπορεί να βρει περισσότερες πληροφορίες γι’ αυτό τον τρόπο αναπαράστασης στο σύγγραμμα υπολογιστικής ρευστοδυναμικής του Καφούσια <span id="id21">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
+<p class="card-text">Το υπολογιστικό πλέγμα του αριθμητικού σχήματος που προκύπτει από την διακριτοποίηση της εξίσωσης του Laplace με κεντρικές ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> έχει ιδιαίτερη σημασία και προσφέρει ταυτόχρονα μια καλή εποπτική εικόνα αυτού. Οι αριθμοί μέσα στους κύκλους είναι οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>, για το εν λόγω υπολογιστικό σχήμα. O ενδιαφερόμενος αναγνώστης μπορεί να βρει περισσότερες πληροφορίες γι’ αυτό τον τρόπο αναπαράστασης στο εξής σύγγραμμα Υπολογιστικής Ρευστοδυναμικής <span id="id21">[<a class="reference internal" href="zreferences.html#id5">92</a>]</span>.</p>
 </div>
 </details></div>
 <div class="admonition- admonition">
@@ -873,57 +873,58 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">Με την βοήθεια του αναπτύγματος Taylor της συνάρτησης <span class="math notranslate nohighlight">\(u(x + \Delta x, y + \Delta y)\)</span> έχουμε ότι,
-$<span class="math notranslate nohighlight">\(
+<p class="card-text">Με την βοήθεια του αναπτύγματος Taylor της συνάρτησης <span class="math notranslate nohighlight">\(u(x + \Delta x, y + \Delta y)\)</span> έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-k2-ex2b">
+<span class="eqno">(88)<a class="headerlink" href="#equation-k2-ex2b" title="Permalink to this equation">¶</a></span>\[\begin{split}
     \begin{gathered}
         u(x + \Delta x, y + \Delta y) = u(x , y) +  \frac{\partial u}{\partial x} \Delta x + \frac{\partial u}{\partial y} \Delta y + \\
         \frac{\partial^2 u}{\partial x^2} \frac{(\Delta x)^2}{2!} + \frac{\partial^2 u}{\partial y^2} \frac{(\Delta y)^2}{2!} + \frac{1}{2!} \frac{\partial^2 u}{\partial x \partial y} \Delta x \Delta y + ...    
     \end{gathered}
-\)</span>$ (k2_ex2b)</p>
-<p class="card-text">όπου το ανωτέρο άθροισμα περιλαμβάνει όρους μεγαλύτερης ή και ίσης τάξης του τρία. Λύνοντας την σχέση <code class="xref eq docutils literal notranslate"><span class="pre">k2_ex2b</span></code> ως προς την ποσότητα <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> παίρνουμε,</p>
+\end{split}\]</div>
+<p class="card-text">όπου το ανωτέρο άθροισμα περιλαμβάνει όρους μεγαλύτερης ή και ίσης τάξης του τρία. Λύνοντας την σχέση <a class="reference internal" href="#equation-k2-ex2b">(88)</a> ως προς την ποσότητα <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> παίρνουμε,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex2c">
-<span class="eqno">(88)<a class="headerlink" href="#equation-k2-ex2c" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(89)<a class="headerlink" href="#equation-k2-ex2c" title="Permalink to this equation">¶</a></span>\[\begin{split}
     \begin{gathered}
         \frac{\partial^2 u}{\partial x \partial y} \Delta x \Delta y =  u_{i+1 , j+1} - u_{i , j} -  \frac{\partial u}{\partial x}|_{(i , j)} \Delta x - \frac{\partial u}{\partial y}|_{(i , j)} \Delta y - \\
         \frac{\partial^2 u}{\partial x^2}|_{(i , j)} \frac{(\Delta x)^2}{2!} - \frac{\partial^2 u}{\partial y^2}|_{(i , j)} \frac{(\Delta y)^2}{2!} - ...    
     \end{gathered}
 \end{split}\]</div>
-<p class="card-text">Για τις μερικές παραγώγους που εμφανίζονται στην σχέση <a class="reference internal" href="#equation-k2-ex2c">(88)</a>, έχουμε τις παρακάτω εκφράσεις με εφαρμογή κεντρικών Π.Δ.,</p>
+<p class="card-text">Για τις μερικές παραγώγους που εμφανίζονται στην σχέση <a class="reference internal" href="#equation-k2-ex2c">(89)</a>, έχουμε τις παρακάτω εκφράσεις με εφαρμογή κεντρικών ΠΔ,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex2d">
-<span class="eqno">(89)<a class="headerlink" href="#equation-k2-ex2d" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(90)<a class="headerlink" href="#equation-k2-ex2d" title="Permalink to this equation">¶</a></span>\[
 \begin{gathered}
 \frac{\partial u}{\partial x}|_{(i , j)} = \frac{1}{2 \Delta x} (u_{i+1 , j} - u_{i-1 , j}) + O(\Delta x)^2  
 \end{gathered}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-k2-ex2e">
-<span class="eqno">(90)<a class="headerlink" href="#equation-k2-ex2e" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(91)<a class="headerlink" href="#equation-k2-ex2e" title="Permalink to this equation">¶</a></span>\[
     \begin{gathered}
         \frac{\partial^2 u}{\partial x^2}|_{(i , j)} = \frac{1}{(\Delta x)^2} (u_{i+1 , j} - 2 u_{i , j} + u_{i-1 , j}) + O(\Delta x)^2
     \end{gathered}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-k2-ex2f">
-<span class="eqno">(91)<a class="headerlink" href="#equation-k2-ex2f" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(92)<a class="headerlink" href="#equation-k2-ex2f" title="Permalink to this equation">¶</a></span>\[
     \begin{gathered}
         \frac{\partial u}{\partial y}|_{(i , j)} = \frac{1}{2 \Delta y} (u_{i , j+1} - u_{i , j-1}) + O(\Delta y)^2
     \end{gathered}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-k2-ex2g">
-<span class="eqno">(92)<a class="headerlink" href="#equation-k2-ex2g" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(93)<a class="headerlink" href="#equation-k2-ex2g" title="Permalink to this equation">¶</a></span>\[
     \begin{gathered}
         \frac{\partial^2 u}{\partial y^2}|_{(i , j)} = \frac{1}{(\Delta y)^2} (u_{i , j+1} - 2 u_{i , j} + u_{i , j-1}) + O(\Delta y)^2
     \end{gathered}
 \]</div>
-<p class="card-text">Αντικαθιστώντας τις παραπάνω εκφράσεις, σχέσεις <a class="reference internal" href="#equation-k2-ex2d">(89)</a>-<a class="reference internal" href="#equation-k2-ex2g">(92)</a> στην σχέση <a class="reference internal" href="#equation-k2-ex2c">(88)</a>, παίρνουμε τελικά την σχέση που ζητείται, δηλαδή,</p>
+<p class="card-text">Αντικαθιστώντας τις παραπάνω εκφράσεις <a class="reference internal" href="#equation-k2-ex2d">(90)</a>-<a class="reference internal" href="#equation-k2-ex2g">(93)</a> στην σχέση <a class="reference internal" href="#equation-k2-ex2c">(89)</a>, παίρνουμε τελικά την σχέση που ζητείται, δηλαδή,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex2h">
-<span class="eqno">(93)<a class="headerlink" href="#equation-k2-ex2h" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(94)<a class="headerlink" href="#equation-k2-ex2h" title="Permalink to this equation">¶</a></span>\[
     \begin{gathered}
         \frac{\partial^2 u}{\partial x \partial y} |_{(i , j)} = \frac{u_{i + 1 , j + 1} - u_{i + 1 , j - 1} - u_{i - 1 , j + 1} + u_{i - 1 , j - 1}}{4 (\Delta y)^2} + O(\Delta x)^2 + O(\Delta y)^2    
     \end{gathered}
 \]</div>
-<p class="card-text">Στο σχήμα <a class="reference internal" href="#fig2-ex2"><span class="std std-numref">Fig. 8</span></a>, παρουσιάζεται η αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με την μέθοδο των κεντρικών Π.Δ. στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>. Μέσα στους κύκλους αναγράφονται οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</p>
+<p class="card-text">Στο σχήμα <a class="reference internal" href="#fig2-ex2"><span class="std std-numref">Fig. 8</span></a>, παρουσιάζεται η αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με την μέθοδο των κεντρικών ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>. Μέσα στους κύκλους αναγράφονται οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</p>
 <div class="figure align-default" id="fig2-ex2">
 <a class="reference internal image-reference" href="_images/Fig2_ex2.png"><img alt="_images/Fig2_ex2.png" src="_images/Fig2_ex2.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με την μέθοδο των κεντρικών Π.Δ. στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig2-ex2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με την μέθοδο των κεντρικών ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig2-ex2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -931,7 +932,7 @@ $<span class="math notranslate nohighlight">\(
 <p class="admonition-title">Εφαρμογή 3</p>
 <p>Να δειχθεί η παρακάτω σχέση σχετικά με την δεύτερης τάξης παράγωγο ως προς <span class="math notranslate nohighlight">\(y\)</span>, όπου <span class="math notranslate nohighlight">\(k\)</span> είναι το βήμα της ομοιόμορφης διαμέρισης,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex3">
-<span class="eqno">(94)<a class="headerlink" href="#equation-k2-ex3" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(95)<a class="headerlink" href="#equation-k2-ex3" title="Permalink to this equation">¶</a></span>\[
     \frac{\partial^2 u}{\partial y^2} |_{(i , j)} = \frac{u_{i , j + 1} - 2 u_{i , j} + u_{i , j - 1}}{k^2} + O(k^2)
 \]</div>
 <p>με <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> της τάξης του <span class="math notranslate nohighlight">\(k^2\)</span>.</p>
@@ -944,7 +945,7 @@ $<span class="math notranslate nohighlight">\(
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Θεωρούμε ομοιόμορφη διαμέριση με βήμα, <span class="math notranslate nohighlight">\(k\)</span>. Αναπτύσουμε τις <span class="math notranslate nohighlight">\(u_{i , j+1}\)</span> και <span class="math notranslate nohighlight">\(u_{i , j-1}\)</span> σε σειρά Taylor ως προς το σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> και έχουμε τις παρακάτω εκφράσεις,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex3b">
-<span class="eqno">(95)<a class="headerlink" href="#equation-k2-ex3b" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(96)<a class="headerlink" href="#equation-k2-ex3b" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{array}{l}
 u_{i , j+1} = u_{i , j} +  u_y |_{(i , j)} k + u_{yy} |_{(i , j)} \frac{k^2}{2 !} + O(k^2) \\
 %------------
@@ -953,15 +954,15 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
 \end{split}\]</div>
 <p class="card-text">Οι ανωτέρω σχέσεις μπορούν να γραφούν ως,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex3c">
-<span class="eqno">(96)<a class="headerlink" href="#equation-k2-ex3c" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(97)<a class="headerlink" href="#equation-k2-ex3c" title="Permalink to this equation">¶</a></span>\[\begin{split}
     \begin{array}{l}
         \frac{1}{k} (u_{i , j+1} - u_{i , j}) = u_y |_{(i , j)} + u_{yy} |_{(i , j)} \frac{k^2}{2 !} + O(k^2) \\
         \frac{1}{k} (u_{i , j-1} - u_{i , j})  = -u_y |_{(i , j)} + u_{yy} |_{(i , j)} \frac {k^2}{2 !} + O(k^2) \\
     \end{array}
 \end{split}\]</div>
-<p class="card-text">Με πρόσθεση των παραπάνω κατά μέλη έχουμε την ζητούμενη σχέση των κεντρικών Π.Δ. για την δεύτερης τάξης μερική παράγωγο,</p>
+<p class="card-text">Με πρόσθεση των παραπάνω κατά μέλη έχουμε την ζητούμενη σχέση των κεντρικών ΠΔ για την δεύτερης τάξης μερική παράγωγο,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex3d">
-<span class="eqno">(97)<a class="headerlink" href="#equation-k2-ex3d" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(98)<a class="headerlink" href="#equation-k2-ex3d" title="Permalink to this equation">¶</a></span>\[
 \frac{\partial^2 u}{\partial y^2} |_{(i , j)} = \frac{u_{i , j + 1} - 2 u_{i , j} + u_{i , j - 1}}{k^2} + O(k^2)
 \]</div>
 </div>
@@ -970,14 +971,14 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
 <p class="admonition-title">Εφαρμογή 4</p>
 <p>Θεωρούμε επίπεδη πλάκα μήκους <span class="math notranslate nohighlight">\(\bar L\)</span>, που παρεμβάλλεται παράλληλα στη ροή ρευστού σταθερής πυκνότητας <span class="math notranslate nohighlight">\(\bar \rho\)</span> και σταθερής ταχύτητας <span class="math notranslate nohighlight">\(\bar U_0\)</span>. Οι εξισώσεις Navier-Stokes,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex4">
-<span class="eqno">(98)<a class="headerlink" href="#equation-k2-ex4" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(99)<a class="headerlink" href="#equation-k2-ex4" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{array}{l}
 \frac{\partial \bar u}{\partial \bar x} + \frac{\partial \bar v}{\partial \bar y} = 0, \\ 
 \frac{\partial \bar u}{\partial \bar t} + \bar u \frac{\partial \bar u}{\partial \bar x} + \bar v \frac{\partial \bar u}{\partial \bar y} = - \frac{1}{\bar \rho} \frac{\partial \bar p}{\partial \bar x} + \bar \nu \, \left( \frac{\partial^2 \bar u}{\partial \bar x^2} + \frac{\partial^2 \bar u}{\partial \bar y^2} \right) \\ 
 \frac{\partial \bar v}{\partial \bar t} + \bar u \frac{\partial \bar v}{\partial \bar x} + \bar v \frac{\partial \bar v}{\partial \bar y} = - \frac{1}{\bar \rho} \frac{\partial \bar p}{\partial \bar y} + \bar \nu \, \left( \frac{\partial^2 \bar v}{\partial \bar x^2} + \frac{\partial^2 \bar v}{\partial \bar y^2} \right) \\ 
 \end{array}
 \end{split}\]</div>
-<p>όπου <span class="math notranslate nohighlight">\(\bar p\)</span> είναι η πίεση, <span class="math notranslate nohighlight">\(\bar \nu\)</span> το κινηματικό ιξώσες και οι παύλες πάνω από κάθε μέγεθος δηλώνουν ότι είναι διαστατικό μέγεθος. Να εισάγετε κατάλληλα μεγέθη αναφοράς και να αδιαστατοποιήσετε το παραπάνω σύστημα Μ.Δ.Ε.</p>
+<p>όπου <span class="math notranslate nohighlight">\(\bar p\)</span> είναι η πίεση, <span class="math notranslate nohighlight">\(\bar \nu\)</span> το κινηματικό ιξώσες και οι παύλες πάνω από κάθε μέγεθος δηλώνουν ότι είναι διαστατικό μέγεθος. Να εισάγετε κατάλληλα μεγέθη αναφοράς και να αδιαστατοποιήσετε το παραπάνω σύστημα ΜΔΕ</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Απάντηση</strong><div class="summary-down docutils">
@@ -987,7 +988,7 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Εισάγουμε ως χαρακτηριστικά μεγέθη τα <span class="math notranslate nohighlight">\(\bar L\)</span>, <span class="math notranslate nohighlight">\(\bar U_0\)</span> και <span class="math notranslate nohighlight">\(\bar \rho\)</span>. Θεωρούμε επίσης ως χαρακτηριστικό χρόνο το πηλίκο <span class="math notranslate nohighlight">\( \frac{\bar L}{\bar U_0}\)</span>, όπου είναι ο χρόνος που χρειάζεται ένα ρευστό σωματίδιο να διατρέξει την πλάκα μήκους <span class="math notranslate nohighlight">\(\bar L\)</span> με σταθερή ταχύτητα <span class="math notranslate nohighlight">\(\bar U_0\)</span>. Τέλος, ως χαρακτηριστική πίεση ορίζουμε την δυναμική πίεση <span class="math notranslate nohighlight">\(\bar \rho \bar U_0^2\)</span>, του ελευθέρου ρεύματος. Οπότε τα αδιάστατα μεγέθη είναι,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex4b">
-<span class="eqno">(99)<a class="headerlink" href="#equation-k2-ex4b" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(100)<a class="headerlink" href="#equation-k2-ex4b" title="Permalink to this equation">¶</a></span>\[\begin{split}
     \begin{array}{l}
     x = \frac{\bar x}{\bar L}, \,\,\,\,\,\, y = \frac{\bar y}{\bar L}, \,\,\,\,\,\, t = \frac{\bar t}{\bar L/\bar U_0} \\ 
     u = \frac{\bar u}{\bar U_0}, \,\,\,\,\,\, v = \frac{\bar v}{\bar U_0}, \,\,\,\,\,\, p = \frac{\bar p}{\bar \rho \bar U_0^2}
@@ -995,49 +996,50 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
 \end{split}\]</div>
 <p class="card-text">Η εξίσωση συνέχειας μετά την αδιαστατοποίηση θα γίνει,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex4c">
-<span class="eqno">(100)<a class="headerlink" href="#equation-k2-ex4c" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(101)<a class="headerlink" href="#equation-k2-ex4c" title="Permalink to this equation">¶</a></span>\[
 \begin{array}{l}
 \frac{\partial \bar u}{\partial \bar x} + \frac{\partial \bar v}{\partial \bar y} = 0 \Rightarrow  \frac{\partial (\bar U_0 u)}{\partial (\bar L x)} + \frac{\partial (\bar U_0 v)}{\partial (\bar L y)} = 0 \Rightarrow  \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0
 \end{array}
 \]</div>
-<p class="card-text">Εργαζόμενοι με τον ίδιο τρόπο, η εξίσωση ορμής κατά την <span class="math notranslate nohighlight">\(x\)</span>-διεύθυνση θα γίνει,
-$<span class="math notranslate nohighlight">\(
+<p class="card-text">Εργαζόμενοι με τον ίδιο τρόπο, η εξίσωση ορμής κατά την <span class="math notranslate nohighlight">\(x\)</span>-διεύθυνση θα γίνει,</p>
+<div class="math notranslate nohighlight" id="equation-k2-ex4d">
+<span class="eqno">(102)<a class="headerlink" href="#equation-k2-ex4d" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{array}{l}
 \frac{\partial (\bar U_0 u)}{\partial (\frac{\bar L}{\bar U_0} t)} + (\bar U_0 u) \frac{\partial (\bar U_0 u)}{\partial (\bar L x)} + (\bar U_0 v) \frac{\partial (\bar U_0 u)}{\partial (\bar L y)} = \\
 \quad \quad \quad \quad \quad -  \frac{1}{\bar \rho} \frac{\partial (\bar \rho \bar U_0^2 p)}{\partial (\bar L x)} + \bar \nu \, \left[ \frac{\partial}{\partial (\bar L x)} \frac{\partial (\bar U_0 u)}{\partial (\bar L x)} + \frac{\partial}{\partial (\bar L y)} \frac{\partial (\bar U_0 u)}{\partial (\bar L y)} \right] \Rightarrow \\ 
 \Rightarrow  \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = - \frac{\partial p}{\partial x} + \frac{1}{Re} \, \left( \frac{\partial^2 u}{\partial x^2} +\frac{\partial^2 u}{\partial y^2} \right)
 \end{array}
-\)</span>$ (k2_ex4d)</p>
+\end{split}\]</div>
 <p class="card-text">όπου <span class="math notranslate nohighlight">\(Re = \frac{\bar L \bar U_0}{\bar \nu}\)</span> είναι ο αριθμός Reynolds της ροής. Όμοια και η εξίσωση ορμής κατά την <span class="math notranslate nohighlight">\(y\)</span>-διεύθυνση θα γίνει,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex4e">
-<span class="eqno">(101)<a class="headerlink" href="#equation-k2-ex4e" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(103)<a class="headerlink" href="#equation-k2-ex4e" title="Permalink to this equation">¶</a></span>\[
 \begin{array}{l}
 \frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} = - \frac{\partial p}{\partial y} + \frac{1}{Re} \, \left( \frac{\partial^2 v}{\partial x^2} +\frac{\partial^2 v}{\partial y^2} \right)
 \end{array}
 \]</div>
-<p class="card-text">Το σύστημα των εξισώσεων <a class="reference internal" href="#equation-k2-ex4c">(100)</a>-<a class="reference internal" href="#equation-k2-ex4e">(101)</a> αποτελεί την αδιαστατοποιημένη ή κανονικοποιημένη μορφή του αρχικού συστήματος Μ.Δ.Ε., δηλαδή του συστήματος <a class="reference internal" href="#equation-k2-ex4">(98)</a>.</p>
+<p class="card-text">Το σύστημα των εξισώσεων <a class="reference internal" href="#equation-k2-ex4c">(101)</a>-<a class="reference internal" href="#equation-k2-ex4e">(103)</a> αποτελεί την αδιαστατοποιημένη ή κανονικοποιημένη μορφή του αρχικού συστήματος ΜΔΕ, δηλαδή του συστήματος <a class="reference internal" href="#equation-k2-ex4">(99)</a>.</p>
 </div>
 </details></div>
 <p><strong>Ασκήσεις για λύση</strong></p>
 <ol>
 <li><p>Να αποδειχθούν οι παρακάτω σχέσεις, όπου <span class="math notranslate nohighlight">\(h\)</span> είναι το βήμα της ομοιόμορφης διαμέρισης,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex5">
-<span class="eqno">(102)<a class="headerlink" href="#equation-k2-ex5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(104)<a class="headerlink" href="#equation-k2-ex5" title="Permalink to this equation">¶</a></span>\[
         \frac{\partial u}{\partial x} |_{(i , j)} = \frac{- 3 u_{i , j} + 4 u_{i + 1 , j} - u_{i + 2 , j}}{2 h^2} + O(h^2)
     \]</div>
 <div class="math notranslate nohighlight" id="equation-k2-ex5b">
-<span class="eqno">(103)<a class="headerlink" href="#equation-k2-ex5b" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(105)<a class="headerlink" href="#equation-k2-ex5b" title="Permalink to this equation">¶</a></span>\[
         \frac{\partial^2 u}{\partial x^2} |_{(i , j)} = \frac{u_{i , j} - 2 u_{i - 1 , j} + u_{i - 2 , j}}{h^2} + O(h)
     \]</div>
 <div class="math notranslate nohighlight" id="equation-k2-ex5c">
-<span class="eqno">(104)<a class="headerlink" href="#equation-k2-ex5c" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(106)<a class="headerlink" href="#equation-k2-ex5c" title="Permalink to this equation">¶</a></span>\[
         \frac{\partial^2 u}{\partial x^2} |_{(i , j)} = \frac{2 u_{i , j} - 5 u_{i - 1 , j} + 4 u_{i - 2 , j} - u_{i - 3 , j}}{h^2} + O(h^2)
     \]</div>
 <p>με <span class="math notranslate nohighlight">\(\sigma. \alpha.\)</span> της τάξης του <span class="math notranslate nohighlight">\(h\)</span> και <span class="math notranslate nohighlight">\(h^2\)</span></p>
 </li>
-<li><p>Η μόνιμη ροή ρευστού μέσα στο οριακό στρώμα πάνω από ημιάπειρη πλάκα παράλληλη στο ελέυθερο ρεύμα , χωρίς βαθμίδα πίεσης, περιγράφεται από το παρακάτω σύστημα των εξισώσεων</p>
+<li><p>Η μόνιμη ροή ρευστού μέσα στο οριακό στρώμα πάνω από ημιάπειρη πλάκα παράλληλη στο ελέυθερο ρεύμα, χωρίς βαθμίδα πίεσης, περιγράφεται από το παρακάτω σύστημα των εξισώσεων,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex6">
-<span class="eqno">(105)<a class="headerlink" href="#equation-k2-ex6" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(107)<a class="headerlink" href="#equation-k2-ex6" title="Permalink to this equation">¶</a></span>\[\begin{split}
     \begin{array}{l}
      \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0, \\ 
     u  \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = \nu \,\frac{\partial ^2 u}{\partial y^2} \\ 
@@ -1045,10 +1047,10 @@ $<span class="math notranslate nohighlight">\(
     \end{split}\]</div>
 <p>Να εισάγετε τη ρευματική συνάρτηση <span class="math notranslate nohighlight">\(\Psi = \Psi (x , y)\)</span> και να μετασχηματίσετε το παραπάνω σύστημα σε ένα ισοδύναμο όπου οι ανεξάρτητες μεταβλητές δεν είναι πλέον οι <span class="math notranslate nohighlight">\((x , y)\)</span> αλλά οι <span class="math notranslate nohighlight">\((x , \Psi)\)</span>. Στη συνέχεια εισάγοντας τις μεταβλητές,</p>
 <div class="math notranslate nohighlight" id="equation-k2-ex6b">
-<span class="eqno">(106)<a class="headerlink" href="#equation-k2-ex6b" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(108)<a class="headerlink" href="#equation-k2-ex6b" title="Permalink to this equation">¶</a></span>\[
         \eta = \frac{x}{L}, \,\,\, \xi = \left( \frac{U_0 L}{\nu} \right)^{1/2}, \,\,\, f = 1 - \left( \frac{u}{U_0} \right)^{2}
     \]</div>
-<p>να αδιαστατοποιήσετε το παραπάνω σύστημα Μ.Δ.Ε.</p>
+<p>να αδιαστατοποιήσετε το παραπάνω σύστημα ΜΔΕ</p>
 </li>
 </ol>
 </div>
