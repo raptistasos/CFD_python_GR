@@ -6,12 +6,14 @@ copyright                   : "2021"  # Copyright year to be placed in the foote
 logo                        : logo.png  # A path to the book logo
 only_build_toc_files        : true 
 
+execute:
+  execute_notebooks         : force
 
 launch_buttons:
   binderhub_url             : "https://mybinder.org"
   thebe                     : true
   colab_url                 : ""
-
+  
 repository:
   url                       : https://github.com/raptistasos/CFD_python_GR 
   branch                    : master
@@ -39,7 +41,8 @@ sphinx:
     - sphinx_exercise
     - sphinx_proof
   config:
-    mathjax_path            : https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    bibtex_reference_style  : author_year
+    mathjax_path            : https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     latex_elements:
       pointsize             : 12pt
       fncychap              : \usepackage[Glenn]{fncychap}
