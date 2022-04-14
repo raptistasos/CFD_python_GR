@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Η εξίσωση Διάχυσης &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -33,15 +33,18 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -77,21 +80,25 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Οι εξισώσεις Laplace και Poisson" href="Chapter5.html" />
     <link rel="prev" title="Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής" href="Chapter3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -181,16 +188,6 @@ commentsRunWhenDOMLoaded(addUtterances);
    Οι εξισώσεις των Navier και Stokes
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Chapter11.html">
-   Εφαρμογές
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Βιβλιογραφία
-  </a>
- </li>
 </ul>
 
     </div>
@@ -237,7 +234,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -288,7 +285,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -307,7 +304,12 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#euler">
-   Άμεσο και πεπλεγμένο σχήμα του Euler
+   Άμεσο σχήμα του Euler
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Πεπλεγμένο σχήμα του Euler
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -316,13 +318,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
+  <a class="reference internal nav-link" href="#id6">
    Ο κανόνας θ
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#richardson">
-   Αριθμητικό σχήμα του Richardson
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -331,13 +328,18 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
+  <a class="reference internal nav-link" href="#id8">
    Επέκταση στις 2 διαστάσεις
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
-   Εφαρμογές &amp; ασκήσεις
+  <a class="reference internal nav-link" href="#a">
+   Aσκήσεις
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   Βιβλιογραφία
   </a>
  </li>
 </ul>
@@ -348,40 +350,732 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Η εξίσωση Διάχυσης</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Η εξίσωση διάχυσης σε μια διάσταση
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Το πρόβλημα αρχικών-συνοριακών τιμών για διάχυση σε μια διάσταση
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#euler">
+   Άμεσο σχήμα του Euler
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Πεπλεγμένο σχήμα του Euler
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crank-nicolson">
+   Το σχήμα των Crank-Nicolson
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Ο κανόνας θ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dufort-frankel">
+   Τύπος των Dufort-Frankel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   Επέκταση στις 2 διαστάσεις
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a">
+   Aσκήσεις
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   Βιβλιογραφία
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>Η εξίσωση Διάχυσης<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p><strong>Περίληψη</strong>. Στην πρώτη ενότητα αυτού του κεφαλαίου η μεθοδολογία ξεκινά με την απλούστερη ΜΔΕ, την εξίσωση Διάχυσης. Περιγράφεται το πρόβλημα αρχικών-συνοριακών τιμών για την εξίσωση διάχυσης σε μια διάσταση. Ακολουθεί η άμεση και πεπλεγμένη μέθοδος του Euler και το σχήμα των Crank –Nicolson. Εισάγεται ο κανόνας θ και το αριθμητικό σχήμα του Richardson, καθώς και το σχήμα των Dufort-Frankel. Ακολουθεί η επέκταση της μεθοδολογίας στις δύο διαστάσεις. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
 <div class="section" id="id2">
 <h2>Η εξίσωση διάχυσης σε μια διάσταση<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Το κεφάλαιο ξεκινά με την αριθμητική μεθοδολογία για την απλούστερη ΜΔΕ, τη μονοδιάστατη εξίσωση της Διάχυσης. Η χρονοεξαρτώμενη αυτή εξίσωση είναι παραβολικού τύπου και δίνεται στην παρακάτω μορφή,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-1">
+<span class="eqno">(109)<a class="headerlink" href="#equation-eq4-1" title="Permalink to this equation">¶</a></span>\[ 
+	\frac{\partial u}{\partial t} = d \, \frac{\partial^2 u}{\partial x^2}
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(u(x,t)\)</span> είναι η άγνωστη συνάρτηση ή η εξαρτημένη μεταβλητή που εξαρτάται από την χωρική μεταβλητή <span class="math notranslate nohighlight">\(x\)</span> και την χρονική μεταβλητή <span class="math notranslate nohighlight">\(t\)</span>. Ο συντελεστής <span class="math notranslate nohighlight">\(d\)</span> καλείται συντελεστής διάχυση και καθορίζει το πόσο γρήγορα διαχέεται ή μεταβάλεται η συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> στο χωρίο ολοκλήρωσης, <span class="math notranslate nohighlight">\(\Omega\)</span>. Σε σύγκριση με την κυματική εξίσωση, <span class="math notranslate nohighlight">\(u_{tt} = c^2 \, u_{xx}\)</span>, η οποία μοιάζει με την εξίσωση <a class="reference internal" href="#equation-eq4-1">(109)</a>, η εξίσωση διάχυσης διαθέτει λύσεις που είναι πολύ διαφορετικές από αυτές της κυματικής εξίσωσης, υπερβολικού τύπου. Ως αποτέλεσμα, η εξίσωση διάχυσης έχει και αρκετά διαφορετικές απαιτήσεις σε σχέση με την κυματική εξίσωση στις αριθμητικές μεθόδους λόγω της φύσης της εξίσωσης και των προβλημάτων που περιγράφει.</p>
+<p>Συγκεκριμένα, τα προβλήματα διάχυσης μπορεί να παρουσιάσουν ταχεία αλλαγή στην αρχή, αλλά στη συνέχεια η εξέλιξη του <span class="math notranslate nohighlight">\(u\)</span> γίνεται όλο και πιο αργή. Η λύση είναι συνήθως πολύ ομαλή, και μετά από κάποιο χρονικό διάστημα, δεν μπορεί κανείς να αναγνωρίσει το αρχικό σχήμα του <span class="math notranslate nohighlight">\(u\)</span>. Αυτό έρχεται σε αντίθεση με τις λύσεις της κυματικής εξίσωσης όπου διατηρείται το αρχικό σχήμα, δηλαδή η λύση είναι μια κινούμενη αρχική συνθήκη, ένα αρχικό κύμα που μεταφέρεται στον χώρο. Η κλασική εξίσωση κύματος <span class="math notranslate nohighlight">\(u_{tt} = c^2 \, u_{xx}\)</span> έχει λύσεις που διαδίδονται με ταχύτητα <span class="math notranslate nohighlight">\(c\)</span> για πάντα, χωρίς να αλλάζει το σχήμα του κύματος, ενώ η εξίσωση διάχυσης συγκλίνει σε μια σταθερή λύση <span class="math notranslate nohighlight">\(\bar u(x)\)</span> καθώς το <span class="math notranslate nohighlight">\(t \to \infty\)</span>. Σε αυτό το όριο, <span class="math notranslate nohighlight">\(u_t = 0\)</span>, και για την <span class="math notranslate nohighlight">\(\bar u\)</span> ισχύει ότι <span class="math notranslate nohighlight">\(\bar u''(x) = 0\)</span>. Αυτό το όριο της εξίσωσης διάχυσης περιγράφεται από την εξίσωση του Laplace, ελλειπτικού τύπου, και προκύπτει σε ένα πολύ ευρύ φάσμα εφαρμογών σε όλες τις επιστήμες και στη ρευστομηχανική.</p>
+<p>Είναι εφικτό να λυθεί αριθμητικά η εξίσωση <a class="reference internal" href="#equation-eq4-1">(109)</a> και να βρεθεί η λύση της <span class="math notranslate nohighlight">\(u(x,t)\)</span>, χρησιμοποιώντας ένα άμεσο ή εκπεφρασμένο σχήμα, αλλά οι περιορισμοί του χρονικού βήματος είναι πολύ περιοριστικοί σε σχέση με ένα πεπλεγμένο αριθμητικό σχήμα. Δεδομένου ότι η λύση
+<span class="math notranslate nohighlight">\(u\)</span> της εξίσωσης διάχυσης είναι πολύ ομαλή και αλλάζει αργά καθώς το <span class="math notranslate nohighlight">\(t \to \infty\)</span>, τα μικρά χρονικά βήματα δεν είναι βολικά και δεν απαιτούνται από την ακρίβεια καθώς η διαδικασία επίλυσης της εξίσωσης διάχυσης συγκλίνει σε μια σταθερή κατάσταση (steady state). Όλα αυτά τα θέματα θα μας απασχολήσουν στις επόμενες ενότητες.</p>
 </div>
 <div class="section" id="id3">
 <h2>Το πρόβλημα αρχικών-συνοριακών τιμών για διάχυση σε μια διάσταση<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Όπως αναφέρθηκε στην προηγούμενη ενότητα η εξίσωση της διάχυσης είναι παραβολικού τύπου, που σημαίνει ότι για να επιλυθεί η εξίσωση και να βρεθεί μια μοναδική μερική λύση της χρειάζεται να διαθέτουμε τόσο αρχικές όσο και συνοριακές συνθήκες. Η εξίσωση διάχυσης ξεκινάει με μια αρχική συνθήκη <span class="math notranslate nohighlight">\(u(x,0) = f(x)\)</span>, όπου το <span class="math notranslate nohighlight">\(f\)</span> είναι μια συνεχής συνάρτηση του χώρου <span class="math notranslate nohighlight">\(\Omega = [0, L]\)</span>. Απαιτείται μία συνοριακή συνθήκη σε κάθε σύνορο του χωρίου, που σε ένα μονοδιάστατο χωρίο όπως το <span class="math notranslate nohighlight">\(\Omega\)</span>, σημαίνει ότι πρέπει να είναι γνωστό το <span class="math notranslate nohighlight">\(u\)</span> ή το <span class="math notranslate nohighlight">\(u_x\)</span> ή κάποιος συνδυασμός τους στα συνοριακά σημεία, <span class="math notranslate nohighlight">\(0\)</span> και <span class="math notranslate nohighlight">\(L\)</span>. Ξεκινώντας με την απλούστερη συνοριακή συνθήκη, <span class="math notranslate nohighlight">\(u = 0\)</span> (συνθήκη Dirichlet, για την άγνωστη συνάρτηση). Το πλήρες πρόβλημα διάχυσης αρχικών–συνοριακών τιμών, σε μια διάσταση του χώρου μπορεί να καθοριστεί ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-2">
+<span class="eqno">(110)<a class="headerlink" href="#equation-eq4-2" title="Permalink to this equation">¶</a></span>\[\begin{split}
+	\begin{gathered}
+		\frac{\partial u}{\partial t} = d \, \frac{\partial^2 u}{\partial x^2}, \,\, (x,t) \in (0,L) \times (0,T] \\
+		u(x, 0) = f(x), \,\, x \in [0, L] \\
+		u(0, t) = u(L, t) = 0, t &gt; 0 
+	\end{gathered}
+\end{split}\]</div>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq4-2">(110)</a> είναι γνωστή ως η μονοδιάστατη εξίσωση διάχυσης, που συχνά αναφέρεται και ως εξίσωση θερμότητας (heat equation). Με μια χρονική παράγωγο πρώτης τάξης, χρειάζεται μόνο μια αρχική συνθήκη, ενώ η παράγωγος δεύτερης τάξης στο διάστημα οδηγεί σε αναζήτηση δύο συνοριακών συνθηκών. Πρέπει επίσης να δοθεί η παράμετρος <span class="math notranslate nohighlight">\(d\)</span>, δηλ. ο συντελεστής διάχυσης.</p>
+<p>Οι εξισώσεις διάχυσης όπως η <a class="reference internal" href="#equation-eq4-2">(110)</a> έχουν ένα ευρύ φάσμα εφαρμογών στις φυσικές, βιολογικές, οικονομικές επιστήμες και στη ρευστομηχανική. Μία από τις πιο κοινές εφαρμογές είναι η διάδοση της θερμότητας, όπου το <span class="math notranslate nohighlight">\(u(x,t)\)</span> μπορεί να αντιπροσωπεύει τη θερμοκρασία στο σημείο <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(x \in (0, L)\)</span> και στο χρόνο <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(t \in (0, T]\)</span>.</p>
 </div>
 <div class="section" id="euler">
-<h2>Άμεσο και πεπλεγμένο σχήμα του Euler<a class="headerlink" href="#euler" title="Permalink to this headline">¶</a></h2>
+<h2>Άμεσο σχήμα του Euler<a class="headerlink" href="#euler" title="Permalink to this headline">¶</a></h2>
+<p>Τα πιο απλά και βασικά αριθμητικά σχήματα είναι το άμεσο και το πεπελεγμένο σχήμα του Euler. Οπότε, είναι πολύ σημαντικό να ξεκινήσουμε την ανάλυση μας από αυτά τα δύο αριθμητικά σχήματα. Το πρώτο βήμα της μεθοδολογίας είναι η διακριτοποίηση το χωρίου ολοκλήρωσης. Δηλαδή, αντικαθιστούμε το συνεχές χωρίο <span class="math notranslate nohighlight">\([0, L] \times [0, T]\)</span> από ένα διακριτό ανάλογο, διακριτά σημεία στο χωρίο ολοκλήρωσης. Υποθέτουμε μια οποιόμορφη διακριτοποίηση του χωρίου ως προς το χρόνο και το χώρο,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-3">
+<span class="eqno">(111)<a class="headerlink" href="#equation-eq4-3" title="Permalink to this equation">¶</a></span>\[ 
+	x_i = i \, \Delta x, \, i = 0, ..., N_x, \,\,\, t_n = n \, \Delta t, \, n = 0, ..., N_t
+\]</div>
+<p>Επιπλέον, <span class="math notranslate nohighlight">\(u_i^n\)</span> είναι ο συμβολισμός της προσέγγισης της συνάρτησης στα διακριτά σημεία, <span class="math notranslate nohighlight">\(u(x_i,  t_n)\)</span> για <span class="math notranslate nohighlight">\(i = 0, ..., N_x\)</span> και <span class="math notranslate nohighlight">\(n = 0, ..., N_t\)</span>. Απαιτώντας ότι η ΜΔΕ της εξίσωσης <a class="reference internal" href="#equation-eq4-2">(110)</a> να ισχύει σε κάθε διακριτό σημείο του υπολογιστικού πλέγματος <span class="math notranslate nohighlight">\((x_i, t_n)\)</span> οδηγούμστε στην διακριτή εξίσωση,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-4">
+<span class="eqno">(112)<a class="headerlink" href="#equation-eq4-4" title="Permalink to this equation">¶</a></span>\[
+	\frac{\partial}{\partial t} u(x_i, t_n) = d \, \frac{\partial^2}{\partial x^2} u(x_i, t_n)
+\]</div>
+<p>το επόμενο βήμα είναι να αντικαταστήσουμε τις παραγώγους με τις διακριτές τους μορφές, όπως αυτές συζητήθηκαν στο προηγούμενο κεφάλαιο. Συγκεκριμένα, εφαρμόζοντας εμπρόσθιες πεπερασμένες διαφορές για τον χρόνο και κεντρικές πεπερασμένες διαφορές για τον χώρο, καταλήγουμε στο παρακάτω αριθμητικό σχήμα,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-5">
+<span class="eqno">(113)<a class="headerlink" href="#equation-eq4-5" title="Permalink to this equation">¶</a></span>\[
+	\frac{u_i^{n+1} - u_i^n}{\Delta t} = d \, \frac{u_{i+1}^{n} - 2 u_i^n + u_{i-1}^n}{\Delta x^2}
+\]</div>
+<p>Αυτό που έχουμε επιτύχει είναι να μετατρέψουμε μια ΜΔΕ σε ένα σύστημα αλγεβρικών εξισώσεων ή εξισώσεων διαφορών. Το γεγονός ότι παίρνουμε ένα σύστημα αλγεβρικών εξισώσεων μας διευκολύνει να λύσουμε την διαφορική εξίσωση στο χωρίο ολοκλήρωσης. Ο άγνωστος στην εξίσωση <a class="reference internal" href="#equation-eq4-5">(113)</a> είναι το <span class="math notranslate nohighlight">\(u_i^{n+1}\)</span>, όλοι οι άλλοι όροι είναι γνωστοί, υπολογισμένοι από προηγούμενα υπολογιστικά βήματα ή από αρχικές και συνοριακές συνθήκες. Τελικά, το άμεσο αριθμητικό σχήμα είναι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-6">
+<span class="eqno">(114)<a class="headerlink" href="#equation-eq4-6" title="Permalink to this equation">¶</a></span>\[
+	u_i^{n+1} = u_i^n + \frac{d \, \Delta t}{\Delta x^2} (u_{i+1}^{n} - 2 u_i^n + u_{i-1}^n)
+\]</div>
+<div class="admonition- admonition">
+<p class="admonition-title">Σημείωση</p>
+<p>H παράμετρος, <span class="math notranslate nohighlight">\(F = \displaystyle \frac{d \, \Delta t}{\Delta x^2}\)</span>, είναι βασική παράμετρος για την εξίσωση διάχυσης. Η <span class="math notranslate nohighlight">\(F\)</span> είναι ένας αδιάστατος αριθμός που εμπεριέχει τη βασική φυσική παράμετρο του προβλήματος, <span class="math notranslate nohighlight">\(d\)</span>, καθώς και τις παραμέτρους διακριτοποίησης, <span class="math notranslate nohighlight">\(\Delta x\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span> σε μία μόνο παράμετρο. Οι ιδιότητες της προτεινόμενης αριθμητικής μεθόδου, δηλαδή της άμεσης μεθόδου του Euler, εξαρτώνται σε μεγάλο βαθμό από την τιμή της παραμέτρου, <span class="math notranslate nohighlight">\(F\)</span>.</p>
+</div>
+<p>Ακολουθεί ο κώδικας επίλυσης της εξίσωσης διάχυσης σε μία διάσταση με το άμεσο σχήμα Euler.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gauss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Συνάρτηση Gauss</span>
+<span class="sd">    a: ύψος της κορυφής της καμπύλης</span>
+<span class="sd">    b: θέση της κορυφής της καμπύλης</span>
+<span class="sd">    c: τυπική απόκλιση</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plug_profile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">solve_diffusion1D_FE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Επιλύει την μονοδιάστατη διάχυση με το άμεσο σχήμα Euler (Forward Euler, FE) </span>
+<span class="sd">    θεωρώντας ομογενείς, μηδενικές, συνοριακές συνθήκες.</span>
+<span class="sd">    L: μήκος χωρίου στη διάσταση x</span>
+<span class="sd">    Τ: τελική χρονική στιγμή</span>
+<span class="sd">    dx: χωρικό βήμα</span>
+<span class="sd">    dt: χρονικό βήμα</span>
+<span class="sd">    d: συντελεστής διάχυσης</span>
+<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (πχ gauss ή plug_profile).</span>
+<span class="sd">    *args: μέσω της λέξης κλειδί *args δηλώνεται δυναμικός αριθμός επιπλέον ορισμάτων.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span> <span class="c1"># πεδίο ορισμού - υπολογιστικό πλέγμα</span>
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+    <span class="n">nsteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+    
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">plot_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nsteps</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+    
+    <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="c1"># αρχική συνθήκη. Το πρώτο όρισμα της συνάρτησης (xs) είναι το πεδίο ορισμού και τα</span>
+    <span class="c1"># υπό΄λοιπα ορίσματα (αδιευκρίνιστα εκ των προτέρων) εισάγονται μέσω της λέξης κλειδί *args.</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+       
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span>  <span class="ow">in</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># η επανάληψη δεν περιλαμβάνει το πρώτο και τελευταίο σημείο του πεδίου ορισμού τα οποία καθορίζονται</span>
+            <span class="c1"># από τις συνοριακές συνθήκες.</span>
+
+            <span class="n">u</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">F</span><span class="o">*</span><span class="p">(</span><span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="k">plot_freq</span> == 0:
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;t=</span><span class="si">{</span><span class="n">n</span><span class="o">*</span><span class="n">dt</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># επιβολή συνοριακών συνθηκών</span>
+        <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  
+        <span class="n">u</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">u0</span> <span class="o">=</span> <span class="n">u</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με άμεσο σχήμα Euler</span>
+<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">solve_diffusion1D_FE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_9_0.png" src="_images/Chapter4_9_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">solve_diffusion1D_FE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">plug_profile</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_10_0.png" src="_images/Chapter4_10_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Πεπλεγμένο σχήμα του Euler<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Εφαρμόζοντας οπίσθιες πεπερασμένες διαφορές για τον χρόνο και κεντρικές πεπερασμένες διαφορές για τον χώρο, καταλήγουμε σε ένα διαφορετικό αριθμητικό σχήμα το οποίο είναι πεπλεγμένο. Το αριθμητικό σχήμα τώρα είναι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-7">
+<span class="eqno">(115)<a class="headerlink" href="#equation-eq4-7" title="Permalink to this equation">¶</a></span>\[
+\frac{u_i^{n} - u_i^{n-1}}{\Delta t} = d \, \frac{u_{i+1}^{n} - 2 u_i^n + u_{i-1}^n}{\Delta x^2}
+\]</div>
+<p>Σε αυτό το αριθμητικό σχήμα, η ποσότητα <span class="math notranslate nohighlight">\(u_i^{n-1}\)</span> είναι γνωστή, αλλά όλες οι άλλες ποσότητες στο νέο χρονικό βήμα <span class="math notranslate nohighlight">\(n\)</span> είναι άγνωστες. Σε αυτή την περίπτωση δεν είναι δυνατόν να λύσουμε μόνο για την άγνωστη συνάρτηση στο σημείο <span class="math notranslate nohighlight">\((i, n)\)</span>, δηλαδή για την <span class="math notranslate nohighlight">\(u_i^n\)</span>, γιατί οι τιμές της <span class="math notranslate nohighlight">\(u\)</span> στα γειτονικά σημεία, <span class="math notranslate nohighlight">\(u_{i-1}^n\)</span> και <span class="math notranslate nohighlight">\(u_{i+1}^n\)</span>, είναι επίσης άγνωστες. Ένα τέτοιο αριθμητικό σχήμα λέγεται πεπλεγμένο, γιατί εμπλέκει περισσότερες από μια άγνωστες τιμές της συνάρτησης, <span class="math notranslate nohighlight">\(u\)</span>, στα γειτονικά σημεία.</p>
+<p>Το αριθμητικό σχήμα της εξίσωσης <a class="reference internal" href="#equation-eq4-7">(115)</a> δίνει ένα πεπλεγμένο σύστημα <span class="math notranslate nohighlight">\((N_x - 1) \times (N_x - 1)\)</span> αλγεβρικών εξισώσεων για τις άγνωστες τιμές <span class="math notranslate nohighlight">\(u_i^n\)</span> της συνάρτησης στα εσωτερικά χωρικά σημεία του πλέγματος, <span class="math notranslate nohighlight">\(i = 1, ..., N_x - 1\)</span>. Συγκεντρώνοντας τους αγνώστους στο αριστερό μέλος της εξίσωσης, μπορούμε να γράψουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-8">
+<span class="eqno">(116)<a class="headerlink" href="#equation-eq4-8" title="Permalink to this equation">¶</a></span>\[
+- F \, u_{i-1}^n + (1 + 2 F) \, u_i^{n} - F \, u_{i+1}^{n} = u_i^{n-1} ,  		
+\]</div>
+<p>για <span class="math notranslate nohighlight">\(i = 1, ..., N_x - 1\)</span> και την παράμετρο <span class="math notranslate nohighlight">\(F = \displaystyle \frac{d \, \Delta t}{\Delta x^2}\)</span> που καλείται αριθμός Fourier του υπολογιστικού πλέγματος (mesh Fourier number).
+Εφαρμόζοντας τις αντίστοιχες συνοριακές συνθήκες για το πρόβλημα αυτό, καταλήγουμε σε ένα σύστημα αλγεβρικών εξισώσεων της μορφής, <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u} = (u_0^n, ..., u_{N_x}^n)^T\)</span> και ο πίνακας, <span class="math notranslate nohighlight">\(A\)</span>, έχει την εξής μορφή,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{A} = \left[ {\begin{array}{*{7}c}
+   a_{0,0} &amp; a_{0,1} &amp; 0             &amp; ...          &amp; ...           &amp; ...                     &amp;  0                \\
+   a_{1,0} &amp; a_{1,1} &amp; a_{1,2}             &amp;              &amp;               &amp;                         &amp;  \vdots          \\
+   0           &amp; a_{2,1} &amp; a_{2,2}   &amp; a_{2,3} &amp;               &amp;                         &amp;  \vdots           \\
+   \vdots    &amp; \ddots  &amp;  \ddots    &amp;  \ddots  &amp; \ddots      &amp;                         &amp;  \vdots            \\
+   \vdots    &amp;             &amp;  a_{i,i-1} &amp; a_{i,i}   &amp;a_{i,i+1} &amp; \ddots               &amp;  \vdots             \\
+   \vdots    &amp;             &amp;                &amp;  \ddots  &amp; \ddots     &amp; \ddots               &amp;  \vdots             \\
+   0           &amp;  ...         &amp;  ...           &amp; ...         &amp; 0            &amp; a_{N_x,N_{x-1}} &amp;  a_{N_x,N_{x}}   \\
+\end{array}} \right]
+\end{split}\]</div>
+<p>Ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι αραιός (δηλαδή έχει πολλά μηδενικά στοιχεία), συμμετρικός και τριδιαγώνιος. Έχει δηλαδή πολύ καλές ιδιότητες, είναι επίσης θετικά ορισμένος αφού τα μη μηδενικά στοιχεία δίνονται από τις σχέσεις,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-9">
+<span class="eqno">(117)<a class="headerlink" href="#equation-eq4-9" title="Permalink to this equation">¶</a></span>\[
+a_{i,i-1} = - F, \,\, a_{i,i} = 1 + 2 \, F, \,\, a_{i,i+1} = - F, \,\,\, i = 1, ..., N_x - 1
+\]</div>
+<p>Αυτά τα στοιχεία καθιστούν το πίνακα <span class="math notranslate nohighlight">\(A\)</span> εύκολο να αντιστραφεί και να λυθεί το σύστημα των εξισώσεων. Αν θεωρήσουμε και ομογενείς, μηδενικές, συνοριακές συνθήκες, δηλαδή <span class="math notranslate nohighlight">\(u_0^n = 0\)</span>, <span class="math notranslate nohighlight">\(u_{N_x}^n = 0\)</span>, τότε έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-10">
+<span class="eqno">(118)<a class="headerlink" href="#equation-eq4-10" title="Permalink to this equation">¶</a></span>\[
+a_{0,0} = 1, \,\, a_{0,1} = 0, \,\, a_{N_x,N_{x-1}} = 0, \,\, a_{N_x,N_{x}} = 1
+\]</div>
+<p>Το διάνυσμα του δεξιού μέλους των εξισώσεων, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-11">
+<span class="eqno">(119)<a class="headerlink" href="#equation-eq4-11" title="Permalink to this equation">¶</a></span>\[
+\mathbf{b} = (b_0, b_1, ..., b_i, ..., b_{N_x})^T
+\]</div>
+<p>με,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-12">
+<span class="eqno">(120)<a class="headerlink" href="#equation-eq4-12" title="Permalink to this equation">¶</a></span>\[
+b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
+\]</div>
+<p>Παρατηρούμε ότι ο πίνακας <span class="math notranslate nohighlight">\(Α\)</span> περιέχει ποσότητες που δεν αλλάζουν στο χρόνο. Επομένως, ο πίνακας <span class="math notranslate nohighlight">\(Α\)</span> μπορεί να σχηματιστεί μια για πάντα πριν τη χρονική εξέλιξη. Το δεξί μέλος <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, ωστόσο, πρέπει να ενημερώνεται σε κάθε χρονικό βήμα. Αυτό οδηγεί στον ακόλουθο υπολογιστικό αλγόριθμο, που σκιαγραφείται εδώ με κώδικα σε γλώσσα προγραμματισμού Python,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="c1"># χρησιμοποιούμε το πακέτο scipy για την επίλυση γραμμικών συστημάτων</span>
+
+<span class="k">def</span> <span class="nf">solve_diffusion1D_BE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Επιλύει την μονοδιάστατη διάχυση με το πεπλεγμένο σχήμα Euler (Backward Euler, BE) </span>
+<span class="sd">    L: μήκος χωρίου στη διάσταση x</span>
+<span class="sd">    Τ: τελική χρονική στιγμή</span>
+<span class="sd">    dx: χωρικό βήμα</span>
+<span class="sd">    dt: χρονικό βήμα</span>
+<span class="sd">    d: συντελεστής διάχυσης</span>
+<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (πχ gauss η plug_profile).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span> <span class="c1"># πεδίο ορισμού</span>
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    
+    <span class="n">nsteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+    
+    <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># αρχικοποίηση πινάκων Α και b.</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">F</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">F</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">F</span>
+
+    <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Α[0,0] = Α[Nx, Nx] = 0</span>
+    <span class="c1"># Σύμφωνα με το αριθμητικό σχήμα, θα πρέπι να μηδενιστούν τα στοιχεία A[0,1] και Α[Nx, Nx-1]. Ωστόσο ΄΄εχει ήδη γίνει κατά</span>
+    <span class="c1"># την αρχικοποίηση του πίνακα Α με μηδενικά.</span>
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">plot_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nsteps</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="c1"># Υπολογισμός του πίνακα b και επίλυση γραμμικού συστήματος</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        <span class="n">u0</span> <span class="o">=</span> <span class="n">u</span>
+    
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="k">plot_freq</span> == 0:
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;t=</span><span class="si">{</span><span class="n">n</span><span class="o">*</span><span class="n">dt</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με το πεπλεγμένο σχ΄ήμα Euler. </span>
+<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">solve_diffusion1D_BE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_13_0.png" src="_images/Chapter4_13_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με άμεσο σχήμα Euler. </span>
+<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span> 
+<span class="n">solve_diffusion1D_BE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">plug_profile</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_14_0.png" src="_images/Chapter4_14_0.png" />
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">Σημείωση</p>
+<p>Οι μέθοδοι διακριτοποίησης που οδηγούν σε ένα συζευγμένο σύστημα εξισώσεων για την άγνωστη συνάρτηση  στο νέο χρονικό βήμα λέγονται <strong>πεπελεγμένες μέθοδοι</strong>. Αντίστοιχα, ο όρος <strong>άμεσες μέθοδοι</strong> αναφέρεται σε μεθόδους διακριτοποίησης όπου υπάρχει ένας απλός σαφής τύπος για τις τιμές της άγνωστης συνάρτησης σε κάθε ένα από τα χωρικά σημεία του πλέγματος στο νέο χρονικό βήμα ολοκλήρωσης. Από άποψη υλοποίησης, οι πεπλεγμένες μέθοδοι είναι πιο δύσκολες στην υλοποίηση αριθμητικού κώδικα, αφού χρειάζεται η επίλυση ενός συζευγμένου συστήματος εξισώσεων της μορφής <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> είναι το διάνυσμα των αγνώστων, <span class="math notranslate nohighlight">\(A\)</span> είναι ο πίνακας των συντελεστών και <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι το διάνυσμα του δεξιού μέλους κάθε εξίσωσης. Για τις άμεσες μεθόδους είναι πιο εύκολη η υλοποίηση αριθμητικού κώδικα, αφού έχουμε μια απλή επαναληπτική διαδικασία.</p>
+</div>
 </div>
 <div class="section" id="crank-nicolson">
 <h2>Το σχήμα των Crank-Nicolson<a class="headerlink" href="#crank-nicolson" title="Permalink to this headline">¶</a></h2>
+<p>Η ιδέα για το σχήμα των Crank-Nicolson είναι να εφαρμοστούν κεντρικές πεπερασμένες διαφορές στο χώρο και το χρόνο, σε συνδυασμό με την μέση τιμή του ενδιάμεσου (εικονικού) σημείου στο χρόνο. Σε αυτή την μέθοδο απαιτούμε η διακριτή μορφή της ΜΔΕ να ισχύει σε εικονικά (ενδιάμεσα) χρονικά σημεία του υπολογιστικού πλέγματος <span id="id5">[<a class="reference internal" href="#id13" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>]</span>. Πιο συγκεκριμένα,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-13">
+<span class="eqno">(121)<a class="headerlink" href="#equation-eq4-13" title="Permalink to this equation">¶</a></span>\[
+	\begin{gathered}
+		\frac{\partial}{\partial t} u(x_i, t_{n+\frac{1}{2}}) = d \, \frac{\partial^2}{\partial x^2} u(x_i, t_{n+\frac{1}{2}}), \,\, i = 0, ..., N_x - 1, \,\,\, n = 0, ..., N_t - 1
+	\end{gathered}
+\]</div>
+<p>Εφαρμόζοντας κεντρικές διαφορές για τις χωρικές και χρονικές μεταβλητές, στο δεξί μέλος της εξίσωσης έχουμε την έκφραση,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-14">
+<span class="eqno">(122)<a class="headerlink" href="#equation-eq4-14" title="Permalink to this equation">¶</a></span>\[
+	\begin{gathered}
+		\frac{1}{\Delta x^2} \left( u_{i-1}^{n+\frac{1}{2}} - 2 u_{i}^{n+\frac{1}{2}} + u_{i+1}^{n+\frac{1}{2}} \right)
+	\end{gathered}
+\]</div>
+<p>Αυτή η έκφραση περιγράφει την τιμή της άγνωστης συνάρτησης <span class="math notranslate nohighlight">\(u\)</span> σε ένα εικονικό (μη υπαρκτό) σημείο της διαμέρισης, π.χ. <span class="math notranslate nohighlight">\(u_{i}^{n+\frac{1}{2}}\)</span>. Η πιο απλή αντικατάσταση που μπορούμε να κάνουμε είναι η αντικατάσταση με τον μέση τιμή της <span class="math notranslate nohighlight">\(u\)</span> στα γειτονικά γνωστά σημεία της διαμέρισης,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-15a">
+<span class="eqno">(123)<a class="headerlink" href="#equation-eq4-15a" title="Permalink to this equation">¶</a></span>\[
+	\begin{gathered}
+		u_{i}^{n+\frac{1}{2}} \approx \frac{1}{2} (u_{i}^{n} + u_{i}^{n+1})
+	\end{gathered}
+\]</div>
+<p>Τελικά, εφαρμόζοντας τη διαδικασία διακριτοποίησης και αντικαθιστώντας με τον μέση τιμή για τα εικονικά σημεία, πολλαπλασιάζοντας με το <span class="math notranslate nohighlight">\(\Delta t\)</span> και ομαδοποιόντας τους όρους έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-15b">
+<span class="eqno">(124)<a class="headerlink" href="#equation-eq4-15b" title="Permalink to this equation">¶</a></span>\[
+	\begin{gathered}
+		u_{i}^{n+1} - \frac{1}{2} F \left( u_{i-1}^{n+1} - 2 u_{i}^{n+1} + u_{i+1}^{n+1} \right) = u_{i}^{n} + \frac{1}{2} F \left( u_{i-1}^{n} - 2 u_{i}^{n} + u_{i+1}^{n} \right)
+	\end{gathered}
+\]</div>
+<p>όπου η παράμετρος παράμετρος <span class="math notranslate nohighlight">\(F = \displaystyle \frac{d \, \Delta t}{\Delta x^2}\)</span>, ορίζεται όπως και στην προηγούμενη ενότητα. Το αλγεβρικό σύστημα που προκύπτει από την διακριτοποίηση εμπεριέχει τους αγνώστους, <span class="math notranslate nohighlight">\(u_{i-1}^{n+1}, u_{i}^{n+1}\)</span> και <span class="math notranslate nohighlight">\(u_{i+1}^{n+1}\)</span> και απότελεί ένα συζευγμένο γραμμικό σύστημα της μορφής, <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> είναι το διάνυσμα των αγνώστων, <span class="math notranslate nohighlight">\(A\)</span> είναι ο πίνακας των συντελεστών και <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι το διάνυσμα του δεξιού μέλους κάθε εξίσωσης. Ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι παρόμοιας μορφής με αυτή που περιγράψαμε στην προηγούμενη ενότητα, δηλαδή τριδιαγώνιος πίνακας με όρους,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-16">
+<span class="eqno">(125)<a class="headerlink" href="#equation-eq4-16" title="Permalink to this equation">¶</a></span>\[
+a_{i,i-1} = - \frac{1}{2} F, \,\, a_{i,i} = 1 + F, \,\, a_{i,i+1} = - \frac{1}{2} F, \,\,\, i = 1, ..., N_x - 1
+\]</div>
+<p>Αυτά τα στοιχεία καθιστούν τον πίνακα <span class="math notranslate nohighlight">\(A\)</span> εύκολο να αντιστραφεί και να λυθεί το σύστημα των εξισώσεων. Αν θεωρήσουμε και ομογενείς, μηδενικές, συνοριακές συνθήκες, δηλαδή <span class="math notranslate nohighlight">\(u_0^n = 0\)</span>, <span class="math notranslate nohighlight">\(u_{N_x}^n = 0\)</span>, τότε έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-17">
+<span class="eqno">(126)<a class="headerlink" href="#equation-eq4-17" title="Permalink to this equation">¶</a></span>\[
+a_{0,0} = 1, \,\, a_{0,1} = 0, \,\, a_{N_x,N_{x-1}} = 0, \,\, a_{N_x,N_{x}} = 1
+\]</div>
+<p>Το διάνυσμα του δεξιού μέλους των εξισώσεων, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-18">
+<span class="eqno">(127)<a class="headerlink" href="#equation-eq4-18" title="Permalink to this equation">¶</a></span>\[
+\mathbf{b} = (b_0, b_1, ..., b_i, ..., b_{N_x})^T
+\]</div>
+<p>με,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-19">
+<span class="eqno">(128)<a class="headerlink" href="#equation-eq4-19" title="Permalink to this equation">¶</a></span>\[
+b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.linalg</span>
+
+<span class="k">def</span> <span class="nf">solve_diffusion1D_CR</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Επιλύει την μονοδιάστατη διάχυση με το σχήμα Crank-Nicolson (CR)</span>
+<span class="sd">    L: μήκος χωρίου στη διάσταση x</span>
+<span class="sd">    Τ: τελική χρονική στιγμή</span>
+<span class="sd">    dx: χωρικό βήμα</span>
+<span class="sd">    dt: χρονικό βήμα</span>
+<span class="sd">    d: συντελεστής διάχυσης</span>
+<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (πχ gauss η plug_profile).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span> <span class="c1"># πεδίο ορισμού</span>
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+    <span class="n">nsteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+    
+    
+    <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># αρχικοποίηση πινάκων Α και b.</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">F</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">F</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">F</span><span class="o">/</span><span class="mi">2</span>
+
+    <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">plot_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nsteps</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+        <span class="n">u0</span> <span class="o">=</span> <span class="n">u</span>
+    
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="k">plot_freq</span> == 0:
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;t=</span><span class="si">{</span><span class="n">n</span><span class="o">*</span><span class="n">dt</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
 </div>
-<div class="section" id="id4">
-<h2>Ο κανόνας θ<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="richardson">
-<h2>Αριθμητικό σχήμα του Richardson<a class="headerlink" href="#richardson" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με το πεπλεγμένο σχ΄ήμα Euler. </span>
+<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">solve_diffusion1D_CR</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_18_0.png" src="_images/Chapter4_18_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με άμεσο σχήμα Euler. </span>
+<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span> 
+<span class="n">solve_diffusion1D_CR</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">plug_profile</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_19_0.png" src="_images/Chapter4_19_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Ο κανόνας θ<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span> αποτελει τη γενίκευση των προηγούμενων μεθόδων που εισάγονται σε αυτό το κεφάλαιo, όπως είναι η εμπρόσθια και η οπίσθια μέθοδος του Euler και η μέθοδος των Crank-Nicolson. Για μια εξίσωση της μορφής,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-20a">
+<span class="eqno">(129)<a class="headerlink" href="#equation-eq4-20a" title="Permalink to this equation">¶</a></span>\[
+	\frac{\partial u}{\partial t} = G(u)
+\]</div>
+<p>όπου το <span class="math notranslate nohighlight">\(G(\cdot)\)</span> είναι ένας χωρικός διαφορικός τελεστής που δρά στη συνάρτηση <span class="math notranslate nohighlight">\(u\)</span>, τότε ο <span class="math notranslate nohighlight">\(\theta\)</span>-κανόνας είναι της μορφής,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-20b">
+<span class="eqno">(130)<a class="headerlink" href="#equation-eq4-20b" title="Permalink to this equation">¶</a></span>\[
+	\frac{u_i^{n+1} - u_i^{n}}{\Delta t} = \theta G(u_i^{n+1}) + (1 - \theta) G(u_i^{n}) 
+\]</div>
+<p>Το σημαντικό χαρακτηριστικό του αριθμητικού <span class="math notranslate nohighlight">\(\theta\)</span>-σχήματος είναι ότι αποτελεί για γενικότερη οικογένεια γνωστών και ευρέως χρησιμοποιούμενων σχημάτων χρονικής διακριτοποίησης. Οπότε, για διάφορες τιμές του <span class="math notranslate nohighlight">\(\theta\)</span> μπορούμε να πάρουμε τα παρακάτω αριθμητικά σχήματα,</p>
+<ol class="simple">
+<li><p>Όταν το <span class="math notranslate nohighlight">\(\theta = 0\)</span>,  παίρνουμε το άμεσο αριθμητικό σχήμα του Euler στο χρόνο</p></li>
+<li><p>Όταν το <span class="math notranslate nohighlight">\(\theta = 1\)</span>, παίρνουμε το πεπλεγμένο αριθμητικό σχήμα του Euler στο χρόνο</p></li>
+<li><p>Όταν το <span class="math notranslate nohighlight">\(\theta = 1/2\)</span>,  παίρνουμε το πεπλεγμένο αριθμητικό σχήμα των Crank-Nicolson στο χρόνο</p></li>
+</ol>
+<p>Εφαρμόζεται στο πρόβλημα της μονοδιάστατης διάχυσης τον <span class="math notranslate nohighlight">\(\theta\)</span>-κανόνα παίρνουμε το παρακάτω αριθμητικό σχήμα,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-21">
+<span class="eqno">(131)<a class="headerlink" href="#equation-eq4-21" title="Permalink to this equation">¶</a></span>\[
+\frac{u_i^{n+1} - u_i^{n}}{\Delta t} = d \left( \theta \, \frac{u_{i+1}^{n+1} - 2 u_i^{n+1} + u_{i-1}^{n+1}}{\Delta x^2} + (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n}}{\Delta x^2} \right)
+\]</div>
+<p>Αυτό το αριθμητικό σχήμα οδηγεί σε ένα αλγεβρικό σύστημα, όπου ο πίνακας των συντελεστών <span class="math notranslate nohighlight">\(A\)</span> είναι τριδιαγώνιες και έχει τις παρακάτω συνιστώσες,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-22">
+<span class="eqno">(132)<a class="headerlink" href="#equation-eq4-22" title="Permalink to this equation">¶</a></span>\[
+a_{i,i-1} = - F \, \theta, \,\, a_{i,i} = 1 + 2 \, F \, \theta, \,\, a_{i,i+1} = - F \, \theta, \,\,\, i = 1, ..., N_x - 1
+\]</div>
+<p>Το διάνυσμα του δεξιού μέλους των εξισώσεων, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, έχει συνιστώσες της μορφής,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-23">
+<span class="eqno">(133)<a class="headerlink" href="#equation-eq4-23" title="Permalink to this equation">¶</a></span>\[
+b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n}}{\Delta x^2}
+\]</div>
+<p>Οι αντίστοιχες τιμές για τα συνοριακά σημεία είναι ίδιες όπως και στα πεπελεγμένα σχήματα της οπίσθιας μεθόδου του Euler και της μεθόδου των Crank-Nicolson, που έχουμε περιγράψει στις προηγούμενες ενότητες.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.linalg</span>
+
+<span class="k">def</span> <span class="nf">tridiag</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">diagflat</span><span class="p">([</span><span class="n">a</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">diagflat</span><span class="p">([</span><span class="n">b</span><span class="p">]</span><span class="o">*</span><span class="n">size</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">diagflat</span><span class="p">([</span><span class="n">c</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">theta_rule_diffusion1D</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    
+    <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span> <span class="c1"># πεδίο ορισμού</span>
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+    <span class="n">nsteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+    
+    <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="n">a</span> <span class="o">=</span> <span class="o">-</span> <span class="n">F</span> <span class="o">*</span> <span class="n">theta</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">F</span> <span class="o">*</span> <span class="n">theta</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="o">-</span> <span class="n">F</span> <span class="o">*</span> <span class="n">theta</span>
+    
+    <span class="n">A</span> <span class="o">=</span> <span class="n">tridiag</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">plot_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nsteps</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+        <span class="n">u0</span> <span class="o">=</span> <span class="n">u</span>
+    
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="k">plot_freq</span> == 0:
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;t=</span><span class="si">{</span><span class="n">n</span><span class="o">*</span><span class="n">dt</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="dufort-frankel">
 <h2>Τύπος των Dufort-Frankel<a class="headerlink" href="#dufort-frankel" title="Permalink to this headline">¶</a></h2>
+<p>Στις προηγούμενες παραγράφους αναπτύξαμε το άμεσα αριθμητικό σχήμα του Euler. Αυτό το αριθμητικό σχήμα γράφεται στη μορφή,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-24">
+<span class="eqno">(134)<a class="headerlink" href="#equation-eq4-24" title="Permalink to this equation">¶</a></span>\[
+	u_i^{n+1} = u_i^n + \frac{d \, \Delta t}{\Delta x^2} (u_{i+1}^{n} - 2 \, u_i^n + u_{i-1}^n)
+\]</div>
+<p>όπου η παράμετρος <span class="math notranslate nohighlight">\(F = \frac{d \, \Delta t}{\Delta x^2}\)</span>, είναι βασική παράμετρος για την εξίσωση διάχυσης. Η <span class="math notranslate nohighlight">\(F\)</span>, όπως έχουμε ήδη περιγράψει, είναι ένας αδιάστατος αριθμός που εμπεριέχει τη βασική φυσική παράμετρο του προβλήματος, <span class="math notranslate nohighlight">\(d\)</span>, καθώς και τις παραμέτρους διακριτοποίησης, <span class="math notranslate nohighlight">\(\Delta x\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span> σε μία μόνο παράμετρο.</p>
+<p>Στο ανωτέρω αριθμητικό σχήμα χρησιμοποιήσαμε κεντρικές διαφορές για τις χωρικές παραγώγους και εμπρόσθιες διαφορές για τις χρονικές. Έτσι το σφάλμα αποκοπής είναι <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>.</p>
+<p>Ένα βελτιωμένο αριθμητικό σχήμα, με σφάλμα αποκοπής  <span class="math notranslate nohighlight">\(O(\Delta t^2, \Delta x^2)\)</span> επιτυγχάνεται χρησιμοποιώντας κεντρικές διαφορές για τις χωρικές παραγώγους αλλά και για τις χρονικές. Στη συνέχεια αντικαθιστούμε το δεύτερο <span class="math notranslate nohighlight">\(u_i^n\)</span> στο δεύτερο μέλος της εξίσωσης <a class="reference internal" href="#equation-eq4-24">(134)</a>, με τη μέση τιμή του, δηλαδή <span class="math notranslate nohighlight">\(\frac{u_i^{n+1} + u_i^{n-1}}{2}\)</span>.</p>
+<p>Έτσι το βελτιωμένο αριθμητικό σχήμα που παίρνουμε έχει την παρακάτω μορφή,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-25">
+<span class="eqno">(135)<a class="headerlink" href="#equation-eq4-25" title="Permalink to this equation">¶</a></span>\[
+	\frac{u_i^{n+1} - u_i^{n-1}}{2 \, \Delta t} + \frac{d}{\Delta x^2} (u_{i-1}^{n} - u_{i}^{n-1} - u_i^{n+1} + u_{i+1}^n)
+\]</div>
+<p>ή τελικά έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-25b">
+<span class="eqno">(136)<a class="headerlink" href="#equation-eq4-25b" title="Permalink to this equation">¶</a></span>\[
+	(1 + 2 \, F) \, u_i^{n+1} = 2 \, F \, (u_{i-1}^{n} + u_{i+1}^n) + (1 - 2 \, F) \, u_{i}^{n-1} 
+\]</div>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq4-25b">(136)</a> αποτελεί την εξίσωση των DuFort-Frankel <span id="id7">[<a class="reference internal" href="#id27" title="EC Du Fort and S Po Frankel. Stability conditions in the numerical treatment of parabolic differential equations. Mathematical Tables and Other Aids to Computation, 7(43):135–152, 1953.">Du Fort and Frankel, 1953</a>]</span>.</p>
+<p>Ο παραπάνω τύπος περιλαμβάνει τρία χρονικά επίπεδα, <span class="math notranslate nohighlight">\((n+1 , n , n-1)\)</span> και αποδεικνύεται ότι έχει σφάλμα αποκοπής, <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>, είναι επίσης ένα αριθμητικό σχήμα άνευ συνθηκών ευσταθές (unconditionally stable numerical scheme).</p>
+<p>Σύμφωνα με το αριθμητικό σχήμα <a class="reference internal" href="#equation-eq4-24">(134)</a> ο υπολογισμός της λύσης στο σημείο <span class="math notranslate nohighlight">\((i, n+1)\)</span>, δηλαδή στο επόμενο χρονικό βήμα, απαιτεί την τιμή της λύσης, σε τρία σημεία του πλέγματος, του προηγούμενου χρονικού βήματος, <span class="math notranslate nohighlight">\(n\)</span>, δηλαδή στα σημεία <span class="math notranslate nohighlight">\((i-1, n)\)</span>, <span class="math notranslate nohighlight">\((i, n)\)</span> και <span class="math notranslate nohighlight">\((i+1, n)\)</span>. Με τον ίδιο τρόπο ο υπολογισμός της λύσης στο <span class="math notranslate nohighlight">\((i-1, n)\)</span> σημείο, απαιτεί την τιμή της λύσης και στο <span class="math notranslate nohighlight">\((i-2, n)\)</span>, κ.λπ.</p>
+<div class="figure align-default" id="fig-df">
+<a class="reference internal image-reference" href="_images/Fig_DF.png"><img alt="_images/Fig_DF.png" src="_images/Fig_DF.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Υπολογισμός της τιμής της συνάρτησης στο σημείο <span class="math notranslate nohighlight">\((i, n+1)\)</span> για το πεπλεγμένο σχήμα των οπίσθιων διαφορών.</span><a class="headerlink" href="#fig-df" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id5">
-<h2>Επέκταση στις 2 διαστάσεις<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Άρα, η τιμή της λύσης στο σημείο <span class="math notranslate nohighlight">\(A \, (i, n+1)\)</span> εξαρτάται από την τιμή της λύσης σε όλα τα σημεία του πλέγματος που ορίζει το τρίγωνο <span class="math notranslate nohighlight">\(OAB\)</span>, όχι όμως και απ’ όλα τα σημεία του πλέγματος που βρίσκονται κάτω από την ευθεία <span class="math notranslate nohighlight">\(t = n + 1\)</span>, όπως χαρακτηριστικά φαίνεται στο σχήμα <a class="reference internal" href="#fig-df"><span class="std std-numref">Fig. 9</span></a>. Αυτό σημαινει ότι το παραπάνω αριθμητικό σχήμα θα είναι καλύτερο, όσο περισσότερα σημεία του πλέγματος περιλαμβάνονται μέσα στο τρίγωνο <span class="math notranslate nohighlight">\(OAB\)</span>. Αυτό επιτυγχάνεται για πιο εκλεπτυσμένο χρονικό βήμα <span class="math notranslate nohighlight">\(k\)</span>, δηλαδή αυξάνοντας τον υπολογιστικό χρόνο.</p>
+<p><em>Σημείωση:</em> Παρατηρούμε ότι το αριθμητικό σχήμα των DuFort-Frankel είναι ένα βελτιωμένο αριθμητικό σχήμα, σε σχέση με το άμεσο αριθμητικό σχήμα του Euler, που ειναι ακρίβειας <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>. Η σχέση όμως <a class="reference internal" href="#equation-eq4-25b">(136)</a> του τύπου των DuFort-Frankel δεν έχει τον άμεσο χαρακτήρα του προηγούμενου αριθμητικού σχήματος. Για το λόγο αυτό και η εφαρμογή του σε Η/Υ δεν έχει την ίδια απλότητα που είχε το σχήμα των εμπρόσθιων διαφορών.</p>
 </div>
-<div class="section" id="id6">
-<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h2>Επέκταση στις 2 διαστάσεις<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Η εξίσωση διάχυσης σε 2 διαστάσεις είναι:</p>
+<div class="math notranslate nohighlight" id="equation-eq4-27">
+<span class="eqno">(137)<a class="headerlink" href="#equation-eq4-27" title="Permalink to this equation">¶</a></span>\[ 
+	\frac{\partial u}{\partial t} = d (\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2})
+\]</div>
+<p>Εφαρμόζοντας το άμεσο σχήμα Euler για την διακριτοποίηση της <a class="reference internal" href="#equation-eq4-27">(137)</a> έχουμε,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-28">
+<span class="eqno">(139)<a class="headerlink" href="#equation-eq4-28" title="Permalink to this equation">¶</a></span>\[
+	\frac{u_{i,j}^{n+1} - u_{i,j}^n}{\Delta t} = d \, (\frac{u_{{i+1,j}}^{n} - 2 u_{i,j}^n + u_{i-1,j}^n}{\Delta x^2} + \frac{u_{{i,j+1}}^{n} - 2 u_{i,j}^n + u_{i,j-1}^n}{\Delta y^2})
+\]</div>
+<p>Αναδιατάσσοντας τους όρους, η άγνωστη συνάρτηση βρίσκεται ως εξής,</p>
+<div class="math notranslate nohighlight" id="equation-eq4-28">
+<span class="eqno">(139)<a class="headerlink" href="#equation-eq4-28" title="Permalink to this equation">¶</a></span>\[
+	u_{i,j}^{n+1} = u_{i,j}^n + = d \Delta t \, (\frac{u_{{i+1,j}}^{n} - 2 u_{i,j}^n + u_{i-1,j}^n}{\Delta x^2} + \frac{u_{{i,j+1}}^{n} - 2 u_{i,j}^n + u_{i,j-1}^n}{\Delta y^2})
+\]</div>
+<p>Στο παράδειγμα που ακολουθεί, επιλύεται η εξίσωση διάχυσης σε ένα τετραγωνικό χωρίο θεωρώντας ότι η συνάρτηση παίρνει τιμή 1 εντός ενός κύκλου με ακτίνα <span class="math notranslate nohighlight">\(r\)</span> και κέντρο <span class="math notranslate nohighlight">\((cx, cy)\)</span> και εκτός του κύκλου έχει τιμή 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">do_timestep</span><span class="p">(</span><span class="n">u0</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+    <span class="c1"># εμπρόσθιες διαφορές στο χρόνο, κεντρικές διαφορές στο χώρο</span>
+    <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">*</span> <span class="p">(</span>
+          <span class="p">(</span><span class="n">u0</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">u0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">u0</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="n">dx2</span>
+          <span class="o">+</span> <span class="p">(</span><span class="n">u0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">u0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">u0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="n">dy2</span> <span class="p">)</span>
+
+    <span class="n">u0</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">u0</span><span class="p">,</span> <span class="n">u</span>
+
+ 
+<span class="n">Lx</span> <span class="o">=</span> <span class="n">Ly</span> <span class="o">=</span> <span class="mf">10.</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">4.</span>
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">101</span>
+
+<span class="n">nx</span><span class="p">,</span> <span class="n">ny</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Lx</span><span class="o">/</span><span class="n">dx</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">Ly</span><span class="o">/</span><span class="n">dy</span><span class="p">)</span>
+
+<span class="n">dx2</span><span class="p">,</span> <span class="n">dy2</span> <span class="o">=</span> <span class="n">dx</span><span class="o">*</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="o">*</span><span class="n">dy</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dx2</span> <span class="o">*</span> <span class="n">dy2</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span> <span class="o">+</span> <span class="n">dy2</span><span class="p">))</span> <span class="c1"># το μέγιοστο dt ώστε το σχήμα να παραμένει ευσταθές (F=0.5)</span>
+
+<span class="n">u0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">))</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">u0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># αρχική συνθήκη - κύκλος ακτίνας r και κέντρο (cx,cy)</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nx</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ny</span><span class="p">):</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">dx</span><span class="o">-</span><span class="n">cx</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">j</span><span class="o">*</span><span class="n">dy</span><span class="o">-</span><span class="n">cy</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">p2</span> <span class="o">&lt;</span> <span class="n">r2</span><span class="p">:</span>
+            <span class="n">u0</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># χρονικά σημεία</span>
+
+<span class="n">plot_timings</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">plot_timings</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
+    <span class="n">u0</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">do_timestep</span><span class="p">(</span><span class="n">u0</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">plot_timings</span><span class="p">:</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">counter</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;afmhot&#39;</span><span class="p">),</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">counter</span><span class="p">]</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">counter</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;t = </span><span class="si">{:.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">j</span><span class="o">*</span><span class="n">dt</span><span class="o">*</span><span class="mi">1000</span><span class="p">))</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_25_0.png" src="_images/Chapter4_25_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="a">
+<h2>Aσκήσεις<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Να γραφτεί πρόγραμμα για το άμεσο και πεπλεγμένο σχήμα Euler με βάση τον αριθμό των σημείων διακριτοποίησης αντί για το χωρικό βήμα που δίνεται παραπάνω.</p></li>
+<li><p>Να γραφτούν τα προγράμματα του άμεσου και πεπλεγμένου σχήματος Euler καθώς και του σχήματος Crank-Nicolson για ενναλακτικές συνοριακές συνθήκες.</p></li>
+<li><p>Να γραφτεί ο κώδικας για την διάχυση σε 2 διαστάσεις σε μορφή συνάρτησης με τα κατάλληλα ορίσματα.</p></li>
+<li><p>Να γραφτεί ο κώδικας για την διάχυση σε 2 διαστάσεις με ένα πεπλεγμένο αριθμητικό σχήμα.</p></li>
+<li><p>Να δοθεί κώδικας επίλυσης της εξίσωσης διάχυσης με το άμεσο σχήμα Euler για 3 διαστάσεις.</p></li>
+</ol>
+</div>
+<div class="section" id="id9">
+<h2>Βιβλιογραφία<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p id="id10"><dl class="citation">
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id7">DFF53</a></span></dt>
+<dd><p>EC Du Fort and S Po Frankel. Stability conditions in the numerical treatment of parabolic differential equations. <em>Mathematical Tables and Other Aids to Computation</em>, 7(43):135–152, 1953.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id5">92</a></span></dt>
+<dd><p>Νίκος Καφούσιας. <em>Ρευστομηχανική ΙI</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"78d85646943d4735a6ffd0083bf7ebc5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "badd9bb21c06404a8742e42bd214ad4b": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_97e160fa2bda4136bee68971a39ef3f3", "IPY_MODEL_e758747c908f4b00bff8960e64fff254", "IPY_MODEL_ce68958734a647db9309e2942951b811", "IPY_MODEL_4d7d3f746a464e208068ae92e21428bd"], "layout": "IPY_MODEL_78d85646943d4735a6ffd0083bf7ebc5"}}, "fd86422530b94630bb3285ca75fd0428": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "fc34f590b1514bc4916766a2bed846be": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "97e160fa2bda4136bee68971a39ef3f3": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "a", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_fd86422530b94630bb3285ca75fd0428", "max": 2.0, "min": 0.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.1, "style": "IPY_MODEL_fc34f590b1514bc4916766a2bed846be", "value": 1.0}}, "e7cfae91fc424de2a4d68289ced692f5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3edfaa591a354745a1a81b86c7c777e7": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "e758747c908f4b00bff8960e64fff254": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "b", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_e7cfae91fc424de2a4d68289ced692f5", "max": 1.0, "min": 0.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.1, "style": "IPY_MODEL_3edfaa591a354745a1a81b86c7c777e7", "value": 0.5}}, "82674134778a422eb584daf30c495583": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "43c4c221fe5c4be48d18022153521057": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "ce68958734a647db9309e2942951b811": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "c", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_82674134778a422eb584daf30c495583", "max": 0.2, "min": 0.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.01, "style": "IPY_MODEL_43c4c221fe5c4be48d18022153521057", "value": 0.1}}, "047ff8a329ad4ef186e6576a1297c659": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "350px", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4d7d3f746a464e208068ae92e21428bd": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_047ff8a329ad4ef186e6576a1297c659", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {"needs_background": "light"}, "data": {"text/plain": "<Figure size 432x288 with 1 Axes>", "image/png": "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\n"}}]}}, "f8795aa6c75741d5a9534a906002e0d6": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "50cfa1582971484bbfd532c6ed04ad18": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_dbfdf67c388142269269f4e60bf25d93", "IPY_MODEL_16a0dbb3bbf54c948a1c30bb86a84a0a", "IPY_MODEL_82e0d53031f54b7aba32c8136e908619"], "layout": "IPY_MODEL_f8795aa6c75741d5a9534a906002e0d6"}}, "ccd570f903714f339407572ff0a84865": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3ce0323190f24375a2a7d1b0d99261ee": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "dbfdf67c388142269269f4e60bf25d93": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "a", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_ccd570f903714f339407572ff0a84865", "max": 3.0, "min": 1.0, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.1, "style": "IPY_MODEL_3ce0323190f24375a2a7d1b0d99261ee", "value": 2.0}}, "029e895c54b547a39c7f8f052c991f8a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "77dffb1a6d8641e59082bb61a78fa0f6": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "16a0dbb3bbf54c948a1c30bb86a84a0a": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "b", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_029e895c54b547a39c7f8f052c991f8a", "max": 0.2, "min": 0.05, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.01, "style": "IPY_MODEL_77dffb1a6d8641e59082bb61a78fa0f6", "value": 0.12000000000000001}}, "8970d9eebbc14e1ab58da26bf6822acd": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "350px", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "82e0d53031f54b7aba32c8136e908619": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_8970d9eebbc14e1ab58da26bf6822acd", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {"needs_background": "light"}, "data": {"text/plain": "<Figure size 432x288 with 1 Axes>", "image/png": "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\n"}}]}}}, "version_major": 2, "version_minor": 0}
+</script>
+
 
     <script type="text/x-thebe-config">
     {
@@ -405,54 +1099,42 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="Chapter3.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Chapter3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter5.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Οι εξισώσεις Laplace και Poisson</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="Chapter5.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Οι εξισώσεις Laplace και Poisson</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Αναστάσιος Ράπτης και Μιχαήλ Ξένος<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Αναστάσιος Ράπτης και Μιχαήλ Ξένος<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
