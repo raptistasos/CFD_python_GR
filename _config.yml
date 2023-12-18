@@ -40,7 +40,10 @@ sphinx:
   extra_extensions:
     - sphinx_exercise
     - sphinx_proof
+    # - sphinxcontrib.tikz
   config:
+    # tikz_proc_suite         : pdf2s
+    # tikz_tikzlibraries      : arrows
     bibtex_reference_style  : author_year
     mathjax_path            : https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     latex_elements:
