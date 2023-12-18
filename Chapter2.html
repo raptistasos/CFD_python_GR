@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Εισαγωγή στις Αριθμητικές Μεθόδους &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
   
@@ -18,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,12 +40,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -104,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής" href="Chapter3.html" />
     <link rel="prev" title="Εισαγωγή στη γλώσσα προγραμματισμού Python" href="Chapter1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +116,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -166,9 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -178,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
   
   
 </a></div>
@@ -374,20 +388,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -436,18 +452,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>Εισαγωγή στις Αριθμητικές Μεθόδους<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Εισαγωγή στις Αριθμητικές Μεθόδους<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>Οι Μερικές Διαφορικές Εξισώσεις (ΜΔΕ) συναντώνται στην μαθηματική διατύπωση φυσικών φαινομένων (προβλημάτων), όπως η ροή των ρευστών, η μεταφορά της θερμότητας, η διάδοση των κυμάτων, η διάχυση χημικών ουσιών, η ταλάντωση και η παραμόρφωση των στερεών καθώς και σε άλλα προβλήματα  Ρευστομηχανικής. Οι εξισώσεις αυτές περιγράφουν κατά μοναδικό τρόπο τα προαναφερθέντα φαινόμενα, εαν συμπληρωθούν με κατάλληλες οριακές συνθήκες, αρχικές και συνοριακές <span id="id2">[<a class="reference internal" href="#id22" title="Νίκος Καφούσιας. Ρευστομηχανική Ι. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1989.">Καφούσιας, 1989</a>, <a class="reference internal" href="#id23" title="Μιχάλης Ξένος and Ευστράτιος Τζρτζιλάκης. Μηχανική Ρευστών με Εφαρμογές. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1989.">Ξένος and Τζρτζιλάκης, 1989</a>]</span>.</p>
 <div class="admonition- admonition">
 <p class="admonition-title">Ορισμός</p>
 <p>Μια ΜΔΕ είναι μια σχέση/εξίσωση που αφορά την άγνωστη συνάρτηση χωρικών ή χρονικών ανεξάρτητων μεταβλητών και τις μερικές παραγώγους της συνάρτησης αυτής ως προς αυτές τις μεταβλητές.</p>
 </div>
 <p>Στο παρόν κεφάλαιο παρουσιάζονται μέθοδοι για την ταξινόμηση των  προβλημάτων της Ρευστοδυναμικής (συστήματα ΜΔΕ) με τη βοήθεια των χαρακτηριστικών και της ορίζουσας των συντελεστών των αγνώστων. Εισάγεται επίσης η έννοια του καλά τοποθετημένου προβλήματος και γίνεται περιγραφή των αρχικών και συνοριακών συνθηκών ενός προβλήματος που περιγράφεται από ΜΔΕ.</p>
-<div class="section" id="id3">
-<h2>Ταξινόμηση των προβλημάτων της Ρευστοδυναμικής<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
-<div class="section" id="cauchy">
-<h3>Χαρακτηριστικές καμπύλες ΜΔΕ 1ης τάξης, το πρόβλημα του Cauchy<a class="headerlink" href="#cauchy" title="Permalink to this headline">#</a></h3>
+<section id="id3">
+<h2>Ταξινόμηση των προβλημάτων της Ρευστοδυναμικής<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<section id="cauchy">
+<h3>Χαρακτηριστικές καμπύλες ΜΔΕ 1ης τάξης, το πρόβλημα του Cauchy<a class="headerlink" href="#cauchy" title="Permalink to this heading">#</a></h3>
 <p>Έστω η ημιγραμμική ΜΔΕ πρώτης τάξης,</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">#</a></span>\[
@@ -490,9 +506,9 @@ document.write(`
 <span class="eqno">(8)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">#</a></span>\[
 	\frac{dz}{dt} = c(x(t), y(t)) \, z + d(x(t), y(t))
 \]</div>
-</div>
-<div class="section" id="id4">
-<h3>Χαρακτηριστικές καμπύλες ΜΔΕ 2ης τάξης<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id4">
+<h3>Χαρακτηριστικές καμπύλες ΜΔΕ 2ης τάξης<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Σε αυτή την ενότητα θα ασχοληθούμε με ΜΔΕ 2ης τάξης με δυο ανεξάρτητες μεταβλητές, οι οποίες δηλαδή περιέχουν τουλάχιστον μια από τις παραγώγους 2ης τάξης της εξαρτημένης μεταβλητής.</p>
 <p>Θεωρούμε την ημιγραμμική ΜΔΕ, ως προς τη συνάρτηση <span class="math notranslate nohighlight">\(u(x,y)\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
@@ -601,10 +617,10 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
 <li><p>Οι  υπερβολικές  εξισώσεις  με  χαρακτηριστικό  πρότυπο  την  κυματική  εξίσωση,  εξαρτώνται  από  το  χρόνο  και  περιγράφουν  φαινόμενα  διάδοσης. Το  σήμα  διαδίδεται  με  πεπερασμένη  ταχύτητα  ή  σε   περιορισμένη  περιοχή  του  χώρου,  με  αποτέλεσμα  τα  σημεία  ασυνέχειας  να  παραμένουν  σταθερά.</p></li>
 <li><p>Αντίθετα  με  τις  προηγούμενες  κατηγορίες,  οι  ελλειπτικές  εξισώσεις   περιγράφουν  τη  στατική  συμπεριφορά  ενός  μεγέθους  σε  ορισμένη  περιοχή,  χωρίς  να  υπάρχει  χρονική  εξάρτηση. Χαρακτηριστικές ελλειπτικές  εξισώσεις  είναι  οι εξισώσεις Laplace και Poisson.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>Ταξινόμηση με βάση τις ιδιοτιμές του πίνακα των συντελεστών<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="id5">
+<h2>Ταξινόμηση με βάση τις ιδιοτιμές του πίνακα των συντελεστών<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <p>Η ημιγραμμική ΜΔΕ 2ης τάξης μπορεί να γραφεί στη γενική μορφή ως,</p>
 <div class="math notranslate nohighlight" id="equation-eq18">
 <span class="eqno">(19)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">#</a></span>\[
@@ -654,9 +670,9 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
        0 &amp; 1  \\
     \end{array}} \right],\,\,\,\,\lambda _1  = 1 - M^2 ,\,\,\,\lambda _2  = 1
 \end{split}\]</div>
-</div>
-<div class="section" id="id8">
-<h2>Ταξινόμηση συστημάτων ΜΔΕ<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id8">
+<h2>Ταξινόμηση συστημάτων ΜΔΕ<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
 <p>Το σύνολο των προβλημάτων της Ρευστομηχανικής περιγράφεται από συστήματα ΜΔΕ και όχι από μια απλή ΜΔΕ. Ακόμα και στην περίπτωση που το ρευστομηχανικό πρόβλημα περιγράφεται από ΜΔΕ 2ης τουλάχιστον τάξης, αυτή ανάγεται σ’ ένα σύστημα εξισώσεων 1ης τάξης. Θεωρούμε το ημιγραμμικό σύστημα,</p>
 <div class="math notranslate nohighlight" id="equation-eq24">
 <span class="eqno">(25)<a class="headerlink" href="#equation-eq24" title="Permalink to this equation">#</a></span>\[\begin{split}
@@ -666,10 +682,12 @@ a\left( {\frac{{dy}}{{dx}}} \right)^2  - 2b\frac{{dy}}{{dx}} + c = 0
      \end{gathered}
 \end{split}\]</div>
 <p>όπου οι συντελεστές <span class="math notranslate nohighlight">\(a_i\)</span>, <span class="math notranslate nohighlight">\(b_i\)</span>, <span class="math notranslate nohighlight">\(c_i\)</span> και <span class="math notranslate nohighlight">\(f_i\)</span>, <span class="math notranslate nohighlight">\(i = 1, 2\)</span> είναι συναρτήσεις των ανεξάρτητων μεταβλητών, <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> αλλά και των άγνωστων συναρτήσεων <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span>. Υποθέτουμε ότι η λύση του συστήματος, δηλαδή τα <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span>, έχει υπολογισθεί με την βοήθεια των αρχικών και συνοριακών συνθηκών σε όλα τα σημεία <span class="math notranslate nohighlight">\((x,y)\)</span>, της περιοχής ΑΒΓΔΕΑ, <a class="reference internal" href="#figure-2-1"><span class="std std-numref">Fig. 2</span></a>, αλλά και πάνω στην καμπύλη <span class="math notranslate nohighlight">\(c\)</span>. Γνωρίζουμε λοιπόν στο τυχόν σημείο <span class="math notranslate nohighlight">\(\Gamma\)</span> της καμπύλης <span class="math notranslate nohighlight">\(c\)</span> τις τιμές των, συνεχώς διαφορίσιμων, συναρτήσεων <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(v\)</span> καθώς και των παραγώγων αυτών πάνω σε οποιαδήποτε διεύθυνση που οδηγεί προς το εσωτερικό του χωρίου ΑΒΓΔΕΑ.</p>
-<div class="figure align-default" id="figure-2-1">
+<figure class="align-default" id="figure-2-1">
 <a class="reference internal image-reference" href="_images/Figure_2_1.png"><img alt="_images/Figure_2_1.png" src="_images/Figure_2_1.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Η λύση του συστήματος, <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, υπολογίζεται με την βοήθεια αρχικών και συνοριακών συνθηκών στα σημεία του συνόρου ΑΒΓΔΕΑ.</span><a class="headerlink" href="#figure-2-1" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Η λύση του συστήματος, <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, υπολογίζεται με την βοήθεια αρχικών και συνοριακών συνθηκών στα σημεία του συνόρου ΑΒΓΔΕΑ.</span><a class="headerlink" href="#figure-2-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Έστω <span class="math notranslate nohighlight">\(\theta\)</span> είναι η γωνία που σχηματίζει η τυχούσα διεύθυνση <span class="math notranslate nohighlight">\(\delta\)</span> με την παράλληλη στον <span class="math notranslate nohighlight">\(x\)</span>-άξονα στο σημείο <span class="math notranslate nohighlight">\(\Gamma\)</span>. Έστω επίσης <span class="math notranslate nohighlight">\(s\)</span> το μήκος επί της <span class="math notranslate nohighlight">\(\delta\)</span> από το <span class="math notranslate nohighlight">\(\Gamma\)</span>. Εάν <span class="math notranslate nohighlight">\(u_x\)</span> και <span class="math notranslate nohighlight">\(u_y\)</span> είναι γνωστά στο <span class="math notranslate nohighlight">\(\Gamma\)</span> τότε η κατά διεύθυνση παράγωγος της <span class="math notranslate nohighlight">\(u\)</span> στο <span class="math notranslate nohighlight">\(\Gamma\)</span> είναι επίσης γνωστή και δίνεται από την παρακάτω σχέση,</p>
 <div class="math notranslate nohighlight" id="equation-eq25">
 <span class="eqno">(26)<a class="headerlink" href="#equation-eq25" title="Permalink to this equation">#</a></span>\[
@@ -720,9 +738,9 @@ u_{s,\theta }  = u_x \cos \theta  + u_y \sin \theta  = u_x \frac{dx}{ds} + u_y \
 <p>Εάν η διακρίνουσα <span class="math notranslate nohighlight">\(\Delta\)</span> της <a class="reference internal" href="#equation-eq29">(30)</a> είναι μικρότερη του μηδενός το σύστημα χαρακτηρίζεται ως ελλειπτικού τύπου και δεν υπάρχουν πραγματικές χαρακτηριστικές διευθύνσεις. Εάν <span class="math notranslate nohighlight">\(\Delta = 0\)</span> το σύστημα <a class="reference internal" href="#equation-eq24">(25)</a> είναι παραβολικού τύπου και αν η διακρίνουσα <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span> υπάρχουν δύο χαρακτηριστικές διευθύνσεις και το σύστημα χαρακτηρίζεται ως υπερβολικού τύπου. Κατά μήκος των διευθύνσεων αυτών έχουμε την διάδοση των ασυνεχειών του πεδίου ροής δηλαδή των κρουστικών κυμάτων, shock waves.</p>
 </div>
 <p>Για περισσότερες λεπτομέρειες σχετικά με το πρόβλημα της ύπαρξης και διάδοσης ασυνεχειών στη Ρευστομηχανικη καθώς και στην ταξινόμηση των ΜΔΕ ο αναγνώστης μπορεί να ανατρέξει στα συγγράμματα <span id="id9">[<a class="reference internal" href="#id25" title="Clive Fletcher. Computational Techniques for Fluid Dynamics 1. Volume 1. Springer-Verlag Berlin Heidelberg, 1998.">Fletcher, 1998</a>, <a class="reference internal" href="Chapter4.html#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>]</span>.</p>
-</div>
-<div class="section" id="id10">
-<h2>Το καλά τοποθετημένο πρόβλημα και οι αρχικές και συνοριακές συνθήκες<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id10">
+<h2>Το καλά τοποθετημένο πρόβλημα και οι αρχικές και συνοριακές συνθήκες<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
 <p>Ενα πρόβλημα της Ρευστοδυναμικής, αλλά και γενικότερα ένα μαθηματικό πρόβλημα, που περιγράφεται από μια ΜΔΕ ή ένα σύστημα ΜΔΕ και τις αντίστοιχες αρχικές ή/και συνοριακές συνθήκες θα λέμε ότι είναι ‘’καλά τοποθετημένο’’, well-posed, όταν ικανοποιούνται τα παρακάτω,</p>
 <ul class="simple">
 <li><p>Υπάρχει η λύση του προβλήματος,</p></li>
@@ -746,9 +764,9 @@ u_{s,\theta }  = u_x \cos \theta  + u_y \sin \theta  = u_x \frac{dx}{ds} + u_y \
 <p>Επίσης το δυναμικό <span class="math notranslate nohighlight">\(\Phi\)</span> της ταχύτητας σ’ ένα πρόβλημα αστρόβιλης ροής ιδανικού ρευστού, γύρω από κάποιο στερεό όριο, ικανοποιεί την συνθήκη <span class="math notranslate nohighlight">\(\frac{\partial \Phi}{\partial \eta}= 0\)</span> επί του στερεού ορίου. Μια τέτοια συνθήκη για την άγνωστη συνάρτηση <span class="math notranslate nohighlight">\(\Phi\)</span> είναι συνθήκη Neumann. Τέλος μικτού τύπου συνθήκες εμφανίζονται συνήθως σε προβλήματα μεταφοράς θερμότητας <span id="id15">[<a class="reference internal" href="Chapter4.html#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>]</span>.</p>
 <p>Επίσης θα πρέπει να τονισθεί ότι στην αριθμητική επίλυση ενός προβλήματος, του οποίου οι συνθήκες είναι τύπου Dirichlet ή Robin, η εισαγωγή των συνθηκών αυτών εισάγει αμέσως και κάποιο σφάλμα το οποίο εξαρτάται από τον τρόπο (αριθμητικό σχήμα) με τον οποίο αντιπροσωπεύουμε την παράγωγο αυτή. Μια πληρέστερη παρουσίαση των μαθηματικών απαιτήσεων που πρέπει να ικανοποιούνται για την εισαγωγή κατάλληλων συνθηκών, σε σχέση με την ΜΔΕ που περιγράφει ένα πρόβλημα μπορεί να βρει ο αναγνώστης στα συγράμματα <span id="id16">[<a class="reference internal" href="#id25" title="Clive Fletcher. Computational Techniques for Fluid Dynamics 1. Volume 1. Springer-Verlag Berlin Heidelberg, 1998.">Fletcher, 1998</a>, <a class="reference internal" href="#id27" title="Richard H Pletcher, John C Tannehill, and Dale Anderson. Computational fluid mechanics and heat transfer. CRC press, 3 edition, 2012.">Pletcher <em>et al.</em>, 2012</a>]</span>.</p>
 <p>Γενικά, για τις ελλειπτικές ΜΔΕ καθορίζονται συνοριακές συνθήκες τύπου Dirichlet ή Neumann σε όλα τα σύνορα. Για τις ΜΔΕ παραβολικού τύπου καθορίζονται συνθήκες τύπου Dirichlet ή Neumann στα σύνορα καθώς και μια κατανομή της άγνωστης συνάρτησης για κάποια δεδομένη αρχική τιμή της μεταβλητής εκείνης ως προς την οποία θα ακολουθηθεί μια αριθμητική διαδικασία επίλυσης και η οποία είναι συνήθως ο χρόνος, <span class="math notranslate nohighlight">\(t\)</span>. Τέλος για τις ΜΔΕ 2ης τάξης, υπερβολικού τύπου, που ισχύουν σε κάποιο πεπερασμένο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span>, καθορίζονται συνθήκες τύπου Dirichlet ή Neumann στα σύνορα του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>, καθώς επίσης και μια κατανομή της άγνωστης συνάρτησης και της πρώτης παραγώγου της για καποια αρχικη τιμή του χρόνου, <span class="math notranslate nohighlight">\(t\)</span>.</p>
-</div>
-<div class="section" id="id17">
-<h2>Αδιαστατοποίηση των εξισώσεων της Ρευστοδυναμικής<a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id17">
+<h2>Αδιαστατοποίηση των εξισώσεων της Ρευστοδυναμικής<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
 <p>Πολλές φορές είναι πιο εύκολο να εξετάσουμε στη Ρευστομηχανική την αδιάστατη μορφή των εξισώσεων. Κατά την αδιαστατοποίηση οι εξαρτημένες και ανεξάρτητες μεταβλητές επιπλέον κανονικοποιούνται για να παίρνουν τιμές από 0 έως 1. Με την αδιαστατοποίηση εμφανίζονται αδιάστατοι παράμετροι που με τη βοήθεια τους μπορούμε να ομαδοποιήσουμε το φυσικό μας πρόβλημα. Για παράδειγμα, θεωρούμε τις εξισώσεις συνέχειας και ορμής στις τρεις διαστάσεις, στη συμπιεστή, χρονοεξαρτώμενη περίπτωση:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\bar \nabla \cdot\bar q = 0 \)</span>, εξίσωση συνέχειας.</p></li>
@@ -802,9 +820,9 @@ Re = \frac{{\rho UL}}{\mu } =\frac{\mbox{Δυνάμεις αδρανείας}}{\
 <p>Σε αυτή την περίπτωση έχουμε τις λεγόμενες <strong>βραδείες ή έρπουσες ροές ή ροές Stokes</strong>.</p>
 </div>
 <p>Περισσότερες πληροφορίες σχετικά με την αδιαστατοποίηση των εξισώσεων Navier - Stokes  μπορεί να βρει ο αναγνώστης στα συγγράμματα <span id="id18">[<a class="reference internal" href="Chapter3.html#id28" title="Suhas Patankar. Numerical heat transfer and fluid flow. CRC Press, 2009.">Patankar, 2009</a>, <a class="reference internal" href="#id28" title="Hermann Schlichting and Klaus Gersten. Boundary-Layer Theory. Springer-Verlag Berlin Heidelberg, 9 edition, 2017.">Schlichting and Gersten, 2017</a>, <a class="reference internal" href="#id30" title="Frank M White. Fluid Mechanics. McGraw-Hill, 4 edition, 1998.">White, 1998</a>, <a class="reference internal" href="#id22" title="Νίκος Καφούσιας. Ρευστομηχανική Ι. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1989.">Καφούσιας, 1989</a>, <a class="reference internal" href="Chapter4.html#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>, <a class="reference internal" href="#id23" title="Μιχάλης Ξένος and Ευστράτιος Τζρτζιλάκης. Μηχανική Ρευστών με Εφαρμογές. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1989.">Ξένος and Τζρτζιλάκης, 1989</a>]</span>.</p>
-</div>
-<div class="section" id="id19">
-<h2>Εφαρμογές<a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id19">
+<h2>Εφαρμογές<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
 <div class="admonition- admonition">
 <p class="admonition-title">Εφαρμογή 1 </p>
 <p>Θεωρήστε την ανιξωδική εξίσωση του Burger,</p>
@@ -1040,10 +1058,11 @@ u\,dy - v\,dx = 0 \Rightarrow \frac{{dy}}{{dx}} = \frac{v}{u} \,\,\,\,\,\,\eta^{
 </li>
 <li><p>Η ΜΔΕ 2ης τάξης, <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial t} = 0\)</span>, είναι υπερβολικού τύπου. Να μετατρέψετε την εξίσωση σ’ ένα ισοδύναμο σύστημα. Να δείξετε ότι και αυτό θα είναι υπερβολικού τύπου και ότι οι χαρακτηριστικές του καμπύλες είναι οι άξονες <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 </ol>
-</div>
-<div class="section" id="id20">
-<h2>Βιβλιογραφία<a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h2>
-<p id="id21"><dl class="citation">
+</section>
+<section id="id20">
+<h2>Βιβλιογραφία<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id21">
+<dl class="citation">
 <dt class="label" id="id25"><span class="brackets">Fle98</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id12">2</a>,<a href="#id14">3</a>,<a href="#id16">4</a>)</span></dt>
 <dd><p>Clive Fletcher. <em>Computational Techniques for Fluid Dynamics 1</em>. Volume 1. Springer-Verlag Berlin Heidelberg, 1998.</p>
 </dd>
@@ -1072,9 +1091,9 @@ u\,dy - v\,dx = 0 \Rightarrow \frac{{dy}}{{dx}} = \frac{v}{u} \,\,\,\,\,\,\eta^{
 <dd><p>Μιχάλης Ξένος and Ευστράτιος Τζρτζιλάκης. <em>Μηχανική Ρευστών με Εφαρμογές</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1989.</p>
 </dd>
 </dl>
-</p>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1101,11 +1120,10 @@ u\,dy - v\,dx = 0 \Rightarrow \frac{{dy}}{{dx}} = \frac{v}{u} \,\,\,\,\,\,\eta^{
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Chapter1.html"
@@ -1125,10 +1143,7 @@ u\,dy - v\,dx = 0 \Rightarrow \frac{{dy}}{{dx}} = \frac{v}{u} \,\,\,\,\,\,\eta^{
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1175,6 +1190,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2021.
@@ -1201,8 +1217,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

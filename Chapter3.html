@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
   
@@ -18,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,12 +40,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -104,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Η εξίσωση Διάχυσης" href="Chapter4.html" />
     <link rel="prev" title="Εισαγωγή στις Αριθμητικές Μεθόδους" href="Chapter2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -113,6 +116,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -166,9 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -178,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
   
   
 </a></div>
@@ -374,20 +388,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -438,16 +454,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<div class="section" id="id2">
-<h2>Περίληψη<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>Περίληψη<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>Στην πρώτη ενότητα αυτού του κεφαλαίου αποδεικνύονται με την βοήθεια του αναπτύγματος Taylor τα βασικά αριθμητικά σχήματα της μεθόδου πεπερασμένων διαφορών (ΜΠΔ), όπως οι εμπρόσθιες, οπίσθιες και κεντρικές πεπερασμένες διαφορές. Παρουσιάζονται επίσης αριθμητικά σχήματα που μπορούν να χρησιμοποιούν διαφορετικά σημεία του πλέγματος από αυτά που χρησιμοποιούν τα βασικά αριθμητικά σχήματα των ΠΔ. Παρουσιάζονται οι έννοιες του σφάλματος αποκοπής, δηλαδή η διαφορά μεταξύ της μερικής παραγώγου ή και ολόκληρης της ΜΔΕ και της αναπαράστασής της μέσω των ΠΔ, και η έννοια της συμβατότητας του αριθμητικού σχήματος. Ένα αριθμητικό σχήμα είναι συμβατό όταν το όριο του σφάλματος αποκοπής (<span class="math notranslate nohighlight">\(\sigma.\alpha.\)</span>) τείνει στο μηδέν καθώς οι χωρικές διαστάσεις των αποστάσεων των σημείων τείνουν στο μηδέν. Παρουσιάζονται οι έννοιες της ευστάθειας και σύγκλισης ενός αριθμητικού σχήματος. Εισάγεται η μέθοδος των πεπερασμένων όγκων (ΜΠΟ) και τα αριθμητικά σχήματα που προκύπτουν από αυτή τη μέθοδο. Η ΜΠΟ έχει αναπτυχθεί κυρίως για προβλήματα Ρευστοδυναμικής. Τέλος παρουσιάζεται η φασματική μέθοδος η οποία είναι μια αριθμητική μέθοδος υψηλότερης ακρίβειας σε σχέση με τις ΜΠΔ και ΜΠΟ.</p>
-</div>
-<div class="section" id="id3">
-<h2>Μέθοδος των Πεπερασμένων Διαφορών<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id4">
-<h3>Βασικοί Ορισμοί και Έννοιες<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id3">
+<h2>Μέθοδος των Πεπερασμένων Διαφορών<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<section id="id4">
+<h3>Βασικοί Ορισμοί και Έννοιες<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Η βασική ιδέα της ΜΠΔ για την αριθμητική επίλυση ΜΔΕ είναι η μετατροπή του συνεχούς συστήματος σε διακριτό, το οποίο μπορούμε να επιλύσουμε με την βοήθεια του Η/Υ. Με τη ΜΠΔ, το συνεχές χωρίο ορισμού, <span class="math notranslate nohighlight">\(\Omega\)</span>, της άγνωστης συνάρτησης, χωρίζεται σ’ ένα σύνολο διακεκριμένων σημείων <span class="math notranslate nohighlight">\(P_{i,j}\)</span> και η ΜΔΕ που διέπει το πρόβλημα προσεγγίζεται από μια αντίστοιχη εξίσωση διαφορών σε κάθε κομβικό σημείο. Η διακριτοποίηση, descritization, του συνεχούς χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>, σε μεμονωμένα κομβικά σημεία, grid points, <span class="math notranslate nohighlight">\(P_{i,j}\)</span> και η προσέγγιση των παραγώγων της προς προσδιορισμό συνάρτησης, <span class="math notranslate nohighlight">\(u\)</span>, μέσω διαφορών, καθώς και των συνθηκών που ικανοποιεί αυτή, ανάγει το όλο πρόβλημα σε ένα σύστημα αλγεβρικών εξισώσεων. Η φύση του συστήματος αυτού, γραμμικό ή μη γραμμικό, εξαρτάται από την φύση της ΜΔΕ που περιγράφει το πρόβλημα.</p>
 <p>Ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> δύο μεταβλητών, <span class="math notranslate nohighlight">\(u = u(x,y)\)</span>, η οποία ορίζεται στο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του σχήματος <a class="reference internal" href="#sxima-cont-discr"><span class="std std-numref">Fig. 3</span></a>. Η συνάρτηση αυτή ικανοποιεί την εξίσωση,</p>
 <div class="math notranslate nohighlight" id="equation-k2-1">
@@ -455,10 +471,12 @@ document.write(`
     L(u) = f(x,y), \,\,\,\, f \in \Omega
 \]</div>
 <p>σε κάθε εσωτερικό σημείο του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> καθώς και συνθήκες στο σύνορο, <span class="math notranslate nohighlight">\(\partial \Omega\)</span>. Για την εφαρμογή της ΜΠΔ διακριτοποιούμε τον συνεχή χώρο <span class="math notranslate nohighlight">\(\Omega\)</span> με ευθείες παράλληλες προς τους <span class="math notranslate nohighlight">\(x, y\)</span>-άξονες που απέχουν μεταξύ τους σταθερή απόσταση, ομοιόμορφος διαμερισμός (όχι απαραίτητα) <span class="math notranslate nohighlight">\(\Delta x = h\)</span> και <span class="math notranslate nohighlight">\(\Delta y = k\)</span> με <span class="math notranslate nohighlight">\(h \ne k\)</span>. Ορίζουμε με αυτό το τρόπο ένα πλέγμα υπολογιστικών σημείων, computational grid points, <span class="math notranslate nohighlight">\(P_{i,j}\)</span> με <span class="math notranslate nohighlight">\(1 \le i \le N\)</span> και <span class="math notranslate nohighlight">\(1 \le j \le M\)</span>.</p>
-<div class="figure align-default" id="sxima-cont-discr">
+<figure class="align-default" id="sxima-cont-discr">
 <a class="reference internal image-reference" href="_images/Sxima_Cont_Discr.png"><img alt="_images/Sxima_Cont_Discr.png" src="_images/Sxima_Cont_Discr.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">(α) Το συνεχές χωρίο ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span> με σύνορο <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, (β) Διακριτοποίηση του χωρίου ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span>.</span><a class="headerlink" href="#sxima-cont-discr" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">(α) Το συνεχές χωρίο ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span> με σύνορο <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, (β) Διακριτοποίηση του χωρίου ολοκλήρωσης <span class="math notranslate nohighlight">\(\Omega\)</span>.</span><a class="headerlink" href="#sxima-cont-discr" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Έπειτα προσεγγίζουμε την ΜΔΕ, εξίσωση <a class="reference internal" href="#equation-k2-1">(34)</a>, καθώς και τις συνοριακές συνθήκες που ικανοποιεί η <span class="math notranslate nohighlight">\(u\)</span> στο σύνορο <span class="math notranslate nohighlight">\(\partial \Omega\)</span>, με κάποιο σχήμα ΠΔ. Αν για παράδειγμμα ο διαφορικός τελεστής <span class="math notranslate nohighlight">\(L\)</span>, περιέχει την παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x}\)</span> μπορούμε να αντικαταστήσουμε την μερική παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x}\)</span> με την διαφορά,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2">
 <span class="eqno">(35)<a class="headerlink" href="#equation-k2-2" title="Permalink to this equation">#</a></span>\[
@@ -469,14 +487,16 @@ document.write(`
 <p class="admonition-title">Παρατήρηση</p>
 <p>Η εφαρμογή της ΜΠΔ είναι απλή και αποτελεσματική. Η σωστή όμως εφαρμογή της απαιτεί γνώσεις και εμπειρία. Η αντικατάσταση του συνεχούς προβλήματος με ένα αλγεβρικό σύστημα, οδηγεί πολλές φορές σε σοβαρά μαθηματικά προβλήματα, όπως η επάρκεια, η ακρίβεια, η σύγκλιση και η ευστάθεια της μεθόδου, τα οπο΄΄ία πολλές φορές δεν αντιμετωπίζονται εύκολα <span id="id6">[<a class="reference internal" href="Chapter4.html#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>]</span>.</p>
 </div>
-</div>
-<div class="section" id="id7">
-<h3>Βασικά Σχήματα της ΜΠΔ<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id7">
+<h3>Βασικά Σχήματα της ΜΠΔ<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <p>Για την ανάπτυξη των προσεγγίσεων ή των αριθμητικών σχημάτων, ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u = u(x,y)\)</span> δύο μεταβλητών που ικανοποιεί κάποια ΜΔΕ σε ένα ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του <span class="math notranslate nohighlight">\(xy\)</span>-επιπέδου. Ένα απλοποιημένο παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> φαίνεται στο παρακάτω σχήμα, <a class="reference internal" href="#sxima-grid"><span class="std std-numref">Fig. 4</span></a>. Τα διάφορα σημεία του πλέγματος μέσα στο <span class="math notranslate nohighlight">\(\Omega\)</span> και επί του συνόρου <span class="math notranslate nohighlight">\(\partial \Omega\)</span> προσδιορίζονται τώρα από τις τιμές <span class="math notranslate nohighlight">\((i, j)\)</span> στα κομβικά σημεία του πλέγματος.</p>
-<div class="figure align-default" id="sxima-grid">
+<figure class="align-default" id="sxima-grid">
 <a class="reference internal image-reference" href="_images/Sxima_grid.png"><img alt="_images/Sxima_grid.png" src="_images/Sxima_grid.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Aπλοποιημένο παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> με τη ΜΠΔ</span><a class="headerlink" href="#sxima-grid" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Aπλοποιημένο παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> με τη ΜΠΔ</span><a class="headerlink" href="#sxima-grid" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Με αυτό τον τρόπο οι εξισώσεις ΠΔ (finite differences) που προσεγγίζουν τις παραγώγους της <span class="math notranslate nohighlight">\(u\)</span> στο κομβικό σημείο <span class="math notranslate nohighlight">\((i, j)\)</span> εκφράζονται μέσω της τιμής της <span class="math notranslate nohighlight">\(u\)</span> στο σημείο <span class="math notranslate nohighlight">\((i, j)\)</span> αλλά και των γειτονικών του. Συμβολίζουμε με <span class="math notranslate nohighlight">\(u(x , y) = u_{i,j}\)</span>, όπου το σημείο <span class="math notranslate nohighlight">\((x , y)\)</span> είναι το “σημέιο αναφοράς” ως προς τα γειτονικά σημεία στο υπολογιστικό πλέγμα. Έτσι έχουμε για τα γειτονικά κομβικά σημεία ότι,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2b">
 <span class="eqno">(36)<a class="headerlink" href="#equation-k2-2b" title="Permalink to this equation">#</a></span>\[\begin{split}
@@ -615,9 +635,9 @@ document.write(`
 <p class="admonition-title">Παρατήρηση</p>
 <p>Οι τρείς προσεγγίσεις που αναπτύχθηκαν σε αυτή την ενότητα για τις μερικές παραγώγους, εμπρόσθιες, κεντρικές και οπίσθιες ΠΔ, οδηγούν σε τρια αντίστοιχα αριθμητικά σχήματα που εφαρμόζονται για την αριθμητική επίλυση ΜΔΕ ή και συστημάτων αυτών. Το καθε ένα αριθμητικό σχήμα έχει τις δικές του ιδιαιτερότητες στη λύση διαφόρων φυσικών προβλημάτων.</p>
 </div>
-</div>
-<div class="section" id="id8">
-<h3>Άλλα αριθμητικά σχήματα ΠΔ<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id8">
+<h3>Άλλα αριθμητικά σχήματα ΠΔ<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <p>Είναι πολλές φορές αναγκαίο να προσεγγίσουμε παραγώγους σ’ ένα σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> μέσω της μεθόδου των ΠΔ χρησιμοποιώντας σημεία του πλέγματος που βρίσκονται προς τη μια πλευρά του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span> και όχι εκατέρωθεν αυτού. Αυτό πολλές φορές γίνεται αναγκαίο όταν το σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> βρίσκεται κοντά στο σύνορο του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
 <p>Έστω ότι θέλουμε να προσεγγίσουμε την μερική παράγωγο <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_ {(i , j)}\)</span> με την βοήθεια μιας ΜΠΔ που χρησιμοποιεί σημεία που βρίσκονται μόνο προς τα αριστερα του σημείου <span class="math notranslate nohighlight">\((i , j)\)</span> και επί της ίδιας ευθείας, όπως για παράδειγμμα τα κομβικά σημεία <span class="math notranslate nohighlight">\((i-1, j)\)</span>, <span class="math notranslate nohighlight">\((i-2, j)\)</span> κ.λπ. Έστω ότι θα θέλαμε επίσης η ακρίβεια της αναπαράστασης αυτής να είναι δεύτερης τάξης και γι’ αυτό πρέπει να χρησιμοποιήσουμε όσα κομβικά σημεία του πλέγματος είναι απαραίτητο. Συνεπώς, είναι απαραίτητο να αναπτύξουμε σε σειρά Taylor τις συναρτήσεις <span class="math notranslate nohighlight">\(u_{i-1, j}\)</span>, <span class="math notranslate nohighlight">\(u_{i-2, j}\)</span> κ.λπ. γύρω από το σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> και να λύσουμε ως προς την <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} |_ {(i , j)}\)</span> από τις εκφράσεις αυτές, κατά τέτοιο τρόπο ώστε το σφάλμα αποκοπής να είναι <span class="math notranslate nohighlight">\(O(\Delta x)^2\)</span>. Έτσι λοιπόν έχουμε ότι,</p>
 <div class="math notranslate nohighlight" id="equation-k2-2w1">
@@ -666,10 +686,10 @@ document.write(`
 <span class="eqno">(65)<a class="headerlink" href="#equation-k2-2x7" title="Permalink to this equation">#</a></span>\[
     \frac{\partial^2 u}{\partial x^2} |_{(i , j)} = \frac{1}{(\Delta y)^2} (u_{i , j} - 2 u_{i , j-2} + u_{i , j-2}) + O(\Delta y)
 \]</div>
-</div>
-</div>
-<div class="section" id="id9">
-<h2>Σφάλμα αποκοπής και η έννοια της συμβατότητας αριθμητικού σχήματος<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="id9">
+<h2>Σφάλμα αποκοπής και η έννοια της συμβατότητας αριθμητικού σχήματος<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <p>Βασική ιδέα της ΜΠΔ είναι η αντικατάσταση της ΜΔΕ και των συνθηκών που την συνοδεύουν για να περιγράψουν το υπό μελέτη πρόβλημα, μ’ ένα αλγεβρικό σύστημα εξισώσεων το οποίο θα επιλυθεί αριθμητικά δίνοντας μας τις τιμές της άγνωστης συνάρτησης στα κομβικά σημεία του υπολογιστικού πλέγματος <span class="math notranslate nohighlight">\((i, j)\)</span>. Έστω λοιπόν μια ΜΔΕ της οποίας οι όροι, δηλαδή οι μερικές παράγωγοι, αναπαριστώνται από ένα αριθμητικό σχήμα ΠΔ με σφάλμα αποκοπής, <span class="math notranslate nohighlight">\(\sigma.\alpha.\)</span></p>
 <div class="admonition- admonition">
 <p class="admonition-title">Ορισμός</p>
@@ -747,9 +767,9 @@ document.write(`
 <p>όπου <span class="math notranslate nohighlight">\(\lambda = k \frac{\Delta t}{(\Delta x)^2}\)</span>, το οποίο ονομάζεται εκπεφρασμένο γιατί ο όρος <span class="math notranslate nohighlight">\(u_j^{n+1}\)</span>, δίνεται εκπεφρασμένα μέσω των γνωστών, από την προηγούμενη εκτίμηση, όρων του δεύτερου μέλους της εξίσωσης <a class="reference internal" href="#equation-k2-14">(77)</a>.</p>
 </div>
 <p>Τέτοια προβλήματα που αναπτύσσουν βήμα προς βήμα μια υπολογιστική διαδικασία μέσα στον χρόνο καλούνται “marching problems” (προβλήματα βηματισμού). Στις επόμενες ενότητες θα παρουσιάσουμε αριθμητικά σχήματα που οδηγούν σε ένα συζευγμένο (implicit) αλγεβρικό σύστημα το οποίο θα απαιτεί την ταυτόχρονη επίλυση όλων τως εξισώσεων που προκύπτουν από την εφαρμογή του αριθμητικού σχήματος σε όλα τα κομβικά σημεία του πλέγματος του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> στο οποίο ορίζεται η λύση <span class="math notranslate nohighlight">\(u\)</span> του προβλήματος υπό μελέτη. Συμφέρει πολλές φορές να εφαρμόσουμε μια επαναληπτική διαδικασία επίλυσης του συζευγμένου συστήματος η οποία θα οδηγήσει πιο γρήγορα στη λύση από ότι μια άμεση μέθοδος.</p>
-</div>
-<div class="section" id="id10">
-<h2>Ευστάθεια και σύγκλιση<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id10">
+<h2>Ευστάθεια και σύγκλιση<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
 <p>Κάθε σχήμα ΠΔ πρέπει κατ’ αρχάς να είναι συνεπές ή συμβατό, consistent.  Αν ικανοποιείται η προϋπόθεση της συνέπειας του αριθμητικού σχήματος τότε θα πρέπει όλη η διαδικασία επίλυσης ενός προβλήματος να αποτρέπει την ανάπτυξη σφαλμάτων στρογγύλευσης (roundoff errors). Η ΜΠΔ ανάγει την επίλυση μιας ΜΔΕ ή ενός συστήματος ΜΔΕ στην επίλυση ενός αλγεβρικού συστήματος. Η μη ακριβής επίλυση των αριθμητικών προσεγγίσεων που προκύπτουν από την διακριτοποίηση της ΜΔΕ εκδηλώνεται ως ένα πρόσθετο σφάλμα που ονομάζεται σφάλμα στρογγύλευσης. Το σφάλμα στρογγύλευσης είναι γενικά μικρό, όμως σε διάφορες διαδικασίες επίλυσης, κυρίως επαναληπτικές, είναι δυνατόν να αυξάνει πάρα πολύ. Αν συμβαίνει αυτό τότε δημιουργεί το λεγόμενο σφάλμα συσσώρευσης, που μπορεί να οδηγήσει στη λεγόμενη αριθμητική αστάθεια της λύσης (induced instability) <span id="id11">[<a class="reference internal" href="Chapter4.html#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>]</span>.</p>
 <p>Όπως τα σφάλματα αποκοπής εξαρτώνται από την διαμέριση <span class="math notranslate nohighlight">\(h\)</span> και <span class="math notranslate nohighlight">\(k\)</span> του πλέγματος και την σχέση που έχουν μεταξύ τους, έτσι και τα σφάλματα συσσώρευσης επηρεάζονται από τα μεγέθη των βημάτων αυτών κατ’ αντίθετη όμως έννοια. Πράγματι, όταν τα βήματα της διαμέρισης <span class="math notranslate nohighlight">\(h\)</span> και <span class="math notranslate nohighlight">\(k\)</span> μειώνονται και τα σφάλματα αποκοπής μειώνονται, τα σφάλματα συσσώρευσης αυξάνουν.</p>
 <div class="tip admonition">
@@ -779,16 +799,18 @@ document.write(`
 <p>Εάν σ’ ένα καλά τοποθετημένο πρόβλημα αρχικών τιμών, το οποίο περιγράφεται από γραμμική ΜΔΕ, η επιλεγείσα ΜΠΔ είναι συνεπής, τότε η ευστάθεια είναι ικανή και αναγκαία συνθήκη για την σύγκλιση.</p>
 </div>
 <p>Το θεώρημα θεώρημα ισοδυναμίας του Lax είναι επίσης γνωστό ως θεώρημα Lax-Richtmyer, από τους Peter Lax και Robert D. Richtmyer. Περισσότερες πληροφορίες ο αναγνώστης μπορεί να βρεί στα συγγράμματα και τις εργασίες <span id="id13">[<a class="reference internal" href="Chapter4.html#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>, <a class="reference internal" href="#id39" title="Peter D Lax and Robert D Richtmyer. Survey of the stability of linear finite difference equations. Communications on pure and applied mathematics, 9(2):267–293, 1956.">Lax and Richtmyer, 1956</a>, <a class="reference internal" href="#id36" title="RD Richtmyer and KM Morton. Difference Methods for Initial-Value Problems. Volume 2. Cambridge University Press, NY, 1967.">Richtmyer and Morton, 1967</a>]</span>.</p>
-</div>
-<div class="section" id="id14">
-<h2>Μέθοδος των Πεπερασμένων Όγκων<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id14">
+<h2>Μέθοδος των Πεπερασμένων Όγκων<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
 <p>Η ΜΠΟ αποτελεί την κύρια μέθοδο διακριτοποίησης προβλημάτων Ρευστομηχανικής. Τα κύρια πλεονεκτήματα είναι ότι η ΜΠΟ: (α) είναι ολοκληρωτική και υπερτερεί σε σχέση με παλαιότερες μεθόδους, όπως  η ΜΠΔ, (β) βρίσκει εφαρμογή σε κάθε τύπο υπολογιστικού πλέγματος αλλά και σε πολύπλοκες γεωμετρικές δομές <span id="id15">[<a class="reference internal" href="#id28" title="Suhas Patankar. Numerical heat transfer and fluid flow. CRC Press, 2009.">Patankar, 2009</a>]</span>.</p>
 <p>Η μέθοδος εφαρμόζεται χωρίζοντας αρχικά το πεδίο ορισμού σε μικρότερα χωρία, δηλαδή σε πεπερασμένους όγκους (ΠΟ) αναφοράς, έτσι ώστε κάθε υπολογιστικός κόμβος του πλέγματος να περιβάλλεται από έναν όγκο αναφοράς. Στη συνέχεια η ΜΔΕ ολοκληρώνεται στον όγκο αναφοράς. Τα ολοκληρώματα υπολογίζονται αναλυτικά υποθέτοντας ότι οι τιμές της άγνωστης εξαρτημένης μεταβλητής π.χ. η <span class="math notranslate nohighlight">\(u(x,y)\)</span> είναι σταθερές ή ότι μεταβάλλονται γραμμικά σε κάθε όγκο αναφοράς. Οι αλγεβρικές εξισώσεις που προκύπτουν ονομάζονται εξισώσεις ΠΟ και το σύστημα μπορεί να επιλυθυεί χρησιμοποιώντας άμεσες ή επαναληπτικές τεχνικές επίλυσης αλγεβρικών συστημάτων. Η μεθοδολογία και ο τρόπος διατύπωσης της μεθόδου συνδέεεται άμεσα με τη φυσική του προβλήματος και κατ’ επέκταση με τη φύση της ΜΔΕ.</p>
 <p>Θεωρούμε οτι οι εξισώσεις ΠΟ, δηλαδή οι εξισώσεις διαφορών που προκύπτουν από τη διακριτοποίηση, ικανοποιούν τις ίδιες φυσικές αρχές και νόμους, με αυτές που ικανοποιούν οι διαφορικές εξισώσεις από τις οποίες έχουν προκύψει. Μια βασική διαφορά ανάμεσα στην ΜΠΟ και την ΜΠΔ είναι ότι στην ΜΠΔ η λύση βασίζεται μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους του πλέγματος ενώ στην ΜΠΟ η λύση βασίζεται όχι μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους αλλά και σε συνεχείς υποθετικές κατανομές ανάμεσα στους κόμβους.</p>
-<div class="figure align-default" id="fig34-fv">
+<figure class="align-default" id="fig34-fv">
 <a class="reference internal image-reference" href="_images/Fig34_FV.png"><img alt="_images/Fig34_FV.png" src="_images/Fig34_FV.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Σχηματική αναπαράσταση των όγκων αναφοράς για ένα υπολογιστικό πλέγμα και το αριθμητικό σχήμα στον όγκο αναφοράς</span><a class="headerlink" href="#fig34-fv" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Σχηματική αναπαράσταση των όγκων αναφοράς για ένα υπολογιστικό πλέγμα και το αριθμητικό σχήμα στον όγκο αναφοράς</span><a class="headerlink" href="#fig34-fv" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Για να περιγράψουμε και να κατανοήσουμε τη ΜΠΟ, θα την εφαρμόσουμε για την διακριτοποίηση μιας σχετικά απλής ΜΔΕ, της διδιάστατης εξίσωσης Poisson, όπου <span class="math notranslate nohighlight">\(u(x,y) \in \Omega \subseteq \mathbb{R}^2\)</span>, όπου <span class="math notranslate nohighlight">\(f(x,y)\)</span> είναι μια συνεχής συνάρτηση με πεπερασμένο αριθμό ασυνεχειών.</p>
 <div class="math notranslate nohighlight" id="equation-laplace">
 <span class="eqno">(79)<a class="headerlink" href="#equation-laplace" title="Permalink to this equation">#</a></span>\[
@@ -847,9 +869,9 @@ document.write(`
        0 &amp; 0 &amp; ...&amp; { - \alpha} &amp; 0 &amp; {- \frac{1}{\alpha }} &amp; {2(\frac{{\alpha ^2  + 1}}{\alpha })}  \\
     \end{array}} \right]
 \end{split}\]</div>
-</div>
-<div class="section" id="id16">
-<h2>Φασματική Μέθοδος<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id16">
+<h2>Φασματική Μέθοδος<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
 <p>Οι φασματικές μέθοδοι, Spectral methods, είναι μια κατηγορία αριθμητικών τεχνικών που χρησιμοποιούνται στα εφαρμοσμένα μαθηματικά και στον κλάδο των επιστημονικών υπολογισμών για την αριθμητική επίλυση συνήθων ή μερικών διαφορικών εξισώσεων. Συνήθως οι φασματικές μέθοδοι ενδέχεται να περιλαμβάνουν τη χρήση του μετασχηματισμού Fourier.</p>
 <p>Η βασική ιδέα είναι η λύση της διαφορικής εξίσωσης να γραφεί ως άθροισμα συγκεκριμένων “συναρτήσεων βάσης”, όπως για παράδειγμα, ως σειρά Fourier που αποτελεί άθροισμα ημιτόνων και συνημιτόνων. Στη συνέχεια μπορούμε να επιλέξουμε κατάλληλα τους συντελεστές στο άθροισμα έτσι ώστε να ικανοποιείται η διαφορική εξίσωση, όσο το δυνατόν καλύτερα.</p>
 <div class="tip admonition">
@@ -885,14 +907,16 @@ document.write(`
 {{\hat U}_t} =- a\frac{i}{2}k{e^{ - \lambda t}}F({({F^{ - 1}}({e^{\lambda t}}\hat U))^2})
 \]</div>
 <p>όπου F είναι ο τελεστής του μετασχηματισμού Fourier. Για συγκεκριμένες τιμές των παραμέτρων του προβλήματος , π.χ. <span class="math notranslate nohighlight">\(a = 1.0\)</span>, <span class="math notranslate nohighlight">\(b = -0.05\)</span>, <span class="math notranslate nohighlight">\(c = 0.001\)</span> και αρχική συνθήκη <span class="math notranslate nohighlight">\(u = {e^{ - 2{x^2}}}\)</span>, παίρνουμε το αποτέλεσμα της εικόνας <a class="reference internal" href="#fig-s0"><span class="std std-numref">Fig. 6</span></a>.</p>
-<div class="figure align-default" id="fig-s0">
+<figure class="align-default" id="fig-s0">
 <a class="reference internal image-reference" href="_images/S0.png"><img alt="_images/S0.png" src="_images/S0.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Σχηματική παράσταση της εξίσωσης KdV-B για τις παραμέτρους <span class="math notranslate nohighlight">\(a = 1.0\)</span>, <span class="math notranslate nohighlight">\(b = -0.05\)</span>, <span class="math notranslate nohighlight">\(c = 0.001\)</span>.</span><a class="headerlink" href="#fig-s0" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Σχηματική παράσταση της εξίσωσης KdV-B για τις παραμέτρους <span class="math notranslate nohighlight">\(a = 1.0\)</span>, <span class="math notranslate nohighlight">\(b = -0.05\)</span>, <span class="math notranslate nohighlight">\(c = 0.001\)</span>.</span><a class="headerlink" href="#fig-s0" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Το χωρικό σφάλμα της μεθόδου είναι τάξης ακρίβειας <span class="math notranslate nohighlight">\(O(h^{256})\)</span>, όπου <span class="math notranslate nohighlight">\(h\)</span> είναι το χωρικό βήμα της διαμέρισης και <span class="math notranslate nohighlight">\(O(k^4)\)</span> για το χρονικό βήμα, όπου <span class="math notranslate nohighlight">\(k\)</span> είναι το χρονικό βήμα της διαμέρισης. Περισσότερες λεπτομέρειες θα δούμε στα παρακάτω κεφάλαια αυτού του βιβλίου, αλλά και στο σύγγραμμα του Trefethen <span id="id19">[<a class="reference internal" href="#id34" title="LN Trefethen. Spectral Methods in MATLAB. Volume 10. SIAM, 2000.">Trefethen, 2000</a>]</span>.</p>
-</div>
-<div class="section" id="id20">
-<h2>Εφαρμογές<a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id20">
+<h2>Εφαρμογές<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
 <div class="admonition- admonition">
 <p class="admonition-title">Εφαρμογή 1</p>
 <p>Έστω ότι έχουμε ένα τετραγωνικό πλέγμα με διαμέριση <span class="math notranslate nohighlight">\(\Delta x = \Delta y = h\)</span> και την εξίσωση του Laplace που ισχύει σε κάθε κομβικό σημείο του πλέγματος. Να αναπαραστήσετε την εξίσωση του Laplace με κεντρικές ΠΔ, να εκτιμήσετε το σφάλμα αποκοπής της αναπαράστασης αυτής και να σχεδιάσετε το υπολογιστικό σχήμα που δημιουργείται γύρω από το κεντρικό κομβικό σημείο.</p>
@@ -923,10 +947,12 @@ document.write(`
 	u_{i+1 , j} - 4 u_{i , j} + u_{i-1 , j} + u_{i , j+1} + u_{i, j-1} = 0
 \]</div>
 <p class="sd-card-text">με <span class="math notranslate nohighlight">\(\sigma.\alpha.\)</span> της τάξης του <span class="math notranslate nohighlight">\(h^2\)</span>. Το υπολογιστικό πλέγμα της αναπαράστασης αυτής φαίνεται στο παρακάτω σχήμα, Σχήμα <a class="reference internal" href="#fig1-ex1"><span class="std std-numref">Fig. 7</span></a>.</p>
-<div class="figure align-default" id="fig1-ex1">
+<figure class="align-default" id="fig1-ex1">
 <a class="reference internal image-reference" href="_images/Fig1_ex1.png"><img alt="_images/Fig1_ex1.png" src="_images/Fig1_ex1.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της εξίσωσης του Laplace με κεντρικές ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig1-ex1" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της εξίσωσης του Laplace με κεντρικές ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig1-ex1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p class="sd-card-text">Το υπολογιστικό πλέγμα του αριθμητικού σχήματος που προκύπτει από την διακριτοποίηση της εξίσωσης του Laplace με κεντρικές ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span> έχει ιδιαίτερη σημασία και προσφέρει ταυτόχρονα μια καλή εποπτική εικόνα αυτού. Οι αριθμοί μέσα στους κύκλους είναι οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>, για το εν λόγω υπολογιστικό σχήμα. O ενδιαφερόμενος αναγνώστης μπορεί να βρει περισσότερες πληροφορίες γι’ αυτό τον τρόπο αναπαράστασης στο εξής σύγγραμμα Υπολογιστικής Ρευστοδυναμικής <span id="id21">[<a class="reference internal" href="Chapter4.html#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>]</span>.</p>
 </div>
 </details></div>
@@ -993,10 +1019,12 @@ document.write(`
     \end{gathered}
 \]</div>
 <p class="sd-card-text">Στο σχήμα <a class="reference internal" href="#fig2-ex2"><span class="std std-numref">Fig. 8</span></a>, παρουσιάζεται η αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με την μέθοδο των κεντρικών ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>. Μέσα στους κύκλους αναγράφονται οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</p>
-<div class="figure align-default" id="fig2-ex2">
+<figure class="align-default" id="fig2-ex2">
 <a class="reference internal image-reference" href="_images/Fig2_ex2.png"><img alt="_images/Fig2_ex2.png" src="_images/Fig2_ex2.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με την μέθοδο των κεντρικών ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig2-ex2" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Σχηματική αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με την μέθοδο των κεντρικών ΠΔ στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</span><a class="headerlink" href="#fig2-ex2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 </details></div>
 <div class="admonition- admonition">
@@ -1124,10 +1152,11 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
 <p>να αδιαστατοποιήσετε το παραπάνω σύστημα ΜΔΕ</p>
 </li>
 </ol>
-</div>
-<div class="section" id="id22">
-<h2>Βιβλιογραφία<a class="headerlink" href="#id22" title="Permalink to this headline">#</a></h2>
-<p id="id23"><dl class="citation">
+</section>
+<section id="id22">
+<h2>Βιβλιογραφία<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id23">
+<dl class="citation">
 <dt class="label" id="id39"><span class="brackets">LR56</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id13">2</a>)</span></dt>
 <dd><p>Peter D Lax and Robert D Richtmyer. Survey of the stability of linear finite difference equations. <em>Communications on pure and applied mathematics</em>, 9(2):267–293, 1956.</p>
 </dd>
@@ -1153,9 +1182,9 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
 <dd><p>Νίκος Καφούσιας. <em>Ρευστομηχανική ΙI</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.</p>
 </dd>
 </dl>
-</p>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1182,11 +1211,10 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Chapter2.html"
@@ -1206,10 +1234,7 @@ u_{i , j-1} = u_{i , j} +  u_y |_{(i , j)} (- k) + u_{yy} |_{(i , j)} \frac{(- k
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1258,6 +1283,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2021.
@@ -1284,8 +1310,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

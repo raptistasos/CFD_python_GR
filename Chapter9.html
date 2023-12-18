@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV) &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
   
@@ -18,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,12 +40,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -102,7 +105,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Οι εξισώσεις των Navier και Stokes" href="Chapter10.html" />
     <link rel="prev" title="Μη-μόνιμη Μεταφορά &amp; Διάχυση" href="Chapter8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -111,6 +114,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -164,9 +176,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -176,8 +190,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
   
   
 </a></div>
@@ -372,20 +386,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -431,34 +447,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="burger-korteweg-de-vries-kdv">
-<h1>Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)<a class="headerlink" href="#burger-korteweg-de-vries-kdv" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="burger-korteweg-de-vries-kdv">
+<h1>Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)<a class="headerlink" href="#burger-korteweg-de-vries-kdv" title="Permalink to this heading">#</a></h1>
 <p><strong>Περίληψη</strong>. Σε αυτό το κεφάλαιο εισάγονται η εξίσωση του Burger (έχει παρουσιαστεί και στο προηγούμενο κεφάλαιο – εδώ παρουσιάζεται σε δύο μορφές, ιξωδική και ανιξωδική) και η εξίσωση των Korteweg-de Vries (KdV). Αυτές αποτελούν ΜΔΕ παραβολικού τύπου και περιγράφουν φυσικά φαινόμενα: κρουστικά κύματα η πρώτη και μοναχικά (σολιτονικά) κύματα η δεύτερη. Επιλύονται αριθμητικά με την βοήθεια αριθμητικών μεθόδων χαμηλής τάξης ακρίβειας όπως είναι οι μέθοδοι των Lax-Friedrichs, των Lax-Wendroff, το αριθμητικό σχήμα του MacCormack και την προσέγγιση του Godunov. Εισάγονται οι φασματικές μέθοδοι που αποτελούν μια αριθμητική μέθοδος υψηλής τάξης ακρίβειας και ο FFT (fast Fourier transform) μετασχηματισμός. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
-<div class="section" id="burger">
-<h2>Εξίσωση του Burger<a class="headerlink" href="#burger" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="kdv">
-<h2>Εξίσωση των KdV<a class="headerlink" href="#kdv" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="lax-friedrichs">
-<h2>Το σχήμα των Lax-Friedrichs<a class="headerlink" href="#lax-friedrichs" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="lax-wendroff">
-<h2>Το σχήμα των Lax-Wendroff<a class="headerlink" href="#lax-wendroff" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="maccormack">
-<h2>Το σχήμα του MacCormack<a class="headerlink" href="#maccormack" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="godunov">
-<h2>Προσέγγιση του Godunov<a class="headerlink" href="#godunov" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="id1">
-<h2>Φασματική Μέθοδος<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="id2">
-<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
-</div>
-</div>
+<section id="burger">
+<h2>Εξίσωση του Burger<a class="headerlink" href="#burger" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="kdv">
+<h2>Εξίσωση των KdV<a class="headerlink" href="#kdv" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="lax-friedrichs">
+<h2>Το σχήμα των Lax-Friedrichs<a class="headerlink" href="#lax-friedrichs" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="lax-wendroff">
+<h2>Το σχήμα των Lax-Wendroff<a class="headerlink" href="#lax-wendroff" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="maccormack">
+<h2>Το σχήμα του MacCormack<a class="headerlink" href="#maccormack" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="godunov">
+<h2>Προσέγγιση του Godunov<a class="headerlink" href="#godunov" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="id1">
+<h2>Φασματική Μέθοδος<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="id2">
+<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -485,11 +501,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Chapter8.html"
@@ -509,10 +524,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -556,6 +568,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2021.
@@ -582,8 +595,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Εισαγωγή στη γλώσσα προγραμματισμού Python &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
   
@@ -18,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,12 +40,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -102,7 +105,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Εισαγωγή στις Αριθμητικές Μεθόδους" href="Chapter2.html" />
     <link rel="prev" title="Περίληψη" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -111,6 +114,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -164,9 +176,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -176,8 +190,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
   
   
 </a></div>
@@ -372,20 +386,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -433,14 +449,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="python">
-<h1>Εισαγωγή στη γλώσσα προγραμματισμού Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="python">
+<h1>Εισαγωγή στη γλώσσα προγραμματισμού Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h1>
 <p>Η Python είναι μία γενικού σκοπού και υψηλού επιπέδου γλώσσα προγραμματισμού με εξαιρετική αναγνωσιμότητα και ευελιξία. Χρησιμοποιείται πλέον σε ένα ευρύ φάσμα εφαρμογών από τις πιο απλές μέχρι τις πιο περίπλοκες, στην Επιστήμη των Δεδομένων, την Mηχανική Eκμάθηση, την Τεχνητή Nοημοσύνη, και την Yπολογιστική Μηχανική. Η Python έχει αναρριχηθεί τα τελευταία χρόνια στην κορυφή της λίστας δημοτητικότητας σύμφωνα με τον δείκτη <a class="reference external" href="https://pypl.github.io/PYPL.html">PYPL</a> (PopularitY of Programming Languanges), έχοντας ξεπεράσει τις γλώσσες προγραμματισμού Java και C/C++.</p>
 <p>Μια συνήθης πρακτική για την εκμάθηση ή την εφαρμογή των αρχών της Υπολογιστικής Ρευστοδυναμικής είναι η χρήση των πακέτων λογισμικού Matlab ή Mathematica. Τόσο το Matlab όσο και το Mathematica είναι ωστόσο εμπορικά πακέτα λογισμικού και απαιτούν συνδρομή επί πληρωμής. Στο παρόν σύγγραμμα προκρίθηκε η λύση της Python όχι μόνο επειδή είναι ελεύθερη (ανευ κόστους) και ανοιχτού κώδικα (open source) αλλά κυρίως επειδή πλαισιώνεται από ένα ευρύ οικοσύστημα επιλέξιμων βιβλιοθηκών ή πακέτων λογισμικού που επαυξάνουν σημαντικά τις δυνατότητές της. Για παράδειγμα, μία πολύ διαδεδομένη βιβλιοθήκη είναι η Numpy που προσδίδει στην Python λειτουργικότητα τύπου Matlab, υποστηρίζοντας πράξεις με μεγάλους, πολυδιάστατους πίνακες. Αντίστοιχα, η βιβλιοθήκη Sympy επιτρέπει, όπως η Mathematica, συμβολικούς μαθηματικούς υπολογισμούς. Για την κατασκευή διαγραμμάτων και γενικότερα στατικών ή δυναμικών απεικονίσεων διατίθενται επίσης πολλές βιβλιοθήκες εκ των οποίων πολύ γνωστή είναι η Matplotlib.</p>
 <p>Στις επόμενες παραγράφους θα δοθούν πρακτικές οδηγίες για την εγκατάσταση της Python και των βιβλιοθηκών της και θα παρουσιαστούν οι βασικές τους αρχές. Καθ’ όλη την έκταση του συγγράματος, υπάρχουν ενσωματωμένα αποσπάσματα κώδικα ως εφαρμογές της θεωρίας. Ο συνδυασμός φυσικής γλώσσας, όπως τα Ελληνικά, με αποσπασμάτα κώδικα, ορίζεται ως “λογοτεχνικός προγραμματισμός” (literate programming) και αποτελεί ίσως τον πιο άμεσο και αποτελεσματικό τρόπο εκμάθησης της θεωρίας. Στην ηλεκτρονική μορφή του συγγράμματος, παρέχεται επιπλέον η δυνατότητα διάδρασης, δηλαδή η εκτέλεση των αποσπαμάτων κώδικα καθώς και η κατ’ επιλογή παραλλαγή (π.χ. η αλλαγή τιμών των παραμέτρων) και επανεκτέλεσή τους. Φυσικά, οποιαδήποτε μετατροπή κώδικα δεν επηρεάζει μόνιμα το περιεχόμενο του συγγράμματος, επομένως οι αναγνώστες προτρέπονται να εκμεταλευτούν τις διαδραστικές δυνατότητες άφοβα.</p>
 <p>Τα αποσπάσματα κώδικα που παρουσιάζονται στο σύγγραμα είναι επίσης διαθέσιμα στο <a class="reference external" href="https://raptistasos.github.io/CFD_python_GR/intro.html">αποθετηρίο</a> του συγγράμματος.</p>
-<div class="section" id="id1">
-<h2>Εγκατάσταση<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h2>Εγκατάσταση<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Ο προτεινόμενος τρόπος εγκατάστασης της Python και των βιβλιοθηκών της είναι μέσω της σουίτας Anaconda. Το Anaconda είναι ένα πρόγραμμα διαχείρισης βιβλιοθηκών, παρέχοντας πρόσβαση σε μια ευρεία συλλογή (&gt;7500 βιβλιοθήκες). Η πλήρης σουίτα <a class="reference external" href="https://www.anaconda.com/products/individual">Anacoda</a> εγκαθιστά αυτόματα &gt;250 βιβλιοθήκες εκ των οποίων οι περισσότερες δεν είναι απαραίτητες για τις ανάγκες του μαθήματος. Προτείνεται εναλλακτικά η εγκατάσταση της σουίτας <a class="reference external" href="https://www.youtube.com/watch?v=FYopfc_mVyM">Miniconda</a> που είναι μια μικρότερη διανομή της Python (προσφέρεται για όλα τα λειτουργικά συστήματα, Windows, MacOS, Linux).</p>
 <p>H διαχείριση των βιβλιοθηκών γίνεται μέσω τερματικού, του Anaconda Prompt, όπως ονομάζεται. Ανοίγουμε το τερματικό πληκτρολογώντας “Anaconda prompt” στο πεδίο αναζήτησης του λειτουργικού μας συστήματος και επιλέγοντας την ομώνυμη εφαρμογή. Στο τερματικό μπορούμε να εκτελέσουμε διάφορες εντολές για την εγκατάσταση, ανανέωση, απεγκατάσταση βιβλιοθηκών και άλλες λειτουργίες. Για παράδειγμα, η λίστα των διαθέσιμων βιβλιοθηκών που εγκαθιστώνται με το Anaconda ή το Miniconda εμφανίζεται με την εντολή,</p>
 <p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">conda</span> <span class="pre">list</span></code></p>
@@ -466,9 +482,9 @@ document.write(`
 H λίστα των διαθέσιμων περιβάλλοντων εμφανίζεται με την εντολή,</p>
 <p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">conda</span> <span class="pre">info</span> <span class="pre">--envs</span></code></p>
 <p>Με αστερίσκο υποδηλώνεται το περιβάλλον που έιναι ενεργοποιημένο. Οι δίαφορες εντολές διαχείρισης περιβάλλοντων περιγράφονται αναλυτικά στον εξής <a class="reference external" href="https://conda.io/projects/conda/en/latest/index.html">οδηγό</a>.</p>
-</div>
-<div class="section" id="jupyter-notebooks">
-<h2>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="jupyter-notebooks">
+<h2>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h2>
 <p>Ο μη ενδεδειγμένος τρόπος εκτέλεσης ενός προγράμματος Python, είναι 1) η δημιουργία ενός αρχείου με την κατάληξη <em>.py</em>, π.χ. <em>script_name.py</em>, 2) άνοιγμα του αρχείου σε έναν επεξεργαστή κειμένου (π.χ. Νotepad), 3) συγγραφή του κώδικα και 4) εκτελέση του προγράμματος με την εντολή <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">script_name.py</span></code> στο τερματικό. Η πλοήγηση στους φακέλους μέσω του τερματικού γίνεται με την εντολή <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">path/to/folder</span></code>. Για σχετική μετακίνηση από τον φάκελο στον οποίο βρισκόμαστε, οι αντίστοιχες εντολές είναι <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> (προηγούμενος φάκελος) και <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/subfolder</span></code> (επόμενος φάκελος).</p>
 <p>Ο ενδεδειγμένος τρόπος ανάπτυξης και εκτέλεσης προγραμμάτων Python (και όχι μόνο) είναι με την χρήση των λεγόμενων Integrated Development Environments (IDEs). Τα IDEs είναι προγράμματα τα οποία διαθέτουν γραφικό περιβάλλον (GUI) και παρέχουν εύχρηστα εργαλεία για την δημιουργία αρχείων, την πλοήγηση σε φακέλους, την αυτόματη συμπλήρωση κώδικα, τον εντοπισμό σφαλμάτων, την επισήμανση σύνταξης, κ.α. Ένα IDE θα σας εξοικονομήσει χρόνο και θα σας βοηθήσει να γράψετε καλύτερο κώδικα. Τα κοινώς χρησιμοποιούμενα και δωρεάν Python IDEs είναι το <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>, <a class="reference external" href="https://atom.io/">Atom</a>, <a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a>, <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> και <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm Community Edition</a>.</p>
 <p>Στα πλαίσια του μαθήματος, το προτεινόμενο IDE είναι το JupyterLab που βασίζεται στην τεχνολογία των Jupyter notebooks τα οποία αποτελούν την προμετωπίδα του σύγχρονου λογοτεχνικού και αναπαραγωγίσημου προγραμματισμού γνωρίζοντας μεγάλη απήχηση από την επιστημονική κοινότητα. Τα Jupyter notebooks είναι δωρεάν, ανοιχτού κώδικα, διαδραστικά εργαλεία που συνδυάζουν κώδικα, υπολογιστικές εξόδους, επεξηγηματικό κείμενο και πόρους πολυμέσων σε ένα μόνο έγγραφο. Για να αντιληφθείτε τις δυνατότητες της συγκεκριμένης τεχνολογίας, το ίδιο το παρόν σύγγραμα δημιουργήθηκε στην βάση των Jupyter notebooks.</p>
@@ -477,19 +493,21 @@ H λίστα των διαθέσιμων περιβάλλοντων εμφανί
 <p>Για την εκκίνηση του JupyterLab, πλοηγούμαστε αρχικά με το τερματικό στον επιθυμητό φάκελο και εκτελούμε την εντολή,</p>
 <p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">jupyter</span> <span class="pre">lab</span></code></p>
 <p>Ως διαδικτυακή εφαρμογή, το JupyterLab ανοίγει σε μια νέα καρτέλα του προκαθορισμένου περιηγητή διαδικτύου (web explorer), όπως το Google Chrome ή το Mozilla Firefox (δεν είναι απαραίτητη η σύνδεση στο διαδίκτυο). Στο αριστερό πάνελ του JupyterLab, είναι εμφανής η λίστα των αρχείων και των υποφακέλων που βρίσκονται στον φάκελο όπου εκτελέσαμε την εντολή εκκίνησης του JupyterLab. Για την δημιουργία ενός νέου Jupyter notebook, επιλέγουμε το σύμβολο <em>+</em> στο επάνω αριστερά μέρος του JupyterLab και έπειτα επιλέγουμε <em>Python 3</em> κάτω από την υποκεφαλίδα <em>Notebook</em> στο κυρίως παράθυρο της εφαρμογής. Παρατηρούμε στο αριστερό πάνελ την δημιουργία ενός νέου αρχείου με την κατάληξη  <em>.ipynb</em> που είναι η προκαθορισμένη κατάληξη των αρχείων Jupyter notebooks, όπως ενδεικτικά παρουσιάζεται και στο <a class="reference internal" href="#figure1"><span class="std std-numref">Fig. 1</span></a>. Η λειτουργικότητά τους είναι εφάμιλλη με τα notebooks του Mathematica, καθώς τα κελιά εκτελούνται πατώντας shift + enter, επιτρέποντας από τον πειραματισμό με μικρής έκτασης κώδικες μέχρι την ανάπτυξη ολόκληρων πακέτων λογισμικού. Για να τερματίσουμε το JupyterLab, αρκεί να κλείσουμε το τερματικό από το οποίο το είχαμε εκκινήσει.</p>
-<div class="figure align-default" id="figure1">
-<a class="reference internal image-reference" href="_images/Capture.png"><img alt="_images/Capture.png" src="_images/Capture.png" style="height: 350px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Το γραφικό περιβάλλον του Jupyterlab, όπου έχει δημιουργηθεί ένα αρχείο Jupyter notebook. Ο ενδεικτικός κώδικας στο πρώτο κελί του Jupyter notebook έχει εκτελεστεί πατώντας shift+enter και η έξοδός του παρουσιάζεται ακριβώς από κάτω.</span><a class="headerlink" href="#figure1" title="Permalink to this image">#</a></p>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>Διαδραστικές λειτουργίες συγγράματος<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<figure class="align-default" id="figure1">
+<a class="reference internal image-reference" href="Figures/chapter1/Capture.png"><img alt="Figures/chapter1/Capture.png" src="Figures/chapter1/Capture.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Το γραφικό περιβάλλον του Jupyterlab, όπου έχει δημιουργηθεί ένα αρχείο Jupyter notebook. Ο ενδεικτικός κώδικας στο πρώτο κελί του Jupyter notebook έχει εκτελεστεί πατώντας shift+enter και η έξοδός του παρουσιάζεται ακριβώς από κάτω.</span><a class="headerlink" href="#figure1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id2">
+<h2>Διαδραστικές λειτουργίες συγγράματος<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>Στην <a class="reference external" href="https://raptistasos.github.io/CFD_python_GR/intro.html">ιστοσελίδα</a> του συγγράματος, στο επάνω μέρος, υπάρχει ένα εικονίδιο σε σχήμα πυραύλου. Πατώντας το εικονίδιο εμφανίζεται μία λίστα με τις επιλογές “Binder” και “Live Code”. H πρώτη επιλογή καλεί την υπηρεσία <a class="reference external" href="https://mybinder.org/">Binder</a> που δημιουργεί ένα περιβάλλον προγραμματισμού Python με όλες τις απαραίτητες βιβλιοθήκες και ανοίγει ένα Jupyter notebook, όπου ο αναγνώστης μπορέι να εκτελέσει κα να πειραματιστεί με τον κώδικα που παρέχεται από το σύγγραμα. Αντίστοιχη είναι και η διαδραστική λειτουργία της επιλογής “Live Code”, με την διαφορά ότι τα κελιά μετατρέπονται σε εκτελέσιμα (επιλέγοντας το εκάστοτε κελί και πατώντας shift+enter) επί της ιστοσελίδας του συγγράμματος (εμφανίζεται η ένδειξη “Launching from mybinder.org: ready” όταν ενεργοποιηθεί η λειτουργία).</p>
-</div>
-<div class="section" id="id3">
-<h2>Βασικές αρχές της Python<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id4">
-<h3>Βασικοί τύποι δεδομένων<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id3">
+<h2>Βασικές αρχές της Python<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<section id="id4">
+<h3>Βασικοί τύποι δεδομένων<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Όπως οι περισσότερες γλώσσες προγραμματισμού, η Python διαθέτει όλους τους βασικούς τύπους δεδομένων, όπως ακέραιους (integers) και αριθμούς κινητής υποδιαστολής (floats), αληθοτιμές (booleans) και συμβολοσειρές (strings).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -571,9 +589,9 @@ hello world
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id5">
-<h3>Σύνθετοι τύποι δεδομένων<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id5">
+<h3>Σύνθετοι τύποι δεδομένων<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>Εκτός από τους βασικούς τύπους δεδομένων, η Python υποστηρίζει επίσης σύνθετες δομές δεδομένων, όπως λίστες (lists), πλειάδες (tuples) και λεξικά (dictionaries).</p>
 <p><strong>Λίστες</strong>. Η πιο ευέλικτη δομή δεδομένων είναι η λίστα, που έχει εν δυνάμει μεταβλητό μέγεθος και μπορεί να περιέχει στοιχεία διαφορετικών τύπων.</p>
 <div class="cell docutils container">
@@ -746,9 +764,7 @@ there are 8 women in the lab
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>there are 7 men in the lab
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>there are 8 women in the lab
+there are 8 women in the lab
 </pre></div>
 </div>
 </div>
@@ -794,11 +810,11 @@ positive
 </div>
 </div>
 <p>Στον παραπάνω κώδικα, δίνεται επίσης παράδειγμα δομής ελέγχου if/elif/else σε Python.</p>
-</div>
-</div>
-<div class="section" id="numpy">
-<h2>Βιβλιοθήκη Numpy<a class="headerlink" href="#numpy" title="Permalink to this headline">#</a></h2>
-<p>Η <a class="reference external" href="https://numpy.org/doc/stable/index.html">Numpy</a> είναι πολύ δημοφιλής βιβλιοθήκη για επιστημονικούς υπολογισμούς. Για να χρησιμοποιήσουμε οποιαδήποτε βιβλιοθήκη της Python πρέπει πρώτα να την εισάγουμε στο κώδικά μας,</p>
+</section>
+</section>
+<section id="numpy">
+<h2>Βιβλιοθήκη Numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h2>
+<p>Η <a class="reference external" href="https://numpy.org/doc/stable/index.html#">Numpy</a> είναι πολύ δημοφιλής βιβλιοθήκη για επιστημονικούς υπολογισμούς. Για να χρησιμοποιήσουμε οποιαδήποτε βιβλιοθήκη της Python πρέπει πρώτα να την εισάγουμε στο κώδικά μας,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -897,9 +913,9 @@ positive
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.04740745 0.67071377 0.3272608  0.07651844]
- [0.06403274 0.4618684  0.04517686 0.69401911]
- [0.84155448 0.16993679 0.90018146 0.89731011]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.91567393 0.97073265 0.51408677 0.03225471]
+ [0.17887828 0.0605744  0.55984256 0.8450655 ]
+ [0.49772855 0.11535275 0.68148925 0.62617278]]
 </pre></div>
 </div>
 </div>
@@ -993,8 +1009,8 @@ positive
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.23822809 0.97402364]
- [0.34090761 0.11672931]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.24966561 0.63041583]
+ [0.75351938 0.75702692]]
 </pre></div>
 </div>
 </div>
@@ -1150,9 +1166,9 @@ positive
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="matplotlib">
-<h2>Βιβολιοθήκη Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="matplotlib">
+<h2>Βιβολιοθήκη Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this heading">#</a></h2>
 <p>H Matpolotlib είναι η βιβλιοθήκη κατασκευής διαγραμμάτων της γλώσσας προγραμματισμού Python και της αριθμητικής της επέκτασης Numpy. Παρακάτω, εισάγεται εν συντομία το άρθρωμα (module) <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>, που παρέχει ένα σύστημα σχεδίασης παρόμοιο με το Matlab.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1175,7 +1191,7 @@ positive
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/eff657789a486682bb925186cc87208703a224578b917863ca1c6dbd05e8c3ea.png" src="_images/eff657789a486682bb925186cc87208703a224578b917863ca1c6dbd05e8c3ea.png" />
+<img alt="_images/1d5b6a4148a47af21d3c088de10f63e28c077448b5fe424b63efb0948832e047.png" src="_images/1d5b6a4148a47af21d3c088de10f63e28c077448b5fe424b63efb0948832e047.png" />
 </div>
 </div>
 <p>Για τον συνδυασμό διαγραμμάτων και την προσθήκη ετικετών στους x και y άξονες, καθώς και υπομνήματος, ακολουθείται η εξής σύνταξη,</p>
@@ -1197,12 +1213,12 @@ positive
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f37459e0ae5959910d672d946226fc3c42064695d7d8c539f85570f486f2ece1.png" src="_images/f37459e0ae5959910d672d946226fc3c42064695d7d8c539f85570f486f2ece1.png" />
+<img alt="_images/c4e7b0e43c97ac7614cb53aed83d7771b8103b08cab38c614ede57e5210ad004.png" src="_images/c4e7b0e43c97ac7614cb53aed83d7771b8103b08cab38c614ede57e5210ad004.png" />
 </div>
 </div>
-<p>Περισσότες πληροφορίες για τις δυνατότητες της βιβλιοθήκης Matplotlib μπορούν να αναζητηθούν σην επίσημη <a class="reference external" href="https://matplotlib.org/stable/">ιστοσελίδα</a> της. Κλείνοντας, προτείνεται το εξής <a class="reference external" href="https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html">ηλεκτρονικό βιβλίο</a> που παρουσιάζει αναλυτικά την γλώσσα προγραμματισμού Python δίνοντας έμφαση σε εφαρμογές αριθμητικών μεθόδων.</p>
-</div>
-</div>
+<p>Περισσότες πληροφορίες για τις δυνατότητες της βιβλιοθήκης Matplotlib μπορούν να αναζητηθούν σην επίσημη <a class="reference external" href="https://matplotlib.org/stable/#">ιστοσελίδα</a> της. Κλείνοντας, προτείνεται το εξής <a class="reference external" href="https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html">ηλεκτρονικό βιβλίο</a> που παρουσιάζει αναλυτικά την γλώσσα προγραμματισμού Python δίνοντας έμφαση σε εφαρμογές αριθμητικών μεθόδων.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1229,11 +1245,10 @@ positive
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -1253,10 +1268,7 @@ positive
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1302,6 +1314,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2021.
@@ -1328,8 +1341,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
