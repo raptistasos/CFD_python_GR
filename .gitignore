@@ -1,6 +1,4 @@
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 .github/ 
-_build/latex/
-_build/.doctrees/
-_build/jupyter_execute/
+_build/
