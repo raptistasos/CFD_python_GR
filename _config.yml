@@ -19,7 +19,7 @@ repository:
   branch                    : master
 
 latex:
-  latex_engine              : xelatex
+  latex_engine              : pdflatex
 
 html:
   use_repository_button     : true
