@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Η εξίσωση Διάχυσης &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
@@ -15,47 +14,48 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=982b99e0" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,13 +92,11 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter4';</script>
@@ -108,6 +106,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής" href="Chapter3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -115,32 +114,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -148,7 +131,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -156,16 +138,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -180,6 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -193,11 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -213,11 +213,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Chapter3.html">Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Η εξίσωση Διάχυσης</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter5.html">Οι εξισώσεις Laplace και Poisson</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter6.html">Η εξίσωση Μεταφοράς</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter7.html">Μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter8.html">Μη-μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter10.html">Οι εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter6.html">Η Εξίσωση Μεταφοράς</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter7.html">Η Εξίσωση Μεταφοράς - Διάχυσης</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter8.html">Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Οι Εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Βιβλιογραφία</a></li>
 </ul>
 
     </div>
@@ -233,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -242,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -274,14 +274,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/raptistasos/CFD_python_GR/master?urlpath=tree/Chapter4.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -389,27 +389,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -430,17 +422,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Σύντομη Εισαγωγή</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Η εξίσωση διάχυσης σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Το πρόβλημα αρχικών-συνοριακών τιμών για διάχυση σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler">Άμεσο σχήμα του Euler</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Πεπλεγμένο σχήμα του Euler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Η εξίσωση διάχυσης σε μία χωρική διάσταση</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Το πρόβλημα αρχικών-συνοριακών τιμών για την εξίσωση διάχυσης σε μία διάσταση</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crank-nicolson">Το σχήμα των Crank-Nicolson</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ο κανόνας θ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dufort-frankel">Τύπος των Dufort-Frankel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Επέκταση στις 2 διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a">Aσκήσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Βιβλιογραφία</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theta">Ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#du-fort-frankel">Ο τύπος των Du Fort-Frankel και η μέθοδος εμπρόσθιων διαφορών</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Επέκταση στις δύο διαστάσεις</a></li>
 </ul>
             </nav>
         </div>
@@ -450,126 +438,46 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Η εξίσωση Διάχυσης<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>Η εξίσωση Διάχυσης<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Σύντομη Εισαγωγή<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>Στην πρώτη ενότητα αυτού του κεφαλαίου η μεθοδολογία ξεκινά με την απλούστερη ΜΔΕ, την εξίσωση της Διάχυσης, που αποτελεί το απλούστερο πρόβλημα παραβολικού τύπου ~\cite{kaf3}. Περιγράφεται το πρόβλημα αρχικών–συνοριακών τιμών για την εξίσωση διάχυσης σε μια διάσταση. Ακολουθεί η άμεση και πεπλεγμένη μέθοδος του \textlatin{Euler} και το σχήμα των \textlatin{Crank–Nicolson}. Εισάγεται ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span> καθώς και το σχήμα των \textlatin{Dufort–Frankel}. Ακολουθεί η επέκταση της μεθοδολογίας στις δύο διαστάσεις. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
-</section>
-<section id="id3">
-<h2>Η εξίσωση διάχυσης σε μια διάσταση<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>Το κεφάλαιο ξεκινά με την αριθμητική μεθοδολογία για την απλούστερη ΜΔΕ, τη μονοδιάστατη εξίσωση της Διάχυσης. Η χρονοεξαρτώμενη αυτή εξίσωση είναι παραβολικού τύπου και δίνεται στην παρακάτω μορφή,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-1">
-<span class="eqno">(109)<a class="headerlink" href="#equation-eq4-1" title="Permalink to this equation">#</a></span>\[ 
-	\frac{\partial u}{\partial t} = d \, \frac{\partial^2 u}{\partial x^2}
-\]</div>
-<p>όπου <span class="math notranslate nohighlight">\(u(x,t)\)</span> είναι η άγνωστη συνάρτηση ή η εξαρτημένη μεταβλητή που εξαρτάται από την χωρική μεταβλητή <span class="math notranslate nohighlight">\(x\)</span> και την χρονική μεταβλητή <span class="math notranslate nohighlight">\(t\)</span>. Ο συντελεστής <span class="math notranslate nohighlight">\(d\)</span> καλείται συντελεστής διάχυση και καθορίζει το πόσο γρήγορα διαχέεται ή μεταβάλεται η συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> στο χωρίο ολοκλήρωσης, <span class="math notranslate nohighlight">\(\Omega\)</span>. Σε σύγκριση με την κυματική εξίσωση, <span class="math notranslate nohighlight">\(u_{tt} = c^2 \, u_{xx}\)</span>, η οποία μοιάζει με την εξίσωση <a class="reference internal" href="#equation-eq4-1">(109)</a>, η εξίσωση διάχυσης διαθέτει λύσεις που είναι πολύ διαφορετικές από αυτές της κυματικής εξίσωσης, υπερβολικού τύπου. Ως αποτέλεσμα, η εξίσωση διάχυσης έχει και αρκετά διαφορετικές απαιτήσεις σε σχέση με την κυματική εξίσωση στις αριθμητικές μεθόδους λόγω της φύσης της εξίσωσης και των προβλημάτων που περιγράφει.</p>
-<p>Συγκεκριμένα, τα προβλήματα διάχυσης μπορεί να παρουσιάσουν ταχεία αλλαγή στην αρχή, αλλά στη συνέχεια η εξέλιξη του <span class="math notranslate nohighlight">\(u\)</span> γίνεται όλο και πιο αργή. Η λύση είναι συνήθως πολύ ομαλή, και μετά από κάποιο χρονικό διάστημα, δεν μπορεί κανείς να αναγνωρίσει το αρχικό σχήμα του <span class="math notranslate nohighlight">\(u\)</span>. Αυτό έρχεται σε αντίθεση με τις λύσεις της κυματικής εξίσωσης όπου διατηρείται το αρχικό σχήμα, δηλαδή η λύση είναι μια κινούμενη αρχική συνθήκη, ένα αρχικό κύμα που μεταφέρεται στον χώρο. Η κλασική εξίσωση κύματος <span class="math notranslate nohighlight">\(u_{tt} = c^2 \, u_{xx}\)</span> έχει λύσεις που διαδίδονται με ταχύτητα <span class="math notranslate nohighlight">\(c\)</span> για πάντα, χωρίς να αλλάζει το σχήμα του κύματος, ενώ η εξίσωση διάχυσης συγκλίνει σε μια σταθερή λύση <span class="math notranslate nohighlight">\(\bar u(x)\)</span> καθώς το <span class="math notranslate nohighlight">\(t \to \infty\)</span>. Σε αυτό το όριο, <span class="math notranslate nohighlight">\(u_t = 0\)</span>, και για την <span class="math notranslate nohighlight">\(\bar u\)</span> ισχύει ότι <span class="math notranslate nohighlight">\(\bar u''(x) = 0\)</span>. Αυτό το όριο της εξίσωσης διάχυσης περιγράφεται από την εξίσωση του Laplace, ελλειπτικού τύπου, και προκύπτει σε ένα πολύ ευρύ φάσμα εφαρμογών σε όλες τις επιστήμες και στη ρευστομηχανική.</p>
-<p>Είναι εφικτό να λυθεί αριθμητικά η εξίσωση <a class="reference internal" href="#equation-eq4-1">(109)</a> και να βρεθεί η λύση της <span class="math notranslate nohighlight">\(u(x,t)\)</span>, χρησιμοποιώντας ένα άμεσο ή εκπεφρασμένο σχήμα, αλλά οι περιορισμοί του χρονικού βήματος είναι πολύ περιοριστικοί σε σχέση με ένα πεπλεγμένο αριθμητικό σχήμα. Δεδομένου ότι η λύση
-<span class="math notranslate nohighlight">\(u\)</span> της εξίσωσης διάχυσης είναι πολύ ομαλή και αλλάζει αργά καθώς το <span class="math notranslate nohighlight">\(t \to \infty\)</span>, τα μικρά χρονικά βήματα δεν είναι βολικά και δεν απαιτούνται από την ακρίβεια καθώς η διαδικασία επίλυσης της εξίσωσης διάχυσης συγκλίνει σε μια σταθερή κατάσταση (steady state). Όλα αυτά τα θέματα θα μας απασχολήσουν στις επόμενες ενότητες.</p>
+<h2>Περίληψη<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Στην πρώτη ενότητα αυτού του κεφαλαίου η μεθοδολογία ξεκινά με την απλούστερη Μ.Δ.Ε., την εξίσωση διάχυσης, που αποτελεί το απλούστερο πρόβλημα παραβολικού τύπου <span id="id3">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>]</span>. Περιγράφεται το πρόβλημα αρχικών-συνοριακών τιμών για την εξίσωση διάχυσης σε μία διάσταση. Ακολουθεί η άμεση και πεπλεγμένη μέθοδος του Euler και το σχήμα των Crank-Nicolson. Εισάγεται ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span> καθώς και το σχήμα των Dufort-Frankel. Ακολουθεί η επέκταση της μεθοδολογίας στις δύο διαστάσεις. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
+<p><strong>Προαπαιτούμενη γνώση</strong>: Βασικές γνώσεις Συνήθων/Μερικών Διαφορικών Εξισώσεων και Αριθμητικής Ανάλυσης.</p>
 </section>
 <section id="id4">
-<h2>Το πρόβλημα αρχικών-συνοριακών τιμών για διάχυση σε μια διάσταση<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<p>Όπως αναφέρθηκε στην προηγούμενη ενότητα η εξίσωση της διάχυσης είναι παραβολικού τύπου, που σημαίνει ότι για να επιλυθεί η εξίσωση και να βρεθεί μια μοναδική μερική λύση της χρειάζεται να διαθέτουμε τόσο αρχικές όσο και συνοριακές συνθήκες. Η εξίσωση διάχυσης ξεκινάει με μια αρχική συνθήκη <span class="math notranslate nohighlight">\(u(x,0) = f(x)\)</span>, όπου το <span class="math notranslate nohighlight">\(f\)</span> είναι μια συνεχής συνάρτηση του χώρου <span class="math notranslate nohighlight">\(\Omega = [0, L]\)</span>. Απαιτείται μία συνοριακή συνθήκη σε κάθε σύνορο του χωρίου, που σε ένα μονοδιάστατο χωρίο όπως το <span class="math notranslate nohighlight">\(\Omega\)</span>, σημαίνει ότι πρέπει να είναι γνωστό το <span class="math notranslate nohighlight">\(u\)</span> ή το <span class="math notranslate nohighlight">\(u_x\)</span> ή κάποιος συνδυασμός τους στα συνοριακά σημεία, <span class="math notranslate nohighlight">\(0\)</span> και <span class="math notranslate nohighlight">\(L\)</span>. Ξεκινώντας με την απλούστερη συνοριακή συνθήκη, <span class="math notranslate nohighlight">\(u = 0\)</span> (συνθήκη Dirichlet, για την άγνωστη συνάρτηση). Το πλήρες πρόβλημα διάχυσης αρχικών–συνοριακών τιμών, σε μια διάσταση του χώρου μπορεί να καθοριστεί ως,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-2">
-<span class="eqno">(110)<a class="headerlink" href="#equation-eq4-2" title="Permalink to this equation">#</a></span>\[\begin{split}
-	\begin{gathered}
-		\frac{\partial u}{\partial t} = d \, \frac{\partial^2 u}{\partial x^2}, \,\, (x,t) \in (0,L) \times (0,T] \\
-		u(x, 0) = f(x), \,\, x \in [0, L] \\
-		u(0, t) = u(L, t) = 0, t &gt; 0 
-	\end{gathered}
-\end{split}\]</div>
-<p>Η εξίσωση <a class="reference internal" href="#equation-eq4-2">(110)</a> είναι γνωστή ως η μονοδιάστατη εξίσωση διάχυσης, που συχνά αναφέρεται και ως εξίσωση θερμότητας (heat equation). Με μια χρονική παράγωγο πρώτης τάξης, χρειάζεται μόνο μια αρχική συνθήκη, ενώ η παράγωγος δεύτερης τάξης στο διάστημα οδηγεί σε αναζήτηση δύο συνοριακών συνθηκών. Πρέπει επίσης να δοθεί η παράμετρος <span class="math notranslate nohighlight">\(d\)</span>, δηλ. ο συντελεστής διάχυσης.</p>
-<p>Οι εξισώσεις διάχυσης όπως η <a class="reference internal" href="#equation-eq4-2">(110)</a> έχουν ένα ευρύ φάσμα εφαρμογών στις φυσικές, βιολογικές, οικονομικές επιστήμες και στη ρευστομηχανική. Μία από τις πιο κοινές εφαρμογές είναι η διάδοση της θερμότητας, όπου το <span class="math notranslate nohighlight">\(u(x,t)\)</span> μπορεί να αντιπροσωπεύει τη θερμοκρασία στο σημείο <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(x \in (0, L)\)</span> και στο χρόνο <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(t \in (0, T]\)</span>.</p>
+<h2>Η εξίσωση διάχυσης σε μία χωρική διάσταση<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Το κεφάλαιο ξεκινά με την αριθμητική μεθοδολογία για την απλούστερη Μ.Δ.Ε., τη μονοδιάστατη εξίσωση διάχυσης. Η χρονοεξαρτώμενη αυτή εξίσωση είναι παραβολικού τύπου και δίνεται στην παρακάτω μορφή,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-1">
+<span class="eqno">(99)<a class="headerlink" href="#equation-eq-k4-1" title="Link to this equation">#</a></span>\[
+\frac{\partial u}{\partial t} = d \, \frac{\partial^2 u}{\partial x^2},
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(u(x,t)\)</span> είναι η άγνωστη συνάρτηση ή η εξαρτημένη μεταβλητή που εξαρτάται από τη χωρική μεταβλητή <span class="math notranslate nohighlight">\(x\)</span> και τη χρονική μεταβλητή <span class="math notranslate nohighlight">\(t\)</span>. Ο συντελεστής <span class="math notranslate nohighlight">\(d\)</span> καλείται συντελεστής διάχυσης και καθορίζει πόσο γρήγορα διαχέεται ή μεταβάλλεται η συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> στο χωρίο ολοκλήρωσης, <span class="math notranslate nohighlight">\(\Omega\)</span>. Σε σύγκριση με την κυματική εξίσωση, <span class="math notranslate nohighlight">\(u_{tt} = c^2 \, u_{xx}\)</span>, η οποία μοιάζει με την εξίσωση <a class="reference internal" href="#equation-eq-k4-1">(99)</a>, η εξίσωση διάχυσης διαθέτει λύσεις που είναι πολύ διαφορετικές από αυτές της κυματικής εξίσωσης, η οποία είναι υπερβολικού τύπου. Ως αποτέλεσμα, η εξίσωση διάχυσης έχει και αρκετά διαφορετικές απαιτήσεις σε σχέση με την κυματική εξίσωση στις αριθμητικές μεθόδους λόγω της φύσης της εξίσωσης και των προβλημάτων που περιγράφει.</p>
+<p>Συγκεκριμένα, τα προβλήματα διάχυσης μπορεί να παρουσιάσουν ταχεία αλλαγή στην αρχή, αλλά στη συνέχεια η εξέλιξη της <span class="math notranslate nohighlight">\(u\)</span> γίνεται όλο και πιο αργή. Η λύση είναι συνήθως πολύ ομαλή, και μετά από κάποιο χρονικό διάστημα, δεν μπορεί κανείς να αναγνωρίσει το αρχικό σχήμα της <span class="math notranslate nohighlight">\(u\)</span>. Αυτό έρχεται σε αντίθεση με τις λύσεις της κυματικής εξίσωσης όπου διατηρείται το αρχικό σχήμα, δηλαδή η λύση είναι μια κινούμενη αρχική συνθήκη, ένα αρχικό κύμα που μεταφέρεται στο χώρο. Η κλασική εξίσωση κύματος <span class="math notranslate nohighlight">\(u_{tt} = c^2 \, u_{xx}\)</span> έχει λύσεις που διαδίδονται με ταχύτητα <span class="math notranslate nohighlight">\(c\)</span> για πάντα, χωρίς να αλλάζει το σχήμα του κύματος, ενώ η εξίσωση διάχυσης συγκλίνει σε μια σταθερή λύση <span class="math notranslate nohighlight">\(\bar u(x)\)</span> καθώς το <span class="math notranslate nohighlight">\(t \to \infty\)</span>. Σε αυτό το όριο, <span class="math notranslate nohighlight">\(u_t = 0\)</span>, και για την <span class="math notranslate nohighlight">\(\bar u\)</span> ισχύει ότι <span class="math notranslate nohighlight">\(\bar u''(x) = 0\)</span>. Αυτό το όριο της εξίσωσης διάχυσης περιγράφεται από την εξίσωση του Laplace, ελλειπτικού τύπου, και προκύπτει σε ένα πολύ ευρύ φάσμα εφαρμογών σε όλες τις επιστήμες και στη Ρευστομηχανική.</p>
+<p>Είναι εφικτό να λυθεί αριθμητικά η εξίσωση <a class="reference internal" href="#equation-eq-k4-1">(99)</a> και να βρεθεί η λύση της <span class="math notranslate nohighlight">\(u(x,t)\)</span>, με χρήση ενός άμεσου ή εκπεφρασμένου σχήματος, αλλά οι περιορισμοί του χρονικού βήματος είναι πολύ δεσμευτικοί σε σχέση με ένα πεπλεγμένο αριθμητικό σχήμα. Δεδομένου ότι η λύση <span class="math notranslate nohighlight">\(u\)</span> της εξίσωσης διάχυσης είναι πολύ ομαλή και αλλάζει αργά καθώς το <span class="math notranslate nohighlight">\(t \to \infty\)</span>, τα μικρά χρονικά βήματα δεν είναι βολικά και δεν απαιτούνται από την ακρίβεια καθώς η διαδικασία επίλυσης της εξίσωσης διάχυσης συγκλίνει σε μια σταθερή κατάσταση (steady state). Όλα αυτά τα θέματα θα μας απασχολήσουν στις επόμενες ενότητες.</p>
 </section>
-<section id="euler">
-<h2>Άμεσο σχήμα του Euler<a class="headerlink" href="#euler" title="Permalink to this heading">#</a></h2>
-<p>Τα πιο απλά και βασικά αριθμητικά σχήματα είναι το άμεσο και το πεπελεγμένο σχήμα του Euler. Οπότε, είναι πολύ σημαντικό να ξεκινήσουμε την ανάλυση μας από αυτά τα δύο αριθμητικά σχήματα. Το πρώτο βήμα της μεθοδολογίας είναι η διακριτοποίηση το χωρίου ολοκλήρωσης. Δηλαδή, αντικαθιστούμε το συνεχές χωρίο <span class="math notranslate nohighlight">\([0, L] \times [0, T]\)</span> από ένα διακριτό ανάλογο, διακριτά σημεία στο χωρίο ολοκλήρωσης. Υποθέτουμε μια οποιόμορφη διακριτοποίηση του χωρίου ως προς το χρόνο και το χώρο,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-3">
-<span class="eqno">(111)<a class="headerlink" href="#equation-eq4-3" title="Permalink to this equation">#</a></span>\[ 
-	x_i = i \, \Delta x, \, i = 0, ..., N_x, \,\,\, t_n = n \, \Delta t, \, n = 0, ..., N_t
-\]</div>
-<p>Επιπλέον, <span class="math notranslate nohighlight">\(u_i^n\)</span> είναι ο συμβολισμός της προσέγγισης της συνάρτησης στα διακριτά σημεία, <span class="math notranslate nohighlight">\(u(x_i,  t_n)\)</span> για <span class="math notranslate nohighlight">\(i = 0, ..., N_x\)</span> και <span class="math notranslate nohighlight">\(n = 0, ..., N_t\)</span>. Απαιτώντας ότι η ΜΔΕ της εξίσωσης <a class="reference internal" href="#equation-eq4-2">(110)</a> να ισχύει σε κάθε διακριτό σημείο του υπολογιστικού πλέγματος <span class="math notranslate nohighlight">\((x_i, t_n)\)</span> οδηγούμστε στην διακριτή εξίσωση,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-4">
-<span class="eqno">(112)<a class="headerlink" href="#equation-eq4-4" title="Permalink to this equation">#</a></span>\[
-	\frac{\partial}{\partial t} u(x_i, t_n) = d \, \frac{\partial^2}{\partial x^2} u(x_i, t_n)
-\]</div>
-<p>το επόμενο βήμα είναι να αντικαταστήσουμε τις παραγώγους με τις διακριτές τους μορφές, όπως αυτές συζητήθηκαν στο προηγούμενο κεφάλαιο. Συγκεκριμένα, εφαρμόζοντας εμπρόσθιες πεπερασμένες διαφορές για τον χρόνο και κεντρικές πεπερασμένες διαφορές για τον χώρο, καταλήγουμε στο παρακάτω αριθμητικό σχήμα,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-5">
-<span class="eqno">(113)<a class="headerlink" href="#equation-eq4-5" title="Permalink to this equation">#</a></span>\[
-	\frac{u_i^{n+1} - u_i^n}{\Delta t} = d \, \frac{u_{i+1}^{n} - 2 u_i^n + u_{i-1}^n}{\Delta x^2}
-\]</div>
-<p>Αυτό που έχουμε επιτύχει είναι να μετατρέψουμε μια ΜΔΕ σε ένα σύστημα αλγεβρικών εξισώσεων ή εξισώσεων διαφορών. Το γεγονός ότι παίρνουμε ένα σύστημα αλγεβρικών εξισώσεων μας διευκολύνει να λύσουμε την διαφορική εξίσωση στο χωρίο ολοκλήρωσης. Ο άγνωστος στην εξίσωση <a class="reference internal" href="#equation-eq4-5">(113)</a> είναι το <span class="math notranslate nohighlight">\(u_i^{n+1}\)</span>, όλοι οι άλλοι όροι είναι γνωστοί, υπολογισμένοι από προηγούμενα υπολογιστικά βήματα ή από αρχικές και συνοριακές συνθήκες. Τελικά, το άμεσο αριθμητικό σχήμα είναι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-6">
-<span class="eqno">(114)<a class="headerlink" href="#equation-eq4-6" title="Permalink to this equation">#</a></span>\[
-	u_i^{n+1} = u_i^n + \frac{d \, \Delta t}{\Delta x^2} (u_{i+1}^{n} - 2 u_i^n + u_{i-1}^n)
-\]</div>
-<div class="admonition- admonition">
-<p class="admonition-title">Σημείωση</p>
-<p>H παράμετρος, <span class="math notranslate nohighlight">\(F = \displaystyle \frac{d \, \Delta t}{\Delta x^2}\)</span>, είναι βασική παράμετρος για την εξίσωση διάχυσης. Η <span class="math notranslate nohighlight">\(F\)</span> είναι ένας αδιάστατος αριθμός που εμπεριέχει τη βασική φυσική παράμετρο του προβλήματος, <span class="math notranslate nohighlight">\(d\)</span>, καθώς και τις παραμέτρους διακριτοποίησης, <span class="math notranslate nohighlight">\(\Delta x\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span> σε μία μόνο παράμετρο. Οι ιδιότητες της προτεινόμενης αριθμητικής μεθόδου, δηλαδή της άμεσης μεθόδου του Euler, εξαρτώνται σε μεγάλο βαθμό από την τιμή της παραμέτρου, <span class="math notranslate nohighlight">\(F\)</span>.</p>
-</div>
-<p>Ακολουθεί ο κώδικας επίλυσης της εξίσωσης διάχυσης σε μία διάσταση με το άμεσο σχήμα Euler.</p>
+<section id="id5">
+<h2>Το πρόβλημα αρχικών-συνοριακών τιμών για την εξίσωση διάχυσης σε μία διάσταση<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Όπως αναφέρθηκε στην προηγούμενη ενότητα, η εξίσωση διάχυσης είναι παραβολικού τύπου, που σημαίνει ότι για να επιλυθεί η εξίσωση και να βρεθεί μια μοναδική μερική λύση της χρειάζεται να διαθέτουμε τόσο αρχικές όσο και συνοριακές συνθήκες. Η εξίσωση διάχυσης ξεκινάει με μία αρχική συνθήκη <span class="math notranslate nohighlight">\(u(x,0) = f(x)\)</span>, όπου το <span class="math notranslate nohighlight">\(f\)</span> είναι μια συνεχής συνάρτηση του χώρου <span class="math notranslate nohighlight">\(\Omega = [0, L]\)</span>. Απαιτείται μία συνοριακή συνθήκη σε κάθε σύνορο του χωρίου, που σε ένα μονοδιάστατο χωρίο όπως το <span class="math notranslate nohighlight">\(\Omega\)</span> σημαίνει ότι πρέπει να είναι γνωστή η <span class="math notranslate nohighlight">\(u\)</span> ή η <span class="math notranslate nohighlight">\(u_x\)</span> ή κάποιος συνδυασμός τους στα συνοριακά σημεία, <span class="math notranslate nohighlight">\(0\)</span> και <span class="math notranslate nohighlight">\(L\)</span>. Ξεκινάμε με την απλούστερη συνοριακή συνθήκη, <span class="math notranslate nohighlight">\(u = 0\)</span> (συνθήκη Dirichlet, για την άγνωστη συνάρτηση). Το πλήρες πρόβλημα διάχυσης αρχικών-συνοριακών τιμών, σε μία διάσταση του χώρου μπορεί να διατυπωθεί ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-2">
+<span class="eqno">(100)<a class="headerlink" href="#equation-eq-k4-2" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+\frac{\partial u}{\partial t} &amp;= d \, \frac{\partial^2 u}{\partial x^2}, \quad (x,t) \in (0,L) \times (0,T], \\[1em]
+u(x, 0) &amp;= f(x), \quad x \in [0, L], \\[1em]
+u(0, t) &amp;= u(L, t) = 0, \quad t&gt; 0.
+\end{aligned}
+\end{split}\]</div>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq-k4-2">(100)</a> είναι γνωστή ως μονοδιάστατη εξίσωση διάχυσης, και συχνά αναφέρεται ως εξίσωση θερμότητας (heat equation). Με μία χρονική παράγωγο πρώτης τάξης, χρειάζεται μόνο μία αρχική συνθήκη, ενώ η παράγωγος δεύτερης τάξης στο διάστημα οδηγεί σε αναζήτηση δύο συνοριακών συνθηκών <span id="id6">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>]</span>. Πρέπει επίσης να δοθεί η παράμετρος <span class="math notranslate nohighlight">\(d\)</span>, δηλαδή ο συντελεστής διάχυσης.</p>
+<p>Οι εξισώσεις διάχυσης όπως η <a class="reference internal" href="#equation-eq-k4-2">(100)</a> έχουν ένα ευρύ φάσμα εφαρμογών στις επιστήμες της Φυσικής, της Βιολογίας, των Οικονομικών και στη Ρευστομηχανική. Μία από τις πιο κοινές εφαρμογές είναι η διάδοση θερμότητας, όπου η <span class="math notranslate nohighlight">\(u(x,t)\)</span> μπορεί να αντιπροσωπεύει τη θερμοκρασία στο σημείο <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(x \in (0, L)\)</span> και τη χρονική στιγμή <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(t \in (0, T]\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">File /opt/conda/lib/python3.11/site-packages/matplotlib/style/core.py:137,</span> in <span class="ni">use</span><span class="nt">(style)</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">137</span>     <span class="n">style</span> <span class="o">=</span> <span class="n">_rc_params_in_file</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;bmh&#39;</span><span class="p">)</span>
 
-<span class="nn">File /opt/conda/lib/python3.11/site-packages/matplotlib/__init__.py:866,</span> in <span class="ni">_rc_params_in_file</span><span class="nt">(fname, transform, fail_on_error)</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span> <span class="n">rc_temp</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="ne">--&gt; </span><span class="mi">866</span> <span class="k">with</span> <span class="n">_open_file_or_url</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">867</span>     <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File /opt/conda/lib/python3.11/contextlib.py:137,</span> in <span class="ni">_GeneratorContextManager.__enter__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">137</span>     <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
-
-<span class="nn">File /opt/conda/lib/python3.11/site-packages/matplotlib/__init__.py:843,</span> in <span class="ni">_open_file_or_url</span><span class="nt">(fname)</span>
-<span class="g g-Whitespace">    </span><span class="mi">842</span> <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">843</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">844</span>     <span class="k">yield</span> <span class="n">f</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;seaborn&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/conda/lib/python3.11/site-packages/matplotlib/style/core.py:139,</span> in <span class="ni">use</span><span class="nt">(style)</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span>         <span class="n">style</span> <span class="o">=</span> <span class="n">_rc_params_in_file</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">139</span>         <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span>             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">style</span><span class="si">!r}</span><span class="s2"> is not a valid package style, path of style &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span>             <span class="sa">f</span><span class="s2">&quot;file, URL of style file, or library style name (library &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span>             <span class="sa">f</span><span class="s2">&quot;styles are listed in `style.available`)&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="n">filtered</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="nn">    144 for k</span> in <span class="ni">style:  # don&#39;t trigger RcParams.__getitem__</span><span class="nt">(&#39;backend&#39;)</span>
-
-<span class="ne">OSError</span>: &#39;seaborn&#39; is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gauss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">gauss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Συνάρτηση Gauss</span>
 <span class="sd">    a: ύψος της κορυφής της καμπύλης</span>
@@ -577,30 +485,20 @@ document.write(`
 <span class="sd">    c: τυπική απόκλιση</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plug_profile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+
+<span class="k">def</span> <span class="nf">plug_profile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">solve_diffusion1D_FE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+<span class="k">def</span> <span class="nf">solve_diffusion1D_FE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Επιλύει την μονοδιάστατη διάχυση με το άμεσο σχήμα Euler (Forward Euler, FE) </span>
+<span class="sd">    Επιλύει τη μονοδιάστατη εξίσωση διάχυσης με το άμεσο σχήμα Euler (Forward Euler, FE) </span>
 <span class="sd">    θεωρώντας ομογενείς, μηδενικές, συνοριακές συνθήκες.</span>
 <span class="sd">    L: μήκος χωρίου στη διάσταση x</span>
 <span class="sd">    Τ: τελική χρονική στιγμή</span>
 <span class="sd">    dx: χωρικό βήμα</span>
 <span class="sd">    dt: χρονικό βήμα</span>
 <span class="sd">    d: συντελεστής διάχυσης</span>
-<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (πχ gauss ή plug_profile).</span>
+<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (π.χ. gauss ή plug_profile).</span>
 <span class="sd">    *args: μέσω της λέξης κλειδί *args δηλώνεται δυναμικός αριθμός επιπλέον ορισμάτων.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     
@@ -614,8 +512,8 @@ document.write(`
     <span class="n">plot_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nsteps</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
     
     <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="c1"># αρχική συνθήκη. Το πρώτο όρισμα της συνάρτησης (xs) είναι το πεδίο ορισμού και τα</span>
-    <span class="c1"># υπόλοιπα ορίσματα (αδιευκρίνιστα εκ των προτέρων) εισάγονται μέσω της λέξης κλειδί *args.</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="c1">#υπό΄λοιπα ορίσματα (αδιευκρίνιστα εκ των προτέρων) εισάγονται μέσω της λέξης κλειδί *args.</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχον χρονικό βήμα</span>
     <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
        
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -639,93 +537,106 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<p>Στο Σχήμα <a class="reference internal" href="#fig-explicit-euler1"><span class="std std-numref">Fig. 11</span></a> παρουσιάζεται ένα παράδειγμα επίλυσης της μονοδιάστατης εξίσωσης διάχυσης με άμεσο σχήμα Euler, όπου η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss.</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με άμεσο σχήμα Euler</span>
-<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">solve_diffusion1D_FE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/51d8600fd37159d59c4e15bde04f2d6c3a74331d85f55b2cce41b75b186b5765.png" src="_images/51d8600fd37159d59c4e15bde04f2d6c3a74331d85f55b2cce41b75b186b5765.png" />
 </div>
-</div>
-<div class="cell docutils container">
+<figure class="align-default" id="fig-explicit-euler1">
+<a class="reference internal image-reference" href="_images/explicit_Euler_1.svg"><img alt="_images/explicit_Euler_1.svg" src="_images/explicit_Euler_1.svg" style="width: 505.70000000000005px; height: 261.3px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Eπίλυση της μονοδιάστατης εξίσωσης διάχυσης με άμεσο σχήμα Euler. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss.</span><a class="headerlink" href="#fig-explicit-euler1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Στο Σχήμα <a class="reference internal" href="#fig-explicit-euler2"><span class="std std-numref">Fig. 12</span></a> παρουσιάζεται ένα παράδειγμα επίλυσης της μονοδιάστατης εξίσωσης διάχυσης με άμεσο σχήμα Euler, όπου η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile.</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">solve_diffusion1D_FE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">plug_profile</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/f1a8c6fddc8357b130bdc416664fc8db94abfd50ce5aceff1f8fd4f24b78a640.png" src="_images/f1a8c6fddc8357b130bdc416664fc8db94abfd50ce5aceff1f8fd4f24b78a640.png" />
 </div>
-</div>
-</section>
-<section id="id5">
-<h2>Πεπλεγμένο σχήμα του Euler<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
-<p>Εφαρμόζοντας οπίσθιες πεπερασμένες διαφορές για τον χρόνο και κεντρικές πεπερασμένες διαφορές για τον χώρο, καταλήγουμε σε ένα διαφορετικό αριθμητικό σχήμα το οποίο είναι πεπλεγμένο. Το αριθμητικό σχήμα τώρα είναι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-7">
-<span class="eqno">(115)<a class="headerlink" href="#equation-eq4-7" title="Permalink to this equation">#</a></span>\[
-\frac{u_i^{n} - u_i^{n-1}}{\Delta t} = d \, \frac{u_{i+1}^{n} - 2 u_i^n + u_{i-1}^n}{\Delta x^2}
+<figure class="align-default" id="fig-explicit-euler2">
+<a class="reference internal image-reference" href="_images/explicit_Euler_2.svg"><img alt="_images/explicit_Euler_2.svg" src="_images/explicit_Euler_2.svg" style="width: 516.1px; height: 261.3px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Eπίλυση της μονοδιάστατης εξίσωσης διάχυσης με άμεσο σχήμα Euler. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile.</span><a class="headerlink" href="#fig-explicit-euler2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Εφαρμόζοντας οπίσθιες πεπερασμένες διαφορές για το χρόνο και κεντρικές πεπερασμένες διαφορές για το χώρο, καταλήγουμε σε ένα διαφορετικό αριθμητικό σχήμα το οποίο είναι πεπλεγμένο. Το αριθμητικό σχήμα τώρα είναι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-7">
+<span class="eqno">(101)<a class="headerlink" href="#equation-eq-k4-7" title="Link to this equation">#</a></span>\[
+\frac{u_i^{n} - u_i^{n-1}}{\Delta t} = d \, \frac{u_{i+1}^{n} - 2 \, u_i^n + u_{i-1}^n}{\Delta x^2}.
 \]</div>
-<p>Σε αυτό το αριθμητικό σχήμα, η ποσότητα <span class="math notranslate nohighlight">\(u_i^{n-1}\)</span> είναι γνωστή, αλλά όλες οι άλλες ποσότητες στο νέο χρονικό βήμα <span class="math notranslate nohighlight">\(n\)</span> είναι άγνωστες. Σε αυτή την περίπτωση δεν είναι δυνατόν να λύσουμε μόνο για την άγνωστη συνάρτηση στο σημείο <span class="math notranslate nohighlight">\((i, n)\)</span>, δηλαδή για την <span class="math notranslate nohighlight">\(u_i^n\)</span>, γιατί οι τιμές της <span class="math notranslate nohighlight">\(u\)</span> στα γειτονικά σημεία, <span class="math notranslate nohighlight">\(u_{i-1}^n\)</span> και <span class="math notranslate nohighlight">\(u_{i+1}^n\)</span>, είναι επίσης άγνωστες. Ένα τέτοιο αριθμητικό σχήμα λέγεται πεπλεγμένο, γιατί εμπλέκει περισσότερες από μια άγνωστες τιμές της συνάρτησης, <span class="math notranslate nohighlight">\(u\)</span>, στα γειτονικά σημεία.</p>
-<p>Το αριθμητικό σχήμα της εξίσωσης <a class="reference internal" href="#equation-eq4-7">(115)</a> δίνει ένα πεπλεγμένο σύστημα <span class="math notranslate nohighlight">\((N_x - 1) \times (N_x - 1)\)</span> αλγεβρικών εξισώσεων για τις άγνωστες τιμές <span class="math notranslate nohighlight">\(u_i^n\)</span> της συνάρτησης στα εσωτερικά χωρικά σημεία του πλέγματος, <span class="math notranslate nohighlight">\(i = 1, ..., N_x - 1\)</span>. Συγκεντρώνοντας τους αγνώστους στο αριστερό μέλος της εξίσωσης, μπορούμε να γράψουμε ότι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-8">
-<span class="eqno">(116)<a class="headerlink" href="#equation-eq4-8" title="Permalink to this equation">#</a></span>\[
-- F \, u_{i-1}^n + (1 + 2 F) \, u_i^{n} - F \, u_{i+1}^{n} = u_i^{n-1} ,  		
+<p>Σε αυτό το αριθμητικό σχήμα η ποσότητα <span class="math notranslate nohighlight">\(u_i^{n-1}\)</span> είναι γνωστή, αλλά όλες οι υπόλοιπες ποσότητες στο νέο χρονικό βήμα <span class="math notranslate nohighlight">\(n\)</span> είναι άγνωστες. Σε αυτή την περίπτωση δεν είναι δυνατόν να λύσουμε ως προς την άγνωστη συνάρτηση στο σημείο <span class="math notranslate nohighlight">\((i, n)\)</span>, δηλαδή για την <span class="math notranslate nohighlight">\(u_i^n\)</span>, επειδή οι τιμές της <span class="math notranslate nohighlight">\(u\)</span> στα γειτονικά σημεία, <span class="math notranslate nohighlight">\(u_{i-1}^n\)</span> και <span class="math notranslate nohighlight">\(u_{i+1}^n\)</span>, είναι επίσης άγνωστες. Ένα τέτοιο αριθμητικό σχήμα λέγεται πεπλεγμένο, επειδή εμπλέκει περισσότερες από μία άγνωστες τιμές της συνάρτησης, <span class="math notranslate nohighlight">\(u\)</span> στα γειτονικά σημεία.</p>
+<p>Το αριθμητικό σχήμα της εξίσωσης <a class="reference internal" href="#equation-eq-k4-7">(101)</a> δίνει ένα πεπλεγμένο σύστημα <span class="math notranslate nohighlight">\((N_x - 1) \times (N_x - 1)\)</span> αλγεβρικών εξισώσεων για τις άγνωστες τιμές <span class="math notranslate nohighlight">\(u_i^n\)</span> της συνάρτησης στα εσωτερικά χωρικά σημεία του πλέγματος, <span class="math notranslate nohighlight">\(i = 1, ..., N_x - 1\)</span>. Συγκεντρώνοντας τους αγνώστους στο αριστερό μέλος της εξίσωσης, μπορούμε να γράψουμε,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-8">
+<span class="eqno">(102)<a class="headerlink" href="#equation-eq-k4-8" title="Link to this equation">#</a></span>\[
+- F \, u_{i-1}^n + (1 + 2 F) \, u_i^{n} - F \, u_{i+1}^{n} = u_i^{n-1},
 \]</div>
-<p>για <span class="math notranslate nohighlight">\(i = 1, ..., N_x - 1\)</span> και την παράμετρο <span class="math notranslate nohighlight">\(F = \displaystyle \frac{d \, \Delta t}{\Delta x^2}\)</span> που καλείται αριθμός Fourier του υπολογιστικού πλέγματος (mesh Fourier number).
-Εφαρμόζοντας τις αντίστοιχες συνοριακές συνθήκες για το πρόβλημα αυτό, καταλήγουμε σε ένα σύστημα αλγεβρικών εξισώσεων της μορφής, <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u} = (u_0^n, ..., u_{N_x}^n)^T\)</span> και ο πίνακας, <span class="math notranslate nohighlight">\(A\)</span>, έχει την εξής μορφή,</p>
+<p>για <span class="math notranslate nohighlight">\(i = 1, ..., N_x - 1\)</span> και η παράμετρος <span class="math notranslate nohighlight">\(F = \frac{d \, \Delta t}{\Delta x^2}\)</span> καλείται αριθμός Fourier του υπολογιστικού πλέγματος (mesh Fourier number).
+Εφαρμόζοντας τις αντίστοιχες συνοριακές συνθήκες για το πρόβλημα αυτό, καταλήγουμε σε ένα σύστημα αλγεβρικών εξισώσεων της μορφής, <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u} = (u_0^n, ..., u_{N_x}^n)^T\)</span> και ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> έχει την εξής μορφή:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-{A} = \left[ {\begin{array}{*{7}c}
-   a_{0,0} &amp; a_{0,1} &amp; 0             &amp; ...          &amp; ...           &amp; ...                     &amp;  0                \\
-   a_{1,0} &amp; a_{1,1} &amp; a_{1,2}             &amp;              &amp;               &amp;                         &amp;  \vdots          \\
-   0           &amp; a_{2,1} &amp; a_{2,2}   &amp; a_{2,3} &amp;               &amp;                         &amp;  \vdots           \\
-   \vdots    &amp; \ddots  &amp;  \ddots    &amp;  \ddots  &amp; \ddots      &amp;                         &amp;  \vdots            \\
-   \vdots    &amp;             &amp;  a_{i,i-1} &amp; a_{i,i}   &amp;a_{i,i+1} &amp; \ddots               &amp;  \vdots             \\
-   \vdots    &amp;             &amp;                &amp;  \ddots  &amp; \ddots     &amp; \ddots               &amp;  \vdots             \\
-   0           &amp;  ...         &amp;  ...           &amp; ...         &amp; 0            &amp; a_{N_x,N_{x-1}} &amp;  a_{N_x,N_{x}}   \\
-\end{array}} \right]
+A = \begin{bmatrix}
+   a_{0,0} &amp; a_{0,1} &amp; 0             &amp; \dots          &amp; 0                 \\
+   a_{1,0} &amp; a_{1,1} &amp; a_{1,2}   &amp; \dots          &amp; 0                 \\
+   0           &amp; a_{2,1} &amp; a_{2,2}   &amp; a_{2,3} &amp; \dots              \\
+   \vdots    &amp; \ddots  &amp;  \ddots    &amp;  \ddots     &amp; \vdots            \\
+   0           &amp; \dots  &amp; a_{N_x,N_{x-1}} &amp; a_{N_x,N_x}
+\end{bmatrix}
 \end{split}\]</div>
-<p>Ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι αραιός (δηλαδή έχει πολλά μηδενικά στοιχεία), συμμετρικός και τριδιαγώνιος. Έχει δηλαδή πολύ καλές ιδιότητες, είναι επίσης θετικά ορισμένος αφού τα μη μηδενικά στοιχεία δίνονται από τις σχέσεις,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-9">
-<span class="eqno">(117)<a class="headerlink" href="#equation-eq4-9" title="Permalink to this equation">#</a></span>\[
-a_{i,i-1} = - F, \,\, a_{i,i} = 1 + 2 \, F, \,\, a_{i,i+1} = - F, \,\,\, i = 1, ..., N_x - 1
-\]</div>
-<p>Αυτά τα στοιχεία καθιστούν το πίνακα <span class="math notranslate nohighlight">\(A\)</span> εύκολο να αντιστραφεί και να λυθεί το σύστημα των εξισώσεων. Αν θεωρήσουμε και ομογενείς, μηδενικές, συνοριακές συνθήκες, δηλαδή <span class="math notranslate nohighlight">\(u_0^n = 0\)</span>, <span class="math notranslate nohighlight">\(u_{N_x}^n = 0\)</span>, τότε έχουμε ότι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-10">
-<span class="eqno">(118)<a class="headerlink" href="#equation-eq4-10" title="Permalink to this equation">#</a></span>\[
-a_{0,0} = 1, \,\, a_{0,1} = 0, \,\, a_{N_x,N_{x-1}} = 0, \,\, a_{N_x,N_{x}} = 1
-\]</div>
-<p>Το διάνυσμα του δεξιού μέλους των εξισώσεων, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-11">
-<span class="eqno">(119)<a class="headerlink" href="#equation-eq4-11" title="Permalink to this equation">#</a></span>\[
+<p>Ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι αραιός (δηλαδή έχει πολλά μηδενικά στοιχεία), συμμετρικός και τριδιαγώνιος. Έχει δηλαδή πολύ καλές ιδιότητες. Είναι, επίσης, θετικά ορισμένος αφού τα μη μηδενικά στοιχεία δίνονται από τις σχέσεις,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-9">
+<span class="eqno">(103)<a class="headerlink" href="#equation-eq-k4-9" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+a_{i,i-1} &amp;= - F, \\
+a_{i,i}   &amp;= 1 + 2 \, F, \\
+a_{i,i+1} &amp;= - F, \quad i = 1, \dots, N_x - 1.
+\end{aligned}
+\end{split}\]</div>
+<p>Αυτά τα στοιχεία καθιστούν εύκολη την αντιστροφή του πίνακα <span class="math notranslate nohighlight">\(A\)</span> και, ως εκ τούτου, την επίλυση του συστήματος των εξισώσεων. Αν θεωρήσουμε και ομογενείς, μηδενικές, συνοριακές συνθήκες, δηλαδή <span class="math notranslate nohighlight">\(u_0^n = 0, u_{N_x}^n = 0\)</span>, τότε έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-10">
+<span class="eqno">(104)<a class="headerlink" href="#equation-eq-k4-10" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+a_{0,0} &amp;= 1, \\
+a_{0,1} &amp;= 0, \\
+a_{N_x,N_{x-1}} &amp;= 0, \\
+a_{N_x,N_x} &amp;= 1.
+\end{aligned}
+\end{split}\]</div>
+<p>Το διάνυσμα, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, του δεξιού μέλους των εξισώσεων, είναι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-11">
+<span class="eqno">(105)<a class="headerlink" href="#equation-eq-k4-11" title="Link to this equation">#</a></span>\[
 \mathbf{b} = (b_0, b_1, ..., b_i, ..., b_{N_x})^T
 \]</div>
-<p>με,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-12">
-<span class="eqno">(120)<a class="headerlink" href="#equation-eq4-12" title="Permalink to this equation">#</a></span>\[
-b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
-\]</div>
-<p>Παρατηρούμε ότι ο πίνακας <span class="math notranslate nohighlight">\(Α\)</span> περιέχει ποσότητες που δεν αλλάζουν στο χρόνο. Επομένως, ο πίνακας <span class="math notranslate nohighlight">\(Α\)</span> μπορεί να σχηματιστεί μια για πάντα πριν τη χρονική εξέλιξη. Το δεξί μέλος <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, ωστόσο, πρέπει να ενημερώνεται σε κάθε χρονικό βήμα. Αυτό οδηγεί στον ακόλουθο υπολογιστικό αλγόριθμο, που σκιαγραφείται εδώ με κώδικα σε γλώσσα προγραμματισμού Python,</p>
+<p>με</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-12">
+<span class="eqno">(106)<a class="headerlink" href="#equation-eq-k4-12" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+b_0 &amp;= 0, \\
+b_i &amp;= u_i^{n-1}, \quad i = 1, \dots, N_x - 1, \\
+b_{N_x} &amp;= 0.
+\end{aligned}
+\end{split}\]</div>
+<p>Παρατηρούμε ότι ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> περιέχει ποσότητες που δεν αλλάζουν στο χρόνο. Επομένως, ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> μπορεί να σχηματιστεί μια για πάντα πριν τη χρονική εξέλιξη. Το δεξί μέλος <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, ωστόσο, πρέπει να ενημερώνεται σε κάθε χρονικό βήμα. Αυτό οδηγεί στον ακόλουθο υπολογιστικό αλγόριθμο, που σκιαγραφείται εδώ με κώδικα σε γλώσσα προγραμματισμού Python:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="c1"># χρησιμοποιούμε το πακέτο scipy για την επίλυση γραμμικών συστημάτων</span>
 
 <span class="k">def</span> <span class="nf">solve_diffusion1D_BE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Επιλύει την μονοδιάστατη διάχυση με το πεπλεγμένο σχήμα Euler (Backward Euler, BE) </span>
+<span class="sd">    Επιλύει τη μονοδιάστατη εξίσωση διάχυσης με το πεπλεγμένο σχήμα Euler (Backward Euler, BE) </span>
 <span class="sd">    L: μήκος χωρίου στη διάσταση x</span>
 <span class="sd">    Τ: τελική χρονική στιγμή</span>
 <span class="sd">    dx: χωρικό βήμα</span>
 <span class="sd">    dt: χρονικό βήμα</span>
 <span class="sd">    d: συντελεστής διάχυσης</span>
-<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (πχ gauss η plug_profile).</span>
+<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (π.χ. gauss ή plug_profile).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     
     <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span> <span class="c1"># πεδίο ορισμού</span>
@@ -734,7 +645,7 @@ b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
     <span class="n">nsteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
     
     <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχον χρονικό βήμα</span>
     <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     
     <span class="c1"># αρχικοποίηση πινάκων Α και b.</span>
@@ -747,8 +658,8 @@ b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
         <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">F</span>
 
     <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">xi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Α[0,0] = Α[Nx, Nx] = 0</span>
-    <span class="c1"># Σύμφωνα με το αριθμητικό σχήμα, θα πρέπι να μηδενιστούν τα στοιχεία A[0,1] και Α[Nx, Nx-1]. Ωστόσο ΄΄εχει ήδη γίνει κατά</span>
-    <span class="c1"># την αρχικοποίηση του πίνακα Α με μηδενικά.</span>
+    <span class="c1"># Σύμφωνα με το αριθμητικό σχήμα, θα πρέπει να μηδενιστούν τα στοιχεία A[0,1] και Α[Nx, Nx-1]. </span>
+    <span class="c1"># Ωστόσο έχει ήδη γίνει κατά την αρχικοποίηση του πίνακα Α με μηδενικά.</span>
     
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">150</span><span class="p">)</span>
     <span class="n">plot_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nsteps</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
@@ -772,100 +683,106 @@ b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<p>Στο Σχήμα <a class="reference internal" href="#fig-implicit-euler1"><span class="std std-numref">Fig. 13</span></a> παρουσιάζεται ένα παράδειγμα επίλυσης της μονοδιάστατης εξίσωσης διάχυσης με πεπλεγμένο σχήμα Euler, όπου η αρχική συνθήκη ορίζεται μέσω της συνάρτησης Gauss.</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με το πεπλεγμένο σχ΄ήμα Euler. </span>
-<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">solve_diffusion1D_BE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/655d433a301b69374da4ef9ee4d5e2108274e4182207891b6c5ea68daa55bc3b.png" src="_images/655d433a301b69374da4ef9ee4d5e2108274e4182207891b6c5ea68daa55bc3b.png" />
 </div>
-</div>
-<div class="cell docutils container">
+<figure class="align-default" id="fig-implicit-euler1">
+<a class="reference internal image-reference" href="_images/implicit_Euler_1.svg"><img alt="_images/implicit_Euler_1.svg" src="_images/implicit_Euler_1.svg" style="width: 516.1px; height: 261.3px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Eπίλυση της μονοδιάστατης εξίσωσης διάχυσης με άμεσο σχήμα Euler. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης Gauss.</span><a class="headerlink" href="#fig-implicit-euler1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Στο Σχήμα <a class="reference internal" href="#fig-implicit-euler2"><span class="std std-numref">Fig. 14</span></a> παρουσιάζεται ένα παράδειγμα επίλυσης της μονοδιάστατης εξίσωσης διάχυσης με πεπλεγμένο σχήμα Euler, όπου η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile.</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με άμεσο σχήμα Euler. </span>
-<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span> 
 <span class="n">solve_diffusion1D_BE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">plug_profile</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/7b834d003fd8dfb792d84a74224ff88c34a8b0a8f3da926e3ed70875a261a5fd.png" src="_images/7b834d003fd8dfb792d84a74224ff88c34a8b0a8f3da926e3ed70875a261a5fd.png" />
 </div>
-</div>
-<div class="admonition- admonition">
+<figure class="align-default" id="fig-implicit-euler2">
+<a class="reference internal image-reference" href="_images/implicit_Euler_2.svg"><img alt="_images/implicit_Euler_2.svg" src="_images/implicit_Euler_2.svg" style="width: 516.1px; height: 261.3px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Eπίλυση της μονοδιάστατης εξίσωσης διάχυσης με άμεσο σχήμα Euler. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile.</span><a class="headerlink" href="#fig-implicit-euler2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
 <p class="admonition-title">Σημείωση</p>
-<p>Οι μέθοδοι διακριτοποίησης που οδηγούν σε ένα συζευγμένο σύστημα εξισώσεων για την άγνωστη συνάρτηση  στο νέο χρονικό βήμα λέγονται <strong>πεπελεγμένες μέθοδοι</strong>. Αντίστοιχα, ο όρος <strong>άμεσες μέθοδοι</strong> αναφέρεται σε μεθόδους διακριτοποίησης όπου υπάρχει ένας απλός σαφής τύπος για τις τιμές της άγνωστης συνάρτησης σε κάθε ένα από τα χωρικά σημεία του πλέγματος στο νέο χρονικό βήμα ολοκλήρωσης. Από άποψη υλοποίησης, οι πεπλεγμένες μέθοδοι είναι πιο δύσκολες στην υλοποίηση αριθμητικού κώδικα, αφού χρειάζεται η επίλυση ενός συζευγμένου συστήματος εξισώσεων της μορφής <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> είναι το διάνυσμα των αγνώστων, <span class="math notranslate nohighlight">\(A\)</span> είναι ο πίνακας των συντελεστών και <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι το διάνυσμα του δεξιού μέλους κάθε εξίσωσης. Για τις άμεσες μεθόδους είναι πιο εύκολη η υλοποίηση αριθμητικού κώδικα, αφού έχουμε μια απλή επαναληπτική διαδικασία.</p>
+<p>Οι μέθοδοι διακριτοποίησης που οδηγούν σε ένα συζευγμένο σύστημα εξισώσεων για την άγνωστη συνάρτηση στο νέο χρονικό βήμα λέγονται <strong>πεπελεγμένες μέθοδοι</strong>. Αντίστοιχα, ο όρος <strong>άμεσες μέθοδοι</strong> αναφέρεται σε μεθόδους διακριτοποίησης όπου υπάρχει ένας απλός σαφής τύπος για τις τιμές της άγνωστης συνάρτησης σε καθένα από τα χωρικά σημεία του πλέγματος στο νέο χρονικό βήμα ολοκλήρωσης. Από άποψη υλοποίησης, οι πεπλεγμένες μέθοδοι είναι πιο δύσκολες στην υλοποίηση αριθμητικού κώδικα, αφού χρειάζεται η επίλυση ενός συζευγμένου συστήματος εξισώσεων της μορφής <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> είναι το διάνυσμα των αγνώστων, <span class="math notranslate nohighlight">\(A\)</span> είναι ο πίνακας των συντελεστών και <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι το διάνυσμα του δεξιού μέλους κάθε εξίσωσης. Για τις άμεσες μεθόδους είναι πιο εύκολη η υλοποίηση αριθμητικού κώδικα, αφού έχουμε μια απλή επαναληπτική διαδικασία.</p>
 </div>
 </section>
 <section id="crank-nicolson">
-<h2>Το σχήμα των Crank-Nicolson<a class="headerlink" href="#crank-nicolson" title="Permalink to this heading">#</a></h2>
-<p>Η ιδέα για το σχήμα των Crank-Nicolson είναι να εφαρμοστούν κεντρικές πεπερασμένες διαφορές στο χώρο και το χρόνο, σε συνδυασμό με την μέση τιμή του ενδιάμεσου (εικονικού) σημείου στο χρόνο. Σε αυτή την μέθοδο απαιτούμε η διακριτή μορφή της ΜΔΕ να ισχύει σε εικονικά (ενδιάμεσα) χρονικά σημεία του υπολογιστικού πλέγματος <span id="id6">[<a class="reference internal" href="#id14" title="Νίκος Καφούσιας. Ρευστομηχανική ΙI. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.">Καφούσιας, 1992</a>]</span>. Πιο συγκεκριμένα,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-13">
-<span class="eqno">(121)<a class="headerlink" href="#equation-eq4-13" title="Permalink to this equation">#</a></span>\[
-	\begin{gathered}
-		\frac{\partial}{\partial t} u(x_i, t_{n+\frac{1}{2}}) = d \, \frac{\partial^2}{\partial x^2} u(x_i, t_{n+\frac{1}{2}}), \,\, i = 0, ..., N_x - 1, \,\,\, n = 0, ..., N_t - 1
-	\end{gathered}
+<h2>Το σχήμα των Crank-Nicolson<a class="headerlink" href="#crank-nicolson" title="Link to this heading">#</a></h2>
+<p>Η ιδέα για το σχήμα των Crank–Nicolson είναι να εφαρμοστούν κεντρικές πεπερασμένες διαφορές στο χώρο και το χρόνο, σε συνδυασμό με τη μέση τιμή του ενδιάμεσου (εικονικού) σημείου στο χρόνο. Σε αυτή τη μέθοδο απαιτούμε η διακριτή μορφή της Μ.Δ.Ε. να ισχύει σε εικονικά (ενδιάμεσα) χρονικά σημεία του υπολογιστικού πλέγματος <span id="id7">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>]</span>. Πιο συγκεκριμένα,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-13">
+<span class="eqno">(107)<a class="headerlink" href="#equation-eq-k4-13" title="Link to this equation">#</a></span>\[
+\frac{\partial}{\partial t} u(x_i, t_{n+\frac{1}{2}}) = d \, \frac{\partial^2}{\partial x^2} u(x_i, t_{n+\frac{1}{2}}), \qquad i = 0, ..., N_x - 1, \qquad n = 0, ..., N_t - 1.  
 \]</div>
-<p>Εφαρμόζοντας κεντρικές διαφορές για τις χωρικές και χρονικές μεταβλητές, στο δεξί μέλος της εξίσωσης έχουμε την έκφραση,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-14">
-<span class="eqno">(122)<a class="headerlink" href="#equation-eq4-14" title="Permalink to this equation">#</a></span>\[
-	\begin{gathered}
-		\frac{1}{\Delta x^2} \left( u_{i-1}^{n+\frac{1}{2}} - 2 u_{i}^{n+\frac{1}{2}} + u_{i+1}^{n+\frac{1}{2}} \right)
-	\end{gathered}
+<p>Εφαρμόζοντας κεντρικές διαφορές για τις χωρικές και τις χρονικές μεταβλητές στο δεξιό μέλος της εξίσωσης, έχουμε την έκφραση,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-14">
+<span class="eqno">(108)<a class="headerlink" href="#equation-eq-k4-14" title="Link to this equation">#</a></span>\[
+\frac{1}{\Delta x^2} \left( u_{i-1}^{n+\frac{1}{2}} - 2 u_{i}^{n+\frac{1}{2}} + u_{i+1}^{n+\frac{1}{2}} \right).
 \]</div>
-<p>Αυτή η έκφραση περιγράφει την τιμή της άγνωστης συνάρτησης <span class="math notranslate nohighlight">\(u\)</span> σε ένα εικονικό (μη υπαρκτό) σημείο της διαμέρισης, π.χ. <span class="math notranslate nohighlight">\(u_{i}^{n+\frac{1}{2}}\)</span>. Η πιο απλή αντικατάσταση που μπορούμε να κάνουμε είναι η αντικατάσταση με τον μέση τιμή της <span class="math notranslate nohighlight">\(u\)</span> στα γειτονικά γνωστά σημεία της διαμέρισης,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-15a">
-<span class="eqno">(123)<a class="headerlink" href="#equation-eq4-15a" title="Permalink to this equation">#</a></span>\[
-	\begin{gathered}
-		u_{i}^{n+\frac{1}{2}} \approx \frac{1}{2} (u_{i}^{n} + u_{i}^{n+1})
-	\end{gathered}
+<p>Αυτή η έκφραση περιγράφει την τιμή της άγνωστης συνάρτησης <span class="math notranslate nohighlight">\(u\)</span> σε ένα εικονικό (μη υπαρκτό) σημείο της διαμέρισης, π.χ. <span class="math notranslate nohighlight">\(u_{i}^{n+\frac{1}{2}}\)</span>. Η πιο απλή αντικατάσταση που μπορούμε να κάνουμε είναι η αντικατάσταση με τη μέση τιμή της <span class="math notranslate nohighlight">\(u\)</span> στα γειτονικά γνωστά σημεία της διαμέρισης,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-15a">
+<span class="eqno">(109)<a class="headerlink" href="#equation-eq-k4-15a" title="Link to this equation">#</a></span>\[
+u_{i}^{n+\frac{1}{2}} \approx \frac{1}{2} (u_{i}^{n} + u_{i}^{n+1}).
 \]</div>
-<p>Τελικά, εφαρμόζοντας τη διαδικασία διακριτοποίησης και αντικαθιστώντας με τον μέση τιμή για τα εικονικά σημεία, πολλαπλασιάζοντας με το <span class="math notranslate nohighlight">\(\Delta t\)</span> και ομαδοποιόντας τους όρους έχουμε ότι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-15b">
-<span class="eqno">(124)<a class="headerlink" href="#equation-eq4-15b" title="Permalink to this equation">#</a></span>\[
-	\begin{gathered}
-		u_{i}^{n+1} - \frac{1}{2} F \left( u_{i-1}^{n+1} - 2 u_{i}^{n+1} + u_{i+1}^{n+1} \right) = u_{i}^{n} + \frac{1}{2} F \left( u_{i-1}^{n} - 2 u_{i}^{n} + u_{i+1}^{n} \right)
-	\end{gathered}
+<p>Τελικά, εφαρμόζοντας τη διαδικασία διακριτοποίησης και αντικαθιστώντας με το μέση τιμή για τα εικονικά σημεία, πολλαπλασιάζοντας επί <span class="math notranslate nohighlight">\(\Delta t\)</span> και ομαδοποιώντας τους όρους έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-15b">
+<span class="eqno">(110)<a class="headerlink" href="#equation-eq-k4-15b" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1} - \frac{1}{2} F \left( u_{i-1}^{n+1} - 2 u_{i}^{n+1} + u_{i+1}^{n+1} \right) = u_{i}^{n} + \frac{1}{2} F \left( u_{i-1}^{n} - 2 u_{i}^{n} + u_{i+1}^{n} \right),
 \]</div>
-<p>όπου η παράμετρος παράμετρος <span class="math notranslate nohighlight">\(F = \displaystyle \frac{d \, \Delta t}{\Delta x^2}\)</span>, ορίζεται όπως και στην προηγούμενη ενότητα. Το αλγεβρικό σύστημα που προκύπτει από την διακριτοποίηση εμπεριέχει τους αγνώστους, <span class="math notranslate nohighlight">\(u_{i-1}^{n+1}, u_{i}^{n+1}\)</span> και <span class="math notranslate nohighlight">\(u_{i+1}^{n+1}\)</span> και απότελεί ένα συζευγμένο γραμμικό σύστημα της μορφής, <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> είναι το διάνυσμα των αγνώστων, <span class="math notranslate nohighlight">\(A\)</span> είναι ο πίνακας των συντελεστών και <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι το διάνυσμα του δεξιού μέλους κάθε εξίσωσης. Ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι παρόμοιας μορφής με αυτή που περιγράψαμε στην προηγούμενη ενότητα, δηλαδή τριδιαγώνιος πίνακας με όρους,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-16">
-<span class="eqno">(125)<a class="headerlink" href="#equation-eq4-16" title="Permalink to this equation">#</a></span>\[
-a_{i,i-1} = - \frac{1}{2} F, \,\, a_{i,i} = 1 + F, \,\, a_{i,i+1} = - \frac{1}{2} F, \,\,\, i = 1, ..., N_x - 1
+<p>όπου η παράμετρος <span class="math notranslate nohighlight">\(F = \frac{d \, \Delta t}{\Delta x^2}\)</span>, ορίζεται όπως και στην προηγούμενη ενότητα. Το αλγεβρικό σύστημα που προκύπτει από τη διακριτοποίηση περιλαμβάνει τους αγνώστους, <span class="math notranslate nohighlight">\(u_{i-1}^{n+1}\)</span>, <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span> και <span class="math notranslate nohighlight">\(u_{i+1}^{n+1}\)</span> και αποτελεί ένα συζευγμένο γραμμικό σύστημα της μορφής <span class="math notranslate nohighlight">\(A \, \mathbf{u} = \mathbf{b}\)</span>, όπου <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> είναι το διάνυσμα των αγνώστων, <span class="math notranslate nohighlight">\(A\)</span> είναι ο πίνακας των συντελεστών και <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι το διάνυσμα του δεξιού μέλους κάθε εξίσωσης. Ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι παρόμοιας μορφής με αυτή που περιγράψαμε στην προηγούμενη ενότητα, δηλαδή τριδιαγώνιος πίνακας με όρους,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-16">
+<span class="eqno">(111)<a class="headerlink" href="#equation-eq-k4-16" title="Link to this equation">#</a></span>\[
+a_{i,i-1} = - \frac{1}{2} F, \,\, a_{i,i} = \frac{1}{2} + F, \,\, a_{i,i+1} = - \frac{1}{2} F, \,\,\, i = 1, ..., N_x - 1.
 \]</div>
-<p>Αυτά τα στοιχεία καθιστούν τον πίνακα <span class="math notranslate nohighlight">\(A\)</span> εύκολο να αντιστραφεί και να λυθεί το σύστημα των εξισώσεων. Αν θεωρήσουμε και ομογενείς, μηδενικές, συνοριακές συνθήκες, δηλαδή <span class="math notranslate nohighlight">\(u_0^n = 0\)</span>, <span class="math notranslate nohighlight">\(u_{N_x}^n = 0\)</span>, τότε έχουμε ότι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-17">
-<span class="eqno">(126)<a class="headerlink" href="#equation-eq4-17" title="Permalink to this equation">#</a></span>\[
-a_{0,0} = 1, \,\, a_{0,1} = 0, \,\, a_{N_x,N_{x-1}} = 0, \,\, a_{N_x,N_{x}} = 1
-\]</div>
-<p>Το διάνυσμα του δεξιού μέλους των εξισώσεων, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> είναι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-18">
-<span class="eqno">(127)<a class="headerlink" href="#equation-eq4-18" title="Permalink to this equation">#</a></span>\[
+<p>Αυτά τα στοιχεία καθιστούν εύκολη την αντιστροφή του πίνακα <span class="math notranslate nohighlight">\(A\)</span> και, ως εκ τούτου, την επίλυση του συστήματος των εξισώσεων. Αν θεωρήσουμε και ομογενείς, μηδενικές, συνοριακές συνθήκες, δηλαδή <span class="math notranslate nohighlight">\(u_0^n = 0\)</span>, <span class="math notranslate nohighlight">\(u_{N_x}^n = 0\)</span>, τότε έχουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-17">
+<span class="eqno">(112)<a class="headerlink" href="#equation-eq-k4-17" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+a_{0,0} &amp;= 1, \\
+a_{0,1} &amp;= 0, \\
+a_{N_x,N_{x-1}} &amp;= 0, \\
+a_{N_x,N_x} &amp;= 1.
+\end{aligned}
+\end{split}\]</div>
+<p>Το διάνυσμα <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> του δεξιού μέλους των εξισώσεων, είναι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-18">
+<span class="eqno">(113)<a class="headerlink" href="#equation-eq-k4-18" title="Link to this equation">#</a></span>\[
 \mathbf{b} = (b_0, b_1, ..., b_i, ..., b_{N_x})^T
 \]</div>
-<p>με,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-19">
-<span class="eqno">(128)<a class="headerlink" href="#equation-eq4-19" title="Permalink to this equation">#</a></span>\[
-b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
-\]</div>
+<p>με</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-19">
+<span class="eqno">(114)<a class="headerlink" href="#equation-eq-k4-19" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+b_0 &amp;= 0, \\
+b_i &amp;= u_i^{n-1}, \quad i = 1, \dots, N_x - 1, \\
+b_{N_x} &amp;= 0.
+\end{aligned}
+\end{split}\]</div>
+<p>Ο παρακάτω κώδικας εφαρμόζει τη μέθοδο Crank–Nicolson για την επίλυση της μονοδιάστατης εξίσωσης διάχυσης.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.linalg</span>
 
 <span class="k">def</span> <span class="nf">solve_diffusion1D_CR</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Επιλύει την μονοδιάστατη διάχυση με το σχήμα Crank-Nicolson (CR)</span>
+<span class="sd">    Επιλύει τη μονοδιάστατη διάχυση με το σχήμα Crank-Nicolson (CR)</span>
 <span class="sd">    L: μήκος χωρίου στη διάσταση x</span>
 <span class="sd">    Τ: τελική χρονική στιγμή</span>
 <span class="sd">    dx: χωρικό βήμα</span>
 <span class="sd">    dt: χρονικό βήμα</span>
 <span class="sd">    d: συντελεστής διάχυσης</span>
-<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (πχ gauss η plug_profile).</span>
+<span class="sd">    I: συνάρτηση που επιστρέφει την αρχική συνθήκη (π.χ. gauss ή plug_profile).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     
     <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span> <span class="c1"># πεδίο ορισμού</span>
@@ -875,7 +792,7 @@ b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
     
     
     <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχον χρονικό βήμα</span>
     <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     
     <span class="c1"># αρχικοποίηση πινάκων Α και b.</span>
@@ -910,67 +827,76 @@ b_0 = 0, \,\, b_i = u_i^{n-1}, \,\, i = 1, ..., N_x - 1, \,\, b_{N_x} = 0
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<p>Στο Σχήμα <a class="reference internal" href="#fig-cr1"><span class="std std-numref">Fig. 15</span></a> παρουσιάζεται ένα παράδειγμα επίλυσης της μονοδιάστατης εξίσωσης διάχυσης με το σχήμα Crank–Nicolson. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης γauss.</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με το πεπλεγμένο σχ΄ήμα Euler. </span>
-<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">solve_diffusion1D_CR</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/349fa45571d50887d5a01978afa9876792befae56f00bbf420afadb6d63005ed.png" src="_images/349fa45571d50887d5a01978afa9876792befae56f00bbf420afadb6d63005ed.png" />
 </div>
-</div>
-<div class="cell docutils container">
+<figure class="align-default" id="fig-cr1">
+<a class="reference internal image-reference" href="_images/CR_1.svg"><img alt="_images/CR_1.svg" src="_images/CR_1.svg" style="width: 516.1px; height: 261.3px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Eπίλυση της μονοδιάστατης εξίσωσης διάχυσης με το σχήμα Crank–Nicolson. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης gauss.</span><a class="headerlink" href="#fig-cr1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Στο Σχήμα <a class="reference internal" href="#fig-cr2"><span class="std std-numref">Fig. 16</span></a> παρουσιάζεται ένα παράδειγμα επίλυσης της μονοδιάστατης εξίσωσης διάχυσης με το σχήμα Crank–Nicolson. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile.</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Παράδειγμα επίλυσης μονοδιάστατης διάχυσης με άμεσο σχήμα Euler. </span>
-<span class="c1"># Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span> 
 <span class="n">solve_diffusion1D_CR</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">plug_profile</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/9a14a618db3376dc9f22d0861a9cdd1ff0a717be1f4f2ea848ff24594af32fc5.png" src="_images/9a14a618db3376dc9f22d0861a9cdd1ff0a717be1f4f2ea848ff24594af32fc5.png" />
 </div>
-</div>
+<figure class="align-default" id="fig-cr2">
+<a class="reference internal image-reference" href="_images/CR_2.svg"><img alt="_images/CR_2.svg" src="_images/CR_2.svg" style="width: 516.1px; height: 261.3px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Eπίλυση της μονοδιάστατης εξίσωσης διάχυσης με το σχήμα Crank–Nicolson. Η αρχική συνθήκη ορίζεται μέσω της συνάρτησης plug_profile
+``</span><a class="headerlink" href="#fig-cr2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="id7">
-<h2>Ο κανόνας θ<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
-<p>Ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span> αποτελει τη γενίκευση των προηγούμενων μεθόδων που εισάγονται σε αυτό το κεφάλαιo, όπως είναι η εμπρόσθια και η οπίσθια μέθοδος του Euler και η μέθοδος των Crank-Nicolson. Για μια εξίσωση της μορφής,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-20a">
-<span class="eqno">(129)<a class="headerlink" href="#equation-eq4-20a" title="Permalink to this equation">#</a></span>\[
-	\frac{\partial u}{\partial t} = G(u)
+<section id="theta">
+<h2>Ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span><a class="headerlink" href="#theta" title="Link to this heading">#</a></h2>
+<p>Ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span> αποτελεί τη γενίκευση των προηγούμενων μεθόδων που εισάγονται σε αυτό το κεφάλαιo, όπως είναι η εμπρόσθια και η οπίσθια μέθοδος του Euler και η μέθοδος των Crank–Nicolson. Για μια εξίσωση της μορφής,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-20">
+<span class="eqno">(115)<a class="headerlink" href="#equation-eq-k4-20" title="Link to this equation">#</a></span>\[
+\frac{\partial u}{\partial t} = G(u), 
 \]</div>
-<p>όπου το <span class="math notranslate nohighlight">\(G(\cdot)\)</span> είναι ένας χωρικός διαφορικός τελεστής που δρά στη συνάρτηση <span class="math notranslate nohighlight">\(u\)</span>, τότε ο <span class="math notranslate nohighlight">\(\theta\)</span>-κανόνας είναι της μορφής,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-20b">
-<span class="eqno">(130)<a class="headerlink" href="#equation-eq4-20b" title="Permalink to this equation">#</a></span>\[
-	\frac{u_i^{n+1} - u_i^{n}}{\Delta t} = \theta G(u_i^{n+1}) + (1 - \theta) G(u_i^{n}) 
+<p>όπου το <span class="math notranslate nohighlight">\(G(\cdot)\)</span> είναι ένας χωρικός διαφορικός τελεστής που δρα στη συνάρτηση <span class="math notranslate nohighlight">\(u\)</span>, ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span> είναι της μορφής,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-20-theta">
+<span class="eqno">(116)<a class="headerlink" href="#equation-eq-k4-20-theta" title="Link to this equation">#</a></span>\[
+\frac{u_i^{n+1} - u_i^{n}}{\Delta t} = \theta G(u_i^{n+1}) + (1 - \theta) G(u_i^{n}) .
 \]</div>
-<p>Το σημαντικό χαρακτηριστικό του αριθμητικού <span class="math notranslate nohighlight">\(\theta\)</span>-σχήματος είναι ότι αποτελεί για γενικότερη οικογένεια γνωστών και ευρέως χρησιμοποιούμενων σχημάτων χρονικής διακριτοποίησης. Οπότε, για διάφορες τιμές του <span class="math notranslate nohighlight">\(\theta\)</span> μπορούμε να πάρουμε τα παρακάτω αριθμητικά σχήματα,</p>
+<p>Το σημαντικό χαρακτηριστικό του αριθμητικού σχήματος <span class="math notranslate nohighlight">\(\theta\)</span> είναι ότι αποτελεί μία γενικότερη οικογένεια γνωστών και ευρέως χρησιμοποιούμενων σχημάτων χρονικής διακριτοποίησης. Οπότε, για διάφορες τιμές του <span class="math notranslate nohighlight">\(\theta\)</span> μπορούμε να πάρουμε τα παρακάτω αριθμητικά σχήματα:</p>
 <ol class="arabic simple">
-<li><p>Όταν το <span class="math notranslate nohighlight">\(\theta = 0\)</span>,  παίρνουμε το άμεσο αριθμητικό σχήμα του Euler στο χρόνο</p></li>
-<li><p>Όταν το <span class="math notranslate nohighlight">\(\theta = 1\)</span>, παίρνουμε το πεπλεγμένο αριθμητικό σχήμα του Euler στο χρόνο</p></li>
-<li><p>Όταν το <span class="math notranslate nohighlight">\(\theta = 1/2\)</span>,  παίρνουμε το πεπλεγμένο αριθμητικό σχήμα των Crank-Nicolson στο χρόνο</p></li>
+<li><p>Όταν <span class="math notranslate nohighlight">\(\theta = 0\)</span>, παίρνουμε το άμεσο αριθμητικό σχήμα του Euler στο χρόνο.</p></li>
+<li><p>Όταν <span class="math notranslate nohighlight">\(\theta = 1\)</span>, παίρνουμε το πεπλεγμένο αριθμητικό σχήμα του Euler στο χρόνο.</p></li>
+<li><p>Όταν <span class="math notranslate nohighlight">\(\theta = 1/2\)</span>, παίρνουμε το πεπλεγμένο αριθμητικό σχήμα των Crank–Nicolson στο χρόνο.</p></li>
 </ol>
-<p>Εφαρμόζεται στο πρόβλημα της μονοδιάστατης διάχυσης τον <span class="math notranslate nohighlight">\(\theta\)</span>-κανόνα παίρνουμε το παρακάτω αριθμητικό σχήμα,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-21">
-<span class="eqno">(131)<a class="headerlink" href="#equation-eq4-21" title="Permalink to this equation">#</a></span>\[
-\frac{u_i^{n+1} - u_i^{n}}{\Delta t} = d \left( \theta \, \frac{u_{i+1}^{n+1} - 2 u_i^{n+1} + u_{i-1}^{n+1}}{\Delta x^2} + (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n}}{\Delta x^2} \right)
+<p>Αν εφαρμόσουμε στο πρόβλημα της μονοδιάστατης εξίσωσης διάχυσης τον κανόνα <span class="math notranslate nohighlight">\(\theta\)</span> παίρνουμε το παρακάτω αριθμητικό σχήμα:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-21">
+<span class="eqno">(117)<a class="headerlink" href="#equation-eq-k4-21" title="Link to this equation">#</a></span>\[
+\frac{u_i^{n+1} - u_i^{n}}{\Delta t} = d \left( \theta \, \frac{u_{i+1}^{n+1} - 2 u_i^{n+1} + u_{i-1}^{n+1}}{\Delta x^2} + (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n}}{\Delta x^2} \right).
 \]</div>
-<p>Αυτό το αριθμητικό σχήμα οδηγεί σε ένα αλγεβρικό σύστημα, όπου ο πίνακας των συντελεστών <span class="math notranslate nohighlight">\(A\)</span> είναι τριδιαγώνιες και έχει τις παρακάτω συνιστώσες,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-22">
-<span class="eqno">(132)<a class="headerlink" href="#equation-eq4-22" title="Permalink to this equation">#</a></span>\[
-a_{i,i-1} = - F \, \theta, \,\, a_{i,i} = 1 + 2 \, F \, \theta, \,\, a_{i,i+1} = - F \, \theta, \,\,\, i = 1, ..., N_x - 1
+<p>Αυτό το αριθμητικό σχήμα οδηγεί σε ένα αλγεβρικό σύστημα, όπου ο πίνακας των συντελεστών <span class="math notranslate nohighlight">\(A\)</span> είναι τριδιαγώνιος και έχει τις παρακάτω συνιστώσες:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-22">
+<span class="eqno">(118)<a class="headerlink" href="#equation-eq-k4-22" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+a_{i,i-1} &amp;= - F \, \theta, \\
+a_{i,i}   &amp;= 1 + 2 \, F \, \theta, \\
+a_{i,i+1} &amp;= - F \, \theta, \quad i = 1, \dots, N_x - 1.
+\end{aligned}
+\end{split}\]</div>
+<p>Το διάνυσμα <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> του δεξιού μέλους των εξισώσεων έχει συνιστώσες της μορφής:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-23">
+<span class="eqno">(119)<a class="headerlink" href="#equation-eq-k4-23" title="Link to this equation">#</a></span>\[
+b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n}}{\Delta x^2}.
 \]</div>
-<p>Το διάνυσμα του δεξιού μέλους των εξισώσεων, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, έχει συνιστώσες της μορφής,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-23">
-<span class="eqno">(133)<a class="headerlink" href="#equation-eq4-23" title="Permalink to this equation">#</a></span>\[
-b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n}}{\Delta x^2}
-\]</div>
-<p>Οι αντίστοιχες τιμές για τα συνοριακά σημεία είναι ίδιες όπως και στα πεπελεγμένα σχήματα της οπίσθιας μεθόδου του Euler και της μεθόδου των Crank-Nicolson, που έχουμε περιγράψει στις προηγούμενες ενότητες.</p>
+<p>Οι αντίστοιχες τιμές για τα συνοριακά σημεία είναι ίδιες όπως και στα πεπλεγμένα σχήματα της οπίσθιας μεθόδου του Euler και της μεθόδου των Crank–Nicolson, που έχουμε περιγράψει στις προηγούμενες ενότητες. Ακολουθεί η υλοποίηση του κανόνα <span class="math notranslate nohighlight">\(\theta\)</span> για την επίλυση της μονοδιάστατης εξίσωσης διάχυσης.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.linalg</span>
@@ -986,7 +912,7 @@ b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n
     <span class="n">nsteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
     
     <span class="n">u0</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχων χρονικό βήμα</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="c1"># τρέχον χρονικό βήμα</span>
     <span class="n">F</span> <span class="o">=</span> <span class="n">d</span><span class="o">*</span><span class="n">dt</span><span class="o">/</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     
     <span class="n">a</span> <span class="o">=</span> <span class="o">-</span> <span class="n">F</span> <span class="o">*</span> <span class="n">theta</span>
@@ -1019,62 +945,62 @@ b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n
 </div>
 </div>
 </section>
-<section id="dufort-frankel">
-<h2>Τύπος των Dufort-Frankel<a class="headerlink" href="#dufort-frankel" title="Permalink to this heading">#</a></h2>
-<p>Στις προηγούμενες παραγράφους αναπτύξαμε το άμεσα αριθμητικό σχήμα του Euler. Αυτό το αριθμητικό σχήμα γράφεται στη μορφή,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-24">
-<span class="eqno">(134)<a class="headerlink" href="#equation-eq4-24" title="Permalink to this equation">#</a></span>\[
-	u_i^{n+1} = u_i^n + \frac{d \, \Delta t}{\Delta x^2} (u_{i+1}^{n} - 2 \, u_i^n + u_{i-1}^n)
+<section id="du-fort-frankel">
+<h2>Ο τύπος των Du Fort-Frankel και η μέθοδος εμπρόσθιων διαφορών<a class="headerlink" href="#du-fort-frankel" title="Link to this heading">#</a></h2>
+<p>Στις προηγούμενες ενότητες αναπτύξαμε το άμεσο αριθμητικό σχήμα του Euler. Αυτό το αριθμητικό σχήμα γράφεται στη μορφή:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-24">
+<span class="eqno">(120)<a class="headerlink" href="#equation-eq-k4-24" title="Link to this equation">#</a></span>\[
+u_i^{n+1} = u_i^n + \frac{d \, \Delta t}{\Delta x^2} (u_{i+1}^{n} - 2 \, u_i^n + u_{i-1}^n).
 \]</div>
-<p>όπου η παράμετρος <span class="math notranslate nohighlight">\(F = \frac{d \, \Delta t}{\Delta x^2}\)</span>, είναι βασική παράμετρος για την εξίσωση διάχυσης. Η <span class="math notranslate nohighlight">\(F\)</span>, όπως έχουμε ήδη περιγράψει, είναι ένας αδιάστατος αριθμός που εμπεριέχει τη βασική φυσική παράμετρο του προβλήματος, <span class="math notranslate nohighlight">\(d\)</span>, καθώς και τις παραμέτρους διακριτοποίησης, <span class="math notranslate nohighlight">\(\Delta x\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span> σε μία μόνο παράμετρο.</p>
+<p>Όπου η παράμετρος <span class="math notranslate nohighlight">\(F = \frac{d \, \Delta t}{\Delta x^2}\)</span> είναι βασική παράμετρος για την εξίσωση διάχυσης. Η <span class="math notranslate nohighlight">\(F\)</span>, όπως έχουμε ήδη περιγράψει, είναι ένας αδιάστατος αριθμός που περιλαμβάνει σε μία μόνο παράμετρο τη βασική φυσική παράμετρο του προβλήματος, <span class="math notranslate nohighlight">\(d\)</span>, καθώς και τις παραμέτρους διακριτοποίησης, <span class="math notranslate nohighlight">\(\Delta x\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
 <p>Στο ανωτέρω αριθμητικό σχήμα χρησιμοποιήσαμε κεντρικές διαφορές για τις χωρικές παραγώγους και εμπρόσθιες διαφορές για τις χρονικές. Έτσι το σφάλμα αποκοπής είναι <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>.</p>
-<p>Ένα βελτιωμένο αριθμητικό σχήμα, με σφάλμα αποκοπής  <span class="math notranslate nohighlight">\(O(\Delta t^2, \Delta x^2)\)</span> επιτυγχάνεται χρησιμοποιώντας κεντρικές διαφορές για τις χωρικές παραγώγους αλλά και για τις χρονικές. Στη συνέχεια αντικαθιστούμε το δεύτερο <span class="math notranslate nohighlight">\(u_i^n\)</span> στο δεύτερο μέλος της εξίσωσης <a class="reference internal" href="#equation-eq4-24">(134)</a>, με τη μέση τιμή του, δηλαδή <span class="math notranslate nohighlight">\(\frac{u_i^{n+1} + u_i^{n-1}}{2}\)</span>.</p>
-<p>Έτσι το βελτιωμένο αριθμητικό σχήμα που παίρνουμε έχει την παρακάτω μορφή,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-25">
-<span class="eqno">(135)<a class="headerlink" href="#equation-eq4-25" title="Permalink to this equation">#</a></span>\[
-	\frac{u_i^{n+1} - u_i^{n-1}}{2 \, \Delta t} + \frac{d}{\Delta x^2} (u_{i-1}^{n} - u_{i}^{n-1} - u_i^{n+1} + u_{i+1}^n)
+<p>Ένα βελτιωμένο αριθμητικό σχήμα, με σφάλμα αποκοπής <span class="math notranslate nohighlight">\(O(\Delta t^2, \Delta x^2)\)</span> επιτυγχάνεται με χρήση κεντρικών διαφορών τόσο για τις χωρικές όσο και για τις χρονικές παραγώγους. Στη συνέχεια αντικαθιστούμε το δεύτερο <span class="math notranslate nohighlight">\(u_i^n\)</span> στο δεύτερο μέλος της εξίσωσης <a class="reference internal" href="#equation-eq-k4-24">(120)</a>, με τη μέση τιμή του, δηλαδή <span class="math notranslate nohighlight">\(\frac{u_i^{n+1} + u_i^{n-1}}{2}\)</span>.</p>
+<p>Έτσι το βελτιωμένο αριθμητικό σχήμα που παίρνουμε έχει την παρακάτω μορφή:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-25">
+<span class="eqno">(121)<a class="headerlink" href="#equation-eq-k4-25" title="Link to this equation">#</a></span>\[
+\frac{u_i^{n+1} - u_i^{n-1}}{2 \, \Delta t} + \frac{d}{\Delta x^2} (u_{i-1}^{n} - u_{i}^{n-1} - u_i^{n+1} + u_{i+1}^n).
 \]</div>
-<p>ή τελικά έχουμε ότι,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-25b">
-<span class="eqno">(136)<a class="headerlink" href="#equation-eq4-25b" title="Permalink to this equation">#</a></span>\[
-	(1 + 2 \, F) \, u_i^{n+1} = 2 \, F \, (u_{i-1}^{n} + u_{i+1}^n) + (1 - 2 \, F) \, u_{i}^{n-1} 
+<p>Ή, τελικά, έχουμε ότι:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-26">
+<span class="eqno">(122)<a class="headerlink" href="#equation-eq-k4-26" title="Link to this equation">#</a></span>\[
+(1 + 2 \, F) \, u_i^{n+1} = 2 \, F \, (u_{i-1}^{n} + u_{i+1}^n) + (1 - 2 \, F) \, u_{i}^{n-1}.
 \]</div>
-<p>Η εξίσωση <a class="reference internal" href="#equation-eq4-25b">(136)</a> αποτελεί την εξίσωση των DuFort-Frankel <span id="id8">[<a class="reference internal" href="#id28" title="EC Du Fort and S Po Frankel. Stability conditions in the numerical treatment of parabolic differential equations. Mathematical Tables and Other Aids to Computation, 7(43):135–152, 1953.">Du Fort and Frankel, 1953</a>]</span>.</p>
-<p>Ο παραπάνω τύπος περιλαμβάνει τρία χρονικά επίπεδα, <span class="math notranslate nohighlight">\((n+1 , n , n-1)\)</span> και αποδεικνύεται ότι έχει σφάλμα αποκοπής, <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>, είναι επίσης ένα αριθμητικό σχήμα άνευ συνθηκών ευσταθές (unconditionally stable numerical scheme).</p>
-<p>Σύμφωνα με το αριθμητικό σχήμα <a class="reference internal" href="#equation-eq4-24">(134)</a> ο υπολογισμός της λύσης στο σημείο <span class="math notranslate nohighlight">\((i, n+1)\)</span>, δηλαδή στο επόμενο χρονικό βήμα, απαιτεί την τιμή της λύσης, σε τρία σημεία του πλέγματος, του προηγούμενου χρονικού βήματος, <span class="math notranslate nohighlight">\(n\)</span>, δηλαδή στα σημεία <span class="math notranslate nohighlight">\((i-1, n)\)</span>, <span class="math notranslate nohighlight">\((i, n)\)</span> και <span class="math notranslate nohighlight">\((i+1, n)\)</span>. Με τον ίδιο τρόπο ο υπολογισμός της λύσης στο <span class="math notranslate nohighlight">\((i-1, n)\)</span> σημείο, απαιτεί την τιμή της λύσης και στο <span class="math notranslate nohighlight">\((i-2, n)\)</span>, κ.λπ.</p>
-<figure class="align-default" id="fig-df">
-<a class="reference internal image-reference" href="_images/Fig_DF.png"><img alt="_images/Fig_DF.png" src="_images/Fig_DF.png" style="height: 250px;" /></a>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq-k4-26">(122)</a> αποτελεί την εξίσωση των Du Fort–Frankel <span id="id8">[<a class="reference internal" href="zreferences.html#id25" title="E.C. Du Fort and S.P. Frankel. Stability conditions in the numerical treatment of parabolic differential equations. Mathematical Tables and other Aids to Computation, 7(43):135–152, 1953.">Du Fort and Frankel, 1953</a>]</span>.</p>
+<p>Ο παραπάνω τύπος περιλαμβάνει τρία χρονικά επίπεδα, <span class="math notranslate nohighlight">\((n+1 , n , n-1)\)</span> και αποδεικνύεται ότι έχει σφάλμα αποκοπής <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>. Πρόκειται, επίσης, για ένα αριθμητικό σχήμα που είναι ευσταθές άνευ συνθηκών (unconditionally stable numerical scheme).</p>
+<p>Σύμφωνα με το αριθμητικό σχήμα <a class="reference internal" href="#equation-eq-k4-24">(120)</a>, ο υπολογισμός της λύσης στο σημείο <span class="math notranslate nohighlight">\((i, n+1)\)</span>, δηλαδή στο επόμενο χρονικό βήμα, απαιτεί την τιμή της λύσης σε τρία σημεία του πλέγματος του προηγούμενου χρονικού βήματος, <span class="math notranslate nohighlight">\(n\)</span>, δηλαδή στα σημεία <span class="math notranslate nohighlight">\((i-1, n)\)</span>, <span class="math notranslate nohighlight">\((i, n)\)</span> και <span class="math notranslate nohighlight">\((i+1, n)\)</span>. Με τον ίδιο τρόπο ο υπολογισμός της λύσης στο σημείο <span class="math notranslate nohighlight">\((i-1, n)\)</span>, απαιτεί την τιμή της λύσης και στο σημείο <span class="math notranslate nohighlight">\((i-2, n)\)</span>, κ.λπ.</p>
+<figure class="align-default" id="fig-fd-bw">
+<img alt="_images/FD_backward.svg" src="_images/FD_backward.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Υπολογισμός της τιμής της συνάρτησης στο σημείο <span class="math notranslate nohighlight">\((i, n+1)\)</span> για το πεπλεγμένο σχήμα των οπίσθιων διαφορών.</span><a class="headerlink" href="#fig-df" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Υπολογισμός της τιμής της συνάρτησης στο σημείο <span class="math notranslate nohighlight">\((i, n+1)\)</span> για το πεπλεγμένο σχήμα των οπίσθιων διαφορών.</span><a class="headerlink" href="#fig-fd-bw" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Άρα, η τιμή της λύσης στο σημείο <span class="math notranslate nohighlight">\(A \, (i, n+1)\)</span> εξαρτάται από την τιμή της λύσης σε όλα τα σημεία του πλέγματος που ορίζει το τρίγωνο <span class="math notranslate nohighlight">\(OAB\)</span>, όχι όμως και απ’ όλα τα σημεία του πλέγματος που βρίσκονται κάτω από την ευθεία <span class="math notranslate nohighlight">\(t = n + 1\)</span>, όπως χαρακτηριστικά φαίνεται στο σχήμα <a class="reference internal" href="#fig-df"><span class="std std-numref">Fig. 9</span></a>. Αυτό σημαινει ότι το παραπάνω αριθμητικό σχήμα θα είναι καλύτερο, όσο περισσότερα σημεία του πλέγματος περιλαμβάνονται μέσα στο τρίγωνο <span class="math notranslate nohighlight">\(OAB\)</span>. Αυτό επιτυγχάνεται για πιο εκλεπτυσμένο χρονικό βήμα <span class="math notranslate nohighlight">\(k\)</span>, δηλαδή αυξάνοντας τον υπολογιστικό χρόνο.</p>
-<p><em>Σημείωση:</em> Παρατηρούμε ότι το αριθμητικό σχήμα των DuFort-Frankel είναι ένα βελτιωμένο αριθμητικό σχήμα, σε σχέση με το άμεσο αριθμητικό σχήμα του Euler, που ειναι ακρίβειας <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>. Η σχέση όμως <a class="reference internal" href="#equation-eq4-25b">(136)</a> του τύπου των DuFort-Frankel δεν έχει τον άμεσο χαρακτήρα του προηγούμενου αριθμητικού σχήματος. Για το λόγο αυτό και η εφαρμογή του σε Η/Υ δεν έχει την ίδια απλότητα που είχε το σχήμα των εμπρόσθιων διαφορών.</p>
+<p>Άρα, η τιμή της λύσης στο σημείο <span class="math notranslate nohighlight">\(A \, (i, n+1)\)</span> εξαρτάται από την τιμή της λύσης σε όλα τα σημεία του πλέγματος που ορίζει το τρίγωνο <span class="math notranslate nohighlight">\(OAB\)</span>, όχι όμως και απ’ όλα τα σημεία του πλέγματος που βρίσκονται κάτω από την ευθεία <span class="math notranslate nohighlight">\(t = n + 1\)</span>, όπως χαρακτηριστικά φαίνεται στο <a class="reference internal" href="#fig-fd-bw"><span class="std std-numref">Fig. 17</span></a>. Αυτό σημαίνει ότι το παραπάνω αριθμητικό σχήμα θα είναι καλύτερο, όσο περισσότερα σημεία του πλέγματος περιλαμβάνονται μέσα στο τρίγωνο <span class="math notranslate nohighlight">\(OAB\)</span>. Αυτό επιτυγχάνεται για πιο εκλεπτυσμένο χρονικό βήμα <span class="math notranslate nohighlight">\(k\)</span>, δηλαδή με αύξηση του υπολογιστικού χρόνου.</p>
+<div class="note admonition">
+<p class="admonition-title">Σημείωση</p>
+<p>Παρατηρούμε ότι το αριθμητικό σχήμα των Du Fort–Frankel είναι ένα βελτιωμένο αριθμητικό σχήμα, σε σχέση με το άμεσο αριθμητικό σχήμα του Euler, που είναι ακρίβειας <span class="math notranslate nohighlight">\(O(\Delta t, \Delta x^2)\)</span>. Η σχέση όμως <a class="reference internal" href="#equation-eq-k4-26">(122)</a> του τύπου των Du Fort–Frankel δεν έχει τον άμεσο χαρακτήρα του προηγούμενου αριθμητικού σχήματος. Για το λόγο αυτό και η εφαρμογή του σε Η/Υ δεν έχει την ίδια απλότητα που είχε το σχήμα των εμπρόσθιων διαφορών.</p>
+</div>
 </section>
 <section id="id9">
-<h2>Επέκταση στις 2 διαστάσεις<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<h2>Επέκταση στις δύο διαστάσεις<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>Η εξίσωση διάχυσης σε 2 διαστάσεις είναι:</p>
-<div class="math notranslate nohighlight" id="equation-eq4-27">
-<span class="eqno">(137)<a class="headerlink" href="#equation-eq4-27" title="Permalink to this equation">#</a></span>\[ 
-	\frac{\partial u}{\partial t} = d (\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2})
+<div class="math notranslate nohighlight" id="equation-eq-k4-27">
+<span class="eqno">(123)<a class="headerlink" href="#equation-eq-k4-27" title="Link to this equation">#</a></span>\[
+\frac{\partial u}{\partial t} = d \left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right).
 \]</div>
-<p>Εφαρμόζοντας το άμεσο σχήμα Euler για την διακριτοποίηση της <a class="reference internal" href="#equation-eq4-27">(137)</a> έχουμε,</p>
+<p>Εφαρμόζοντας το άμεσο σχήμα Euler για τη διακριτοποίηση της <a class="reference internal" href="#equation-eq-k4-27">(123)</a> έχουμε,</p>
 <div class="math notranslate nohighlight">
 \[
-	\frac{u_{i,j}^{n+1} - u_{i,j}^n}{\Delta t} = d \, (\frac{u_{{i+1,j}}^{n} - 2 u_{i,j}^n + u_{i-1,j}^n}{\Delta x^2} + \frac{u_{{i,j+1}}^{n} - 2 u_{i,j}^n + u_{i,j-1}^n}{\Delta y^2})
+\frac{u_{i,j}^{n+1} - u_{i,j}^n}{\Delta t} = d \, \left(\frac{u_{{i+1,j}}^{n} - 2 u_{i,j}^n + u_{i-1,j}^n}{\Delta x^2} + \frac{u_{{i,j+1}}^{n} - 2 u_{i,j}^n + u_{i,j-1}^n}{\Delta y^2}\right)
 \]</div>
-<p>Αναδιατάσσοντας τους όρους, η άγνωστη συνάρτηση βρίσκεται ως εξής,</p>
-<div class="math notranslate nohighlight" id="equation-eq4-28">
-<span class="eqno">(138)<a class="headerlink" href="#equation-eq4-28" title="Permalink to this equation">#</a></span>\[
-	u_{i,j}^{n+1} = u_{i,j}^n + = d \Delta t \, (\frac{u_{{i+1,j}}^{n} - 2 u_{i,j}^n + u_{i-1,j}^n}{\Delta x^2} + \frac{u_{{i,j+1}}^{n} - 2 u_{i,j}^n + u_{i,j-1}^n}{\Delta y^2})
+<p>Με αναδιάταξη των όρων, η άγνωστη συνάρτηση βρίσκεται ως εξής:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k4-28">
+<span class="eqno">(124)<a class="headerlink" href="#equation-eq-k4-28" title="Link to this equation">#</a></span>\[
+u_{i,j}^{n+1} = u_{i,j}^n + d \Delta t \, \left(\frac{u_{{i+1,j}}^{n} - 2 u_{i,j}^n + u_{i-1,j}^n}{\Delta x^2} + \frac{u_{{i,j+1}}^{n} - 2 u_{i,j}^n + u_{i,j-1}^n}{\Delta y^2}\right) .
 \]</div>
-<p>Στο παράδειγμα που ακολουθεί, επιλύεται η εξίσωση διάχυσης σε ένα τετραγωνικό χωρίο θεωρώντας ότι η συνάρτηση παίρνει τιμή 1 εντός ενός κύκλου με ακτίνα <span class="math notranslate nohighlight">\(r\)</span> και κέντρο <span class="math notranslate nohighlight">\((cx, cy)\)</span> και εκτός του κύκλου έχει τιμή 0.</p>
-<div class="cell docutils container">
+<p>Στο παράδειγμα που ακολουθεί, επιλύεται η εξίσωση διάχυσης σε ένα τετραγωνικό χωρίο με την παραδοχή ότι η συνάρτηση παίρνει την τιμή 1 εντός ενός κύκλου με ακτίνα <span class="math notranslate nohighlight">\(r\)</span> και κέντρο <span class="math notranslate nohighlight">\((cx, cy)\)</span>, ενώ εκτός του κύκλου έχει την τιμή 0. Μία αναπαράσταση της λύσης παρουσιάζεται στο <a class="reference internal" href="#fig-df2d"><span class="std std-numref">Fig. 18</span></a>.</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="k">def</span> <span class="nf">do_timestep</span><span class="p">(</span><span class="n">u0</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_timestep</span><span class="p">(</span><span class="n">u0</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
     <span class="c1"># εμπρόσθιες διαφορές στο χρόνο, κεντρικές διαφορές στο χώρο</span>
     <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">*</span> <span class="p">(</span>
           <span class="p">(</span><span class="n">u0</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">u0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">u0</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="n">dx2</span>
@@ -1094,12 +1020,12 @@ b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n
 <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Lx</span><span class="o">/</span><span class="n">dx</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">Ly</span><span class="o">/</span><span class="n">dy</span><span class="p">)</span>
 
 <span class="n">dx2</span><span class="p">,</span> <span class="n">dy2</span> <span class="o">=</span> <span class="n">dx</span><span class="o">*</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="o">*</span><span class="n">dy</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dx2</span> <span class="o">*</span> <span class="n">dy2</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span> <span class="o">+</span> <span class="n">dy2</span><span class="p">))</span> <span class="c1"># το μέγιοστο dt ώστε το σχήμα να παραμένει ευσταθές (F=0.5)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dx2</span> <span class="o">*</span> <span class="n">dy2</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx2</span> <span class="o">+</span> <span class="n">dy2</span><span class="p">))</span> <span class="c1"># το μέγιστο dt ώστε το σχήμα να παραμένει ευσταθές (F=0.5)</span>
 
 <span class="n">u0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">))</span>
 <span class="n">u</span> <span class="o">=</span> <span class="n">u0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-<span class="c1"># αρχική συνθήκη - κύκλος ακτίνας r και κέντρο (cx,cy)</span>
+<span class="c1"># αρχική συνθήκη - κύκλος ακτίνας r και με κέντρο (cx,cy)</span>
 <span class="n">r</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span>
 <span class="n">r2</span> <span class="o">=</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nx</span><span class="p">):</span>
@@ -1126,32 +1052,22 @@ b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/3effc712780769e56ed015338d28c25a62ca0f4c7f4d266d9a004eda94e7f1b4.png" src="_images/3effc712780769e56ed015338d28c25a62ca0f4c7f4d266d9a004eda94e7f1b4.png" />
 </div>
-</div>
-</section>
-<section id="a">
-<h2>Aσκήσεις<a class="headerlink" href="#a" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="fig-df2d">
+<a class="reference internal image-reference" href="_images/Difussion_2D.svg"><img alt="_images/Difussion_2D.svg" src="_images/Difussion_2D.svg" style="width: 604.5px; height: 180.70000000000002px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Επίλυση της εξίσωσης διάχυσης σε τετραγωνικό χωρίο.</span><a class="headerlink" href="#fig-df2d" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="tip admonition">
+<p class="admonition-title">Ασκήσεις για λύση</p>
 <ol class="arabic simple">
-<li><p>Να γραφτεί πρόγραμμα για το άμεσο και πεπλεγμένο σχήμα Euler με βάση τον αριθμό των σημείων διακριτοποίησης αντί για το χωρικό βήμα που δίνεται παραπάνω.</p></li>
-<li><p>Να γραφτούν τα προγράμματα του άμεσου και πεπλεγμένου σχήματος Euler καθώς και του σχήματος Crank-Nicolson για ενναλακτικές συνοριακές συνθήκες.</p></li>
-<li><p>Να γραφτεί ο κώδικας για την διάχυση σε 2 διαστάσεις σε μορφή συνάρτησης με τα κατάλληλα ορίσματα.</p></li>
-<li><p>Να γραφτεί ο κώδικας για την διάχυση σε 2 διαστάσεις με ένα πεπλεγμένο αριθμητικό σχήμα.</p></li>
-<li><p>Να δοθεί κώδικας επίλυσης της εξίσωσης διάχυσης με το άμεσο σχήμα Euler για 3 διαστάσεις.</p></li>
+<li><p>Να γραφεί πρόγραμμα για το άμεσο και το πεπλεγμένο σχήμα του Euler με βάση τον αριθμό των σημείων διακριτοποίησης αντί για το χωρικό βήμα που δίνεται παραπάνω.</p></li>
+<li><p>Να γραφούν τα προγράμματα του άμεσου και του πεπλεγμένου σχήματος του Euler καθώς και του σχήματος των Crank–Nicolson για εναλλακτικές συνοριακές συνθήκες.</p></li>
+<li><p>Να γραφεί ο κώδικας για το πρόβλημα της διάχυσης σε 2 διαστάσεις σε μορφή συνάρτησης με τα κατάλληλα ορίσματα.</p></li>
+<li><p>Να γραφεί ο κώδικας για το πρόβλημα της διάχυσης σε 2 διαστάσεις με ένα πεπλεγμένο αριθμητικό σχήμα.</p></li>
+<li><p>Να δοθεί κώδικας επίλυσης της εξίσωσης διάχυσης με το άμεσο σχήμα του Euler σε 3 διαστάσεις.</p></li>
 </ol>
-</section>
-<section id="id10">
-<h2>Βιβλιογραφία<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id11">
-<dl class="citation">
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id8">DFF53</a></span></dt>
-<dd><p>EC Du Fort and S Po Frankel. Stability conditions in the numerical treatment of parabolic differential equations. <em>Mathematical Tables and Other Aids to Computation</em>, 7(43):135–152, 1953.</p>
-</dd>
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id6">92</a></span></dt>
-<dd><p>Νίκος Καφούσιας. <em>Ρευστομηχανική ΙI</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.</p>
-</dd>
-</dl>
 </div>
 </section>
 </section>
@@ -1183,7 +1099,7 @@ b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1211,7 +1127,9 @@ b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1219,17 +1137,13 @@ b_i  = u_i^{n} + F \, (1 - \theta) \, \frac{u_{i+1}^{n} - 2 u_i^{n} + u_{i-1}^{n
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Σύντομη Εισαγωγή</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Η εξίσωση διάχυσης σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Το πρόβλημα αρχικών-συνοριακών τιμών για διάχυση σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler">Άμεσο σχήμα του Euler</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Πεπλεγμένο σχήμα του Euler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Η εξίσωση διάχυσης σε μία χωρική διάσταση</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Το πρόβλημα αρχικών-συνοριακών τιμών για την εξίσωση διάχυσης σε μία διάσταση</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crank-nicolson">Το σχήμα των Crank-Nicolson</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ο κανόνας θ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dufort-frankel">Τύπος των Dufort-Frankel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Επέκταση στις 2 διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a">Aσκήσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Βιβλιογραφία</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theta">Ο κανόνας του <span class="math notranslate nohighlight">\(\theta\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#du-fort-frankel">Ο τύπος των Du Fort-Frankel και η μέθοδος εμπρόσθιων διαφορών</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Επέκταση στις δύο διαστάσεις</a></li>
 </ul>
   </nav></div>
 
@@ -1278,8 +1192,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

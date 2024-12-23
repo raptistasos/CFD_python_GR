@@ -1,0 +1,786 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Βιβλιογραφία &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=982b99e0" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "raptistasos/CFD_python_GR");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'zreferences';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Οι Εξισώσεις των Navier και Stokes" href="Chapter9.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Περίληψη
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter1.html">Εισαγωγή στη γλώσσα προγραμματισμού Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter2.html">Εισαγωγή στις Αριθμητικές Μεθόδους</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter3.html">Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter4.html">Η εξίσωση Διάχυσης</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter5.html">Οι εξισώσεις Laplace και Poisson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter6.html">Η Εξίσωση Μεταφοράς</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter7.html">Η Εξίσωση Μεταφοράς - Διάχυσης</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter8.html">Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Οι Εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Βιβλιογραφία</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/raptistasos/CFD_python_GR" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/zreferences.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Βιβλιογραφία</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Βιβλιογραφία<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="docutils container" id="id2">
+<div role="list" class="citation-list">
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BT22<span class="fn-bracket">]</span></span>
+<p>Tomas Beuzen and Tiffany Timbers. <em>Python packages</em>. Chapman and Hall/CRC, 2022.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bea21<span class="fn-bracket">]</span></span>
+<p>David M Beazley. <em>Python distilled</em>. Pearson, 2021.</p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sun20<span class="fn-bracket">]</span></span>
+<p>Joakim Sundnes. <em>Introduction to scientific programming with Python</em>. Springer Nature, 2020.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KSB20<span class="fn-bracket">]</span></span>
+<p>Qingkai Kong, Timmy Siauw, and Alexandre Bayen. <em>Python programming and numerical methods: a guide for engineers and scientists</em>. Academic Press, 2020.</p>
+</div>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ham21<span class="fn-bracket">]</span></span>
+<p>David Ham. <em>Object-oriented programming in python for mathematicians</em>. Independently published, 3 edition, 2021.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>89<span class="fn-bracket">]</span></span>
+<p>Νικόλαος Καφούσιας. <em>Ρευστομηχανική Ι</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1989.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>99<span class="fn-bracket">]</span></span>
+<p>Νικόλαος Καφούσιας. <em>Υπολογιστική ρευστοδυναμική Ι</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1999.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>92<span class="fn-bracket">]</span></span>
+<p>Νικόλαος Καφούσιας. <em>Ρευστομηχανική ΙI</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 1992.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>18a<span class="fn-bracket">]</span></span>
+<p>Μιχάλης Ξένος and Ευστράτιος Τζιρτζιλάκης. <em>Μηχανική ρευστών με εφαρμογές</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2018.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>01<span class="fn-bracket">]</span></span>
+<p>Νικόλαος Καφούσιας. <em>Υπολογιστική ρευστοδυναμική ΙΙ</em>. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Fle91<span class="fn-bracket">]</span></span>
+<p>Clive A.J. Fletcher. <em>Computational techniques for fluid dynamics</em>. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.</p>
+</div>
+<div class="citation" id="id18" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Lad69a<span class="fn-bracket">]</span></span>
+<p>Olga Aleksandrovna Ladyzhenskaya. <em>The mathematical theory of viscous incompressible flow</em>. Volume 2. Gordon and Breach New York, 1969.</p>
+</div>
+<div class="citation" id="id14" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>PTA12<span class="fn-bracket">]</span></span>
+<p>Richard H. Pletcher, John C. Tannehill, and Dale Anderson. <em>Computational fluid mechanics and heat transfer</em>. CRC press, 3 edition, 2012.</p>
+</div>
+<div class="citation" id="id110" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pat18<span class="fn-bracket">]</span></span>
+<p>Suhas Patankar. <em>Numerical heat transfer and fluid flow</em>. Taylor &amp; Francis, 2018.</p>
+</div>
+<div class="citation" id="id15" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SG17<span class="fn-bracket">]</span></span>
+<p>Hermann Schlichting and Klaus Gersten. <em>Boundary-layer theory</em>. Springer-Verlag Berlin Heidelberg, 9 edition, 2017.</p>
+</div>
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Whi98<span class="fn-bracket">]</span></span>
+<p>Frank M. White. <em>Fluid mechanics</em>. McGraw-Hill, 4 edition, 1998.</p>
+</div>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>RM94<span class="fn-bracket">]</span></span>
+<p>Robert D. Richtmyer and K.W. Morton. <em>Difference methods for initial-value problems</em>. Krieger Publishing Company, FL, United States, 2 edition, 1994.</p>
+</div>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Str04<span class="fn-bracket">]</span></span>
+<p>John C. Strikwerda. <em>Finite difference schemes and partial differential equations</em>. SIAM, 2004.</p>
+</div>
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Smi85<span class="fn-bracket">]</span></span>
+<p>Gordon D. Smith. <em>Numerical solution of partial differential equations: finite difference methods</em>. Clarendon Press, 3 edition, 1985.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LR56<span class="fn-bracket">]</span></span>
+<p>Peter D. Lax and Robert D. Richtmyer. Survey of the stability of linear finite difference equations. <em>Communications on Pure and Applied Mathematics</em>, 9(2):267–293, 1956.</p>
+</div>
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ors71<span class="fn-bracket">]</span></span>
+<p>Steven A. Orszag. Accurate solution of the orr-sommerfeld stability equation. <em>Journal of Fluid Mechanics</em>, 50(4):689–703, 1971.</p>
+</div>
+<div class="citation" id="id19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tre00<span class="fn-bracket">]</span></span>
+<p>L.N. Trefethen. <em>Spectral methods in MATLAB</em>. Volume 10. SIAM, 2000.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DFF53<span class="fn-bracket">]</span></span>
+<p>E.C. Du Fort and S.P. Frankel. Stability conditions in the numerical treatment of parabolic differential equations. <em>Mathematical Tables and other Aids to Computation</em>, 7(43):135–152, 1953.</p>
+</div>
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>16a<span class="fn-bracket">]</span></span>
+<p>Χρήστος Μπαμπατζιμόπουλος. <em>Εφαρμοσμένη αριθμητική επίλυση μερικών διαφορικών εξισώσεων</em>. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις, 2016.</p>
+</div>
+<div class="citation" id="id35" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>18b<span class="fn-bracket">]</span></span>
+<p>Αμαλία Κοντογιάννη. Επαναληπτικές μέθοδοι γραμμικών και μη γραμμικών μερικών διαφορικών εξισώσεων ελλειπτικού τύπου. Master's thesis, Τμήμα Μαθηματικών, Πανεπιστήμιο Ιωαννίνων, Ιωάννινα, 2018.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>08<span class="fn-bracket">]</span></span>
+<p>Γεώργιος Δ. Ακρίβης. <em>Μερικές διαφορικές εξισώσεις</em>. Πανεπιστημιακές Παραδόσεις, Ιωάννινα, 2008.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></span>
+<p>Ευγενία Ν. Πετροπούλου. <em>Διαφορικές εξισώσεις και εφαρμογές αυτών. Με στοιχεία θεωρίας πινάκων, ειδικών συναρτήσεων και ολοκληρωτικών μετασχηματισμών</em>. Εκδόσεις Gotsis, Πάτρα, 2017.</p>
+</div>
+<div class="citation" id="id29" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></span>
+<p>Γεώργιος Ακρίβης and Βασίλειος Δούγαλης. <em>Αριθμητικές μέθοδοι για συνήθεις διαφορικές εξισώσεις</em>. Πανεπιστημιακές Εκδόσεις Κρήτης, Ηράκλειο, 2 edition, 2013.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<p>Δημήτριος Βαλουγεώργης. <em>Σημειώσεις στο μάθημα αριθμητικές μέθοδοι</em>. Πανεπιστήμιο Θεσσαλίας, 2012.</p>
+</div>
+<div class="citation" id="id33" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>16b<span class="fn-bracket">]</span></span>
+<p>Βασίλειος Δουγαλής, Δημήτριος Νούτσος, and Απόστολος Χατζηδήμος. <em>Αριθμητική γραμμική άλγεβρα</em>. Τυπογραφείο Πανεπιστημίου Ιωαννίνων, Ιωάννινα, 2016.</p>
+</div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>QSS07<span class="fn-bracket">]</span></span>
+<p>Alfio Quarteroni, Riccardo Sacco, and Fausto Saleri. <em>Numerical mathematics</em>. Springer New York, ΝΥ, 2007.</p>
+</div>
+<div class="citation" id="id36" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Saa03<span class="fn-bracket">]</span></span>
+<p>Yousef Saad. <em>Iterative methods for sparse linear systems</em>. SIAM, 2 edition, 2003.</p>
+</div>
+<div class="citation" id="id16" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SURS12<span class="fn-bracket">]</span></span>
+<p>Wei Shyy, H.S. Udaykumar, Madhukar M. Rao, and Richard W. Smith. <em>Computational fluid dynamics with moving boundaries</em>. Courier Corporation, 2012.</p>
+</div>
+<div class="citation" id="id149" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Str22<span class="fn-bracket">]</span></span>
+<p>Gilbert Strang. <em>Introduction to linear algebra</em>. SIAM, 2022.</p>
+</div>
+<div class="citation" id="id150" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AS72<span class="fn-bracket">]</span></span>
+<p>Milton Abramowitz and Irene A Stegun. Handbook of mathematical functions dover publications inc. <em>New York</em>, 1972.</p>
+</div>
+<div class="citation" id="id151" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ZKS+07<span class="fn-bracket">]</span></span>
+<p>Libin Zhang, Kedar Kulkarni, MahadevaBharath R Somayaji, Michalis Xenos, and Andreas A Linninger. Discovery of transport and reaction properties in distributed systems. <em>AIChE Journal</em>, 53(2):381–396, 2007.</p>
+</div>
+<div class="citation" id="id152" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SXZ+08<span class="fn-bracket">]</span></span>
+<p>Mahadevabharath R Somayaji, Michalis Xenos, Libin Zhang, Megan Mekarski, and Andreas A Linninger. Systematic design of drug delivery therapies. <em>Computers &amp; Chemical Engineering</em>, 32(1-2):89–98, 2008.</p>
+</div>
+<div class="citation" id="id49" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>RKX19<span class="fn-bracket">]</span></span>
+<p>Anastasios Raptis, Konstantina Kyriakoudi, and Michail A. Xenos. Finite element analysis in fluid mechanics. In Themistocles M. Rassias and Panos M. Pardalos, editors, <em>Mathematical analysis and applications</em>, Springer Optimization and Its Applications, pages 481–510. Springer, 2019.</p>
+</div>
+<div class="citation" id="id50" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CIR52<span class="fn-bracket">]</span></span>
+<p>Richard Courant, Eugene Isaacson, and Mina Rees. On the solution of nonlinear hyperbolic differential equations by finite differences. <em>Communications on Pure and Applied Mathematics</em>, 5(3):243–255, 1952.</p>
+</div>
+<div class="citation" id="id57" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Abl11<span class="fn-bracket">]</span></span>
+<p>Mark J. Ablowitz. <em>Nonlinear dispersive waves: asymptotic analysis and solitons</em>. Volume 47. Cambridge University Press, 2011.</p>
+</div>
+<div class="citation" id="id58" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ger09<span class="fn-bracket">]</span></span>
+<p>Klaus Gersten. Hermann schlichting and the boundary-layer theory. In <em>Hermann Schlichting–100 Years</em>, pages 3–17. Springer, 2009.</p>
+</div>
+<div class="citation" id="id59" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Eva10<span class="fn-bracket">]</span></span>
+<p>Lawrence C. Evans. <em>Partial differential equations</em>. Volume 19. American Mathematical Society, 2010.</p>
+</div>
+<div class="citation" id="id51" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kud09<span class="fn-bracket">]</span></span>
+<p>Nikolai A. Kudryashov. Self-similar solutions of the burgers hierarchy. <em>Applied Mathematics and Computation</em>, 215(5):1990–1993, 2009.</p>
+</div>
+<div class="citation" id="id52" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LL92<span class="fn-bracket">]</span></span>
+<p>Randall J. LeVeque and Randall J. Leveque. <em>Numerical methods for conservation laws</em>. Volume 214. Springer, 1992.</p>
+</div>
+<div class="citation" id="id53" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tho13<span class="fn-bracket">]</span></span>
+<p>James William Thomas. <em>Numerical partial differential equations: finite difference methods</em>. Volume 22. Springer Science &amp; Business Media, 2013.</p>
+</div>
+<div class="citation" id="id54" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LeV02<span class="fn-bracket">]</span></span>
+<p>Randall J. LeVeque. <em>Finite volume methods for hyperbolic problems</em>. Cambridge University Press, 2002.</p>
+</div>
+<div class="citation" id="id55" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AM05<span class="fn-bracket">]</span></span>
+<p>Mark J. Ablowitz and Ziad H. Musslimani. Spectral renormalization method for computing self-localized solutions to nonlinear systems. <em>Optics Letters</em>, 30(16):2140–2142, 2005.</p>
+</div>
+<div class="citation" id="id56" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TXMB02<span class="fn-bracket">]</span></span>
+<p>E. Tzirtzilakis, M. Xenos, V. Marinakis, and T.C. Bountis. Interactions and stability of solitary waves in shallow water. <em>Chaos, Solitons &amp; Fractals</em>, 14(1):87–95, 2002.</p>
+</div>
+<div class="citation" id="id60" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Whi11<span class="fn-bracket">]</span></span>
+<p>Gerald Beresford Whitham. <em>Linear and nonlinear waves</em>. John Wiley &amp; Sons, 2011.</p>
+</div>
+<div class="citation" id="id128" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bat67<span class="fn-bracket">]</span></span>
+<p>George Keith Batchelor. <em>An introduction to fluid dynamics</em>. Cambridge University Press, 1967.</p>
+</div>
+<div class="citation" id="id131" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Lad69b<span class="fn-bracket">]</span></span>
+<p>Olga Aleksandrovna Ladyzhenskaya. The mathematical theory of viscous incompressible flow. <em>Gordon &amp; Breach</em>, 1969.</p>
+</div>
+<div class="citation" id="id132" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Fef00<span class="fn-bracket">]</span></span>
+<p>Charles L Fefferman. Existence and smoothness of the navier–stokes equation. <em>The millennium prize problems</em>, 57:67, 2000.</p>
+</div>
+<div class="citation" id="id134" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KK13<span class="fn-bracket">]</span></span>
+<p>Sangtae Kim and Seppo J Karrila. <em>Microhydrodynamics: principles and selected applications</em>. Courier Corporation, 2013.</p>
+</div>
+<div class="citation" id="id133" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Xen17<span class="fn-bracket">]</span></span>
+<p>MA Xenos. An euler–lagrange approach for studying blood flow in an aneurysmal geometry. <em>Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, 473(2199):20160774, 2017.</p>
+</div>
+<div class="citation" id="id136" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tao16<span class="fn-bracket">]</span></span>
+<p>Terence Tao. Finite time blowup for an averaged three-dimensional navier–stokes equation. <em>Journal of the American Mathematical Society</em>, 29(3):601–674, 2016.</p>
+</div>
+<div class="citation" id="id146" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MS12<span class="fn-bracket">]</span></span>
+<p>Andreas Meister and Jens Struckmeier. <em>Hyperbolic partial differential equations: theory, numerics and applications</em>. Springer Science &amp; Business Media, 2012.</p>
+</div>
+<div class="citation" id="id164" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BF19<span class="fn-bracket">]</span></span>
+<p>Lorena Barba and Gilbert Forsyth. Cfd python: the 12 steps to navier-stokes equations. <em>Journal of Open Source Education</em>, 2(16):21, 2019. URL: <a class="reference external" href="https://doi.org/10.21105/jose.00021">https://doi.org/10.21105/jose.00021</a>, <a class="reference external" href="https://doi.org/10.21105/jose.00021">doi:10.21105/jose.00021</a>.</p>
+</div>
+<div class="citation" id="id148" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TB22<span class="fn-bracket">]</span></span>
+<p>Lloyd N Trefethen and David Bau. <em>Numerical linear algebra</em>. Volume 181. Siam, 2022.</p>
+</div>
+<div class="citation" id="id147" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Cha10<span class="fn-bracket">]</span></span>
+<p>Steven C Chapra. <em>Numerical methods for engineers</em>. Mcgraw-hill, 2010.</p>
+</div>
+<div class="citation" id="id153" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ari12<span class="fn-bracket">]</span></span>
+<p>Rutherford Aris. <em>Vectors, tensors and the basic equations of fluid mechanics</em>. Courier Corporation, 2012.</p>
+</div>
+<div class="citation" id="id154" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>B+68<span class="fn-bracket">]</span></span>
+<p>Aleksandr Ivanovich Borisenko and others. <em>Vector and tensor analysis with applications</em>. Courier Corporation, 1968.</p>
+</div>
+<div class="citation" id="id155" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>XT13<span class="fn-bracket">]</span></span>
+<p>M. Xenos and E. Tzirtzilakis. Mhd effects on blood flow in a stenosis. <em>Advances in Dynamical Systems and Applications</em>, 8(2):427–437, 01 2013.</p>
+</div>
+<div class="citation" id="id156" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BNSD97<span class="fn-bracket">]</span></span>
+<p>D. Bluestein, L. Niu, R.T. Schoephoerster, and M.K. Dewanjee. Fluid mechanics of arterial stenosis: relationship to the development of mural thrombus. <em>Annals of Biomedical Engineering</em>, 25:344–356, 1997.</p>
+</div>
+<div class="citation" id="id157" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tzi08<span class="fn-bracket">]</span></span>
+<p>E.E. Tzirtzilakis. Biomagnetic fluid flow in a channel with stenosis. <em>Physica D: Nonlinear Phenomena</em>, 237(1):66–81, 2008.</p>
+</div>
+<div class="citation" id="id158" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>RSBR17<span class="fn-bracket">]</span></span>
+<p>M. Roy, B.S. Sikarwar, M. Bhandwal, and P. Ranjan. Modelling of blood flow in stenosed arteries. <em>Procedia Computer Science</em>, 115:821–830, 2017.</p>
+</div>
+<div class="citation" id="id159" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>PYL+08<span class="fn-bracket">]</span></span>
+<p>S.-H. Park, M.-B. Yim, C.-Y. Lee, E. Kim, and E.-I. Son. Intracranial fusiform aneurysms: it's pathogenesis, clinical characteristics and managements. <em>Journal of Korean Neurosurgical Society</em>, 44(3):116, 2008.</p>
+</div>
+<div class="citation" id="id160" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>OPK+00<span class="fn-bracket">]</span></span>
+<p>M.S. Olufsen, C.S. Peskin, W.Y. Kim, E.M. Pedersen, A. Nadim, and J. Larsen. Numerical simulation and experimental validation of blood flow in arteries with structured-tree outflow conditions. <em>Annals of Biomedical Engineering</em>, 28(11):1281–1299, 2000.</p>
+</div>
+<div class="citation" id="id163" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LXZ+07<span class="fn-bracket">]</span></span>
+<p>A.A. Linninger, M. Xenos, D.C. Zhu, M.R. Somayaji, S. Kondapalli, and R.D. Penn. Cerebrospinal fluid flow in the normal and hydrocephalic human brain. <em>IEEE Transactions on Biomedical Engineering</em>, 54(2):291–302, 2007.</p>
+</div>
+<div class="citation" id="id161" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AMDI+07<span class="fn-bracket">]</span></span>
+<p>F.R. Arko, E.H. Murphy, C.M. Davis III, E.D. Johnson, S.T. Smith, and C.K. Zarins. Dynamic geometry and wall thickness of the aortic neck of abdominal aortic aneurysms with intravascular ultrasonography. <em>Journal of Vascular Surgery</em>, 46(5):891–897, 2007.</p>
+</div>
+<div class="citation" id="id162" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>VKVPP+09<span class="fn-bracket">]</span></span>
+<p>J.W. Van Keulen, J. Van Prehn, M. Prokop, F.L. Moll, and J.A. Van Herwaarden. Dynamics of the aorta before and after endovascular aneurysm repair: a systematic review. <em>European Journal of Vascular and Endovascular Surgery</em>, 38(5):586–596, 2009.</p>
+</div>
+<div class="citation" id="id137" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>VDVD82<span class="fn-bracket">]</span></span>
+<p>Milton Van Dyke and Milton Van Dyke. <em>An album of fluid motion</em>. Volume 176. Parabolic Press Stanford, 1982.</p>
+</div>
+<div class="citation" id="id86" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SS93<span class="fn-bracket">]</span></span>
+<p>Salvatore P Sutera and Richard Skalak. The history of poiseuille's law. <em>Annual Review of Fluid Mechanics</em>, 25(1):1–20, 1993.</p>
+</div>
+<div class="citation" id="id145" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FG09<span class="fn-bracket">]</span></span>
+<p>Sandro Forconi and Tommaso Gori. The evolution of the meaning of blood hyperviscosity in cardiovascular physiopathology: should we reinterpret poiseuille? <em>Clinical Hemorheology and Microcirculation</em>, 42(1):1–6, 2009.</p>
+</div>
+<div class="citation" id="id144" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DRRT18<span class="fn-bracket">]</span></span>
+<p>M Dvoriashyna, R Repetto, MR Romano, and JH Tweedy. Aqueous humour flow in the posterior chamber of the eye and its modifications due to pupillary block and iridotomy. <em>Mathematical Medicine and Biology: A Journal of the IMA</em>, 35(4):447–467, 2018.</p>
+</div>
+<div class="citation" id="id139" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SV17<span class="fn-bracket">]</span></span>
+<p>Douglas B Sawyer and Ramachandran S Vasan. <em>Encyclopedia of cardiovascular research and medicine</em>. Elsevier, 2017.</p>
+</div>
+<div class="citation" id="id135" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kla11<span class="fn-bracket">]</span></span>
+<p>Richard Klabunde. <em>Cardiovascular physiology concepts</em>. Lippincott Williams &amp; Wilkins, 2011.</p>
+</div>
+<div class="citation" id="id61" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>GSG17<span class="fn-bracket">]</span></span>
+<p>Alan Garfinkel, Jane Shevtsov, and Yina Guo. <em>Modeling life: the mathematics of biological systems</em>. Springer, 2017.</p>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "raptistasos/CFD_python_GR",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter9.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Οι Εξισώσεις των Navier και Stokes</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

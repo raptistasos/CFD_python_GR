@@ -1,61 +1,61 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Η εξίσωση Μεταφοράς &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Η Εξίσωση Μεταφοράς &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=982b99e0" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,20 +92,21 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter6';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Μόνιμη Μεταφορά &amp; Διάχυση" href="Chapter7.html" />
+    <link rel="next" title="Η Εξίσωση Μεταφοράς - Διάχυσης" href="Chapter7.html" />
     <link rel="prev" title="Οι εξισώσεις Laplace και Poisson" href="Chapter5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -113,32 +114,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -146,7 +131,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -154,16 +138,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -178,6 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -191,11 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -211,11 +213,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Chapter3.html">Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter4.html">Η εξίσωση Διάχυσης</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter5.html">Οι εξισώσεις Laplace και Poisson</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Η εξίσωση Μεταφοράς</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter7.html">Μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter8.html">Μη-μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter10.html">Οι εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Η Εξίσωση Μεταφοράς</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter7.html">Η Εξίσωση Μεταφοράς - Διάχυσης</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter8.html">Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Οι Εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Βιβλιογραφία</a></li>
 </ul>
 
     </div>
@@ -231,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -240,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -272,14 +274,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/raptistasos/CFD_python_GR/master?urlpath=tree/Chapter6.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -387,27 +389,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -418,7 +412,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Η εξίσωση Μεταφοράς</h1>
+    <h1>Η Εξίσωση Μεταφοράς</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -428,14 +422,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Εξίσωση μεταφοράς σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Εμπρόσθιες διαφορές στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfrog">Σχήμα Leapfrog στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upwind">Σχήμα ανάντη διαφορών (upwind)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crank-nicolson">Σχήμα των Crank-Nicolson στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Εξίσωση μεταφοράς σε μία διάσταση</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ftcs">Σχήμα FTCS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Σχήμα ανάντη διαφορών</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lax-wendroff">Η μέθοδος των Lax-Wendroff</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Επέκταση στις δύο διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εφαρμογές &amp; ασκήσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfrog">Σχήμα Leapfrog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crank-nicolson">Σχήμα Crank-Nicolson</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Επέκταση στις δύο διαστάσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Εφαρμογές &amp; ασκήσεις</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Μη ομογενής περίπτωση</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#von-neumann">Ανάλυση ευστάθειας Von Neumann</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -445,34 +444,663 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Η εξίσωση Μεταφοράς<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p><strong>Περίληψη</strong>. Σε αυτό το κεφάλαιο αρχικά περιγράφεται η εξίσωσης μεταφοράς σε μια διάσταση. Εισάγεται το αριθμητικό σχήμα των εμπρόσθιων διαφορών στο χρόνο και κεντρικών διαφορών στο χώρο (FTCS – Forward Time Central Space). Εισάγεται το αριθμητικό σχήμα leapfrog στο χρόνο και κεντρικές διαφορές στο χώρο. Ακολουθεί το σχήμα ανάντη διαφορών (upwind) καθώς και το σχήμα των Crank-Nicolson στο χρόνο με κεντρικές διαφορές στο χώρο. Εισάγεται επίσης η μέθοδος των Lax-Wendroff. Ακολουθεί η επέκταση της μεθοδολογίας στις δύο διαστάσεις. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
+<h1>Η Εξίσωση Μεταφοράς<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Εξίσωση μεταφοράς σε μια διάσταση<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>Περίληψη<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Στο παρόν κεφάλαιο περιγράφεται η εξίσωση μεταφοράς. Η εξίσωση μοντελοποιεί φαινόμενα που διαδραματίζονται στο χώρο και το χρόνο, και μελετάται αρχικά σε μία χωρική διάσταση και έπειτα γενικεύεται και σε περισσότερες διαστάσεις. Εισάγεται το αριθμητικό σχήμα εμπρόσθιων διαφορών στο χρόνο και κεντρικών διαφορών στο χώρο, (FTCS). Ακολουθεί το σχήμα ανάντη διαφορών (upwind). Εισάγεται επίσης η μέθοδος των Lax-Wendroff. Ακολουθεί το σχήμα Leapfrog στο χρόνο και το σχήμα των κεντρικών διαφορών στο χώρο, καθώς και το σχήμα των Crank-Nicolson στο χρόνο με κεντρικές διαφορές στο χώρο. Ακολουθεί γενίκευση, με φυσικό τρόπο, σε περισσότερες χωρικές διαστάσεις. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσής τους.</p>
+<p><strong>Προαπαιτούμενη γνώση</strong>: Βασικές γνώσεις Συνήθων/Μερικών Διαφορικών Εξισώσεων και Αριθμητικής Ανάλυσης.</p>
 </section>
 <section id="id3">
-<h2>Εμπρόσθιες διαφορές στο χρόνο και κεντρικές διαφορές στο χώρο<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h2>Εξίσωση μεταφοράς σε μία διάσταση<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Μια εκ των απλούστερων Μ.Δ.Ε. είναι η εξίσωση μεταφοράς,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-tran0">
+<span class="eqno">(187)<a class="headerlink" href="#equation-eq-k6-tran0" title="Link to this equation">#</a></span>\[
+u_{t}+cu_{x}=0, \qquad c\in\mathbb{R}, \qquad u=u(x,t), \qquad (x,t)\in\mathbb{R}\times(0,\infty)
+\]</div>
+<p>Ποιές συναρτήσεις άραγε να επιλύουν την <a class="reference internal" href="#equation-eq-k6-tran0">(187)</a>, και πώς εξάγονται αυτές οι λύσεις? Ας παραθέσουμε σε αντιστοιχία με την <a class="reference internal" href="#equation-eq-k6-tran0">(187)</a> τον τύπο ολικού διαφορικού της <span class="math notranslate nohighlight">\(u(s)=u(x(s),t(s))\)</span>, όπου <span class="math notranslate nohighlight">\(s\in\mathbb{R}\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-tran1">
+<span class="eqno">(188)<a class="headerlink" href="#equation-eq-k6-tran1" title="Link to this equation">#</a></span>\[
+\dfrac{du}{ds}=\dfrac{\partial u}{\partial x}\dfrac{dx}{ds}+\dfrac{\partial u}{\partial t}\dfrac{dt}{ds}.
+\]</div>
+<p>Παρατηρούμε, από τις <a class="reference internal" href="#equation-eq-k6-tran0">(187)</a> και <a class="reference internal" href="#equation-eq-k6-tran1">(188)</a>, ότι αν,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{dx}{ds} &amp;= c, \\
+  \frac{dt}{ds} &amp;= 1.
+\end{aligned}
+\end{split}\]</div>
+<p>τότε η <a class="reference internal" href="#equation-eq-k6-tran0">(187)</a> ανάγεται στη Σ.Δ.Ε.,</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{du}{ds}=0,
+\]</div>
+<p>δηλαδή <span class="math notranslate nohighlight">\(u=\text{σταθ.}\)</span> κατά μήκος της καμπύλης <span class="math notranslate nohighlight">\(\gamma(s)=(x(s),t(s))\)</span>. Συνεπώς, το πρόβλημα ανάγεται στην εύρεση αυτών των χαρακτηριστικών καμπύλων <span class="math notranslate nohighlight">\(\gamma(s)\)</span>, οι οποίες προσδιορίζονται πλήρως από την <a class="reference internal" href="#equation-eq-k6-tran1">(188)</a>, που είναι η χαρακτηριστική εξίσωση. Από την <a class="reference internal" href="#equation-eq-k6-tran1">(188)</a> παίρνουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-tran2">
+<span class="eqno">(189)<a class="headerlink" href="#equation-eq-k6-tran2" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{align*}
+    \frac{dx}{dt} &amp;= c \\
+    \Leftrightarrow x(t) &amp;= ct + d, \quad d = \text{σταθ.} \\
+    \Leftrightarrow d &amp;= x - ct .
+\end{align*}
+\end{split}\]</div>
+<p>Έτσι, η <span class="math notranslate nohighlight">\(u\)</span> ειναι σταθερή κατά μήκος κάθε τέτοιας καμπύλης, με τη σταθερά να εξαρτάται από την εκάστοτε καμπύλη, συνεπώς λαμβάνουμε τη γενική λύση της μονοδιάστατης εξίσωσης μεταφοράς,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-tran3">
+<span class="eqno">(190)<a class="headerlink" href="#equation-eq-k6-tran3" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{align*}
+    u(x,t) &amp;= f(d) \\
+           &amp;=f(x - ct)
+\end{align*}
+\end{split}\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(f\)</span> διαφορίσιμη συνάρτηση, τέτοια ώστε η <a class="reference internal" href="#equation-eq-k6-tran3">(190)</a> να αποτελεί κλασική λύση της <a class="reference internal" href="#equation-eq-k6-tran0">(187)</a>. Επομένως, η γνώση της τιμής της <span class="math notranslate nohighlight">\(u\)</span> σε κάποιο σημείο μιας χαρακτηριστικής καμπύλη παρέχει αυτόματα και την τιμή της παντού αλλού. Για αυτό, μεταξύ άλλων, η εξίσωση μεταφοράς, αν και απλή στην όψη, είναι αρκετά χρήσιμη στις εφαρμογές. Στην περίπτωση που μας δίνεται ένα Π.Α.Τ. της <a class="reference internal" href="#equation-eq-k6-tran0">(187)</a>, με αρχική συνθήκη <span class="math notranslate nohighlight">\(u_{0}(x):=u(x,0)\)</span>, δεν αλλάζει τίποτα παρά μόνο ότι η <span class="math notranslate nohighlight">\(f\)</span> στην <a class="reference internal" href="#equation-eq-k6-tran3">(190)</a> αντικαθίσταται από την <span class="math notranslate nohighlight">\(u_{0}\)</span>. Συνεπώς, για το Π.Α.Τ.,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-tranweak">
+<span class="eqno">(191)<a class="headerlink" href="#equation-eq-k6-tranweak" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+    u_{t} + c u_{x} &amp;= 0, \qquad c \in \mathbb{R}, \quad u = u(x,t), \quad (x,t) \in \mathbb{R} \times (0, \infty) \\
+    u(x,0) &amp;= u_{0}(x)
+\end{aligned}
+\end{split}\]</div>
+<p>έχουμε,</p>
+<div class="math notranslate nohighlight">
+\[
+u(x,t)=u_{0}(x-ct) .
+\]</div>
+<p>Θεωρώντας ότι η <span class="math notranslate nohighlight">\(u\)</span> αποτελεί λύση της εξίσωσης μεταφοράς και πολλαπλασιάζοντας αμφότερα τα μέλη της εξίσωσης με μια συνάρτηση δοκιμής <span class="math notranslate nohighlight">\(\phi\)</span>, παίρνουμε,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{t}\phi+cu_{x}\phi=0 .
+\]</div>
+<p>Στόχος είναι να μεταφέρουμε, μέσω παραγοντικής ολοκλήρωσης, τις παραγώγους από τη <span class="math notranslate nohighlight">\(u\)</span> στη <span class="math notranslate nohighlight">\(\phi\)</span>, η οποία είναι όπως ξέρουμε απειροδιαφορίσιμη με συμπαγή φορέα. Έχουμε λοιπόν,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-weaksols">
+<span class="eqno">(192)<a class="headerlink" href="#equation-eq-k6-weaksols" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{align*}
+0&amp;=\int_{0}^{\infty}\int_{-\infty}^{\infty}u_{t}\phi\ dx \, dt+c\int_{0}^{\infty}\int_{-\infty}^{\infty}u_{x}\phi\ dx \, dt\\
+&amp;=\int_{-\infty}^{\infty}\int_{0}^{\infty}u_{t}\phi\ dt \, dx+c\int_{0}^{\infty}\int_{-\infty}^{\infty}u_{x}\phi\ dx \, dt\\
+&amp;=\int_{-\infty}^{\infty}\left(u\phi\bigg|_{t=0}^{\infty}-\int_{0}^{\infty}u\phi_{t}dt\right)dx+c\int_{0}^{\infty}\left(u\phi\bigg|_{-\infty}^{\infty}-\int_{-\infty}^{\infty}u\phi_{x}dx\right)dt\\
+&amp;=-\int_{-\infty}^{\infty}\left(u(x,0)\phi(x,0)+\int_{0}^{\infty}u\phi_{t}dt\right)dx-c\int_{0}^{\infty}\int_{\infty}^{\infty}u\phi_{x}dx \, dt\\
+&amp;=-\int_{0}^{\infty}\int_{-\infty}^{\infty}(u\phi_{t}+cu\phi_{x})dx \, dt-\int_{-\infty}^{\infty}u(x,0)\phi(x,0)d . x
+\end{align*}
+\end{split}\]</div>
+<p>Με χρήση τώρα της αρχικής συνθήκης, η <a class="reference internal" href="#equation-eq-k6-weaksols">(192)</a> γίνεται,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-weaksols1">
+<span class="eqno">(193)<a class="headerlink" href="#equation-eq-k6-weaksols1" title="Link to this equation">#</a></span>\[
+\int_{0}^{\infty}\int_{-\infty}^{\infty}(u\phi_{t}+cu\phi_{x})dx \, dt+\int_{-\infty}^{\infty}u(x,0)\phi(x,0)dx=0 . 
+\]</div>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq-k6-weaksols1">(193)</a>, παρότι η <span class="math notranslate nohighlight">\(u\)</span> υποτέθηκε διαφορίσιμη, έχει νόημα ακόμα και αν η <span class="math notranslate nohighlight">\(u\)</span> είναι απλά φραγμένη και καλείται ασθενής μορφή της <a class="reference internal" href="#equation-eq-k6-tranweak">(191)</a>. Τονίζουμε ότι η <a class="reference internal" href="#equation-eq-k6-weaksols1">(193)</a> πρέπει να πληρείται για κάθε συνάρτηση δοκιμής~<span class="math notranslate nohighlight">\(\phi\)</span>. Εύκολα, βάσει της <a class="reference internal" href="#equation-eq-k6-weaksols1">(193)</a>, προκύπτει ότι η <span class="math notranslate nohighlight">\(u_{0}(x-ct)\)</span> είναι ασθενής λύση της <a class="reference internal" href="#equation-eq-k6-tranweak">(191)</a> για κάθε φραγμένη συνάρτηση <span class="math notranslate nohighlight">\(u_{0}\in L^{\infty}(\mathbb{R})\)</span> <span id="id4">[<a class="reference internal" href="zreferences.html#id49" title="Anastasios Raptis, Konstantina Kyriakoudi, and Michail A. Xenos. Finite element analysis in fluid mechanics. In Themistocles M. Rassias and Panos M. Pardalos, editors, Mathematical analysis and applications, Springer Optimization and Its Applications, pages 481-510. Springer, 2019.">Raptis <em>et al.</em>, 2019</a>]</span>.</p>
 </section>
-<section id="leapfrog">
-<h2>Σχήμα Leapfrog στο χρόνο και κεντρικές διαφορές στο χώρο<a class="headerlink" href="#leapfrog" title="Permalink to this heading">#</a></h2>
+<section id="ftcs">
+<h2>Σχήμα FTCS<a class="headerlink" href="#ftcs" title="Link to this heading">#</a></h2>
+<p>Στις επόμενες ενότητες, θα ασχοληθούμε με αριθμητικές μεθόδους επίλυσης της εξίσωσης μεταφοράς. Αρχικά θα συζητήσουμε την αριθμητική μέθοδο FTCS, η οποία χρησιμοποιεί εμπρόσθιες διαφορές στο χρόνο (Forward in Time) και κεντρικές διαφορές στο χώρο (Central in Space). Έτσι, η εξίσωση μεταφοράς γράφεται ως <span id="id5">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>]</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-ftcs">
+<span class="eqno">(194)<a class="headerlink" href="#equation-eq-k6-ftcs" title="Link to this equation">#</a></span>\[
+\dfrac{u_{i}^{n+1}-u_{i}^{n}}{\Delta t}+c\dfrac{u_{i+1/2}^{n}-u_{i-1/2}^{n}}{\Delta x}=0 .
+\]</div>
+<p>Αν θεωρήσουμε, επίσης, ότι,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i\pm1/2}^{n}=\dfrac{1}{2}\left(u_{i}^{n}+u_{i\pm1}^{n}\right)
+\]</div>
+<p>η <a class="reference internal" href="#equation-eq-k6-ftcs">(194)</a> παίρνει τη μορφή,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-expftcs">
+<span class="eqno">(195)<a class="headerlink" href="#equation-eq-k6-expftcs" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{align*}
+\dfrac{u_{i}^{n+1}-u_{i}^{n}}{\Delta t}+c\dfrac{u_{i+1}^{n}-u_{i-1}^{n}}{2\Delta x}&amp;=0\\
+\Leftrightarrow \ u_{i}^{n+1}&amp;=u_{i}^{n}-\dfrac{c\Delta t}{2\Delta x}\left(u_{i+1}^{n}-u_{i-1}^{n}\right)\\
+\Leftrightarrow \ u_{i}^{n+1}&amp;=u_{i}^{n}-\dfrac{C}{2}\left(u_{i+1}^{n}-u_{i-1}^{n}\right)
+\end{align*}
+\end{split}\]</div>
+<p>όπου</p>
+<div class="math notranslate nohighlight">
+\[
+C:=c\dfrac{\Delta t}{\Delta x} : \text{ο αδιάστατος αριθμός Courant} 
+\]</div>
+<p>Η μέθοδος FTCS είναι μια άμεση μέθοδος, πράγμα που σημαίνει ότι η <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span> μπορεί να υπολογιστεί ρητά (δεν χρειάζεται να λυθεί ένα σύστημα αλγεβρικών εξισώσεων), εάν οι τιμές της <span class="math notranslate nohighlight">\(u\)</span> είναι γνωστές για προηγούμενες χρονικές στιγμές. Λόγω του ότι είναι άμεση, η μέθοδος FTCS είναι υπολογιστικά ανέξοδη. Αποτελεί, επίσης, μέθοδο πρώτης τάξης στο χρόνο, ούσα υπό συνθήκη ευσταθής όταν εφαρμόζεται στην επίλυση της εξίσωσης θερμότητας. Αντιθέτως, όταν χρησιμοποιείται στην επίλυση εξισώσεων μεταφοράς (advection) ή γενικότερα υπερβολικών Μ.Δ.Ε., είναι ασταθής, εκτός αν συμπεριλάβουμε τεχνητό ιξώδες.</p>
+<p>Παρακάτω παραθέτουμε τα αριθμητικά αποτελέσματα εφαρμογής της μεθόδου FTCS στο Π.Α.Τ. της εξίσωσης μεταφοράς, για αρχική συνθήκη <span class="math notranslate nohighlight">\(u_{0}(x)=e^{-x^{2}}\)</span> και για διάφορους αριθμούς Courant. Όπως θα παρατηρήσουμε, η μέθοδος δίνει καλά αποτελέσματα, σε σύγκριση με την αναλυτική λύση, μόνο στην περίπτωση μικρών αριθμών Courant. Μια βελτιωμένη παραλλαγή της FTCS είναι η μέθοδος Lax-Friedrichs, στην οποία ο όρος <span class="math notranslate nohighlight">\(u_{i}^{n}\)</span> αντικαθίσταται από το μέσο όρο,</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{1}{2}\left(u_{i+1}^{n}+u_{i-1}^{n}\right)
+\]</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;bmh&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ορισμός του πλέγματος</span>
+<span class="k">def</span> <span class="nf">create_grid</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">xmax</span> <span class="o">-</span> <span class="n">xmin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">dx</span>
+
+<span class="c1"># Ορισμός της μεθόδου FTCS</span>
+<span class="k">def</span> <span class="nf">ftcs</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">))</span>
+    <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="n">C</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">u</span>
+
+<span class="c1"># Ορισμός της συνάρτησης για το γράφημα</span>
+<span class="k">def</span> <span class="nf">plot_solution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">u_numerical</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">C_val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Αρχική συνθήκη&#39;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Αναλυτική λύση&#39;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_numerical</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Αριθμητική λύση&#39;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">])</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;C=</span><span class="si">{</span><span class="n">C_val</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="c1"># Ορισμός των παραμέτρων</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># Αριθμός σημείων στο πλέγμα</span>
+<span class="n">xmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8</span>  <span class="c1"># Ελάχιστη τιμή του x</span>
+<span class="n">xmax</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Μέγιστη τιμή του x</span>
+<span class="n">nt</span> <span class="o">=</span> <span class="mi">300</span>  <span class="c1"># Αριθμός χρονικών βημάτων</span>
+<span class="n">tstart</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Αρχική χρονική στιγμή</span>
+<span class="n">tend</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Τελική χρονική στιγμή</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">tend</span> <span class="o">-</span> <span class="n">tstart</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">nt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Χρονικό βήμα</span>
+<span class="n">C_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>  <span class="c1"># Τιμές του C</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">create_grid</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">)</span>  <span class="c1"># Δημιουργία του πλέγματος</span>
+<span class="n">u0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Αρχική κατάσταση</span>
+
+<span class="c1"># Υπολογισμός αναλυτικών λύσεων</span>
+<span class="n">u_analytic</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">C_values</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx</span> <span class="o">/</span> <span class="n">dt</span><span class="p">)</span> <span class="o">*</span> <span class="n">tend</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Δημιουργία λίστας αριθμητικών λύσεων με τη μέθοδο FTCS</span>
+<span class="n">u_numerical</span> <span class="o">=</span> <span class="p">[</span><span class="n">ftcs</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span> <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">]</span>
+
+<span class="c1"># Προβολή των λύσεων</span>
+<span class="n">plot_solution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">u_numerical</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">,</span> <span class="n">C_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="fig-ftcs">
+<img alt="_images/ftcs.svg" src="_images/ftcs.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Αριθμητικές λύσεις της εξίσωσης μεταφοράς, μέσω της μεθόδου FTCS.</span><a class="headerlink" href="#fig-ftcs" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="upwind">
-<h2>Σχήμα ανάντη διαφορών (upwind)<a class="headerlink" href="#upwind" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="crank-nicolson">
-<h2>Σχήμα των Crank-Nicolson στο χρόνο και κεντρικές διαφορές στο χώρο<a class="headerlink" href="#crank-nicolson" title="Permalink to this heading">#</a></h2>
+<section id="id6">
+<h2>Σχήμα ανάντη διαφορών<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Στο αριθμητικό σχήμα των ανάντη διαφορών (upwind) χρησιμοποιούνται εμπρόσθιες διαφορές για τη διακριτοποίηση της χρονικής παραγώγου και οπίσθιες διαφορές για αυτήν της χωρικής παραγώγου <span id="id7">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>, <a class="reference internal" href="zreferences.html#id110" title="Suhas Patankar. Numerical heat transfer and fluid flow. Taylor &amp; Francis, 2018.">Patankar, 2018</a>]</span>. Έτσι, η εξίσωση μεταφοράς, εδώ, γράφεται ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-upwind">
+<span class="eqno">(196)<a class="headerlink" href="#equation-eq-k6-upwind" title="Link to this equation">#</a></span>\[
+\dfrac{u_{i}^{n+1}-u_{i}^{n}}{\Delta t}+c\dfrac{u_{i}^{n}-u_{i-1}^{n}}{\Delta x}=0
+\]</div>
+<p>και ισοδύναμα, ως προς <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span>, ως,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}^{n+1}=u_{i}^{n}-C(u_{i}^{n}-u_{i-1}^{n}),
+\]</div>
+<p>Έχουμε και εδώ μια άμεση μέθοδο, η οποία είναι ευσταθής για <span class="math notranslate nohighlight">\(|C|\leq1\)</span>, όπου το <span class="math notranslate nohighlight">\(C\)</span> παριστά, όπως και προηγουμένως, τον αριθμό Courant. Με παρόμοιο τρόπο μπορούμε να ορίσουμε και το σχήμα κατάντη διαφορών (downwind), ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-downwind">
+<span class="eqno">(197)<a class="headerlink" href="#equation-eq-k6-downwind" title="Link to this equation">#</a></span>\[
+\dfrac{u_{i}^{n+1}-u_{i}^{n}}{\Delta t}+c\dfrac{u_{i+1}^{n}-u_{i}^{n}}{\Delta x}=0
+\]</div>
+<p>και ισοδύναμα, ως προς <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span>, ως,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}^{n+1}=u_{i}^{n}-C(u_{i+1}^{n}-u_{i}^{n}).
+\]</div>
+<p>Το αριθμητικό σχήμα upwind ορίζεται σε γλώσσα προγραμματισμού Python ως εξής:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ορισμός της μεθόδου upwind</span>
+<span class="k">def</span> <span class="nf">upwind</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">))</span>
+    <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">u</span>
+
+<span class="c1"># Δημιουργία λίστας αριθμητικών λύσεων με τη μέθοδο upwind</span>
+<span class="n">u_numerical</span> <span class="o">=</span> <span class="p">[</span><span class="n">upwind</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span> <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">]</span>
+
+<span class="c1"># Προβολή των λύσεων</span>
+<span class="n">plot_solution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">u_numerical</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">,</span> <span class="n">C_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="fig-upwind">
+<img alt="_images/upwind.svg" src="_images/upwind.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Αριθμητικές λύσεις της εξίσωσης μεταφοράς, μέσω της μεθόδου upwind, για τέσσερις αύξοντες αριθμούς Courant. Εδώ, σε αντίθεση με τη μέθοδο FTCS, η αύξηση του αριθμού Courant οδηγεί ολοένα και σε καλύτερα αποτελέσματα.</span><a class="headerlink" href="#fig-upwind" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="lax-wendroff">
-<h2>Η μέθοδος των Lax-Wendroff<a class="headerlink" href="#lax-wendroff" title="Permalink to this heading">#</a></h2>
+<h2>Η μέθοδος των Lax-Wendroff<a class="headerlink" href="#lax-wendroff" title="Link to this heading">#</a></h2>
+<p>Το σχήμα των Lax-Wendroff (LW) αποτελεί επίσης σχήμα επίλυσης Μ.Δ.Ε. υπερβολικού τύπου, βασιζόμενο σε πεπερασμένες διαφορές <span id="id8">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>]</span>. Παρουσιάζει ακρίβεια δεύτερης τάξης, τόσο ως προς το χώρο όσο και ως προς το χρόνο. Όσον αφορά την εξίσωση μεταφοράς, το σχήμα LW δεν είναι παρά η προσέγγιση Taylor δεύτερης τάξης της <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span>, όπου τώρα εκφράζουμε τις χωρικές μερικές παραγώγους μέσω κεντρικών διαφορών,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-lwlflow">
+<span class="eqno">(198)<a class="headerlink" href="#equation-eq-k6-lwlflow" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}=u_{i}^{n}-\underbrace{\dfrac{C}{2}\left(u_{i+1}^{n}-u_{i-1}^{n}\right)}_{\text{κεντρικές 1ης τάξης}}+\underbrace{\dfrac{C^{2}}{2}\left(u_{i+1}^{n}-2u_{i}^{n}+u_{i-1}^{n}\right)}_{\text{κεντρικές 2ης τάξης}}
+\]</div>
+<p>Το αριθμητικό σχήμα της μεθόδου Lax-Wendroff ορίζεται σε γλώσσα προγραμματισμού Python ως εξής:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ορισμός της μεθόδου Lax-Wendroff</span>
+<span class="k">def</span> <span class="nf">lax_wendroff</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">))</span>
+    <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="n">C</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">C</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">u</span>
+
+<span class="c1"># Δημιουργία λίστας αριθμητικών λύσεων με τη μέθοδο Lax-Wendroff</span>
+<span class="n">u_numerical</span> <span class="o">=</span> <span class="p">[</span><span class="n">lax_wendroff</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span> <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">]</span>
+
+<span class="c1"># Προβολή των λύσεων</span>
+<span class="n">plot_solution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">u_numerical</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">,</span> <span class="n">C_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="fig-lw">
+<img alt="_images/LW.svg" src="_images/LW.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Αριθμητικές λύσεις της εξίσωσης μεταφοράς, μέσω της μεθόδου LW, για τέσσερις αύξοντες αριθμούς Courant.</span><a class="headerlink" href="#fig-lw" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="id4">
-<h2>Επέκταση στις δύο διαστάσεις<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<section id="leapfrog">
+<h2>Σχήμα Leapfrog<a class="headerlink" href="#leapfrog" title="Link to this heading">#</a></h2>
+<p>Στο αριθμητικό σχήμα Leapfrog, θεωρούνται κεντρικές διαφορές τόσο για τη χρονική όσο και για τη χωρική παράγωγο. Έτσι, η εξίσωση μεταφοράς γράφεται,</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{u_{i}^{n+1}-u_{i}^{n-1}}{2\Delta t}=-\dfrac{c}{2\Delta x}\left(u_{i+1}^{n}-u_{i-1}^{n}\right),
+\]</div>
+<p>η οποία μπορεί να εκφραστεί ρητά ως προς <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span>, ως,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}^{n+1}=u_{i}^{n-1}-C(u_{i+1}^{n}-u_{i-1}^{n}).
+\]</div>
+<p>Η μέθοδος αυτή απαιτεί ειδικό χειρισμό λόγω του όρου <span class="math notranslate nohighlight">\(u_{i}^{n-1}\)</span>. Ένα άλλο αριθμητικό σχήμα, όπως π.χ. το σχήμα Lax-Friedrichs, μπορεί να χρησιμοποιηθεί για την εκκίνηση αυτής της μεθόδου.</p>
 </section>
-<section id="id5">
-<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="crank-nicolson">
+<h2>Σχήμα Crank-Nicolson<a class="headerlink" href="#crank-nicolson" title="Link to this heading">#</a></h2>
+<p>Στην ενότητα αυτή θα συζητήσουμε το πεπλεγμένο (implicit) σχήμα των Crank-Nicolson (CN) <span id="id9">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>, <a class="reference internal" href="zreferences.html#id13" title="Clive A.J. Fletcher. Computational techniques for fluid dynamics. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.">Fletcher, 1991</a>]</span>. Για καλύτερη κατανόηση της δομής του αριθμητικού αυτού σχήματος, θα αναφερθούμε σε πρώτη φάση στο πεπλεγμένο σχήμα FTCS. Σε αντίθεση με το άμεσο σχήμα FTCS, <a class="reference internal" href="#equation-eq-k6-expftcs">(195)</a>, στο πεπλεγμένο σχήμα FTCS οι κεντρικές διαφορές στο δεξιό μέλος της <a class="reference internal" href="#equation-eq-k6-expftcs">(195)</a>, υπολογίζονται την <span class="math notranslate nohighlight">\(n+1-\)</span>οστή χρονική στιγμή. Συνεπώς το πεπλεγμένο σχήμα FTCS εκφράζεται ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-impftcs">
+<span class="eqno">(199)<a class="headerlink" href="#equation-eq-k6-impftcs" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}+\dfrac{C}{2}u_{i+1}^{n+1}-\dfrac{C}{2}u_{i-1}^{n+1}=u_{i}^{n} .
+\]</div>
+<p>Με τη σειρά της η <a class="reference internal" href="#equation-eq-k6-impftcs">(199)</a> μπορεί να γραφεί υπό μορφή πινάκων ως,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\renewcommand{\arraystretch}{1.8}
+\left[\begin{array}{cccccc}
+    1 &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
+    -\frac{C}{2} &amp; 1 &amp; \frac{C}{2} &amp; 0 &amp; \dots &amp; 0 \\
+    0 &amp; -\frac{C}{2} &amp; 1 &amp; \frac{C}{2} &amp; \dots &amp; 0 \\
+    0 &amp; 0 &amp; -\frac{C}{2} &amp; 1 &amp; \frac{C}{2} &amp; \dots \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; 1 \\
+\end{array}\right]
+\left[\begin{array}{c}
+    u_{0}^{n+1} \\
+    u_{1}^{n+1} \\
+    u_{2}^{n+1} \\
+    u_{3}^{n+1} \\
+    \vdots \\
+    u_{N-1}^{n+1}
+\end{array}\right]
+=
+\left[\begin{array}{c}
+    u_{0}^{n} \\
+    u_{1}^{n} \\
+    u_{2}^{n} \\
+    u_{3}^{n} \\
+    \vdots \\
+    u_{N-1}^{n}
+\end{array}\right]
+\end{split}\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(N\)</span> είναι ο αριθμός των χωρικών κόμβων του υπολογιστικού πλέγματος. Το παραπάνω έχει δηλαδή τη μορφή ενός γραμμικού συστήματος <span class="math notranslate nohighlight">\(Ax=B\)</span>. Λύνοντας ως προς το <span class="math notranslate nohighlight">\(x\)</span>, το οποίο αντιπροσωπεύει τη λύση στο χρονικό βήμα <span class="math notranslate nohighlight">\(n+1\)</span> ή, αντίστοιχα, στο χρόνο <span class="math notranslate nohighlight">\(t=(n+1)\Delta t\)</span>. Ακόμη, το <span class="math notranslate nohighlight">\(b\)</span> αντιπροσωπεύει την τρέχουσα λύση στο χρονικό βήμα <span class="math notranslate nohighlight">\(n\)</span>, ενώ ο <span class="math notranslate nohighlight">\(A\)</span> αποτελεί τον πίνακα των συντελεστών που παρουσιάζονται παραπάνω. Λόγω της μορφής του πίνακα <span class="math notranslate nohighlight">\(A\)</span>, ο οποίος ονομάζεται τριδιαγώνιος ή μπλοκ διαγώνιος, θα πρέπει να χρησιμοποιηθεί ένας κατάλληλος αλγόριθμος που αξιοποιεί τα πλεονεκτήματα αυτής της ειδικής μορφής του <span class="math notranslate nohighlight">\(A\)</span>. Ένας τέτοιος αλγόριθμος είναι ο αλγόριθμος του Thomas, ο οποίος οδηγεί ταχύτερα, και με λιγότερους υπολογισμούς, προς τη λύση. Αν είχαμε χρησιμοποιήσει έναν γενικό αλγόριθμο, όπως αυτόν της απαλοιφής Gauss, η υπολογιστική διαδικασία θα προχωρούσε πολύ πιο αργά, καθιστώντας μη πρακτική την εφαρμογή του πεπλεγμένου σχήματος.</p>
+<p>Συνοψίζοντας, έχουμε,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    \frac{u_{i}^{n+1} - u_{i}^{n}}{\Delta t} &amp;= -c \frac{u_{i+1}^{n} - u_{i-1}^{n}}{2 \Delta x} \, \text{(άμεσο FTCS)}, \\
+    \frac{u_{i}^{n+1} - u_{i}^{n}}{\Delta t} &amp;= -c \frac{u_{i+1}^{n+1} - u_{i-1}^{n+1}}{2 \Delta x} \, \text{(πεπλεγμένο FTCS)}.
+\end{aligned}
+\end{split}\]</div>
+<p>Λαμβάνοντας το μέσο όρο του άμεσου και του πεπλεγμένου σχήματος FTCS, προκύπτει το αριθμητικό σχήμα Crank-Nicolson, ως,</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{u_{i}^{n+1}-u_{i}^{n}}{\Delta t}=-\dfrac{c}{2}\dfrac{(u_{i+1}^{n}-u_{i-1}^{n})}{2\Delta x}-\dfrac{c}{2}\dfrac{(u_{i+1}^{n}-u_{i-1}^{n})}{2\Delta x}  ,
+\]</div>
+<p>το οποίο μπορεί να γραφεί ισοδύναμα ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-cn1">
+<span class="eqno">(200)<a class="headerlink" href="#equation-eq-k6-cn1" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}+\dfrac{C}{4}u_{i+1}^{n+1}-\dfrac{C}{4}u_{i-1}^{n+1}=u_{i}^{n}-\dfrac{C}{4}u_{i+1}^{n}+\dfrac{C}{4}u_{i-1}^{n}.
+\]</div>
+<p>Όπως και στο σχήμα Leapfrog, έτσι και εδώ, βολεύει να εκφράσουμε την <a class="reference internal" href="#equation-eq-k6-cn1">(200)</a> σε μορφή πινάκων, ως,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\renewcommand{\arraystretch}{1.8}
+\left[{\begin{matrix}1&amp;0&amp;0&amp;0&amp;\dots&amp;0&amp;0\\
+-\frac{C}{4}&amp;1&amp;\frac{C}{4}&amp;0&amp;\dots&amp;0&amp;0\\
+0&amp;-\frac{C}{4}&amp;1&amp;\frac{C}{4}&amp;\dots&amp;0&amp;0\\
+0&amp;0&amp;-\frac{C}{4}&amp;1&amp;\frac{C}{4}&amp;\dots&amp;0\\
+\vdots\\
+0&amp;0&amp;0&amp;0&amp;\dots&amp;0&amp;1\\
+\end{matrix}}\right]
+\left[{\begin{matrix}u_{0}^{n+1}\\
+u_{1}^{n+1}\\
+u_{2}^{n+1}\\
+u_{3}^{n+1}\\
+\vdots\\
+u_{N-1}^{n+1}
+\end{matrix}}\right]
+=\left[{\begin{matrix}u_{0}^{n}\\
+u_{1}^{n}-\frac{C}{4}u_{2}^{n}+\frac{C}{4}u_{0}^{n}\\
+u_{2}^{n}-\frac{C}{4}u_{3}^{n}+\frac{C}{4}u_{1}^{n}\\
+u_{3}^{n}-\frac{C}{4}u_{4}^{n}+\frac{C}{4}u_{2}^{n}\\
+\vdots\\
+u_{N-1}^{n}
+\end{matrix}}\right]
+\end{split}\]</div>
+<p>Ο αλγόριθμος Thomas χρησιμοποιείται για την επίλυση του παραπάνω συστήματος ως προς <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ορισμός της μεθόδου Crank-Nicolson</span>
+<span class="k">def</span> <span class="nf">crank_nicolson</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">))</span>
+    <span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span>
+    
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">C</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nx</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">C</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">C</span><span class="o">/</span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">u</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">u</span>
+
+<span class="c1"># Δημιουργία λίστας αριθμητικών λύσεων με τη μέθοδο Crank-Nicolson</span>
+<span class="n">u_numerical</span> <span class="o">=</span> <span class="p">[</span><span class="n">crank_nicolson</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span> <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">]</span>
+
+<span class="c1"># Προβολή των λύσεων</span>
+<span class="n">plot_solution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">u_numerical</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">,</span> <span class="n">C_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="fig-cn">
+<img alt="_images/CN.svg" src="_images/CN.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Αριθμητικές λύσεις της εξίσωσης μεταφοράς, μέσω της μεθόδου Crank-Nicolson, για τέσσερις αύξοντες αριθμούς Courant.</span><a class="headerlink" href="#fig-cn" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Παραθέτουμε επίσης κώδικα για τη σύγκριση ορισμένων εκ των προαναφερθέντων μεθόδων.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+<span class="n">u_numerical_upwind</span> <span class="o">=</span> <span class="p">[</span><span class="n">upwind</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span> <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">]</span>
+<span class="n">u_numerical_LW</span> <span class="o">=</span> <span class="p">[</span><span class="n">lax_wendroff</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span> <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">]</span>
+<span class="n">u_numerical_CN</span> <span class="o">=</span> <span class="p">[</span><span class="n">crank_nicolson</span><span class="p">(</span><span class="n">nt</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span> <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">]</span>
+<span class="n">u_analytic</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">C_values</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx</span> <span class="o">/</span> <span class="n">dt</span><span class="p">)</span> <span class="o">*</span> <span class="n">tend</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Προβολή των λύσεων για C=0.6</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Αρχική συνθήκη&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Αναλυτική λύση&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_numerical_upwind</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;upwind&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_numerical_LW</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;LW&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_numerical_CN</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Crank-Nicolson&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Γραμμική μεταφορά (C=0.6)&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Προβολή των λύσεων για C=0.8</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Αρχική συνθήκη&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_analytic</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Αναλυτική λύση&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_numerical_upwind</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;upwind&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_numerical_LW</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;LW&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_numerical_CN</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Crank-Nicolson&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Γραμμική μεταφορά (C=0.8)&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="fig-comb">
+<img alt="_images/comb.svg" src="_images/comb.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Αριθμητικές λύσεις μέσω των μεθόδων FTCS, LW και CΝ, για δύο αύξοντες αριθμούς Courant. Όπως είναι φανερό, οι αριθμητικές λύσεις με τις μέθοδους LW και CN συμπίπτουν με την αναλυτική λύση.</span><a class="headerlink" href="#fig-comb" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id10">
+<h2>Επέκταση στις δύο διαστάσεις<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Η εξίσωση μεταφοράς γενικεύεται με φυσικό τρόπο στις δύο χωρικές διαστάσεις ως,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{t}+c_{1}u_{x}+c_{2}u_{y}=0 .
+\]</div>
+<p>Βλέπουμε εύκολα ότι η γενική λύση εδώ δίνεται ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-2dtran">
+<span class="eqno">(201)<a class="headerlink" href="#equation-eq-k6-2dtran" title="Link to this equation">#</a></span>\[
+u(x,y)=f(\mathbf{x}-\mathbf{c}t) ,
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(\mathbf{x}:=(x,y)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{c}:=(c_{1},c_{2})\)</span> και <span class="math notranslate nohighlight">\(f\)</span> μια διαφορίσιμη συνάρτηση δύο μεταβλητών. Να σημειωθεί ότι μπορούμε να γενικεύσουμε και σε αυθαίρετο πλήθος χωρικών διαστάσεων, όπου εκεί η εξίσωση μεταφοράς θα δίνεται ως,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{t}+\mathbf{c}\cdot\nabla_{\mathbf{x}}u=0, \quad \nabla_{\mathbf{x}}:=\left(\dfrac{\partial}{\partial x_{1}},\dots,\dfrac{\partial}{\partial x_{n}}\right) ,
+\]</div>
+<p>με γενική λύση την <a class="reference internal" href="#equation-eq-k6-2dtran">(201)</a>, με τη διαφορά ότι εδώ <span class="math notranslate nohighlight">\(\mathbf{c},\mathbf{x}\in\mathbb{R}^{n}\)</span> και <span class="math notranslate nohighlight">\(f\)</span> διαφορίσιμη συνάρτηση <span class="math notranslate nohighlight">\(n\)</span> μεταβλητών.</p>
+<p>Οι αριθμητικές μέθοδοι γενικεύονται και αυτές με εξίσου φυσικό τρόπο. Θεωρούμε το πρόβλημα μεταφοράς, σε μια χρονική και δύο χωρικές διαστάσεις,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-lflow0">
+<span class="eqno">(202)<a class="headerlink" href="#equation-eq-k6-lflow0" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp; u_{t} + c_{1}u_{x} + c_{2}u_{y} = 0, \qquad (x,y,t) \in [a,b] \times [c,d] \times [0,T], \\
+&amp; u(x,y,0) = u_{0}(x,y)
+\end{aligned}
+\end{split}\]</div>
+<p>Διακριτοποιούμε μέσω ομοιόμορφου πλέγματος, διαμερίσεων <span class="math notranslate nohighlight">\(\Delta x\)</span>, <span class="math notranslate nohighlight">\(\Delta y\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span> για τους άξονες του χώρου και του χρόνου, αντίστοιχα. Θεωρούμε έπειτα ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-lflow1">
+<span class="eqno">(203)<a class="headerlink" href="#equation-eq-k6-lflow1" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+    u_{i,j}^{n} &amp;= u(x_{i},y_{j},t^{n}), \\
+    x_{i} = a + i\Delta x, \quad i &amp;= 0, \ldots, N_{x}, \quad N_{x} = \dfrac{b - a}{\Delta x}, \\
+    y_{j} = c + j\Delta y, \quad j &amp;= 0, \ldots, N_{y}, \quad N_{y} = \dfrac{d - c}{\Delta y}, \\
+    t^{n} = n\Delta t, \quad n &amp;= 0, \ldots, M, \quad M = \dfrac{T}{\Delta t}
+\end{aligned}
+\end{split}\]</div>
+<p>Ενδεικτικά, για το πεπλεγμένο σχήμα FTCS θα έχουμε,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-lf12d">
+<span class="eqno">(204)<a class="headerlink" href="#equation-eq-k6-lf12d" title="Link to this equation">#</a></span>\[
+\dfrac{u_{i,j}^{n+1}-u_{i,j}^{n}}{\Delta t}+c\dfrac{u_{i+1,j}^{n+1}-u_{i-1,j}^{n+1}}{2\Delta x}+c\dfrac{u_{i,j+1}^{n+1}-u_{i,j-1}^{n+1}}{2\Delta y}=0
+\]</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ορισμός των παραμέτρων</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Αριθμός σημείων στον άξονα x</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Αριθμός σημείων στον άξονα y</span>
+<span class="n">xmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8</span>  <span class="c1"># Ελάχιστη τιμή του x</span>
+<span class="n">xmax</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Μέγιστη τιμή του x</span>
+<span class="n">ymin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8</span>  <span class="c1"># Ελάχιστη τιμή του y</span>
+<span class="n">ymax</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Μέγιστη τιμή του y</span>
+<span class="n">nt</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Αριθμός χρονικών βημάτων</span>
+<span class="n">tstart</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Αρχική χρονική στιγμή</span>
+<span class="n">tend</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Τελική χρονική στιγμή</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">tend</span> <span class="o">-</span> <span class="n">tstart</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">nt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Μέγεθος χρονικού βήματος</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># Αριθμός Courant</span>
+
+<span class="c1"># Δημιουργία του πλέγματος</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">xmax</span> <span class="o">-</span> <span class="n">xmin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">ymax</span> <span class="o">-</span> <span class="n">ymin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">ny</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Αρχική συνθήκη, (*@καμπάνα Gauss@*)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nt</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nx</span><span class="p">))</span>
+<span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">X</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">Y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Επίλυση της εξίσωσης μεταφοράς με χρήση της πεπλεγμένης μεθόδου FTCS</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">u</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">C</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># Δημιουργία ενός νέου σχήματος</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Επανάληψη για τις 3 χρονικές στιγμές</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]):</span>
+    <span class="c1"># Δημιουργία νέου υποσχήματος</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Δημιουργία του πλέγματος για τις συντεταγμένες x, y και z</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">t</span> <span class="o">/</span> <span class="n">dt</span><span class="p">)]</span>
+
+    <span class="c1"># Προβολή της επιφάνειας</span>
+    <span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Ορισμός των ετικετών και του τίτλου</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;u&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;t = </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Αφαίρεση του φόντου</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">pane</span><span class="o">.</span><span class="n">fill</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">pane</span><span class="o">.</span><span class="n">fill</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">zaxis</span><span class="o">.</span><span class="n">pane</span><span class="o">.</span><span class="n">fill</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Εμφάνιση του γραφήματος</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="fig-tran2d">
+<img alt="_images/tran2d.svg" src="_images/tran2d.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Γραφική αναπαράσταση της λύσης της διδιάστατης εξίσωσης μεταφοράς με το πεπλεγμένο σχήμα FTCS, με αρχική συνθήκη <span class="math notranslate nohighlight">\(u_{0}(x,y)=e^{-(x^{2}+y^{2})}\)</span>. Παρατηρούμε ότι η λύση διαδίδεται στο χώρο και στο χρόνο διατηρώντας τη μορφή της (οδεύον κύμα).</span><a class="headerlink" href="#fig-tran2d" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id11">
+<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Στην παρούσα ενότητα ασχολούμαστε με εφαρμογές της εξίσωσης μεταφοράς και παραθέτουμε ενδεικτικές ασκήσεις προς επίλυση.</p>
+<section id="id12">
+<h3>Μη ομογενής περίπτωση<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Ας δούμε το Π.Α.Τ. της μη ομογενούς εξίσωσης μεταφοράς,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-tranweaknh">
+<span class="eqno">(205)<a class="headerlink" href="#equation-eq-k6-tranweaknh" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{t}+cu_{x}=f, \quad (x,t)\in\mathbb{R}\times(0,\infty),\\
+&amp;u(x,0)=u_{0}(x)
+\end{aligned}
+\end{split}\]</div>
+<p>όπου εδώ η <span class="math notranslate nohighlight">\(f=f(x,t)\)</span> είναι μια γνωστή και μη μηδενική συνάρτηση, η οποία συναντάται και ως συνάρτηση εξαναγκασμού. Εδώ, η λύση δίνεται ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-soltr">
+<span class="eqno">(206)<a class="headerlink" href="#equation-eq-k6-soltr" title="Link to this equation">#</a></span>\[
+u(x,t)=u_{0}(x-ct)+\int_{0}^{t}f(x-c(t-s),s)ds, \quad (x,t)\in\mathbb{R}\times[0,\infty).
+\]</div>
+<p>Ως άσκηση να δειχθεί αναλυτικά, μέσω της μεθόδου των χαρακτηριστικών σε αναλογία με την επίλυση του <a class="reference internal" href="#equation-eq-k6-tranweak">(191)</a>, ότι η λύση του Π.Α.Τ. <a class="reference internal" href="#equation-eq-k6-tranweaknh">(205)</a> δίνεται από την έκφραση <a class="reference internal" href="#equation-eq-k6-soltr">(206)</a>. Το αποτέλεσμα γενικεύεται με φυσικό τρόπο και για περισσότερες χωρικές διαστάσεις, αντικαθιστώντας τα <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(c\)</span> με <span class="math notranslate nohighlight">\(\mathbf{x},\mathbf{c}\in\mathbb{R}^{n}\)</span>.</p>
+</section>
+<section id="von-neumann">
+<h3>Ανάλυση ευστάθειας Von Neumann<a class="headerlink" href="#von-neumann" title="Link to this heading">#</a></h3>
+<p>Στην Αριθμητική Ανάλυση, η ανάλυση ευστάθειας Von Neumann χρησιμοποιείται για τον έλεγχο της ευστάθειας σχημάτων πεπερασμένων διαφορών, για γραμμικές Μ.Δ.Ε. Η ανάλυση βασίζεται στην ανάλυση Fourier του αριθμητικού σφάλματος και αναπτύχθηκε στο Εθνικό Εργαστήριο Los Alamos, αφού πρώτα περιγράφηκε εν συντομία σε ένα άρθρο των Crank και Nicolson το 1947. Η μέθοδος αυτή είναι ένα παράδειγμα άμεσης ολοκλήρωσης στο χρόνο. Αργότερα, η μέθοδος έλαβε μια πιο αυστηρή θεμελίωση από τον Von Neumann.</p>
+<p>Η ευστάθεια των αριθμητικών σχημάτων συνδέεται στενά με το αριθμητικό σφάλμα. Ένα σχήμα πεπερασμένων διαφορών είναι ευσταθές εάν τα σφάλματα που γίνονται σε ένα χρονικό βήμα του υπολογισμού δεν προκαλούν αύξηση των σφαλμάτων καθώς συνεχίζονται οι υπολογισμοί. Ένα ουδέτερα ευσταθές σχήμα είναι αυτό στο οποίο τα σφάλματα παραμένουν σταθερά. Εάν τα σφάλματα φθίνουν και τελικά αποσβέννυνται, το αριθμητικό σχήμα λέγεται ευσταθές. Αν, αντίθετα, τα σφάλματα αυξάνονται με το χρόνο, το αριθμητικό σχήμα λέγεται ασταθές. Η ευστάθεια των αριθμητικών σχημάτων μπορεί να διερευνηθεί μέσω της ανάλυσης ευστάθειας Von Neumann. Για χρονοεξαρτώμενα προβλήματα, η ευστάθεια μας εγγυάται ότι η αριθμητική μέθοδος παράγει μια φραγμένη λύση, όποτε η λύση της ακριβούς διαφορικής εξίσωσης είναι φραγμένη. Η ευστάθεια, γενικά, μπορεί να είναι δύσκολο να διερευνηθεί, ιδίως όταν η υπό εξέταση εξίσωση είναι μη γραμμική.</p>
+<p>Ας δούμε τώρα την εφαρμογή της ανάλυσης Von Neumann για το αριθμητικό σχήμα FTCS. Η μέθοδος Von Neumann, ξεκινά από τη θεώρηση της ακόλουθης δοκιμαστικής λύσης,</p>
+<div class="math notranslate nohighlight">
+\[
+c(x,t)=A(t)e^{j\kappa x}, \quad j^{2}=-1 ,
+\]</div>
+<p>με το <span class="math notranslate nohighlight">\(|A|\)</span> να εκφράζει το μέγιστο πλάτος του κύματος, ως συνάρτηση του χρόνου, ενώ <span class="math notranslate nohighlight">\(\kappa\)</span> είναι ο κυματικός αριθμός. Ως εκ τούτου, η λύση στο χρονικό βήμα <span class="math notranslate nohighlight">\(n\)</span> και στο σημείο <span class="math notranslate nohighlight">\(i\Delta x\)</span> γράφεται ως <span class="math notranslate nohighlight">\(A^{n}e^{j\kappa i\Delta x}\)</span>. Αντικαθιστώντας στο σχήμα FTCS, <a class="reference internal" href="#equation-eq-k6-expftcs">(195)</a>, παίρνουμε,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-vnan">
+<span class="eqno">(207)<a class="headerlink" href="#equation-eq-k6-vnan" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{align*}
+A^{n+1}e^{j\kappa i\Delta x}&amp;=A^{n}e^{j\kappa i\Delta x}-\dfrac{C}{2}\left(A^{n}e^{j\kappa(i+1)\Delta x}-A^{n}e^{j\kappa(i-1)\Delta x}\right)\\
+\Leftrightarrow\ \xi e^{j\kappa i\Delta x}&amp;=e^{j\kappa i\Delta x}-\dfrac{C}{2}\left(e^{j\kappa(i+1)\Delta x}-e^{j\kappa(i-1)\Delta x}\right), \quad \xi:=\dfrac{A^{n+1}}{A^{n}}\\
+\Leftrightarrow\ \xi &amp;=1-\dfrac{C}{2}\left(e^{j\kappa\Delta x}-e^{-j\kappa\Delta x}\right)\\
+&amp;=1-jC\sin{(\kappa\Delta x)} .
+\end{align*}
+\end{split}\]</div>
+<p>Συνεπώς, παίρνουμε ότι,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k6-vnan1">
+<span class="eqno">(208)<a class="headerlink" href="#equation-eq-k6-vnan1" title="Link to this equation">#</a></span>\[
+|\xi|=\sqrt{1+(C\sin{(\kappa\Delta x)})^{2}} \geq 1, \ \forall \  C:=c\dfrac{\Delta t}{\Delta x}
+\]</div>
+<p>Αυτό μας λέει ότι,</p>
+<div class="math notranslate nohighlight">
+\[
+|A^{n+1}|\geq|A^{n}|.
+\]</div>
+<p>δηλαδή ότι το πλάτος ταλάντωσης αυξάνεται όσο προχωράμε στο χρόνο, συνεπώς το σχήμα FTCS είναι ασταθές. Πιο συγκεκριμένα, είναι άνευ συνθηκών ασταθές. Για μια σταθερή ταχύτητα διάδοσης~<span class="math notranslate nohighlight">\(c\)</span>, η αστάθεια μπορεί να καθυστερήσει, κάνοντας μικρότερο βήμα <span class="math notranslate nohighlight">\(\Delta x\)</span> στο χώρο, αλλά τελικά δεν θα αποτραπεί. Τελικά η αριθμητική λύση του σχήματος FTCS είναι μη φραγμένη. Μέσω μιας αντίστοιχης διαδικασίας, αντικαθιστώντας κάθε φορά την <span class="math notranslate nohighlight">\(A^{n}e^{j\kappa i\Delta x}\)</span> στα εκάστοτε αριθμητικά σχήματα και υπολογίζοντας το <span class="math notranslate nohighlight">\(|\xi|\)</span>, καταλήγουμε στα ακόλουθα συμπεράσματα.</p>
+<ul class="simple">
+<li><p>Τα σχήματα upwind και LW είναι ευσταθή για <span class="math notranslate nohighlight">\(C\leq1\)</span>. Ισοδύναμα αν <span class="math notranslate nohighlight">\(\Delta t_{\max}\leq\dfrac{\Delta x}{c}\)</span>.</p></li>
+<li><p>Τα έμμεσα σχήματα FTCS και CN είναι ευσταθή για κάθε <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p></li>
+</ul>
+<p>Ως άσκηση να εξαχθούνε αναλυτικά, μέσω της ανάλυσης Von Neumann, τα συμπεράσματα ευστάθειας για τα σχήματα upwind και LW <span id="id13">[<a class="reference internal" href="zreferences.html#id49" title="Anastasios Raptis, Konstantina Kyriakoudi, and Michail A. Xenos. Finite element analysis in fluid mechanics. In Themistocles M. Rassias and Panos M. Pardalos, editors, Mathematical analysis and applications, Springer Optimization and Its Applications, pages 481-510. Springer, 2019.">Raptis <em>et al.</em>, 2019</a>]</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Ασκήσεις για λύση</p>
+<ol class="arabic">
+<li><p>(α) Επιλύστε αριθμητικά την εξίσωση γραμμικής μεταφοράς:</p>
+<div class="math notranslate nohighlight">
+\[
+    u_t + c u_x = 0,\ \ u = u(x,t),\quad c: \text{σταθ.}
+    \]</div>
+<p>χρησιμοποιώντας τα σχήματα upwind, Lax-Wendroff και Leapfrog. Διακριτοποιήστε τη χωρική παράγωγο χρησιμοποιώντας κεντρικές διαφορές για τα σχήματα Lax-Wendroff και Leapfrog, και ανάντη διαφορές για το σχήμα upwind.<br />
+(β) Μελετήστε διαφορετικές συνοριακές συνθήκες, όπως περιοδικές, Dirichlet και Von Neumann.</p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple" start="2">
+<li><p>(α) Να αναλυθεί η ευστάθεια κάθε αριθμητικού σχήματος που εφαρμόστηκε στην παραπάνω άσκηση.<br />
+(β) Διερευνήστε τις συνθήκες ευστάθειας για κάθε σχήμα. Προσδιορίστε τη συνθήκη Courant-Friedrichs-Lewy (CFL) για την ευστάθεια και συγκρίνετε τις περιοχές ευστάθειας των διαφόρων αριθμητικών σχημάτων (βλέπε επίσης Κεφάλαιο 8).</p></li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic" start="3">
+<li><p>(α) Θεωρήστε μια ασυνεχή αρχική συνθήκη, όπως την παρακάτω βηματική συνάρτηση:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    u(x,0)=
+    \begin{cases}
+    1,\quad x&lt;0,\\
+    0,\quad x\geq0
+    \end{cases}
+    \end{split}\]</div>
+<p>Προσομοιώστε τη μεταφορά αυτής της αρχικής συνθήκης χρησιμοποιώντας κάθε αριθμητικό σχήμα του κεφαλαίου.<br />
+(β) Παρατηρήστε το σχηματισμό αριθμητικών ταλαντώσεων κοντά στην ασυνέχεια και συγκρίνετε τον τρόπο με τον οποίο κάθε σχήμα αντιμετωπίζει το σχηματισμό και τη διάδοση του κύματος.</p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple" start="4">
+<li><p>(α) Να αναλυθεί η σύγκλιση, σχετικά με την εξίσωση γραμμικής μεταφοράς, σε κάθε αριθμητικό σχήμα του κεφαλαίου μέσω της σύγκρισης των αριθμητικών λύσεων με μια αναλυτική λύση.<br />
+(β) Να υπολογιστούν τα σφάλματα μέσω των νορμών <span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span> και <span class="math notranslate nohighlight">\(L_\infty\)</span> ως συνάρτηση των παραμέτρων χωρικής και χρονικής διακριτοποίησης (π.χ. μέγεθος πλέγματος και μέγεθος χρονικού βήματος).<br />
+(γ) Να διερευνηθεί η τάξη ακρίβειας κάθε σχήματος.</p></li>
+</ol>
+</div>
+</section>
 </section>
 </section>
 
@@ -503,7 +1131,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -520,7 +1148,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Μόνιμη Μεταφορά &amp; Διάχυση</p>
+        <p class="prev-next-title">Η Εξίσωση Μεταφοράς - Διάχυσης</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -531,7 +1159,9 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -539,14 +1169,19 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Εξίσωση μεταφοράς σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Εμπρόσθιες διαφορές στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfrog">Σχήμα Leapfrog στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upwind">Σχήμα ανάντη διαφορών (upwind)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crank-nicolson">Σχήμα των Crank-Nicolson στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Εξίσωση μεταφοράς σε μία διάσταση</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ftcs">Σχήμα FTCS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Σχήμα ανάντη διαφορών</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lax-wendroff">Η μέθοδος των Lax-Wendroff</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Επέκταση στις δύο διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εφαρμογές &amp; ασκήσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leapfrog">Σχήμα Leapfrog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crank-nicolson">Σχήμα Crank-Nicolson</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Επέκταση στις δύο διαστάσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Εφαρμογές &amp; ασκήσεις</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Μη ομογενής περίπτωση</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#von-neumann">Ανάλυση ευστάθειας Von Neumann</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -595,8 +1230,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

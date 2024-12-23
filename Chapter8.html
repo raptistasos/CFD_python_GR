@@ -1,61 +1,61 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Μη-μόνιμη Μεταφορά &amp; Διάχυση &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV) &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=982b99e0" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,20 +92,21 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter8';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)" href="Chapter9.html" />
-    <link rel="prev" title="Μόνιμη Μεταφορά &amp; Διάχυση" href="Chapter7.html" />
+    <link rel="next" title="Οι Εξισώσεις των Navier και Stokes" href="Chapter9.html" />
+    <link rel="prev" title="Η Εξίσωση Μεταφοράς - Διάχυσης" href="Chapter7.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -113,32 +114,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -146,7 +131,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -154,16 +138,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -178,6 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -191,11 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -211,11 +213,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Chapter3.html">Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter4.html">Η εξίσωση Διάχυσης</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter5.html">Οι εξισώσεις Laplace και Poisson</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter6.html">Η εξίσωση Μεταφοράς</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter7.html">Μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Μη-μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter10.html">Οι εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter6.html">Η Εξίσωση Μεταφοράς</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter7.html">Η Εξίσωση Μεταφοράς - Διάχυσης</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Οι Εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Βιβλιογραφία</a></li>
 </ul>
 
     </div>
@@ -231,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -240,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -272,14 +274,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/raptistasos/CFD_python_GR/master?urlpath=tree/Chapter8.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -387,27 +389,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -418,7 +412,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Μη-μόνιμη Μεταφορά & Διάχυση</h1>
+    <h1>Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -428,11 +422,42 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Εξίσωση μη μόνιμη μεταφοράς &amp; διάχυσης σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Εμπρόσθιες διαφορές στο χρόνο &amp; κεντρικές διαφορές στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upwind">Εμπρόσθιες διαφορές στο χρόνο &amp; upwind στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Επέκταση στις 2 διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εφαρμογές &amp; ασκήσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#burgers">Εξίσωση του Burgers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#burgers-navier-stokes">Εξαγωγή της εξίσωση Burgers από τις εξισώσεις Navier-Stokes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Αναλυτικές λύσεις - κρουστικά μέτωπα</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Αναλυτικές λύσεις ομοιότητας</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ανιξωδική εξίσωση Burgers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#korteweg-de-vries">Εξίσωση των Korteweg-de Vries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Διατηρητικές μορφές</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Αναλυτικές λύσεις - Σολιτόνια</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Αναλυτικές λύσεις ομοιότητας</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lax-friedrichs">Το σχήμα των Lax-Friedrichs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Εφαρμογή στο πρόβλημα γραμμικής μεταφοράς</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Το γενικό, μη γραμμικό, υπερβολικό πρόβλημα</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lax-wendroff">Το σχήμα των Lax-Wendroff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maccormack">Το σχήμα του MacCormack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godunov">Προσέγγιση του Godunov</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Αριθμητική επίλυση της ιξωδικής Burgers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Φασματική μέθοδος</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kdv">Φασματικές λύσεις της KdV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Φασματικές λύσεις της Burgers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">Εφαρμογές και ασκήσεις</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Η γραμμική εξίσωση KdV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">Η τροποποιημένη εξίσωση KdV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cole-hopf">Ο μετασχηματισμός των Cole-Hopf</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Η εξίσωση ροής κυκλοφορίας</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t">Υπάρχει μέλλον μετά το χρόνο θραύσης <span class="math notranslate nohighlight">\(t^{*}\)</span>;</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -442,25 +467,1011 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Μη-μόνιμη Μεταφορά &amp; Διάχυση<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p><strong>Περίληψη</strong>. Σε αυτό το κεφάλαιο εισάγεται η μη-μόνιμη (χρονοεξαρτώμενη) εξίσωση μεταφοράς και διάχυσης σε μια χωρική διάσταση (εξίσωση του Burger – περισσότερες λεπτομέρειες σχετικά με την εξίσωση αυτή παρουσιάζονται στο επόμενο κεφάλαιο). Διακριτοποιείται με την μέθοδο των ΠΔ και συγκεκριμένα με εμπρόσθιες διαφορές στο χρόνο και κεντρικές διαφορές στο χώρο (FTCS). Ακολουθεί η μέθοδος των εμπρόσθιων διαφορών στο χρόνο και ανάντη διαφορών (upwind) στο χώρο. Ακολουθεί η επέκταση της μεθοδολογίας στις δύο διαστάσεις. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
-<section id="id2">
-<h2>Εξίσωση μη μόνιμη μεταφοράς &amp; διάχυσης σε μια διάσταση<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="burgers-korteweg-de-vries-kdv">
+<h1>Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)<a class="headerlink" href="#burgers-korteweg-de-vries-kdv" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>Περίληψη<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Σε αυτό το κεφάλαιο εισάγονται η εξίσωση του Burgers (έχει παρουσιαστεί και στο προηγούμενο κεφάλαιο - εδώ παρουσιάζεται σε δύο μορφές, ιξωδική και ανιξωδική) και η εξίσωση των Korteweg-de Vries (KdV). Αυτές αποτελούν μη γραμμικές Μ.Δ.Ε. που περιγράφουν φυσικά φαινόμενα: κρουστικά κύματα η πρώτη και μοναχικά (σολιτονικά) κύματα η δεύτερη. Επιλύονται αριθμητικά με τη βοήθεια αριθμητικών μεθόδων χαμηλής τάξης ακρίβειας όπως είναι οι μέθοδοι των Lax-Friedrichs, των Lax-Wendroff, το αριθμητικό σχήμα του MacCormack και την προσέγγιση του Godunov. Εισάγονται οι φασματικές μέθοδοι που αποτελούν μια αριθμητική μέθοδο υψηλής τάξης ακρίβειας και ο ταχύς μετασχηματισμός Fourier (Fast Fourier Transform, FFT). Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσής τους.</p>
+<p><strong>Προαπαιτούμενη γνώση</strong>: Βασικές γνώσεις Συνήθων/Μερικών Διαφορικών Εξισώσεων, Αριθμητικής Ανάλυσης και Ρευστομηχανικής.</p>
 </section>
-<section id="id3">
-<h2>Εμπρόσθιες διαφορές στο χρόνο &amp; κεντρικές διαφορές στο χώρο<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="upwind">
-<h2>Εμπρόσθιες διαφορές στο χρόνο &amp; upwind στο χώρο<a class="headerlink" href="#upwind" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="id4">
-<h2>Επέκταση στις 2 διαστάσεις<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<section id="burgers">
+<h2>Εξίσωση του Burgers<a class="headerlink" href="#burgers" title="Link to this heading">#</a></h2>
+<p>Τα φαινόμενα της μη γραμμικής μεταφοράς και διάχυσης συνδυάζονται μέσω της ιξωδικής εξίσωσης Burgers <span id="id2">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb0">
+<span class="eqno">(217)<a class="headerlink" href="#equation-eq-k8-viscb0" title="Link to this equation">#</a></span>\[
+u_{t}+uu_{x}-\nu u_{xx}=0, \quad u=u(x,t), \quad (x,t)\in\mathbb{R}\times(0,\infty), \quad \nu&gt;0.
+\]</div>
+<p>Η εξίσωση έχει αρκετές εφαρμογές και συναντάται συχνά στη Ρευστοδυναμική <span id="id3">[<a class="reference internal" href="zreferences.html#id58" title="Klaus Gersten. Hermann schlichting and the boundary-layer theory. In Hermann Schlichting–100 Years, pages 3–17. Springer, 2009.">Gersten, 2009</a>]</span>. Πιο συγκεκριμένα, η εξίσωση <a class="reference internal" href="#equation-eq-k8-viscb0">(217)</a> μοντελοποιεί μαθηματικά μια μονοδιάστατη ιξωδική ροή ρευστού. Έτσι, η λύση αντιστοιχεί στην ταχύτητα του ρευστού, <span class="math notranslate nohighlight">\(u\)</span>, το οποίο θεωρούμε ότι διασχίζει έναν ιδανικό λεπτό σωλήνα, στην πάροδο του χρόνου <span class="math notranslate nohighlight">\(t\)</span>. Η σταθερά <span class="math notranslate nohighlight">\(\nu\)</span> εκφράζει το κινηματικό ιξώδες του ρευστού, δηλαδή το λόγο του δυναμικού ιξώδους, <span class="math notranslate nohighlight">\(\mu\)</span>, προς την πυκνότητα του ρευστού, <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
+<section id="burgers-navier-stokes">
+<h3>Εξαγωγή της εξίσωση Burgers από τις εξισώσεις Navier-Stokes<a class="headerlink" href="#burgers-navier-stokes" title="Link to this heading">#</a></h3>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq-k8-viscb0">(217)</a> αποτελεί ένα απλουστευμένο μαθηματικό μοντέλο των εξισώσεων Navier-Stokes. Για ένα νευτώνειο, ασυμπίεστο ρευστό, οι εξισώσεις Navier-Stokes, σε διανυσματική μορφή, είναι οι <span id="id4">[<a class="reference internal" href="zreferences.html#id58" title="Klaus Gersten. Hermann schlichting and the boundary-layer theory. In Hermann Schlichting–100 Years, pages 3–17. Springer, 2009.">Gersten, 2009</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-nsb">
+<span class="eqno">(218)<a class="headerlink" href="#equation-eq-k8-nsb" title="Link to this equation">#</a></span>\[
+\rho\left(\dfrac{\partial u}{\partial t}+u\cdot\nabla u\right)=-\nabla p+\mu\nabla^{2}u+F.
+\]</div>
+<p>Εδώ, <span class="math notranslate nohighlight">\(\rho\)</span> είναι η πυκνότητα του ρευστού, <span class="math notranslate nohighlight">\(u\)</span> είναι το πεδίο ταχύτητας, <span class="math notranslate nohighlight">\(p\)</span> είναι η πίεση του ρευστού, <span class="math notranslate nohighlight">\(\mu\)</span> είναι το δυναμικό ιξώδες και <span class="math notranslate nohighlight">\(F\)</span> είναι ένα εξωτερικό πεδίο δυνάμεων. Θεωρώντας ότι η μεταβολή της πίεσης κατά τη ροή είναι αμελητέα, δηλαδή ισχύει ότι <span class="math notranslate nohighlight">\(\nabla p=0\)</span>, γράφουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-nsb1">
+<span class="eqno">(219)<a class="headerlink" href="#equation-eq-k8-nsb1" title="Link to this equation">#</a></span>\[
+\rho\left(\dfrac{\partial u}{\partial t}+u\cdot\nabla u\right)=\mu\nabla^{2}u+F.
+\]</div>
+<p>Θεωρούμε επιπλέον ότι η επίδραση του εξωτερικού πεδίου δυνάμεων είναι αμελητέα, δηλαδή <span class="math notranslate nohighlight">\(F=0\)</span>, καθώς και ότι λόγω ασυμπιεστότητας έχουμε σταθερή πυκνότητα. Τότε, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-nsb3">
+<span class="eqno">(220)<a class="headerlink" href="#equation-eq-k8-nsb3" title="Link to this equation">#</a></span>\[
+\left(\dfrac{\partial u}{\partial t}+u\cdot\nabla u\right)=\nu\nabla^{2}u.
+\]</div>
+<p>Στην περίπτωση μονοδιάστατης ροής, η εξίσωση <a class="reference internal" href="#equation-eq-k8-nsb3">(220)</a> γίνεται:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-nsb4">
+<span class="eqno">(221)<a class="headerlink" href="#equation-eq-k8-nsb4" title="Link to this equation">#</a></span>\[
+\dfrac{\partial u}{\partial t}+u\dfrac{\partial u}{\partial x}=\nu\dfrac{\partial^{2} u}{\partial x^{2}},
+\]</div>
+<p>η οποία αποτελεί τη μονοδιάστατη εξίσωση Burgers, που ήδη συναντήσαμε.</p>
 </section>
 <section id="id5">
-<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<h3>Αναλυτικές λύσεις - κρουστικά μέτωπα<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Ας θεωρήσουμε το Π.Σ.Τ. της εξίσωσης Burgers:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb1">
+<span class="eqno">(222)<a class="headerlink" href="#equation-eq-k8-viscb1" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{gathered}
+u_{t}+uu_{x}-\nu u_{xx}=0, \quad u=u(x,t), \quad \nu&gt;0,\\
+\lim_{x\rightarrow -\infty} u(x,t) = u_{1}, \quad \lim_{x\rightarrow \infty} u(x,t) = u_{2}, \quad u_{1} &gt; u_{2} \, \text{δύο σταθερές τιμές},
+\end{gathered}
+\end{split}\]</div>
+<p>και ας εφαρμόσουμε το μετασχηματισμό οδεύοντος κύματος:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-twkdv">
+<span class="eqno">(223)<a class="headerlink" href="#equation-eq-k8-twkdv" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{gathered}
+u(x,t)=u(\zeta),\\
+\zeta=x-\lambda t, \quad \lambda\neq0.
+\end{gathered}
+\end{split}\]</div>
+<p>Αντικαθιστώντας στην <a class="reference internal" href="#equation-eq-k8-viscb1">(222)</a>, λαμβάνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb2">
+<span class="eqno">(224)<a class="headerlink" href="#equation-eq-k8-viscb2" title="Link to this equation">#</a></span>\[
+-\lambda u'(\zeta)+u(\zeta) u'(\zeta)-\nu u''(\zeta)=0, \quad u=u(\zeta).
+\]</div>
+<p>Ολοκληρώνοντας λοιπόν, έχουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb3">
+<span class="eqno">(225)<a class="headerlink" href="#equation-eq-k8-viscb3" title="Link to this equation">#</a></span>\[
+-\lambda u + \dfrac{1}{2}u^2-\nu u'=C
+\Leftrightarrow u'=\dfrac{1}{2\nu}\left(u^2-2\lambda u-2C\right),
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(C\)</span> η σταθερά ολοκλήρωσης. Προφανώς, η εξίσωση <a class="reference internal" href="#equation-eq-k8-viscb3">(225)</a> δηλώνει ότι οι <span class="math notranslate nohighlight">\(u_{1}\)</span> και <span class="math notranslate nohighlight">\(u_{2}\)</span> αποτελούν λύσεις της παραπάνω δευτεροβάθμιας εξίσωσης. Έτσι, από τους τύπους Vieta, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb4">
+<span class="eqno">(226)<a class="headerlink" href="#equation-eq-k8-viscb4" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+\lambda &amp;=\dfrac{u_{1}+u_{2}}{2},\\
+C &amp;=-\dfrac{u_{1}u_{2}}{2}.
+\end{aligned}
+\end{split}\]</div>
+<p>Σε αυτό το στάδιο, η εξίσωση <a class="reference internal" href="#equation-eq-k8-viscb3">(225)</a> μπορεί, ισοδύναμα, να γραφεί ως:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb5">
+<span class="eqno">(227)<a class="headerlink" href="#equation-eq-k8-viscb5" title="Link to this equation">#</a></span>\[
+u'=\dfrac{1}{2\nu}(u-u_{1})(u-u_{2}).
+\]</div>
+<p>Η τελευταία αποτελεί μια πρώτης τάξης εξίσωση χωριζομένων μεταβλητών ως προς τη συνάρτηση <span class="math notranslate nohighlight">\(u\)</span>. Πλέον, ολοκληρώνοντας την εξίσωση <a class="reference internal" href="#equation-eq-k8-viscb5">(227)</a> και θεωρώντας μηδενική σταθερά ολοκλήρωσης, οδηγούμαστε στην:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb6">
+<span class="eqno">(228)<a class="headerlink" href="#equation-eq-k8-viscb6" title="Link to this equation">#</a></span>\[
+u(\zeta)=\dfrac{u_{1}+u_{2}\text{$e$}^{\frac{u_{1}-u_{2}}{2\nu}\zeta}}{1+\text{$e$}^{\frac{u_{1}-u_{2}}{2\nu}\zeta}}.
+\]</div>
+<p>Μια ισοδύναμη έκφραση για την <span class="math notranslate nohighlight">\(u\)</span>, μέσω χρήσης τριγωνομετρικών τύπων, είναι η:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb7">
+<span class="eqno">(229)<a class="headerlink" href="#equation-eq-k8-viscb7" title="Link to this equation">#</a></span>\[
+\dfrac{(u_{1}+u_{2})}{2}-\dfrac{(u_{1}-u_{2})}{2}\tanh\left({\dfrac{(u_{1}-u_{2})}{4\nu}\zeta}\right).
+\]</div>
+<p>Για <span class="math notranslate nohighlight">\(\zeta=0\)</span>, αξίζει να σημειωθεί ότι:</p>
+<div class="math notranslate nohighlight">
+\[
+u=\dfrac{u_{1}+u_{2}}{2}.
+\]</div>
+<p>Μια αναπαράσταση της λύσης της εξίσωσης Burgers για <span class="math notranslate nohighlight">\(\nu=0.5\)</span>, <span class="math notranslate nohighlight">\(u_{1}=1+\sqrt{2}\)</span> και <span class="math notranslate nohighlight">\(u_{2}=1-\sqrt{2}\)</span>, με <span class="math notranslate nohighlight">\((x,t)\in[-20,20]\times[0,3]\)</span>, παρουσιάζεται στο Σχήμα <a class="reference internal" href="#fig-burgers1"><span class="std std-numref">Fig. 40</span></a>.</p>
+<figure class="align-default" id="fig-burgers1">
+<img alt="_images/BurgAnal.png" src="_images/BurgAnal.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Οδεύον κύμα της Burgers, για <span class="math notranslate nohighlight">\(\nu=0.5\)</span>, <span class="math notranslate nohighlight">\(u_{1}=1+\sqrt{2}\)</span> και <span class="math notranslate nohighlight">\(u_{2}=1-\sqrt{2}\)</span>, με <span class="math notranslate nohighlight">\((x,t)\in[-20,20]\times[0,3]\)</span>.</span><a class="headerlink" href="#fig-burgers1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Η παρουσία διάχυσης λόγω του ιξώδους <span class="math notranslate nohighlight">\(\nu\)</span> χρίζει υψίστης προσοχής, μιας και αποτρέπει κάθε ενδεχόμενο παραμόρφωσης του κύματος. Αντιθέτως, όταν έχουμε αμελητέο, σχεδόν μηδενικό ιξώδες (<span class="math notranslate nohighlight">\(\nu\rightarrow0^{+}\)</span>), η λύση γίνεται ασυνεχής, με:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-viscb9">
+<span class="eqno">(230)<a class="headerlink" href="#equation-eq-k8-viscb9" title="Link to this equation">#</a></span>\[\begin{split}
+\underset{\nu\rightarrow0^{+}}{\lim}u(x,t)=
+\begin{cases}
+u_{1}, \quad x&lt;\dfrac{(u_{1}+u_{2})}{2}t,\\\\
+u_{2}, \quad x&gt;\dfrac{(u_{1}+u_{2})}{2}t
+\end{cases}
+\end{split}\]</div>
+<p>Σε αυτή την παρατήρηση-κλειδί βασίζεται και η μέθοδος επίλυσης φθίνοντος ιξώδους (vanishing viscosity method) <span id="id6">[<a class="reference internal" href="zreferences.html#id59" title="Lawrence C. Evans. Partial differential equations. Volume 19. American Mathematical Society, 2010.">Evans, 2010</a>]</span>. Η ανάλυσή μας δείχνει ότι η μη γραμμική μεταφορά και η διάχυση παρουσιάζουν αντίθετα αποτελέσματα, η μία από την άλλη.</p>
+</section>
+<section id="id7">
+<h3>Αναλυτικές λύσεις ομοιότητας<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Θεωρούμε και πάλι τη σχέση <a class="reference internal" href="#equation-eq-k8-viscb0">(217)</a>, όπου ο στόχος τώρα είναι η μελέτη λύσεων ομοιότητας. Τέτοιου είδους λύσεις παρουσιάζουν αυτο-ομοιότητα της κυματομορφής, υπό την προϋπόθεση κατάλληλης κανονικοποίησης των μεταβλητών. Λύσεις ομοιότητας αναζητώνται όταν στο υπό μελέτη πρόβλημα απουσιάζει είτε ένα χαρακτηριστικό μήκος ή μια χρονική κλίμακα. Προβλήματα με λύσεις ομοιότητας συναντώνται συχνά στη Ρευστομηχανική. Με χρήση του μετασχηματισμού ομοιότητας:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-simsolskdv">
+<span class="eqno">(231)<a class="headerlink" href="#equation-eq-k8-simsolskdv" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+u(x,t) &amp;=t^{m}f(\eta),\\
+\eta &amp;=xt^{n},
+\end{aligned}
+\end{split}\]</div>
+<p>παρατηρούμε μετά από αντικατάσταση ότι, για <span class="math notranslate nohighlight">\(m=n=-\dfrac{1}{2}\)</span>, η <a class="reference internal" href="#equation-eq-k8-viscb0">(217)</a> ανάγεται στη Σ.Δ.Ε.:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sburg">
+<span class="eqno">(232)<a class="headerlink" href="#equation-eq-k8-sburg" title="Link to this equation">#</a></span>\[
+\nu f''(\eta)+\dfrac{1}{2}\left(f(\eta)+\eta f'(\eta)\right)-f(\eta)f'(\eta)=0.
+\]</div>
+<p>Ολοκληρώνοντας, σεβόμενοι μηδενικές συνοριακές συνθήκες για κάθε παράγωγο της <span class="math notranslate nohighlight">\(f\)</span>, λαμβάνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sburg1">
+<span class="eqno">(233)<a class="headerlink" href="#equation-eq-k8-sburg1" title="Link to this equation">#</a></span>\[
+f'(\eta)=-\dfrac{\eta}{2\nu}f(\eta)+\dfrac{1}{2\nu}f^{2}(\eta).
+\]</div>
+<p>Παρατηρούμε ότι η εξίσωση <a class="reference internal" href="#equation-eq-k8-sburg1">(233)</a> είναι μια εξίσωση Bernoulli πρώτης τάξης, με τη γενική της λύση να δίνεται ως:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sburg5">
+<span class="eqno">(234)<a class="headerlink" href="#equation-eq-k8-sburg5" title="Link to this equation">#</a></span>\[
+f(\eta)=\dfrac{\text{$e$}^{-\frac{\eta^{2}}{4\nu}}}{\left(C-\frac{\sqrt{\pi}}{2\sqrt{\nu}}\operatorname{erf}\left(\frac{\eta}{2\sqrt{\nu}}\right)\right)}.
+\]</div>
+<figure class="align-default" id="fig-burgers2">
+<img alt="_images/BurgSim.png" src="_images/BurgSim.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Λύση ομοιότητας της ιξωδικής εξίσωσης Burgers, για <span class="math notranslate nohighlight">\(\nu=0.8\)</span> και <span class="math notranslate nohighlight">\(C=1\)</span>, με <span class="math notranslate nohighlight">\((x,t)\in[-10,10]\times[0.1,3]\)</span>.</span><a class="headerlink" href="#fig-burgers2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id8">
+<h3>Ανιξωδική εξίσωση Burgers<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Στην περίπτωση ροής (σχεδόν) ιδανικών ρευστών, η εξίσωση <a class="reference internal" href="#equation-eq-k8-viscb0">(217)</a> ανάγεται στην ανιξωδική εξίσωση Burgers <span id="id9">[<a class="reference internal" href="zreferences.html#id59" title="Lawrence C. Evans. Partial differential equations. Volume 19. American Mathematical Society, 2010.">Evans, 2010</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brg0">
+<span class="eqno">(235)<a class="headerlink" href="#equation-eq-k8-brg0" title="Link to this equation">#</a></span>\[
+u_{t}+uu_{x}=0, \quad u=u(x,t)\in\mathbb{R}, \quad (x,t)\in\mathbb{R}\times(0,\infty)
+\]</div>
+<p>Θεωρούμε ότι η λύση στην αρχή του χρόνου δίνεται μέσω της <span class="math notranslate nohighlight">\(u(x,0):=u_{0}(x)\)</span>. Θα αναζητήσουμε αναλυτική λύση μέσω της μεθόδου των χαρακτηριστικών <span id="id10">[<a class="reference internal" href="zreferences.html#id59" title="Lawrence C. Evans. Partial differential equations. Volume 19. American Mathematical Society, 2010.">Evans, 2010</a>]</span>, την οποία θα αναπτύξουμε για το γενικότερο Π.Α.Τ.:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-geneq">
+<span class="eqno">(236)<a class="headerlink" href="#equation-eq-k8-geneq" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{t}+\left(F(u)\right)_{x}=0,\\
+&amp;u(x,0):=u_{0}(x), \quad x\in\mathbb{R}.
+\end{aligned}
+\end{split}\]</div>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq-k8-brg0">(235)</a> είναι ειδική περίπτωση της εξίσωσης <a class="reference internal" href="#equation-eq-k8-geneq">(236)</a> για <span class="math notranslate nohighlight">\(F(u)=\frac{u^{2}}{2}\)</span>. Είναι πολύ εύκολο να δούμε ότι οι κλασικές λύσεις της εξίσωσης <a class="reference internal" href="#equation-eq-k8-geneq">(236)</a> είναι σταθερές κατά μήκος των χαρακτηριστικών, οι οποίες είναι οι καμπύλες <span class="math notranslate nohighlight">\((x(t),t)\)</span> που ορίζονται από:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-chargen">
+<span class="eqno">(237)<a class="headerlink" href="#equation-eq-k8-chargen" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;\dfrac{dx}{dt}=F'(u(x(t),t)), \quad t\geq0,\\
+&amp;x(0)=x_{0}.
+\end{aligned}
+\end{split}\]</div>
+<p>Για να το δούμε αυτό, διαφορίζουμε τη <span class="math notranslate nohighlight">\(u(x,t)\)</span> κατά μήκος μιας από αυτές τις καμπύλες, όπου με αυτόν τον τρόπο, βρίσκουμε το ρυθμό μεταβολής της <span class="math notranslate nohighlight">\(u\)</span> κατά μήκος των χαρακτηριστικών, διαπιστώνοντας ότι:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dfrac{d}{dt}u(x(t),t)&amp;=\dfrac{\partial}{\partial t}u(x(t),t)+x'(t)\dfrac{\partial}{\partial x}u(x(t),t)\\
+&amp;=u_{t}+F'(u)u_{x}\\
+&amp;=u_{t}+\left(F(u)\right)_{x}\\
+&amp;=0.
+\end{aligned}
+\end{split}\]</div>
+<p>Επιβεβαιώνουμε έτσι ότι η <span class="math notranslate nohighlight">\(u\)</span> είναι σταθερή κατά μήκος των χαρακτηριστικών. Επιπλέον, αυτό δείχνει ότι οι χαρακτηριστικές κινούνται με σταθερή ταχύτητα ίση με <span class="math notranslate nohighlight">\(F'(u_{0}(x_{0}))\)</span>. Όπως θα δούμε και στη συνέχεια, αν η <span class="math notranslate nohighlight">\(u_{0}\)</span> είναι αύξουσα και η <span class="math notranslate nohighlight">\(F\)</span> κυρτή, ή αν η <span class="math notranslate nohighlight">\(u_{0}\)</span> είναι φθίνουσα και η <span class="math notranslate nohighlight">\(F\)</span> κοίλη, τότε η κλασική λύση της <a class="reference internal" href="#equation-eq-k8-geneq">(236)</a> είναι καλώς ορισμένη για κάθε <span class="math notranslate nohighlight">\(t\)</span>. Ωστόσο, στη γενική περίπτωση, δεν υπάρχουν κλασικές λύσεις για όλα τα <span class="math notranslate nohighlight">\(t\)</span> ακόμη και αν η <span class="math notranslate nohighlight">\(u_{0}\)</span> είναι ομαλή. Αυτό συμβαίνει όταν <span class="math notranslate nohighlight">\(\underset{x\in\mathbb{R}}{\inf}\left\{u_{0}'(x)F''(u_{0}(x))\right\}&lt;0\)</span>. Στην περίπτωση αυτή, η κλασική λύση υφίσταται μόνο όταν <span class="math notranslate nohighlight">\(t\in[0,t^{*}]\)</span>, όπου:</p>
+<div class="math notranslate nohighlight">
+\[
+t^{*}=\underset{x\in\mathbb{R}}{\inf}\left\{-\dfrac{1}{u_{0}'(x)F''(u_{0}(x))}\right\}.
+\]</div>
+<div class="note admonition">
+<p class="admonition-title">Ορισμός</p>
+<p>Ο χαρακτηριστικός χρόνος θραύσης της λύσης, <span class="math notranslate nohighlight">\(t^{*}\)</span>, ορίζεται ως <span id="id11">[<a class="reference internal" href="zreferences.html#id59" title="Lawrence C. Evans. Partial differential equations. Volume 19. American Mathematical Society, 2010.">Evans, 2010</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brg06">
+<span class="eqno">(238)<a class="headerlink" href="#equation-eq-k8-brg06" title="Link to this equation">#</a></span>\[
+t^{*}=\underset{x\in\mathbb{R}}{\inf}\left\{-\dfrac{1}{u_{0}'(x)F''(u_{0}(x))}\right\}.
+\]</div>
+<p>Τη χρονική στιγμή <span class="math notranslate nohighlight">\(t^{*}\)</span> οι χαρακτηριστικές διασταυρώνονται για πρώτη φορά και έχουμε θραύση του κύματος. Μια φυσική αναλογία έρχεται μέσω των κυμάτων σε μια παραλία, όπου η κορυφή αυτών κινείται ταχύτερα από το υπόλοιπο τμήμα τους. Διατυπώνουμε αυτό το αποτέλεσμα στο ακόλουθο θεώρημα.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Θεώρημα</p>
+<p>Αν λύσουμε την εξίσωση <a class="reference internal" href="#equation-eq-k8-geneq">(236)</a> με ομαλά αρχικά δεδομένα <span class="math notranslate nohighlight">\(u_{0}(x)\)</span> για τα οποία η ποσότητα <span class="math notranslate nohighlight">\(u_{0}'(x)\, F''(u_{0}(x))\)</span> είναι σε κάποιο σημείο αρνητική, τότε θα έχουμε θραύση του κύματος τη χρονική στιγμή:</p>
+<div class="math notranslate nohighlight">
+\[
+t^{*}=\underset{x\in\mathbb{R}}{\inf}\left\{-\dfrac{1}{u_{0}'(x)F''(u_{0}(x))}\right\}.
+\]</div>
+<p><strong>Απόδειξη</strong></p>
+<p>Δεδομένου ότι κατά μήκος των χαρακτηριστικών η <span class="math notranslate nohighlight">\(u(x(t),t)\)</span> ισούται με <span class="math notranslate nohighlight">\(u_{0}(x_{0})\)</span>, μπορούμε να γράψουμε <span class="math notranslate nohighlight">\(x(t)=x_{0}+F'(u_{0}(x_{0}))t\)</span>. Μπορούμε τώρα να υπολογίσουμε το χρόνο θραύσης, δηλαδή την πρώτη φορά που δύο διαφορετικές χαρακτηριστικές φθάνουν στο ίδιο σημείο <span class="math notranslate nohighlight">\((x,t)\)</span>. Στην περίπτωση αυτή υπάρχουν δύο σημεία, <span class="math notranslate nohighlight">\(x_{0}\)</span> και <span class="math notranslate nohighlight">\(\bar{x}_{0}\)</span>, έτσι ώστε:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;x(t)=x_{0}+F'(u_{0}(x_{0}))\, t=\bar{x}_{0}+F'(u_{0}(\bar{x}_{0}))\, t\\
+\Leftrightarrow&amp;\ t=-\dfrac{\bar{x}_{0}-x_{0}}{F'(u_{0}(\bar{x}_{0}))-F'(u_{0}(x_{0}))}=-\dfrac{1}{u_{0}'(\xi)F''(u_{0}(\xi))}, \quad \xi\in(x_{0},\bar{x}_{0}).
+\end{aligned}
+\end{split}\]</div>
+<p>Προφανώς, αυτή η έκφραση για το <span class="math notranslate nohighlight">\(t\)</span> έχει νόημα όταν η ποσότητα <span class="math notranslate nohighlight">\(u_{0}'(\xi)F''(u_{0}(\xi))\)</span> είναι κάπου αρνητική. Όταν <span class="math notranslate nohighlight">\(t=t^{*}\)</span> η λύση σχηματίζει ένα κρουστικό κύμα <span id="id12">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>.</p>
+</div>
+<figure class="align-default" id="fig-burgcharextra">
+<img alt="_images/BurgCharextra.png" src="_images/BurgCharextra.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Η διάδοση κύματος της \eqref{eq:k8_brg0}, για <span class="math notranslate nohighlight">\(g(x)=e^{-x^{2}}\)</span> με <span class="math notranslate nohighlight">\((x,t)\in[-3,3]\times\{0,\sqrt{\frac{e}{2}},3\}\)</span>. Εδώ, ο χρόνος θραύσης είναι <span class="math notranslate nohighlight">\(t^{*}=\sqrt{\frac{e}{2}}\approx1.17\)</span>.</span><a class="headerlink" href="#fig-burgcharextra" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="korteweg-de-vries">
+<h2>Εξίσωση των Korteweg-de Vries<a class="headerlink" href="#korteweg-de-vries" title="Link to this heading">#</a></h2>
+<p>Φαινόμενα όπως η κυματική διάδοση σε αβαθή ύδατα, τα ακουστικά κύματα στο πλάσμα, καθώς και η παλμική διάδοση του καρδιακού παλμού, μοντελοποιούνται μαθηματικά μέσω της εξίσωσης Korteweg-de Vries (KdV) <span id="id13">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-kdv0">
+<span class="eqno">(239)<a class="headerlink" href="#equation-eq-k8-kdv0" title="Link to this equation">#</a></span>\[
+u_{t}+\gamma uu_{x}+\beta u_{xxx}=0, \quad u=u(x,t), \quad (x,t)\in\mathbb{R}\times(0,\infty), \quad \beta&gt;0, \quad \gamma\neq0.
+\]</div>
+<p>Μια συμβατική επιλογή για τους συντελεστές της εξίσωσης είναι, <span class="math notranslate nohighlight">\(\beta=1\)</span> και <span class="math notranslate nohighlight">\(\gamma=6\)</span>.</p>
+<p>Η εξίσωση KdV αποτελεί το απλούστερο συντηρητικό και μονοδιάστατο μοντέλο κυματικής διάδοσης, στο οποίο εξισορροπούνται φαινόμενα μη γραμμικής μεταφοράς και διάχυσης. Η μη γραμμικότητα υφίσταται λόγω του όρου <span class="math notranslate nohighlight">\(uu_{x}\)</span>, ενώ η διασπορά λόγω του <span class="math notranslate nohighlight">\(u_{xxx}\)</span>. Η υφιστάμενη διασπορά έχει ως αποτέλεσμα τη διεύρυνση του πλάτους του αρχικού κύματος, <span class="math notranslate nohighlight">\(u(x,0)\)</span>, με την πάροδο του χρόνου.</p>
+<p>Το μαθηματικό μοντέλο της KdV παρουσιάζει ιδιαίτερο ερευνητικό ενδιαφέρον, αποτελώντας πρότυπο παράδειγμα ολοκληρώσιμου μοντέλου <span id="id14">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>. Η μαθηματική θεωρία σχετικά με τα ολοκληρώσιμα μοντέλα αποτελεί διαρκώς ενεργό ερευνητικό πεδίο.</p>
+<section id="id15">
+<h3>Διατηρητικές μορφές<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>Συχνά, μέσω μιας Μ.Δ.Ε. εκφράζεται η διατήρηση κάποιας φυσικής ποσότητας. Για παράδειγμα, η εξίσωση συνέχειας για την πυκνότητα ενός ρευστού εκφράζει τη διατήρηση της μάζας του ρευστού. Οι εξισώσεις Burgers και KdV γράφονται, όπως θα δούμε παρακάτω, σε κλειστή, διατηρητική μορφή.</p>
+<div class="note admonition">
+<p class="admonition-title">Ορισμός</p>
+<p>Ένας νόμος διατήρησης μιας ποσότητας εκφράζεται μέσω μιας Μ.Δ.Ε. της μορφής:</p>
+</div>
+<div class="math notranslate nohighlight" id="equation-eq-k8-conslaw">
+<span class="eqno">(240)<a class="headerlink" href="#equation-eq-k8-conslaw" title="Link to this equation">#</a></span>\[
+D_{t}+F_{x}=0
+\]</div>
+<p>με τα <span class="math notranslate nohighlight">\(D\)</span> και <span class="math notranslate nohighlight">\(F\)</span> να αναπαριστούν την πυκνότητα και τη ροή αυτής της ποσότητας, αντίστοιχα <span id="id16">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>.</p>
+<p>Κάθε νόμος διατήρησης οδηγεί, υπό κατάλληλες συνοριακές συνθήκες, στη διατήρηση στο χρόνο ενός ολοκληρώματος της ποσότητας <span class="math notranslate nohighlight">\(D\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-conslaw1">
+<span class="eqno">(241)<a class="headerlink" href="#equation-eq-k8-conslaw1" title="Link to this equation">#</a></span>\[
+\dfrac{d}{dt}\int_{a}^{b}D(x)dx+F(b)-F(a)=0.
+\]</div>
+<p>Στην περίπτωση που είτε η <span class="math notranslate nohighlight">\(F\)</span> μηδενίζεται είτε παίρνει ίσες τιμές στο σύνορο του χωρίου ολοκλήρωσης, το ολοκλήρωμα της <span class="math notranslate nohighlight">\(D\)</span> διατηρείται στο χρόνο.</p>
+<p>Σχετικά με την εξίσωση KdV, ας θεωρήσουμε το εξής πρόβλημα συνοριακών τιμών (Π.Σ.Τ.) <span id="id17">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-kdv1">
+<span class="eqno">(242)<a class="headerlink" href="#equation-eq-k8-kdv1" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp; u_{t}+\gamma uu_{x}+\beta u_{xxx}=0, \quad u=u(x,t), \quad (x,t)\in\mathbb{R}\times(0,\infty),\\
+&amp; \lim_{|x|\rightarrow\infty} \dfrac{\partial^{n} u(x,t)}{\partial x^{n}} = 0, \quad n \in \mathbb{N}.
+\end{aligned}
+\end{split}\]</div>
+<p>Παρατηρούμε ότι η εξίσωση <a class="reference internal" href="#equation-eq-k8-kdv1">(242)</a> γράφεται ισοδύναμα, σε διατηρητική μορφή, ως:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-kdv2">
+<span class="eqno">(243)<a class="headerlink" href="#equation-eq-k8-kdv2" title="Link to this equation">#</a></span>\[
+u_{t}+\left(\gamma\frac{u^{2}}{2}+\beta u_{xx}\right)_{x}=0.
+\]</div>
+<p>Έτσι, ολοκληρώνοντας την εξίσωση <a class="reference internal" href="#equation-eq-k8-kdv2">(243)</a> στο <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> για <span class="math notranslate nohighlight">\(t&gt;0\)</span>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-myeq1">
+<span class="eqno">(244)<a class="headerlink" href="#equation-eq-k8-myeq1" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+0&amp;=\int_{-\infty}^{\infty}u_{t}\ dx+\left(\gamma\frac{u^{2}}{2}+\beta u_{xx}\right)\bigg|_{-\infty}^{\infty}\\
+&amp;=\dfrac{d}{dt}\int_{-\infty}^{\infty}u\ dx,
+\end{aligned}
+\end{split}\]</div>
+<p>από το οποίο έπεται ότι η ποσότητα <span class="math notranslate nohighlight">\(\int_{-\infty}^{\infty}u\ dx\)</span> διατηρείται στο χρόνο. Η φυσική σημασία του αποτελέσματος αυτού έγκειται στο ότι ο όγκος του νερού κάτω από την ελεύθερη επιφάνεια του ρευστού παραμένει σταθερός στο χρόνο.</p>
+<p>Παρόμοια αποτελέσματα αντλούμε και για την εξίσωση Burgers, η οποία γράφεται στην ισοδύναμη διατηρητική μορφή:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-burgcon">
+<span class="eqno">(245)<a class="headerlink" href="#equation-eq-k8-burgcon" title="Link to this equation">#</a></span>\[
+u_{t}+\left(\frac{u^{2}}{2}-\nu u_{x}\right)_{x}=0, \quad \nu\geq0.
+\]</div>
+</section>
+<section id="id18">
+<h3>Αναλυτικές λύσεις - Σολιτόνια<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Το πρόβλημα <a class="reference internal" href="#equation-eq-k8-kdv1">(242)</a> επιδέχεται αναλυτικές λύσεις οδεύοντος κύματος, οι οποίες διαδίδονται στο χώρο και το χρόνο υπό σταθερή ταχύτητα και κυματομορφή. Για να το δούμε αυτό, ας θεωρήσουμε το μετασχηματισμό οδεύοντος κύματος:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;u(x,t)=u(\zeta),\\
+&amp;\zeta=x-\lambda t, \quad \lambda&gt;0,
+\end{aligned}
+\end{split}\]</div>
+<p>ο οποίος ανάγει τη Μ.Δ.Ε. του <a class="reference internal" href="#equation-eq-k8-kdv1">(242)</a> στην αυτόνομη εξίσωση δεύτερης τάξης:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-analsol">
+<span class="eqno">(246)<a class="headerlink" href="#equation-eq-k8-analsol" title="Link to this equation">#</a></span>\[
+-\lambda u+\dfrac{\gamma}{2}u^{2}+\beta u''=0, \quad u'=\dfrac{du}{d\zeta}.
+\]</div>
+<p>Οι λύσεις της τελευταίας καλούνται μοναχικά ή σολιτονικά κύματα της KdV και δίνονται σε κλειστή μορφή ως:</p>
+<div class="math notranslate nohighlight">
+\[
+u(\zeta)=\dfrac{3\lambda}{\gamma}\operatorname{sech}^{2}\left[\sqrt{\dfrac{\lambda}{4\beta}}\left(\zeta-c\right)\right], \quad c\in\mathbb{R}.
+\]</div>
+</section>
+<section id="id19">
+<h3>Αναλυτικές λύσεις ομοιότητας<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<p>Θεωρούμε και πάλι το πρόβλημα <a class="reference internal" href="#equation-eq-k8-kdv1">(242)</a>, όπου ο στόχος τώρα είναι η μελέτη λύσεων ομοιότητας. Παρατηρούμε μετά από αντικατάσταση ότι για <span class="math notranslate nohighlight">\(m=-\dfrac{2}{3}\)</span> και <span class="math notranslate nohighlight">\(n=-\dfrac{1}{3}\)</span>, το <a class="reference internal" href="#equation-eq-k8-kdv1">(242)</a> μετατρέπεται στο:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-painsol">
+<span class="eqno">(247)<a class="headerlink" href="#equation-eq-k8-painsol" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp; f'''(\eta)+\dfrac{1}{\beta}\left[f'(\eta)\left(\gamma f(\eta)-\dfrac{\eta}{3}\right)-\dfrac{2}{3}f(\eta)\right]=0,\\
+&amp; \lim_{|\eta| \rightarrow \infty} \dfrac{d^{n} f(\eta)}{d\eta^{n}} = 0, \quad n \in \mathbb{N}.
+\end{aligned}
+\end{split}\]</div>
+<p>Παρότι η Σ.Δ.Ε. του <a class="reference internal" href="#equation-eq-k8-painsol">(247)</a> δεν επιλύεται αναλυτικά, ο τρόπος εξαγωγής της δίνει χρήσιμες πληροφορίες για την επιλυσιμότητα της αρχικής Μ.Δ.Ε., όπως ότι αυτή είναι ολοκληρώσιμη <span id="id20">[<a class="reference internal" href="zreferences.html#id51" title="Nikolai A. Kudryashov. Self-similar solutions of the burgers hierarchy. Applied Mathematics and Computation, 215(5):1990–1993, 2009.">Kudryashov, 2009</a>]</span>.</p>
+<figure class="align-default" id="fig-kdvanal">
+<img alt="_images/KdVAnal.png" src="_images/KdVAnal.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Σολιτονικό κύμα της KdV, κινούμενο προς τα δεξιά, για τις παραμέτρους <span class="math notranslate nohighlight">\(\lambda=\beta=1\)</span> και <span class="math notranslate nohighlight">\(\gamma=6\)</span>, με <span class="math notranslate nohighlight">\((x,t)\in[-10,10]\times[0,3]\)</span>. Πρόκειται για οδεύον κύμα, με την κυματομορφή να διατηρείται κατά τη διάδοση στο χώρο, υπό σταθερή ταχύτητα.</span><a class="headerlink" href="#fig-kdvanal" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="lax-friedrichs">
+<h2>Το σχήμα των Lax-Friedrichs<a class="headerlink" href="#lax-friedrichs" title="Link to this heading">#</a></h2>
+<p>Η μελέτη των λύσεων των Μ.Δ.Ε. υποδεικνύει ότι δεν υπάρχει γενική μεθοδολογία που να επιλύει κάθε είδους Μ.Δ.Ε. Παρόλο που ορισμένου τύπου εξισώσεις, π.χ. οι ολοκληρωτικού τύπου, επιδέχονται αναλυτικές λύσεις, η πληθώρα των Μ.Δ.Ε. δεν επιλύεται αναλυτικά. Αυτό οφείλεται τόσο στην εξίσωση (μη γραμμικότητα, υψηλή τάξη, μη ομογένεια), όσο και στην πολυπλοκότητα της γεωμετρίας του χωρίου επίλυσης.</p>
+<p>Οι δυσκολίες αυτές αντιμετωπίζονται σε σημαντικό βαθμό με τη μελέτη των Μ.Δ.Ε. μέσω αριθμητικών μεθόδων. Η πρώτη αριθμητική μέθοδος που θα δούμε είναι η μέθοδος των Lax-Friedrichs (LF), η οποία επιλύει αριθμητικά εξισώσεις υπερβολικού τύπου.</p>
+<div class="note admonition">
+<p class="admonition-title">Ορισμός</p>
+<p>Μια διατηρητική μορφή, η οποία δίνεται από την <a class="reference internal" href="#equation-eq-k8-conslaw">(240)</a>, καλείται υπερβολικού τύπου αν ισχύει <span class="math notranslate nohighlight">\(D=u\)</span> και <span class="math notranslate nohighlight">\(F=F(u)\)</span>.</p>
+</div>
+<p>Η ανιξωδική εξίσωση Burgers αποτελεί διατηρητική μορφή υπερβολικού τύπου, με <span class="math notranslate nohighlight">\(F(u)=\frac{u^{2}}{2}\)</span>. Το σχήμα LF βασίζεται σε πεπερασμένες διαφορές, εμπρόσθιες στο χρόνο και κεντρικές στο χώρο. Ωστόσο, το σχήμα σταθεροποιείται, όταν θεωρήσουμε τη μέση τιμή της <span class="math notranslate nohighlight">\(u_{i}^{n}\)</span> μέσω των γειτονικών κελιών <span class="math notranslate nohighlight">\(i-1\)</span> και <span class="math notranslate nohighlight">\(i+1\)</span>.</p>
+<section id="id21">
+<h3>Εφαρμογή στο πρόβλημα γραμμικής μεταφοράς<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<p>Θεωρούμε το πρόβλημα γραμμικής μεταφοράς, υπό σταθερή ταχύτητα <span class="math notranslate nohighlight">\(c\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lflow0">
+<span class="eqno">(248)<a class="headerlink" href="#equation-eq-k8-lflow0" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{t}+cu_{x}=0,\ (x,t)\in[a,b]\times[0,d],\\
+&amp;u(x,0)=u_{0}(x)
+\end{aligned}
+\end{split}\]</div>
+<p>Διακριτοποιούμε μέσω ομοιόμορφου πλέγματος, διαμερίσεων <span class="math notranslate nohighlight">\(\Delta x\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span> για τον άξονα του χώρου και του χρόνου, αντίστοιχα. Θεωρούμε έπειτα ότι:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lflow1">
+<span class="eqno">(249)<a class="headerlink" href="#equation-eq-k8-lflow1" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{i}^{n}=u(x_{i},t^{n}),\\
+&amp;x_{i}=a+i\Delta x, \quad i=0,\ldots,N, \quad N=\dfrac{b-a}{\Delta x},\\
+&amp;t^{n}=n\Delta t, \quad n=0,\ldots,M, \quad M=\dfrac{d}{\Delta t}.
+\end{aligned}
+\end{split}\]</div>
+<p>Σημειώνουμε ακόμη ότι, από την <a class="reference internal" href="#equation-eq-k8-lflow0">(248)</a>, ισχύει:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lwpr">
+<span class="eqno">(250)<a class="headerlink" href="#equation-eq-k8-lwpr" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+u_{t}|_{i}^{n} &amp;=-cu_{x}|_{i}^{n},\\
+u_{tt}|_{i}^{n} &amp;=c^{2}u_{xx}|_{i}^{n}.
+\end{aligned}
+\end{split}\]</div>
+<p>Εκφράζουμε τις <span class="math notranslate nohighlight">\(u_{t}\)</span> και <span class="math notranslate nohighlight">\(u_{x}\)</span> μέσω εμπρόσθιων διαφορών στο χρόνο και κεντρικών διαφορών στο χώρο, αντίστοιχα, παίρνοντας:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lf1">
+<span class="eqno">(251)<a class="headerlink" href="#equation-eq-k8-lf1" title="Link to this equation">#</a></span>\[
+\dfrac{u_{i}^{n+1}-u_{i}^{n}}{\Delta t}+c\dfrac{u_{i+1}^{n}-u_{i-1}^{n}}{2\Delta x}=0.
+\]</div>
+<p>Υποθέτουμε ακόμη ότι η <span class="math notranslate nohighlight">\(u_{i}^{n}\)</span> δίνεται ως ο μέσος όρος των <span class="math notranslate nohighlight">\(u_{i+1}^{n}\)</span> και <span class="math notranslate nohighlight">\(u_{i-1}^{n}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}^{n}=\dfrac{u_{i+1}^{n}+u_{i-1}^{n}}{2}.
+\]</div>
+<p>Αντικαθιστώντας στην εξίσωση <a class="reference internal" href="#equation-eq-k8-lf1">(251)</a>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-laxfried">
+<span class="eqno">(252)<a class="headerlink" href="#equation-eq-k8-laxfried" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}=\dfrac{1}{2}\left(u_{i+1}^{n}+u_{i-1}^{n}\right)-\dfrac{C}{2}\left(u_{i+1}^{n}-u_{i-1}^{n}\right), \quad u_{i}^{0}=u_{0}(x_{i}),
+\]</div>
+<p>όπου:</p>
+<div class="math notranslate nohighlight">
+\[
+C:=c\frac{\Delta t}{\Delta x} : \text{ο αδιάστατος αριθμός Courant}.
+\]</div>
+<p>Το σχήμα LF είναι άμεσο και παρουσιάζει ακρίβεια πρώτης τάξης ως προς το χώρο και το χρόνο, εφόσον η αρχική συνάρτηση <span class="math notranslate nohighlight">\(u_{0}(x)\)</span> είναι επαρκώς ομαλή. Τέλος, σημειώνουμε ότι η μέθοδος είναι ευσταθής αν και μόνο αν πληρείται η συνθήκη των Courant-Friedrichs-Lewy (CFL) <span id="id22">[<a class="reference internal" href="zreferences.html#id52" title="Randall J. LeVeque and Randall J. Leveque. Numerical methods for conservation laws. Volume 214. Springer, 1992.">LeVeque and Leveque, 1992</a>, <a class="reference internal" href="zreferences.html#id53" title="James William Thomas. Numerical partial differential equations: finite difference methods. Volume 22. Springer Science &amp; Business Media, 2013.">Thomas, 2013</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-cfl">
+<span class="eqno">(253)<a class="headerlink" href="#equation-eq-k8-cfl" title="Link to this equation">#</a></span>\[
+|C|=\bigg|c\dfrac{\Delta t}{\Delta x}\bigg|\leq1.
+\]</div>
+</section>
+<section id="id23">
+<h3>Το γενικό, μη γραμμικό, υπερβολικό πρόβλημα<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<p>Θεωρούμε τώρα τη γενική υπερβολική διατηρητική μορφή:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-nlflow0">
+<span class="eqno">(254)<a class="headerlink" href="#equation-eq-k8-nlflow0" title="Link to this equation">#</a></span>\[
+u_{t}+\left(F(u)\right)_{x}=0.
+\]</div>
+<p>Με ανάλογα βήματα με αυτά που ακολουθήσαμε στην εξαγωγή του σχήματος LF για την εξίσωση <a class="reference internal" href="#equation-eq-k8-lflow0">(248)</a>, γενικεύουμε το σχήμα LF για την εξίσωση <a class="reference internal" href="#equation-eq-k8-nlflow0">(254)</a> ως <span id="id24">[<a class="reference internal" href="zreferences.html#id52" title="Randall J. LeVeque and Randall J. Leveque. Numerical methods for conservation laws. Volume 214. Springer, 1992.">LeVeque and Leveque, 1992</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-nlflow1">
+<span class="eqno">(255)<a class="headerlink" href="#equation-eq-k8-nlflow1" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}=\dfrac{1}{2}\left(u_{i+1}^{n}+u_{i-1}^{n}\right)-\dfrac{\Delta t}{2\Delta x}\left(F(u_{i+1}^{n})-F(u_{i-1}^{n})\right).
+\]</div>
+<p>Παρατηρούμε ότι για <span class="math notranslate nohighlight">\(F(u)=cu\)</span> παίρνουμε ακριβώς την <a class="reference internal" href="#equation-eq-k8-laxfried">(252)</a>. Αναφορικά με την ανιξωδική εξίσωση Burgers <a class="reference internal" href="#equation-eq-k8-brg0">(235)</a>, για <span class="math notranslate nohighlight">\(F(u)=\frac{1}{2}u^{2}\)</span>, η εξίσωση <a class="reference internal" href="#equation-eq-k8-nlflow1">(255)</a> γίνεται:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-nlflow2">
+<span class="eqno">(256)<a class="headerlink" href="#equation-eq-k8-nlflow2" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}=\dfrac{1}{2}\left(u_{i+1}^{n}+u_{i-1}^{n}\right)-\dfrac{\Delta t}{4\Delta x}\left((u_{i+1}^{n})^{2}-(u_{i-1}^{n})^{2}\right).
+\]</div>
+<p>Ακολουθεί ο κώδικας επίλυσης της εξίσωσης <a class="reference internal" href="#equation-eq-k8-laxfried">(252)</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lax_friedrichs_scheme</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nt</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">):</span>
+    
+    <span class="n">u</span> <span class="o">=</span> <span class="n">u_initial</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">u_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">()]</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span><span class="p">):</span>
+        <span class="n">un</span> <span class="o">=</span> <span class="n">u_data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">u</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">dx</span> <span class="o">*</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">u_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">u_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Το σχήμα LF χρησιμοποιείται ως δομικό υλικό για τη δημιουργία αριθμητικών σχημάτων υψηλότερης τάξης. Για ασυνεχείς αρχικές συναρτήσεις, το σχήμα LF διέπεται από έντονη διάχυση και διασπορά <span id="id25">[<a class="reference internal" href="zreferences.html#id53" title="James William Thomas. Numerical partial differential equations: finite difference methods. Volume 22. Springer Science &amp; Business Media, 2013.">Thomas, 2013</a>]</span>.</p>
+</section>
+</section>
+<section id="lax-wendroff">
+<h2>Το σχήμα των Lax-Wendroff<a class="headerlink" href="#lax-wendroff" title="Link to this heading">#</a></h2>
+<p>Το σχήμα των Lax-Wendroff (LW) αποτελεί επίσης σχήμα επίλυσης Μ.Δ.Ε. υπερβολικού τύπου, βασιζόμενο σε πεπερασμένες διαφορές. Παρουσιάζει ακρίβεια δεύτερης τάξης, τόσο ως προς το χώρο όσο και ως προς το χρόνο. Το αριθμητικό σχήμα LW για την εξίσωση <a class="reference internal" href="#equation-eq-k8-nlflow0">(254)</a> δίνεται ως <span id="id26">[<a class="reference internal" href="zreferences.html#id52" title="Randall J. LeVeque and Randall J. Leveque. Numerical methods for conservation laws. Volume 214. Springer, 1992.">LeVeque and Leveque, 1992</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-laxwend">
+<span class="eqno">(257)<a class="headerlink" href="#equation-eq-k8-laxwend" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}=u_{i}^{n}-\dfrac{\Delta t}{2\Delta x}\left(F(u_{i+1}^{n})-F(u_{i-1}^{n})\right)
++\dfrac{\Delta t^{2}}{2\Delta x^{2}}\left(A_{i+1/2}^{n}(F(u_{i+1}^{n})-F(u_{i}^{n}))-A_{i-1/2}^{n}(F(u_{i}^{n})-F(u_{i-1}^{n}))\right),
+\]</div>
+<p>όπου:</p>
+<div class="math notranslate nohighlight">
+\[
+A_{i\pm1/2}^{n}=F'\left(\frac{1}{2}(u_{i}^{n}+u_{i\pm1}^{n})\right).
+\]</div>
+<p>Όσον αφορά την <a class="reference internal" href="#equation-eq-k8-lflow0">(248)</a>, το σχήμα LW δεν είναι παρά η προσέγγιση Taylor 2ης τάξης της <span class="math notranslate nohighlight">\(u_{i}^{n+1}\)</span>, όπου τώρα εκφράζουμε στην <a class="reference internal" href="#equation-eq-k8-lwpr">(250)</a> τις χωρικές μερικές παραγώγους μέσω κεντρικών διαφορών:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lwlflow">
+<span class="eqno">(258)<a class="headerlink" href="#equation-eq-k8-lwlflow" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}=u_{i}^{n}-\dfrac{C}{2}\left(u_{i+1}^{n}-u_{i-1}^{n}\right)+\dfrac{C^{2}}{2}\left(u_{i+1}^{n}-2u_{i}^{n}+u_{i-1}^{n}\right),
+\]</div>
+<p>ενώ για την ανιξωδική εξίσωση Burgers, έχουμε την έκφραση:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-laxwendburg">
+<span class="eqno">(259)<a class="headerlink" href="#equation-eq-k8-laxwendburg" title="Link to this equation">#</a></span>\[
+u_{i}^{n+1}=u_{i}^{n}-\dfrac{\Delta t}{4\Delta x}\left((u_{i+1}^{n})^{2}-(u_{i-1}^{n})^{2}\right)
++\dfrac{\Delta t^{2}}{8\Delta x^{2}}\left[(u_{i}^{n}+u_{i+1}^{n})((u_{i+1}^{n})^{2}-(u_{i}^{n})^{2})-(u_{i}^{n}+u_{i-1}^{n})((u_{i}^{n})^{2}-(u_{i-1}^{n})^{2})\right].
+\]</div>
+<p>Ακολουθεί ο κώδικας επίλυσης της εξίσωσης <a class="reference internal" href="#equation-eq-k8-laxwendburg">(259)</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">lax_wendroff_scheme</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nt</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">):</span>
+
+    <span class="n">u</span> <span class="o">=</span> <span class="n">u_initial</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">u_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">()]</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span><span class="p">):</span>
+        <span class="n">un</span> <span class="o">=</span> <span class="n">u_data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">u</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">dx</span> <span class="o">*</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.125</span> <span class="o">*</span> <span class="p">(</span><span class="n">dt</span> <span class="o">/</span> <span class="n">dx</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">((</span><span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+        <span class="n">u_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">u_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="maccormack">
+<h2>Το σχήμα του MacCormack<a class="headerlink" href="#maccormack" title="Link to this heading">#</a></h2>
+<p>Με το σχήμα MacCormack (MC) επιλύονται αριθμητικά Μ.Δ.Ε. υπερβολικού τύπου με χρήση πεπερασμένων διαφορών δεύτερης τάξης. Το σχήμα MC για την <a class="reference internal" href="#equation-eq-k8-nlflow0">(254)</a> δίνεται σε δύο στάδια, με το πρώτο να εφαρμόζει οπίσθιες διαφορές και το δεύτερο εμπρόσθιες, ως <span id="id27">[<a class="reference internal" href="zreferences.html#id52" title="Randall J. LeVeque and Randall J. Leveque. Numerical methods for conservation laws. Volume 214. Springer, 1992.">LeVeque and Leveque, 1992</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;v_{i}^{n+1}=u_{i}^{n}-\dfrac{\Delta t}{\Delta x}\left(F(u_{i}^{n})-F(u_{i-1}^{n})\right),\\
+&amp;u_{i}^{n+1}=u_{i}^{n+1/2}-\dfrac{\Delta t}{2\Delta x}\left(F(v_{i+1}^{n})-F(v_{i}^{n})\right), \ u_{i}^{n+1/2}=\dfrac{1}{2}\left(u_{i}^{n}+v_{i}^{n+1}\right).
+\end{aligned}
+\end{split}\]</div>
+<p>Για την <a class="reference internal" href="#equation-eq-k8-lflow0">(248)</a>, το σχήμα MC ανάγεται στο σχήμα LW. Για την <a class="reference internal" href="#equation-eq-k8-brg0">(235)</a>, παίρνουμε τις εξισώσεις:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;v_{i}^{n+1}=u_{i}^{n}-\dfrac{\Delta t}{2\Delta x}\left((u_{i}^{n})^{2}-(u_{i-1}^{n})^{2}\right),\\
+&amp;u_{i}^{n+1}=\dfrac{1}{2}\left(u_{i}^{n}+v_{i}^{n+1}\right)-\dfrac{\Delta t}{4\Delta x}\left((v_{i+1}^{n})^{2}-(v_{i}^{n})^{2}\right),
+\end{aligned}
+\end{split}\]</div>
+<p>οι οποίες επιλύονται αριθμητικά με τον κώδικα που ακολουθεί.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">maccormack_scheme</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nt</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">):</span>
+    
+    <span class="n">u</span> <span class="o">=</span> <span class="n">u_initial</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">u_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">()]</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span><span class="p">):</span>
+        <span class="n">un</span> <span class="o">=</span> <span class="n">u_data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">u_star</span> <span class="o">=</span> <span class="n">un</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">u_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">dx</span> <span class="o">*</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">un</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">u</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">un</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">u_star</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mf">0.25</span><span class="o">*</span> <span class="n">dt</span> <span class="o">/</span> <span class="n">dx</span> <span class="o">*</span> <span class="p">(</span><span class="n">u_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">u_star</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">u_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">u_data</span>
+
+
+<span class="c1"># Παράμετροι</span>
+<span class="n">nt</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Αριθμός βημάτων χρόνου</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># Μέγεθος βήματος χρόνου</span>
+
+
+<span class="n">nx_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span> <span class="c1"># Αριθμός σημείων πλέγματος χώρου</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">nx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nx_values</span><span class="p">):</span>
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span> <span class="c1"># Πλέγμα χώρου</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">nx</span> <span class="c1"># Βήμα χώρου</span>
+    <span class="n">u_initial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Αρχική συνθήκη</span>
+
+    <span class="n">u_LF</span> <span class="o">=</span> <span class="n">lax_friedrichs_scheme</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nt</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">)</span>
+    <span class="n">u_LW</span> <span class="o">=</span> <span class="n">lax_wendroff_scheme</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nt</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">)</span>
+    <span class="n">u_MC</span> <span class="o">=</span> <span class="n">maccormack_scheme</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">nt</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Αρχική συνθήκη&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_LF</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LF&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_LW</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LW&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">u_MC</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MC&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;M = </span><span class="si">{</span><span class="n">nx</span><span class="si">}</span><span class="s2">, N = </span><span class="si">{</span><span class="n">nt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Ανιξωδική εξίσωση Burgers&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span> <span class="mf">0.05</span><span class="p">),</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="fig-inviscid-burgers-numerical">
+<img alt="_images/inviscid_Burgers_numerical.svg" src="_images/inviscid_Burgers_numerical.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Αριθμητικές λύσεις LF, LW και MC για το πρόβλημα της ανιξωδικής εξίσωσης Burgers. Για αρχική συνθήκη θεωρήσαμε <span class="math notranslate nohighlight">\(u_{0}(x)=e^{-x^{2}}\)</span>.</span><a class="headerlink" href="#fig-inviscid-burgers-numerical" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="godunov">
+<h2>Προσέγγιση του Godunov<a class="headerlink" href="#godunov" title="Link to this heading">#</a></h2>
+<p>Στην Αριθμητική Ανάλυση και την Υπολογιστική Ρευστοδυναμική, η προσέγγιση Godunov είναι συντηρητική μέθοδος πεπερασμένων όγκων (Μ.Π.Ο.) που επιλύει προβλήματα Riemann στα όρια μεταξύ των υπολογιστικών κελιών. Πρόκειται για μέθοδο με ακρίβεια πρώτης τάξης τόσο στο χώρο όσο και στο χρόνο <span id="id28">[<a class="reference internal" href="zreferences.html#id54" title="Randall J. LeVeque. Finite volume methods for hyperbolic problems. Cambridge University Press, 2002.">LeVeque, 2002</a>]</span>. Ξεκινάμε με τον ορισμό του προβλήματος Riemann για τη μη γραμμική υπερβολική εξίσωση <a class="reference internal" href="#equation-eq-k8-nlflow0">(254)</a>.</p>
+<div class="note admonition">
+<p class="admonition-title">Ορισμός</p>
+<p>Το Π.Α.Τ. της <a class="reference internal" href="#equation-eq-k8-nlflow0">(254)</a>, με αρχική συνθήκη <span class="math notranslate nohighlight">\(u_{0}\)</span> μια τμηματικά σταθερή συνάρτηση,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+u_{0}(x)=
+\begin{cases}
+u_{l}, \quad x&lt;0 \\ 
+u_{r}, \quad x&gt;0
+\end{cases}, \quad u_{l}\neq u_{r}
+\end{split}\]</div>
+<p>καλείται πρόβλημα Riemann <span id="id29">[<a class="reference internal" href="zreferences.html#id59" title="Lawrence C. Evans. Partial differential equations. Volume 19. American Mathematical Society, 2010.">Evans, 2010</a>]</span>. Παρατηρούμε ότι η μοναδική ασυνέχεια της <span class="math notranslate nohighlight">\(u_{0}\)</span> εμφανίζεται για <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+</div>
+<p>Ακολουθώντας το κλασικό πλαίσιο της μεθόδου πεπερασμένων όγκων, επιδιώκουμε τον προσδιορισμό ενός πεπερασμένου συνόλου διακριτών αγνώστων:</p>
+<div class="math notranslate nohighlight">
+\[
+U_{i}^{n}=\dfrac{1}{\Delta x}\int_{x_{i-1/2}}^{x_{i+1/2}}u(t^{n},x)\, dx. \quad (eq:k8_god0)
+\]</div>
+<p>Θεωρούμε ότι οι:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;x_{i-1/2}=x_{0}+(i-1/2)\Delta x,\\
+&amp;t^{n}=n\Delta t
+\end{aligned} \quad (eq:k8_god2)
+\end{split}\]</div>
+<p>αποτελούν τη χωρική και τη χρονική διαμέριση, αντίστοιχα, της <a class="reference internal" href="#equation-eq-k8-nlflow0">(254)</a>.</p>
+<p>Ολοκληρώνοντας την <a class="reference internal" href="#equation-eq-k8-nlflow0">(254)</a> σε έναν όγκο αναφοράς, <span class="math notranslate nohighlight">\([x_{i-1/2},x_{i+1/2}]\)</span>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-god3">
+<span class="eqno">(260)<a class="headerlink" href="#equation-eq-k8-god3" title="Link to this equation">#</a></span>\[
+\left(U_{i}(t)\right)_{t}=-\dfrac{1}{\Delta x}\left[F(u(t,x_{i+1/2}))-F(u(t,x_{i-1/2}))\right].
+\]</div>
+<p>Αυτή είναι μια κλασική περιγραφή της πρώτης τάξης, ανεστραμμένης μεθόδου πεπερασμένων όγκων (upwinded FVM). Τώρα, η ακριβής χρονική ολοκλήρωση της <a class="reference internal" href="#equation-eq-k8-god3">(260)</a> από τη χρονική στιγμή <span class="math notranslate nohighlight">\(t=t^{n}\)</span> ως τη χρονική στιγμή <span class="math notranslate nohighlight">\(t=t^{n+1}\)</span> μας δίνει:</p>
+<div class="math notranslate nohighlight">
+\[
+U_{i}^{n+1}=U_{i}^{n}-\dfrac{1}{\Delta x}\int_{t^{n}}^{t^{n+1}}\left[F(u(t,x_{i+1/2}))-F(u(t,x_{i-1/2}))\right]dt. \quad (eq:k8_god4)
+\]</div>
+<p>Στο στάδιο αυτό, η μέθοδος του Godunov προσεγγίζει το ολοκλήρωμα στο χρόνο:</p>
+<div class="math notranslate nohighlight">
+\[
+\int _{t^{n}}^{t^{n+1}}F(u(t,x_{i-1/2}))dt,
+\]</div>
+<p>μέσω μιας εμπρόσθιας μεθόδου Euler, ως:</p>
+<div class="math notranslate nohighlight">
+\[
+\int _{t^{n}}^{t^{n+1}}F(u(t,x_{i-1/2}))dt\approx\Delta tF^{\downarrow }\left(U_{{i-1}}^{n},U_{i}^{n}\right). \quad (eq:k8_god5)
+\]</div>
+<p>Όπου η <span class="math notranslate nohighlight">\(F^{\downarrow }\left(u_{l},u_{r}\right)\)</span> προσεγγίζει την ακριβή λύση του προβλήματος Riemann. Για λόγους συνέπειας, υποθέτουμε ότι:</p>
+<div class="math notranslate nohighlight">
+\[
+F^{\downarrow }(u_{l},u_{r})=F(u_{l})\quad {\text{αν}}\quad u_{l}=u_{r}, \quad (eq:k8_god6)
+\]</div>
+<p>καθώς και ότι η <span class="math notranslate nohighlight">\(F^{\downarrow}\)</span> είναι αύξουσα στο πρώτο της όρισμα και φθίνουσα στο δεύτερο. Για βαθμωτά προβλήματα, όπου <span class="math notranslate nohighlight">\(F'(u)&gt;0\)</span>, μπορεί κανείς να χρησιμοποιήσει το απλό σχήμα ανάντη διαφορών, το οποίο ορίζει <span class="math notranslate nohighlight">\(F^{\downarrow}(u_{l},u_{r})=F(u_{l})\)</span>. Το πλήρες σχήμα Godunov, στην πιο βασική του μορφή, δίνεται ως:</p>
+<div class="math notranslate nohighlight">
+\[
+U_{i}^{n+1}=U_{i}^{n}-\frac {\Delta t}{\Delta x} \left({\hat {F}}_{i+1/2}^{n}-{\hat {F}}_{i-1/2}^{n}\right), \quad {\hat {F}}_{i-1/2}^{n}=F^{\downarrow }\left(U_{i-1}^{n}, U_{i}^{n}\right). \quad (eq:k8_godsch)
+\]</div>
+<figure class="align-default" id="fig-lfcompnew">
+<img alt="_images/LFCompnew.png" src="_images/LFCompnew.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Αριθμητικές λύσεις LF, LW, MC και Godunov για τρεις αύξοντες αριθμούς Courant, με <span class="math notranslate nohighlight">\(N=200\)</span>, για την <a class="reference internal" href="#equation-eq-k8-lflow0">(248)</a>, με <span class="math notranslate nohighlight">\(u_{0}(x)=e^{-x^{2}}\)</span>. Η αναλυτική λύση προέκυψε από τη μέθοδο των χαρακτηριστικών. Η αύξηση του αριθμού Courant, οδηγεί κάθε σχήμα σε σύγκλιση προς την αναλυτική λύση.</span><a class="headerlink" href="#fig-lfcompnew" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id30">
+<h2>Αριθμητική επίλυση της ιξωδικής Burgers<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<p>Η ενότητα αυτή εστιάζει στην αριθμητική επίλυση του Π.Α.Τ.:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-specfb">
+<span class="eqno">(261)<a class="headerlink" href="#equation-eq-k8-specfb" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{t}+\left(\frac{u^{2}}{2}-\nu u_{x}\right)_{x}=0, \quad \nu&gt;0, \ u=u(x,t), \quad (x,t)\in[a,b]\times(0,T],\\  
+&amp;u(x,0):=u_{0}(x), \quad (x,t)\in[a,b]\times\{t=0\}
+\end{aligned}
+\end{split}\]</div>
+<p>Διακριτοποιούμε το πρόβλημα ως εξής:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lflow11">
+<span class="eqno">(262)<a class="headerlink" href="#equation-eq-k8-lflow11" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{i}^{n}:=u(x_{i},t^{n}),\\
+&amp;x_{i}=a+i\Delta x, \quad i=0,\ldots,N, \quad N=\frac{b-a}{\Delta x},\\
+&amp;x_{i\pm1/2}:=\dfrac{x_{i}+x_{i\pm1}}{2},\\
+&amp;t^{n}=n\Delta t, \quad n=0,\ldots,M, \quad M=\frac{T}{\Delta t}
+\end{aligned}
+\end{split}\]</div>
+<p>Ολοκληρώνοντας στο διάστημα <span class="math notranslate nohighlight">\([x_{i-1/2},x_{i+1/2}]\)</span>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-pmeth">
+<span class="eqno">(263)<a class="headerlink" href="#equation-eq-k8-pmeth" title="Link to this equation">#</a></span>\[
+\int_{x_{i-1/2}}^{x_{i+1/2}}u_{t}dx+\left(\frac{u^{2}}{2}-\nu u_{x}\right)\bigg|_{x_{i-1/2}}^{x_{i+1/2}}=0.
+\]</div>
+<p>Στο στάδιο αυτό προσεγγίζουμε κάθε όρο της <a class="reference internal" href="#equation-eq-k8-pmeth">(263)</a>, ως εξής:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-approxs">
+<span class="eqno">(264)<a class="headerlink" href="#equation-eq-k8-approxs" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+\int_{x_{i-1/2}}^{x_{i+1/2}}u_{t}dx&amp;\approx u_{t}(x_{i},t^{n})\Delta x\approx\dfrac{u(x_{i},t^{n+1})-u(x_{i},t^{n})}{\Delta t}\Delta x \,\, (\text{Εμπρόσθιες διαφορές})\\\\
+\dfrac{u^{2}}{2}\bigg|_{x_{i-1/2}}^{x_{i+1/2}}&amp;=\dfrac{1}{2}\left(u^{2}(x_{i+1/2},t^{n})-u^{2}(x_{i-1/2},t^{n})\right),\\\\
+-\nu u_{x}\bigg|_{x_{i-1/2}}^{x_{i+1/2}}&amp;=-\nu\left[\dfrac{u(x_{i+1},t^{n})-2u(x_{i},t^{n})+u(x_{i-1},t^{n})}{\Delta x}\right]
+\end{aligned}
+\end{split}\]</div>
+<p>Αντικαθιστώντας τις εκφράσεις της <a class="reference internal" href="#equation-eq-k8-approxs">(264)</a> στην <a class="reference internal" href="#equation-eq-k8-pmeth">(263)</a>, οδηγούμαστε στο άμεσο υπολογιστικό σχήμα:</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}^{n+1}=u_{i}^{n}-\Delta t\bigg\{\dfrac{1}{2\Delta x}\left((u_{i+1/2}^{n})^{2}-(u_{i-1/2}^{n})^{2}\right) -\nu\left[\dfrac{u_{i+1}^{n}-2u_{i}^{n}+u_{i-1}^{n}}{\Delta x^{2}}\right]\bigg\} \quad (eq:k8_pmethfinal)
+\]</div>
+</section>
+<section id="id31">
+<h2>Φασματική μέθοδος<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<p>Παρουσιάζουμε τώρα μια φασματική μέθοδο αριθμητικής επίλυσης Μ.Δ.Ε., μέσω του (διακριτού) μετασχηματισμού Fourier (FFT). Αρχικά, υπενθυμίζουμε κάποια βασικά γνωρίσματα του μετασχηματισμού Fourier.</p>
+<div class="note admonition">
+<p class="admonition-title">Ορισμός</p>
+<p>Ο ευθύς και ο αντίστροφος μετασχηματισμός Fourier για μια συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> ορίζονται ως <span id="id32">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sprz2">
+<span class="eqno">(265)<a class="headerlink" href="#equation-eq-k8-sprz2" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;F\left\{u(x)\right\}=\hat{u}(k)=\int_{-\infty}^{\infty}e^{-i\kappa x}u(x)dx,\\\\
+&amp;F^{-1}\left\{\hat{u}(\kappa)\right\}=u(x)=\dfrac{1}{2\pi}\int_{-\infty}^{\infty}e^{i\kappa x}\hat{u}(\kappa)d\kappa .
+\end{aligned}
+\end{split}\]</div>
+</div>
+<p>Μέσω παραγοντικής ολοκλήρωσης παίρνουμε τα εξής αποτελέσματα αναφορικά με την <span class="math notranslate nohighlight">\(n\)</span>-οστή παράγωγο της <span class="math notranslate nohighlight">\(u\)</span> και του μετασχηματισμού Fourier αυτής:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sprz3">
+<span class="eqno">(266)<a class="headerlink" href="#equation-eq-k8-sprz3" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;\frac{d^{n}u}{dx^{n}}=(i^{n})F^{-1}\left\{\kappa^{n}\hat{u}(\kappa)\right\},\\
+&amp;\frac{d^{n}\hat{u}}{d\kappa^{n}}=(-i)^{n}F\left\{x^{n}u(x)\right\}
+\end{aligned}
+\end{split}\]</div>
+<p>Ο μετασχηματισμός Fourier είναι ολοκληρωτικός γραμμικός μετασχηματισμός.</p>
+<section id="kdv">
+<h3>Φασματικές λύσεις της KdV<a class="headerlink" href="#kdv" title="Link to this heading">#</a></h3>
+<p>Θεωρούμε τον ευθύ μετασχηματισμό Fourier της εξίσωσης <a class="reference internal" href="#equation-eq-k8-analsol">(246)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sprz1">
+<span class="eqno">(267)<a class="headerlink" href="#equation-eq-k8-sprz1" title="Link to this equation">#</a></span>\[
+F\left\{\beta u''-\lambda u+\dfrac{\gamma}{2}u^{2}\right\}=0.
+\]</div>
+<p>Με χρήση γνωστών ιδιοτήτων του μετασχηματισμού Fourier, η <a class="reference internal" href="#equation-eq-k8-sprz1">(267)</a> παίρνει τη μορφή:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-myeq2">
+<span class="eqno">(268)<a class="headerlink" href="#equation-eq-k8-myeq2" title="Link to this equation">#</a></span>\[
+\hat{u}=F\{u\}=\dfrac{\gamma F\{u^{2}\}}{2(\lambda+\beta\kappa^{2})}.
+\]</div>
+<p>Η κατασκευή μιας μη τετριμμένης και φραγμένης λύσης απαιτεί να εισάγουμε <span class="math notranslate nohighlight">\(v\)</span> τέτοια ώστε, <span class="math notranslate nohighlight">\(u=cv\)</span>, όπου η σταθερά <span class="math notranslate nohighlight">\(c\neq0\)</span> θα προσδιοριστεί κατάλληλα <span id="id33">[<a class="reference internal" href="zreferences.html#id55" title="Mark J. Ablowitz and Ziad H. Musslimani. Spectral renormalization method for computing self-localized solutions to nonlinear systems. Optics Letters, 30(16):2140–2142, 2005.">Ablowitz and Musslimani, 2005</a>]</span>. Αντικαθιστώντας στην <a class="reference internal" href="#equation-eq-k8-myeq2">(268)</a>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sprz4">
+<span class="eqno">(269)<a class="headerlink" href="#equation-eq-k8-sprz4" title="Link to this equation">#</a></span>\[
+\hat{v}=\dfrac{c\gamma F\{v^{2}\}}{2(\lambda+\beta\kappa^{2})}.
+\]</div>
+<p>Πολλαπλασιάζοντας την <a class="reference internal" href="#equation-eq-k8-sprz4">(269)</a> με <span class="math notranslate nohighlight">\(\hat{v}^{*}\)</span>, τη συζυγή της <span class="math notranslate nohighlight">\(\hat{v}\)</span>, και ολοκληρώνοντας στο πεδίο συχνοτήτων <span class="math notranslate nohighlight">\(\kappa\)</span>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sprz5">
+<span class="eqno">(270)<a class="headerlink" href="#equation-eq-k8-sprz5" title="Link to this equation">#</a></span>\[
+c=\dfrac{2}{\gamma}\dfrac{\int_{-\infty}^{\infty}(\lambda+\beta\kappa^{2})|\hat{v}|^{2}\ d\kappa}{\int_{-\infty}^{\infty}F\{v^{2}\}\hat{v}^{*}\ d\kappa}.
+\]</div>
+<p>Οι εξισώσεις <a class="reference internal" href="#equation-eq-k8-sprz4">(269)</a> και <a class="reference internal" href="#equation-eq-k8-sprz5">(270)</a> αποτελούν ένα επαναληπτικό σχήμα σταθερού σημείου, η λύση του οποίου για <span class="math notranslate nohighlight">\(c\)</span> και <span class="math notranslate nohighlight">\(v\)</span> μπορεί να εκφραστεί ως:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sprz6">
+<span class="eqno">(271)<a class="headerlink" href="#equation-eq-k8-sprz6" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;c_{n}=\dfrac{2}{\gamma}\dfrac{\int_{-\infty}^{\infty}(\lambda+\beta\kappa^{2})|\hat{v_{n}}|^{2}\ d\kappa}{\int_{-\infty}^{\infty}F\{v_{n}^{2}\}\hat{v_{n}}^{*}\ d\kappa},\\\\
+&amp;\hat{v_{n+1}}=\dfrac{c_{n}\gamma F\{v_{n}^{2}\}}{2(\lambda+\beta\kappa^{2})}.
+\end{aligned}
+\end{split}\]</div>
+<p>Αναφορικά με τις αρχικές τιμές, <span class="math notranslate nohighlight">\(c_{0}\)</span> και <span class="math notranslate nohighlight">\(v_{0}\)</span>, επιλέγουμε <span id="id34">[<a class="reference internal" href="zreferences.html#id55" title="Mark J. Ablowitz and Ziad H. Musslimani. Spectral renormalization method for computing self-localized solutions to nonlinear systems. Optics Letters, 30(16):2140–2142, 2005.">Ablowitz and Musslimani, 2005</a>, <a class="reference internal" href="zreferences.html#id56" title="E. Tzirtzilakis, M. Xenos, V. Marinakis, and T.C. Bountis. Interactions and stability of solitary waves in shallow water. Chaos, Solitons &amp; Fractals, 14(1):87–95, 2002.">Tzirtzilakis <em>et al.</em>, 2002</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+c_{0}=1, \quad v_{0}(x)=\text{$e$}^{-x^{2}}.
+\]</div>
+<p>Το επαναληπτικό φασματικό σχήμα <a class="reference internal" href="#equation-eq-k8-sprz6">(271)</a> επιλέγεται να έχει τις κάτωθι συνθήκες τερματισμού, οι οποίες συνεισφέρουν και στην ακρίβεια των αριθμητικών λύσεών του:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-sprzcor">
+<span class="eqno">(272)<a class="headerlink" href="#equation-eq-k8-sprzcor" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;|c_{n+1}-c_{n}|\leq10^{-10},\\\\
+&amp;\bigg|F^{-1}\{\hat{{v}_{n+1}}\}-F^{-1}\{\hat{{v}_{n}}\}\bigg|_{\infty}\leq10^{-10}, \quad n\geq0.
+\end{aligned}
+\end{split}\]</div>
+<p>Η φασματική αριθμητική μέθοδος παρουσιάζει ακρίβεια φασματικής τάξης, σχετικά με τις χωρικές μεταβλητές του προβλήματος <span id="id35">[<a class="reference internal" href="zreferences.html#id55" title="Mark J. Ablowitz and Ziad H. Musslimani. Spectral renormalization method for computing self-localized solutions to nonlinear systems. Optics Letters, 30(16):2140–2142, 2005.">Ablowitz and Musslimani, 2005</a>, <a class="reference internal" href="zreferences.html#id56" title="E. Tzirtzilakis, M. Xenos, V. Marinakis, and T.C. Bountis. Interactions and stability of solitary waves in shallow water. Chaos, Solitons &amp; Fractals, 14(1):87–95, 2002.">Tzirtzilakis <em>et al.</em>, 2002</a>]</span>. Επόμενος στόχος είναι η χρονική εξέλιξη της αριθμητικής λύσης που λάβαμε από τη φασματική μέθοδο. Θεωρούμε, για το σκοπό αυτό, την εξίσωση KdV, στη μορφή:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-eqn29">
+<span class="eqno">(273)<a class="headerlink" href="#equation-eq-k8-eqn29" title="Link to this equation">#</a></span>\[
+u_{t}=-\gamma uu_{x}-\beta u_{xxx}.
+\]</div>
+<p>Εφαρμόζοντας το μετασχηματισμό Fourier, γράφουμε την <a class="reference internal" href="#equation-eq-k8-eqn29">(273)</a> ως <span id="id36">[<a class="reference internal" href="zreferences.html#id19" title="L.N. Trefethen. Spectral methods in MATLAB. Volume 10. SIAM, 2000.">Trefethen, 2000</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-eqn30">
+<span class="eqno">(274)<a class="headerlink" href="#equation-eq-k8-eqn30" title="Link to this equation">#</a></span>\[
+u_{t}=f(t,u).
+\]</div>
+<p>Όπου οι χωρικές μερικές παράγωγοι υπολογίζονται ως:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;u_{x}=iF^{-1}(\kappa\hat{u}),\\
+&amp;u_{xx}=-F^{-1}(\kappa^{2}\hat{u}),\\
+&amp;u_{xxx}=-iF^{-1}(\kappa^{3}\hat{u}).
+\end{aligned}
+\end{split}\]</div>
+<p>Πλέον, η <a class="reference internal" href="#equation-eq-k8-eqn30">(274)</a> έχει πάρει κατάλληλη μορφή ώστε να μπορούμε να εφαρμόσουμε το άμεσο σχήμα Runge-Kutta τέταρτης τάξης. Έτσι, θα λάβουμε την αριθμητική εξέλιξη της φασματικής λύσης της KdV, με αρχική συνθήκη τη φασματική λύση.</p>
+</section>
+<section id="id37">
+<h3>Φασματικές λύσεις της Burgers<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
+<p>Οι αριθμητικές φασματικές λύσεις της εξίσωσης Burgers θα ληφθούν μέσω της μεθόδου Runge-Kutta τέταρτης τάξης, όπως έγινε και με τις λύσεις της εξίσωσης KdV. Για αρχική συνάρτηση, επιλέγουμε και εδώ την <span class="math notranslate nohighlight">\(u(x,0)=\operatorname{sech}^{2}{x}\)</span>.</p>
+<figure class="align-default" id="fig-kdvevo">
+<img alt="_images/KdVEvo.png" src="_images/KdVEvo.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Η φασματική αριθμητική λύση (αριστερά) και το αναλυτικό σολιτόνιο της KdV (δεξιά), για <span class="math notranslate nohighlight">\(\lambda=\beta=1\)</span> και <span class="math notranslate nohighlight">\(\gamma=6\)</span>.</span><a class="headerlink" href="#fig-kdvevo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-burgersevo">
+<img alt="_images/BurgersEvo.png" src="_images/BurgersEvo.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Αριθμητικές λύσεις της ιξωδικής Burgers, για <span class="math notranslate nohighlight">\(\nu=10^{-2}\)</span>. Παρατηρείται τόσο ο κρουστικός χαρακτήρας όσο και η απώλεια ενέργειας λόγω διάχυσης.</span><a class="headerlink" href="#fig-burgersevo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id38">
+<h2>Εφαρμογές και ασκήσεις<a class="headerlink" href="#id38" title="Link to this heading">#</a></h2>
+<p>Στην τελευταία αυτή ενότητα θα παρουσιάσουμε αναλυτικές εφαρμογές μαζί με ασκήσεις προς λύση, με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
+<section id="id39">
+<h3>Η γραμμική εξίσωση KdV<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
+<p>Θεωρούμε το Π.Α.Τ. της γραμμικής εξίσωση KdV, σε αντιστοιχία με αυτό της KdV για <span class="math notranslate nohighlight">\(\gamma=0\)</span>, ως:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lkdv">
+<span class="eqno">(275)<a class="headerlink" href="#equation-eq-k8-lkdv" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{t}+\beta u_{xxx}=0, \quad u=u(x,t), \quad (x,t)\in\mathbb{R}\times(0,\infty), \quad \beta&gt;0,\\
+&amp;u(x,0):=u_{0}(x)\underset{|x|\rightarrow\infty}{\rightarrow}0.
+\end{aligned}
+\end{split}\]</div>
+<p>Εφαρμόζοντας το μετασχηματισμό Fourier, ως προς τη χωρική μεταβλητή <span class="math notranslate nohighlight">\(x\)</span>, σε αμφότερα τα μέλη της <a class="reference internal" href="#equation-eq-k8-lkdv">(275)</a>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-lkdvsol">
+<span class="eqno">(276)<a class="headerlink" href="#equation-eq-k8-lkdvsol" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;\ \hat{u}_{t}-i\beta\kappa^{3}\hat{u}=0,\\
+\Leftrightarrow&amp;\ \hat{u}(\kappa,t)=\hat{u_{0}}(\kappa)e^{i\beta\kappa^{3}t},\\
+\Leftrightarrow&amp;\ u(x,t)=\dfrac{1}{2\pi}\int_{-\infty}^{\infty}\hat{u_{0}}(\kappa)e^{i\kappa(x+\beta\kappa^{2}t)}d\kappa.
+\end{aligned}
+\end{split}\]</div>
+<p>Ως άσηση για τη γραμμική εξίσωση KdV, ακολουθώντας τα αντίστοιχα εδάφια της θεωρίας, να μελετηθούν τα ακόλουθα, καθώς και να αναπαρασταθούν γραφικά τα αποτελέσματα, όπου είναι εφικτό:</p>
+<ol class="arabic simple">
+<li><p>Αναλυτικές λύσεις οδεύοντος κύματος.</p></li>
+<li><p>Αναλυτικές λύσεις ομοιότητας.</p></li>
+<li><p>Αριθμητικές φασματικές λύσεις.</p></li>
+</ol>
+</section>
+<section id="id40">
+<h3>Η τροποποιημένη εξίσωση KdV<a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
+<p>Στο εδάφιο αυτό, μελετούμε την τροποποιημένη εξίσωση KdV (modified KdV, mKdV), η οποία δίνεται ως <span id="id41">[<a class="reference internal" href="zreferences.html#id57" title="Mark J. Ablowitz. Nonlinear dispersive waves: asymptotic analysis and solitons. Volume 47. Cambridge University Press, 2011.">Ablowitz, 2011</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-mkdv0">
+<span class="eqno">(277)<a class="headerlink" href="#equation-eq-k8-mkdv0" title="Link to this equation">#</a></span>\[
+u_{t}+\gamma u^{2}u_{x}+\beta u_{xxx}=0, \quad (x,t)\in\mathbb{R}\times(0,\infty), \quad \beta&gt;0, \quad \gamma\neq0.
+\]</div>
+<p>Θα υποθέσουμε επίσης ότι τόσο η λύση όσο και οι χωρικές μερικές παράγωγοι αυτής, τείνουν προς το <span class="math notranslate nohighlight">\(0\)</span> για <span class="math notranslate nohighlight">\(|x|\rightarrow\infty\)</span>. Όπως και η KdV, έτσι και η mKdV, γράφεται σε διατηρητική μορφή:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-mkdv1">
+<span class="eqno">(278)<a class="headerlink" href="#equation-eq-k8-mkdv1" title="Link to this equation">#</a></span>\[
+u_{t}+\left(\dfrac{\gamma u^{3}}{3}+\beta u_{xx}\right)_{x}=0.
+\]</div>
+<p>Έτσι, ολοκληρώνοντας την <a class="reference internal" href="#equation-eq-k8-mkdv1">(278)</a> στο <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> για <span class="math notranslate nohighlight">\(t&gt;0\)</span>, μπορούμε να δείξουμε ότι η ποσότητα <span class="math notranslate nohighlight">\(\int_{-\infty}^{\infty}u\ dx\)</span>, όπως συνέβη και στην KdV, διατηρείται στο χρόνο. Ως άσκηση, με χρήση της αντίστοιχης θεωρίας, να μελετηθούν τα ακόλουθα, καθώς και να αναπαρασταθούν γραφικά τα αποτελέσματα, όπου είναι εφικτό:</p>
+<ol class="arabic simple">
+<li><p>Αναλυτικές λύσεις οδεύοντος κύματος της <a class="reference internal" href="#equation-eq-k8-mkdv0">(277)</a>.</p></li>
+<li><p>Αναλυτικές λύσεις ομοιότητας της <a class="reference internal" href="#equation-eq-k8-mkdv0">(277)</a>.</p></li>
+<li><p>Αριθμητικές φασματικές λύσεις της <a class="reference internal" href="#equation-eq-k8-mkdv0">(277)</a>.</p></li>
+</ol>
+</section>
+<section id="cole-hopf">
+<h3>Ο μετασχηματισμός των Cole-Hopf<a class="headerlink" href="#cole-hopf" title="Link to this heading">#</a></h3>
+<p>Στο εδάφιο αυτό, ασχολούμαστε με την ολοκληρωσιμότητα της ιξωδικής εξίσωσης Burgers, μελετώντας το Π.Α.Τ. αυτής:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brgc1">
+<span class="eqno">(279)<a class="headerlink" href="#equation-eq-k8-brgc1" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;u_{t}+uu_{x}-\alpha u_{xx}=0, \quad u=u(x,t), \quad (x,t)\in\mathbb{R}\times(0,\infty), \quad \nu&gt;0,\\
+&amp;u(x,0)=f(x)\rightarrow0, \quad |x|\rightarrow\infty.
+\end{aligned}
+\end{split}\]</div>
+<p>Θέτουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brgc2">
+<span class="eqno">(280)<a class="headerlink" href="#equation-eq-k8-brgc2" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;w := \int_{0}^{x}u(y,t)\ dy,\\\\
+&amp;h(x) := \int_{0}^{x}f(y)\ dy,
+\end{aligned}
+\end{split}\]</div>
+<p>με <span class="math notranslate nohighlight">\(w\rightarrow\)</span> σταθερά καθώς <span class="math notranslate nohighlight">\(|x|\rightarrow\infty\)</span>, και παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brgc3">
+<span class="eqno">(281)<a class="headerlink" href="#equation-eq-k8-brgc3" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;w_{t}+\dfrac{1}{2}w_{x}^{2}-\alpha w_{xx}=0, \quad (x,t)\in\mathbb{R}\times(0,\infty),\\
+&amp;w(x,0)=h(x), \quad x\in\mathbb{R}.
+\end{aligned}
+\end{split}\]</div>
+<p>Θεωρούμε τώρα το μετασχηματισμό:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brgc4">
+<span class="eqno">(282)<a class="headerlink" href="#equation-eq-k8-brgc4" title="Link to this equation">#</a></span>\[
+v=\phi(w),
+\]</div>
+<p>με τη <span class="math notranslate nohighlight">\(\phi\)</span> να είναι τέτοια ώστε η <span class="math notranslate nohighlight">\(v\)</span> να αποτελεί τελικά λύση μιας γραμμικής εξίσωσης. Μέσω αλυσιδωτής διαφόρισης της <a class="reference internal" href="#equation-eq-k8-brgc4">(282)</a>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brgc5">
+<span class="eqno">(283)<a class="headerlink" href="#equation-eq-k8-brgc5" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;v_{t}=\phi'(w)w_{t},\\
+&amp;v_{xx}=\phi''(w)w_{x}^{2}+\phi'(w)w_{xx}.
+\end{aligned}
+\end{split}\]</div>
+<p>Συνεπώς, από την <a class="reference internal" href="#equation-eq-k8-brgc3">(281)</a> έπεται ότι:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+v_{t}&amp;=\phi'(w)\left(\nu w_{xx}-\dfrac{w_{x}^{2}}{2}\right)\\
+&amp;=\nu v_{xx}-\left(\nu\phi''(w)+\dfrac{\phi'(w)}{2}\right)w_{x}^{2}\\
+&amp;=\nu v_{xx},
+\end{aligned}
+\end{split}\]</div>
+<p>με την προϋπόθεση ότι η <span class="math notranslate nohighlight">\(\phi\)</span> πληροί την:</p>
+<div class="math notranslate nohighlight">
+\[
+\nu\phi''+\dfrac{\phi'}{2}=0.
+\]</div>
+<p>Μια λύση της τελευταίας είναι η:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi=e^{-\dfrac{z}{2\nu}}.
+\]</div>
+<p>Έτσι, στην περίπτωση που η <span class="math notranslate nohighlight">\(w\)</span> αποτελεί λύση της <a class="reference internal" href="#equation-eq-k8-brgc3">(281)</a>, τότε η:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-brgc6">
+<span class="eqno">(284)<a class="headerlink" href="#equation-eq-k8-brgc6" title="Link to this equation">#</a></span>\[
+v=e^{-\dfrac{w}{2\nu}}
+\]</div>
+<p>θα αποτελεί λύση του Π.Α.Τ. της εξίσωσης διάχυσης:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-heat1">
+<span class="eqno">(285)<a class="headerlink" href="#equation-eq-k8-heat1" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;v_{t}-\nu v_{xx}=0, \ (x,t)\in\mathbb{R}\times(0,\infty),\\\\
+&amp;v(x,0)=e^{-\dfrac{h(x)}{2\nu}}.
+\end{aligned}
+\end{split}\]</div>
+<div class="note admonition">
+<p class="admonition-title">Ορισμός</p>
+<p>Ο μετασχηματισμός που δίνεται μέσω της <a class="reference internal" href="#equation-eq-k8-brgc6">(284)</a> είναι γνωστός ως μετασχηματισμός των Cole-Hopf και ανάγει την επίλυση της μη γραμμικής ιξωδικής Burgers σε αυτήν της γραμμικής εξίσωσης διάχυσης. Αυτή η αναγωγή καθιστά τη μη γραμμική εξίσωση ολοκληρώσιμη <span id="id42">[<a class="reference internal" href="zreferences.html#id59" title="Lawrence C. Evans. Partial differential equations. Volume 19. American Mathematical Society, 2010.">Evans, 2010</a>]</span>.</p>
+</div>
+<p>Στο στάδιο αυτό, το ισοδύναμο πλέον γραμμικό πρόβλημα <a class="reference internal" href="#equation-eq-k8-heat1">(285)</a>, μέσω του μετασχηματισμού Fourier, όπως και αυτό της <a class="reference internal" href="#equation-eq-k8-lkdv">(275)</a>, δέχεται μοναδική λύση:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-heat2">
+<span class="eqno">(286)<a class="headerlink" href="#equation-eq-k8-heat2" title="Link to this equation">#</a></span>\[
+v(x,t)=\dfrac{1}{\sqrt{4\pi\nu t}}\int_{-\infty}^{\infty}e^{-\dfrac{(x-y)^{2}}{4\nu t}-\dfrac{h(y)}{2\nu}}dy.
+\]</div>
+<p>Τότε, επειδή και η <a class="reference internal" href="#equation-eq-k8-brgc6">(284)</a> γράφεται ισοδύναμα ως:</p>
+<div class="math notranslate nohighlight">
+\[
+w=-2\nu\log{v},
+\]</div>
+<p>λαμβάνουμε την έκφραση κλειστής μορφής για την <span class="math notranslate nohighlight">\(w\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-ch1">
+<span class="eqno">(287)<a class="headerlink" href="#equation-eq-k8-ch1" title="Link to this equation">#</a></span>\[
+w(x,t)=-2\nu\log{\dfrac{1}{\sqrt{4\pi\nu t}}\int_{-\infty}^{\infty}e^{-\dfrac{(x-y)^{2}}{4\nu t}-\dfrac{h(y)}{2\nu}}dy}.
+\]</div>
+<p>Τελικά, διαφορίζοντας την <a class="reference internal" href="#equation-eq-k8-ch1">(287)</a>, μερικώς ως προς <span class="math notranslate nohighlight">\(x\)</span>, παίρνουμε:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-ch2">
+<span class="eqno">(288)<a class="headerlink" href="#equation-eq-k8-ch2" title="Link to this equation">#</a></span>\[
+u(x,t)=\dfrac{\int_{-\infty}^{\infty}\dfrac{x-y}{t}e^{-\dfrac{(x-y)^{2}}{4\nu t}-\dfrac{h(y)}{2\nu}}dy}{\int_{-\infty}^{\infty}e^{-\dfrac{(x-y)^{2}}{4\nu t}-\dfrac{h(y)}{2\nu}}dy}.
+\]</div>
+</section>
+<section id="id43">
+<h3>Η εξίσωση ροής κυκλοφορίας<a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
+<p>Ως ένα φυσικό παράδειγμα που υπόκειται σε νόμο διατήρησης, θεωρούμε τη ροή αυτοκινήτων σε αυτοκινητόδρομο (traffic flow). Αυτή, όπως θα δείξουμε, περιγράφεται μέσω μιας διατηρητικής μορφής υπερβολικού τύπου. Υποθέτουμε ότι η συνάρτηση <span class="math notranslate nohighlight">\(\rho\)</span> εκφράζει την πυκνότητα κατανομής των αυτοκινήτων στο δρόμο και η <span class="math notranslate nohighlight">\(u\)</span> την ταχύτητα αυτών. Μπορούμε να υποθέσουμε ότι η <span class="math notranslate nohighlight">\(u\)</span> είναι μια δεδομένη συνάρτηση της <span class="math notranslate nohighlight">\(\rho\)</span>, μιας και σε έναν αυτοκινητόδρομο θα θέλαμε βέλτιστα να οδηγούμε με κάποια ταχύτητα <span class="math notranslate nohighlight">\(U_{\max}\)</span> (η οριακή ταχύτητα). Βέβαια, στην πυκνή κυκλοφορία επιβραδύνουμε, με την ταχύτητα να μειώνεται καθώς αυξάνεται η πυκνότητα.</p>
+<p>Το απλούστερο μαθηματικό μοντέλο, για την παραπάνω περιγραφή, προκύπτει γραμμικά ως:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-tf0">
+<span class="eqno">(289)<a class="headerlink" href="#equation-eq-k8-tf0" title="Link to this equation">#</a></span>\[
+u(\rho)=U_{\max}\left(1-\dfrac{\rho}{\rho_{\max}}\right),
+\]</div>
+<p>όπου η τιμή <span class="math notranslate nohighlight">\(\rho_{\max}\)</span> αφορά στην πυκνότητα κατά τη μέγιστη κυκλοφοριακή συμφόρηση. Σημειώνουμε ότι, βάσει της <a class="reference internal" href="#equation-eq-k8-tf0">(289)</a>, η ταχύτητα των αυτοκινήτων γίνεται μέγιστη όταν δεν υπάρχει κυκλοφοριακή συμφόρηση, δηλαδή <span class="math notranslate nohighlight">\(\rho=0\)</span>, ενώ γίνεται μηδενική, δηλαδή τα αυτοκίνητα ακινητοποιούνται, στην περίπτωση της έντονης συμφόρησης.</p>
+<p>Θεωρώντας:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-tf1">
+<span class="eqno">(290)<a class="headerlink" href="#equation-eq-k8-tf1" title="Link to this equation">#</a></span>\[
+F(\rho)=\rho u(\rho)=\rho U_{\max}\left(1-\dfrac{\rho}{\rho_{\max}}\right),
+\]</div>
+<p>από την εξίσωση συνέχειας, λαμβάνουμε την υπερβολική διατηρητική μορφή <span id="id44">[<a class="reference internal" href="zreferences.html#id52" title="Randall J. LeVeque and Randall J. Leveque. Numerical methods for conservation laws. Volume 214. Springer, 1992.">LeVeque and Leveque, 1992</a>]</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-k8-tf2">
+<span class="eqno">(291)<a class="headerlink" href="#equation-eq-k8-tf2" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+&amp;\ \rho_{t}+\left(\rho u\right)_{x}=0 \ \text{(Εξίσωση συνέχειας)},\\
+\Leftrightarrow&amp;\ \rho_{t}+\left(F(\rho)\right)_{x}=0.
+\end{aligned}
+\end{split}\]</div>
+<figure class="align-default" id="fig-k8-trafficflow">
+<img alt="_images/Trafficflow.png" src="_images/Trafficflow.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Γραφική αναπαράσταση των <span class="math notranslate nohighlight">\(u\)</span> και <span class="math notranslate nohighlight">\(F\)</span>, για <span class="math notranslate nohighlight">\(U_{\max}=\rho_{\max}=1\)</span>.</span><a class="headerlink" href="#fig-k8-trafficflow" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Ως άσκηση, για την εξίσωση <a class="reference internal" href="#equation-eq-k8-tf2">(291)</a>, για <span class="math notranslate nohighlight">\(U_{\max}=\rho_{\max}=1\)</span>, με χρήση της αντίστοιχης θεωρίας, να μελετηθούν τα ακόλουθα, καθώς και να αναπαρασταθούν γραφικά τα αποτελέσματα, όπου είναι εφικτό:</p>
+<ol class="arabic simple">
+<li><p><strong>Αναλυτικές λύσεις μέσω της μεθόδου των χαρακτηριστικών</strong>, αφού έχετε προσδιορίσει ρητά και το χρόνο θραύσης του κύματος (αν τέτοιος χρόνος υφίσταται).</p></li>
+<li><p><strong>Αναλυτικές λύσεις ομοιότητας</strong>.</p></li>
+<li><p><strong>Αριθμητικές λύσεις με τις μεθόδους LF και LW</strong>.</p></li>
+</ol>
+</section>
+<section id="t">
+<h3>Υπάρχει μέλλον μετά το χρόνο θραύσης <span class="math notranslate nohighlight">\(t^{*}\)</span>;<a class="headerlink" href="#t" title="Link to this heading">#</a></h3>
+<p>Στο εδάφιο αυτό θα παρουσιάσουμε τη μέθοδο ίσων περιοχών του Whitham <span id="id45">[<a class="reference internal" href="zreferences.html#id60" title="Gerald Beresford Whitham. Linear and nonlinear waves. John Wiley &amp; Sons, 2011.">Whitham, 2011</a>]</span>. Θα ασχοληθούμε με τη γραφική αναπαράσταση των κρουστικών κυμάτων μετά το χαρακτηριστικό χρόνο <span class="math notranslate nohighlight">\(t^{*}\)</span>. Το ερώτημα που τίθεται είναι πώς να τοποθετηθεί σωστά αυτή η κρουστική καμπύλη, ώστε να «συνεχίζει» τη λύση και μετά το χρόνο θραύσης. Προφανώς, η λύση μετά το χρόνο αυτό θα είναι ασυνεχής και δε θα μπορεί να ικανοποιεί με τον κλασικό τρόπο μια εξίσωση με παραγώγους. Δηλαδή, προκύπτει φυσιολογικά η ανάγκη μιας ασθενούς θεώρησης της λύσης.</p>
+<p>Όπως είδαμε, η διατηρητική μορφή διατηρεί στο χρόνο το εμβαδόν μεταξύ της κυματομορφής και του άξονα των <span class="math notranslate nohighlight">\(x\)</span>. Συνεπώς, τόσο η ασυνέχεια (κρουστική καμπύλη) όσο και η πλειονότιμη καμπύλη (που προκύπτει από τη μέθοδο των χαρακτηριστικών) πρέπει να υπακούν στη διατήρηση στο χρόνο του εμβαδού της κυματομορφής. Επομένως, η κρουστική καμπύλη πρέπει να τοποθετηθεί με τέτοιο τρόπο ώστε να αποκόπτει ίσες περιοχές.</p>
+<figure class="align-default" id="fig-k8-equal-area">
+<img alt="_images/equalarea2.png" src="_images/equalarea2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">[A] Εφαρμογή της αρχής των ίσων περιοχών, ώστε <span class="math notranslate nohighlight">\(A1\)</span>=<span class="math notranslate nohighlight">\(A2\)</span>. [B] Τα στάδια σχηματισμού κρουστικού κύματος μέσω της αρχής των ίσων περιοχών.</span><a class="headerlink" href="#fig-k8-equal-area" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="tip admonition">
+<p class="admonition-title">Ασκήσεις για λύση</p>
+<ol class="arabic">
+<li><p>Θεωρήστε τη μονοδιάστατη εξίσωση διάχυσης:</p>
+<div class="math notranslate nohighlight">
+\[
+   u_{t} = k u_{xx}, \quad u = u(x,t) .
+   \]</div>
+<p>Εφαρμόστε το σχήμα ανάντη διαφορών για τη διακριτοποίηση της χωρικής παραγώγου και επιλύστε την εξίσωση αριθμητικά για διαφορετικές συνοριακές συνθήκες.</p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic" start="2">
+<li><p>Δεδομένης της μονοδιάστατης εξίσωσης μεταφοράς:</p>
+<div class="math notranslate nohighlight">
+\[
+   u_{t}+cu_{x}=0,\quad u=u(x,t),\ c&gt;0 ,
+   \]</div>
+<p>χρησιμοποιήστε το σχήμα ανάντη διαφορών για να διακριτοποιήσετε τον όρο χωρικής μεταφοράς και να επιλύσετε την εξίσωση αριθμητικά. Πειραματιστείτε με διαφορετικές τιμές της ταχύτητας μεταφοράς <span class="math notranslate nohighlight">\(c\)</span> και παρατηρήστε τη συμπεριφορά της λύσης.</p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic" start="3">
+<li><p>Θεωρήστε τη μονοδιάστατη και ιξωδική εξίσωση Burgers:</p>
+<div class="math notranslate nohighlight">
+\[
+   u_{t}+uu_{x}=\nu u_{xx},\quad u=u(x,t),\quad \nu&gt;0 .
+   \]</div>
+<p>Εφαρμόστε το σχήμα ανάντη διαφορών για να διακριτοποιήσετε τον όρο μη γραμμικής μεταφοράς και τον όρο της δεύτερης παραγώγου. Επιλύστε την εξίσωση αριθμητικά και παρατηρήστε το σχηματισμό κρουστικών κυμάτων (shock waves) ή/και κυμάτων αραιώσεως (rarefaction waves).</p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic" start="4">
+<li><p>Θεωρήστε το μοντέλο ροής κυκλοφορίας των Lighthill, Whitham και Richards (LWR):</p>
+<div class="math notranslate nohighlight">
+\[
+   \rho_{t}+(\rho v)_{x}=0 ,
+   \]</div>
+<p>όπου η συνάρτηση <span class="math notranslate nohighlight">\(\rho\)</span> εκφράζει την κυκλοφοριακή συμφόρηση των οχημάτων και η <span class="math notranslate nohighlight">\(v\)</span> την ταχύτητα αυτών. Διακριτοποιήστε τον όρο μη γραμμικής μεταφοράς χρησιμοποιώντας το σχήμα ανάντη διαφορών και προσομοιώστε τη δυναμική της κυκλοφοριακής ροής υπό διαφορετικές συνθήκες κυκλοφορίας.</p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic" start="5">
+<li><p>Θεωρήστε τη μονοδιάστατη εξίσωση αντίδρασης-διάχυσης:</p>
+<div class="math notranslate nohighlight">
+\[
+   u_{t} = Du_{xx} + f(u) ,
+   \]</div>
+<p>όπου το <span class="math notranslate nohighlight">\(D\)</span> είναι ο συντελεστής διάχυσης και η <span class="math notranslate nohighlight">\(f(u)\)</span> αντιπροσωπεύει έναν όρο χημικής αντίδρασης. Χρησιμοποιήστε το σχήμα ανάντη διαφορών για τη διακριτοποίηση του όρου διάχυσης και λύστε την εξίσωση αριθμητικά, παρατηρώντας τις επιδράσεις της διάχυσης και της αντίδρασης στη λύση.</p>
+</li>
+</ol>
+</div>
+</section>
 </section>
 </section>
 
@@ -491,7 +1502,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -500,7 +1511,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Μόνιμη Μεταφορά &amp; Διάχυση</p>
+        <p class="prev-next-title">Η Εξίσωση Μεταφοράς - Διάχυσης</p>
       </div>
     </a>
     <a class="right-next"
@@ -508,7 +1519,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)</p>
+        <p class="prev-next-title">Οι Εξισώσεις των Navier και Stokes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -519,7 +1530,9 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -527,11 +1540,42 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Εξίσωση μη μόνιμη μεταφοράς &amp; διάχυσης σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Εμπρόσθιες διαφορές στο χρόνο &amp; κεντρικές διαφορές στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upwind">Εμπρόσθιες διαφορές στο χρόνο &amp; upwind στο χώρο</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Επέκταση στις 2 διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εφαρμογές &amp; ασκήσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#burgers">Εξίσωση του Burgers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#burgers-navier-stokes">Εξαγωγή της εξίσωση Burgers από τις εξισώσεις Navier-Stokes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Αναλυτικές λύσεις - κρουστικά μέτωπα</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Αναλυτικές λύσεις ομοιότητας</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ανιξωδική εξίσωση Burgers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#korteweg-de-vries">Εξίσωση των Korteweg-de Vries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Διατηρητικές μορφές</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Αναλυτικές λύσεις - Σολιτόνια</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Αναλυτικές λύσεις ομοιότητας</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lax-friedrichs">Το σχήμα των Lax-Friedrichs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Εφαρμογή στο πρόβλημα γραμμικής μεταφοράς</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Το γενικό, μη γραμμικό, υπερβολικό πρόβλημα</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lax-wendroff">Το σχήμα των Lax-Wendroff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maccormack">Το σχήμα του MacCormack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#godunov">Προσέγγιση του Godunov</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Αριθμητική επίλυση της ιξωδικής Burgers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Φασματική μέθοδος</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kdv">Φασματικές λύσεις της KdV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Φασματικές λύσεις της Burgers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">Εφαρμογές και ασκήσεις</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Η γραμμική εξίσωση KdV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">Η τροποποιημένη εξίσωση KdV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cole-hopf">Ο μετασχηματισμός των Cole-Hopf</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Η εξίσωση ροής κυκλοφορίας</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t">Υπάρχει μέλλον μετά το χρόνο θραύσης <span class="math notranslate nohighlight">\(t^{*}\)</span>;</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -580,8 +1624,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

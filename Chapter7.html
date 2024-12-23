@@ -1,61 +1,61 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Μόνιμη Μεταφορά &amp; Διάχυση &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Η Εξίσωση Μεταφοράς - Διάχυσης &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css?v=982b99e0" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -92,20 +92,21 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter7';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Μη-μόνιμη Μεταφορά &amp; Διάχυση" href="Chapter8.html" />
-    <link rel="prev" title="Η εξίσωση Μεταφοράς" href="Chapter6.html" />
+    <link rel="next" title="Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)" href="Chapter8.html" />
+    <link rel="prev" title="Η Εξίσωση Μεταφοράς" href="Chapter6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -113,32 +114,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -146,7 +131,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -154,16 +138,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -178,6 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -191,11 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -211,11 +213,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Chapter3.html">Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter4.html">Η εξίσωση Διάχυσης</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter5.html">Οι εξισώσεις Laplace και Poisson</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter6.html">Η εξίσωση Μεταφοράς</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter8.html">Μη-μόνιμη Μεταφορά &amp; Διάχυση</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Η εξίσωση του Burger και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter10.html">Οι εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter6.html">Η Εξίσωση Μεταφοράς</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Η Εξίσωση Μεταφοράς - Διάχυσης</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter8.html">Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter9.html">Οι Εξισώσεις των Navier και Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Βιβλιογραφία</a></li>
 </ul>
 
     </div>
@@ -231,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -240,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -272,14 +274,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/raptistasos/CFD_python_GR/master?urlpath=tree/Chapter7.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -387,27 +389,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -418,7 +412,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Μόνιμη Μεταφορά & Διάχυση</h1>
+    <h1>Η Εξίσωση Μεταφοράς - Διάχυσης</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -428,11 +422,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Εξίσωση μόνιμης μεταφοράς και διάχυσης σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Σχήμα κεντρικών πεπερασμένων διαφορών</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upwind">Σχήμα ανάντη διαφορών (upwind)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Επέκταση στις δύο διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εφαρμογές &amp; ασκήσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Η μόνιμη εξίσωση μεταφοράς-διάχυσης</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εξίσωση μόνιμης μεταφοράς και διάχυσης σε μία διάσταση</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Σχήμα κεντρικών πεπερασμένων διαφορών</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Σχήμα ανάντη διαφορών</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Επέκταση στις δύο διαστάσεις</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Μη μόνιμη μεταφορά και διάχυση</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Εξίσωση μη μόνιμης μεταφοράς και διάχυσης σε μία διάσταση</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Εμπρόσθιες διαφορές στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Εμπρόσθιες διαφορές στο χρόνο και ανάντη διαφορές στο χώρο</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Επέκταση στις δύο διαστάσεις</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Εφαρμογές και ασκήσεις</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langevin">Εξίσωση του Langevin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Οδεύοντα κύματα</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -442,25 +451,331 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Μόνιμη Μεταφορά &amp; Διάχυση<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p><strong>Περίληψη</strong>. Σε αυτό το κεφάλαιο περιγράφεται η εξίσωση μόνιμης μεταφοράς και διάχυσης σε μια διάσταση. Εισάγεται η διακριτή μορφή με την μέθοδο των ΠΔ καθώς και με τη μέθοδο των ΠΟ. Περιγράφεται το σχήμα ανάντη διαφορών (upwind). Ακολουθεί η επέκταση της μεθοδολογίας στις δύο διαστάσεις. Το κεφάλαιο κλείνει με αναλυτικές εφαρμογές και ασκήσεις προς λύση με υπόδειξη για τα βασικά βήματα επίλυσης τους.</p>
+<h1>Η Εξίσωση Μεταφοράς - Διάχυσης<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Εξίσωση μόνιμης μεταφοράς και διάχυσης σε μια διάσταση<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>Περίληψη<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Η εξίσωση μεταφοράς-διάχυσης είναι ένας συνδυασμός των εξισώσεων μεταφοράς (advection) και διάχυσης (diffusion). Αποτελεί μια βαθμωτή Μ.Δ.Ε., η οποία περιγράφει φυσικά φαινόμενα μεταφοράς και διάχυσης σωματιδίων, ενέργειας ή άλλων φυσικών μεγεθών, π.χ. της θερμοκρασίας. Η εξίσωση μεταφοράς-διάχυσης μπορεί να γραφεί με απλό τρόπο ως εξής,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-00">
+<span class="eqno">(209)<a class="headerlink" href="#equation-eq-k7-00" title="Link to this equation">#</a></span>\[
+\frac{\partial T}{\partial t} + \nabla \cdot \mathbf{j} = R,
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> είναι η συνολική ροή της βαθμωτής συνάρτησης και <span class="math notranslate nohighlight">\(R\)</span> είναι μια συνισταμένη ογκομετρική πηγή για τη βαθμωτή συνάρτηση <span class="math notranslate nohighlight">\(T = T(\mathbf{r}, t)\)</span>. Υπάρχουν δύο πηγές ροής σε αυτή την κατάσταση. Πρώτον, η διαχυτική ροή η οποία περιγράφεται συνήθως με τον πρώτο νόμο του Fick που αφορά μεταβολή της συγκέντρωσης μιας ουσίας στο χώρο ή από το νόμο του Fourier που αφορά διάχυση ενέργειας (θερμική ροή) στο χώρο,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{j}_{\text{diff}} = - D \, \nabla T,
+\]</div>
+<p>δηλαδή, η ροή του υλικού που διαχέεται, σε σχέση με την κίνηση του όγκου ελέγχου, είναι ανάλογη της τοπικής κλίσης συγκέντρωσης ή θερμικής ροής. Δεύτερον, όταν υπάρχει συνολική μεταφορά ή «ροή», υπάρχει μια σχετική ροή που ονομάζεται ροή μεταφοράς, ή μεταγωγική ροή, η οποία περιγράφεται μαθηματικά ως,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{j}_{\text{adv}} = q T,
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(q\)</span> είναι η ταχύτητα με την οποία μεταφέρεται η βαθμωτή ποσότητα <span class="math notranslate nohighlight">\(T\)</span>. Αντικαθιστώντας, τελικά, στην αρχική εξίσωση, εξίσωση <a class="reference internal" href="#equation-eq-k7-00">(209)</a>, λαμβάνουμε,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-0">
+<span class="eqno">(210)<a class="headerlink" href="#equation-eq-k7-0" title="Link to this equation">#</a></span>\[
+\frac {\partial T}{\partial t}+ \nabla \cdot \left( \mathbf{j}_{\text{diff}} + \mathbf{j}_{\text{adv}} \right) = R \Rightarrow \frac {\partial T}{\partial t}+ \nabla \cdot \left( - D \, \nabla T + q \, T \right) = R.
+\]</div>
+<p>Το κεφάλαιο αναλύεται σε δύο βασικές ενότητες. Στην πρώτη ενότητα περιγράφεται η εξίσωση μόνιμη μεταφοράς–διάχυσης, ενώ στη δεύτερη ενότητα περιγράφεται η μη μόνιμη εξίσωση μεταφοράς–διάχυσης.</p>
+<p><strong>Προαπαιτούμενη γνώση</strong>: Βασικές γνώσεις Συνήθων/Μερικών Διαφορικών Εξισώσεων και Αριθμητικής Ανάλυσης.</p>
 </section>
 <section id="id3">
-<h2>Σχήμα κεντρικών πεπερασμένων διαφορών<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="upwind">
-<h2>Σχήμα ανάντη διαφορών (upwind)<a class="headerlink" href="#upwind" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="id4">
-<h2>Επέκταση στις δύο διαστάσεις<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-</section>
+<h2>Η μόνιμη εξίσωση μεταφοράς-διάχυσης<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Όπως περιγράφηκε στην εισαγωγική ενότητα, η εξίσωση μεταφοράς-διάχυσης αποτελεί μια βαθμωτή Μ.Δ.Ε. που περιγράφει τις συνδυασμένες επιδράσεις της μεταφοράς και της διάχυσης στην κατανομή μιας βαθμωτής ποσότητας (συνάρτηση των χωρικών συντεταγμένων), όπως για παράδειγμα η θερμότητα, <span class="math notranslate nohighlight">\(T\)</span>, η μάζα, <span class="math notranslate nohighlight">\(m\)</span> ή η ορμή <span class="math notranslate nohighlight">\(j\)</span>, σε ένα ρευστό ή ένα στερεό μέσο. Συναντάται συχνά σε διάφορα πεδία της επιστήμης και της μηχανικής, όπως είναι η μηχανική των ρευστών, η μεταφορά θερμότητας και μάζας καθώς και σε φαινόμενα μεταφοράς χημικών ουσιών.</p>
+<p>Η εξίσωση μόνιμης μεταφοράς και διάχυσης, ενός βαθμωτού πεδίου, περιγράφεται από τη Μ.Δ.Ε. ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-1">
+<span class="eqno">(211)<a class="headerlink" href="#equation-eq-k7-1" title="Link to this equation">#</a></span>\[
+q \cdot \nabla T = D \nabla^{2} T ,
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(q\)</span> είναι το ασυμπίεστο πεδίο ταχύτητας που αντιστοιχεί στην ποσότητα <span class="math notranslate nohighlight">\(T\)</span>, όπου ισχύει η ασυμπίεστη εξίσωση συνέχειας, δηλαδή <span class="math notranslate nohighlight">\(\nabla \cdot q = 0\)</span>. Αξίζει να παρατηρήσει κανείς ότι η εξίσωση <a class="reference internal" href="#equation-eq-k7-1">(211)</a> δεν είναι παρά η χρονοανεξάρτητη εξίσωση <a class="reference internal" href="#equation-eq-k7-0">(210)</a> <span class="math notranslate nohighlight">\(\left({\frac {\partial T}{\partial t}} = 0 \right)\)</span> με <span class="math notranslate nohighlight">\(R = 0\)</span>. Για να κατανοήσουμε τη φυσική σημασία των όρων της εξίσωσης, συχνά θεωρούμε ως ποσότητα <span class="math notranslate nohighlight">\(T\)</span> τη συγκέντρωση μιας χημικής ένωσης που διαχέεται σε ένα χωρίο, π.χ. ένα ποτάμι με πεδίο ταχύτητας <span class="math notranslate nohighlight">\(q\)</span>, ή, αντίστοιχα, θα μπορούσαμε να θεωρήσουμε την ποσότητα <span class="math notranslate nohighlight">\(T\)</span> ως τη θερμοκρασία και πώς αυτή μεταβάλεται σε ένα χωρίο. Ο συντελεστής διάχυσης της ποσότητας <span class="math notranslate nohighlight">\(T\)</span> συμβολίζεται σε αυτό το κεφάλαιο με <span class="math notranslate nohighlight">\(D\)</span>. Τα προβλήματα μεταφοράς-διάχυσης αντιμετωπίζονται συχνά ως σημείο εκκίνησης για τη μελέτη των μη γραμμικών εξισώσεων Navier-Stokes. Η διακριτοποίηση της εξίσωσης μεταφοράς-διάχυσης αποτελεί, επίσης, σημαντικό εργαλείο και πολλές φορές εφαρμόζεται για την ανάπτυξη μεθόδων διακριτοποίησης και ως σημείο εκκίνησης για τη διακριτοποίηση των πιο σύνθετων εξισώσεων Navier-Stokes.</p>
+<p>Η φύση της εξίσωσης μεταφοράς-διάχυσης διέπεται από τον αριθμό του Peclet. Ο αριθμός Peclet (<span class="math notranslate nohighlight">\(\operatorname{Pe}\)</span>) είναι ένας αδιάστατος αριθμός που χρησιμοποιείται στη μεταφορά θερμότητας και τη μεταφορά μάζας για να χαρακτηρίσει τη σχετική σημασία της μεταφοράς σε σχέση με τη διάχυση σε μια συγκεκριμένη φυσική διεργασία. Ο <span class="math notranslate nohighlight">\(\operatorname{Pe}\)</span> ορίζεται ως,</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{Pe}=\dfrac{|q| l }{D},
+\]</div>
+<p>όπου:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(q\)</span>: η χαρακτηριστική ταχύτητα του ρευστού ή της ροής,</p></li>
+<li><p><span class="math notranslate nohighlight">\(l\)</span>: μια χαρακτηριστική κλίμακα μήκους που σχετίζεται με το σύστημα, όπως το πλάτος ενός σωλήνα, η ακτίνα ενός σωματιδίου ή το πάχος ενός οριακού στρώματος,</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span>: ο συντελεστής που περιγράφει το ρυθμό διάχυσης ή μεταφοράς μάζας στο σύστημα. Μπορεί επίσης να είναι ο συντελεστής θερμικής διάχυσης για προβλήματα μεταφοράς θερμότητας.</p></li>
+</ul>
+<p>Αξίζει να σημειωθεί ότι, σύμφωνα με τον <span class="math notranslate nohighlight">\(\operatorname{Pe}\)</span>, διακρίνονται οι εξής περιπτώσεις:</p>
+<ul class="simple">
+<li><p>Όταν <span class="math notranslate nohighlight">\(\operatorname{Pe} \ll 1\)</span> η διάχυση κυριαρχεί έναντι της μεταφοράς. Σε τέτοιες περιπτώσεις, η επίδραση της μεταφοράς είναι αμελητέες σε σύγκριση με εκείνη της διάχυσης και η διεργασία ελέγχεται από τη διάχυση. Για παράδειγμα, σε μια πολύ αργή ροή ή όταν το χαρακτηριστικό μήκος είναι μικρό σε σύγκριση με το μήκος διάχυσης, η διάχυση κυριαρχεί.</p></li>
+<li><p>Όταν <span class="math notranslate nohighlight">\(\operatorname{Pe} \sim 1\)</span> η μεταφορά και η διάχυση παίζουν εξίσου σημαντικό ρόλο στη διεργασία. Αυτό είναι συχνά ένα μεταβατικό στάδιο όπου οι επιδράσεις μεταφοράς και διάχυσης είναι συγκρίσιμες.</p></li>
+<li><p>Όταν <span class="math notranslate nohighlight">\(\operatorname{Pe} \gg 1\)</span> η μεταφορά κυριαρχεί έναντι της διάχυσης. Στην περίπτωση αυτή, η επίδραση της μεταφοράς είναι πολύ ισχυρότερη από εκείνη της διάχυσης και η διεργασία ελέγχεται από τη μεταφορά. Για παράδειγμα, σε ένα ρευστό με γρήγορη ροή ή όταν το χαρακτηριστικό μήκος είναι μεγάλο σε σύγκριση με το μήκος διάχυσης, η μεταφορά κυριαρχεί.</p></li>
+</ul>
+<p>Όπως θα δούμε παρακάτω, η επίλυση της εξίσωσης <a class="reference internal" href="#equation-eq-k7-1">(211)</a> περιλαμβάνει συνήθως αριθμητικές μεθόδους, συμβατές με τη γεωμετρία και την πολυπλοκότητα του προβλήματος <span id="id4">[<a class="reference internal" href="zreferences.html#id49" title="Anastasios Raptis, Konstantina Kyriakoudi, and Michail A. Xenos. Finite element analysis in fluid mechanics. In Themistocles M. Rassias and Panos M. Pardalos, editors, Mathematical analysis and applications, Springer Optimization and Its Applications, pages 481-510. Springer, 2019.">Raptis <em>et al.</em>, 2019</a>]</span>.</p>
 <section id="id5">
-<h2>Εφαρμογές &amp; ασκήσεις<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<h3>Εξίσωση μόνιμης μεταφοράς και διάχυσης σε μία διάσταση<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Η φύση της εξίσωσης <a class="reference internal" href="#equation-eq-k7-1">(211)</a> γίνεται ευκολότερα κατανοητή εφόσον μελετηθεί αρχικά σε μία χωρική διάσταση. Τότε, για <span class="math notranslate nohighlight">\(q = u = u(x)\)</span> και <span class="math notranslate nohighlight">\(T = T(x)\)</span>, η εξίσωση <a class="reference internal" href="#equation-eq-k7-1">(211)</a> γράφεται ως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-2">
+<span class="eqno">(212)<a class="headerlink" href="#equation-eq-k7-2" title="Link to this equation">#</a></span>\[
+u \, T_{x}= D \, T_{xx},
+\]</div>
+<p>Να τονισθεί εδώ ότι η εξίσωση <a class="reference internal" href="#equation-eq-k7-2">(212)</a> είναι πλέον μια συνήθης διαφορική εξίσωση, όπου το χωρίο επίλυσης επιλέγεται να είναι το κλειστό διάστημα <span class="math notranslate nohighlight">\(I = [a,b]\)</span> της πραγματικής ευθείας, με <span class="math notranslate nohighlight">\(T\)</span> τη δύο φορές παραγωγίσιμη και συνεχή συνάρτηση, με <span class="math notranslate nohighlight">\(T \in I\)</span>, <span class="math notranslate nohighlight">\(u\)</span> είναι μία συνεχή συνάρτηση, <span class="math notranslate nohighlight">\(u \in I\)</span> και <span class="math notranslate nohighlight">\(D \in \mathbb{R}\)</span>.</p>
+</section>
+<section id="id6">
+<h3>Σχήμα κεντρικών πεπερασμένων διαφορών<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Θεωρώντας μια ομοιόμορφη διαμέριση του χωρίου <span class="math notranslate nohighlight">\(I\)</span>, εφαρμόζοντας κεντρικές πεπερασμένες διαφορές για τις παραγώγους της βαθμωτής συνάρτησης <span class="math notranslate nohighlight">\(T = T(x)\)</span> και θεωρώντας ότι η συνεχής συνάρτηση <span class="math notranslate nohighlight">\(u = u(x)\)</span> υπολογίζεται στα εκάστοτε κομβικά σημεία, η εξίσωση <a class="reference internal" href="#equation-eq-k7-2">(212)</a> διακριτοποείται ως,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}\dfrac{T_{i+1}-T_{i-1}}{2\Delta x} = D \, \dfrac{T_{i+1}-2T_{i}+T_{i-1}}{(\Delta x)^{2}}.
+\]</div>
+<p>Εδώ <span class="math notranslate nohighlight">\(\Delta x\)</span> είναι η απόσταση μεταξύ των διακριτών σημείων της ομοιόμορφης διαμέρισης, ενώ το <span class="math notranslate nohighlight">\(i\)</span> αναπαριστά τα διακριτά σημεία κατά μήκος της πραγματικής ευθείας στο <span class="math notranslate nohighlight">\(I = [a,b]\)</span>.</p>
+</section>
+<section id="id7">
+<h3>Σχήμα ανάντη διαφορών<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Μια εναλλακτική επιλογή διακριτοποίησης, μέσω του αριθμητικού σχήματος των ανάντη διαφορών, δίνει ένα διαφορετικό αριθμητικό σχήμα,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}\dfrac{T_{i}-T_{i-1}}{\Delta x} = D \, \dfrac{T_{i+1}-2T_{i}+T_{i-1}}{(\Delta x)^{2}} .
+\]</div>
+<p>Η διαφοροποίηση εδώ είναι ότι η πρώτης τάξης παράγωγος της βαθμωτής συνάρτησης <span class="math notranslate nohighlight">\(T = T(x)\)</span> προσεγγίζεται με οπίσθιες πεπερασμένες διαφορές (πρώτης τάξης ακρίβειας) σε αντιδιαστολή με το προηγούμενο αριθμητικό σχήμα όπου οι πρώτης τάξης πεπερασμένες διαφορές προσεγγίστηκαν με δεύτερης τάξης πεπερασμένες διαφορές (κεντρικές πεπερασμένες διαφορές).</p>
+<p>Στις αριθμητικές μεθόδους, ο όρος των ανάντη πεπερασμένων διαφορών αναφέρεται τυπικά σε μια κατηγορία μεθόδων αριθμητικής διακριτοποίησης για την επίλυση κυρίως υπερβολικών και παραβολικών Μ.Δ.Ε. στις οποίες χρησιμοποιούνται οι λεγόμενες upstream μεταβλητές για τον υπολογισμό των παραγώγων στο πεδίο ροής ανάλογα με την κατεύθυνση της ροής, δηλαδή εδώ ανάλογα με το πρόσημο της συνάρτησης, <span class="math notranslate nohighlight">\(u\)</span>. Ιστορικά, η προέλευση των μεθόδων ανάντη διαφορών μπορεί να αναχθεί στην εργασία των Courant, Isaacson και Rees του 1952 <span id="id8">[<a class="reference internal" href="zreferences.html#id50" title="Richard Courant, Eugene Isaacson, and Mina Rees. On the solution of nonlinear hyperbolic differential equations by finite differences. Communications on Pure and Applied Mathematics, 5(3):243-255, 1952.">Courant <em>et al.</em>, 1952</a>]</span>.</p>
+</section>
+<section id="id9">
+<h3>Επέκταση στις δύο διαστάσεις<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Μια φυσική γενίκευση της εξίσωσης μόνιμης μεταφοράς και διάχυσης είναι η θεώρησή της πλέον στις δύο χωρικές διαστάσεις, <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(y\)</span>. Τότε, <span class="math notranslate nohighlight">\(\bar q = (u(x, y), v(x, y))\)</span> και <span class="math notranslate nohighlight">\(T = T(x, y)\)</span>, με την εξίσωση <a class="reference internal" href="#equation-eq-k7-1">(211)</a> να δίνεται τώρα στη μορφή <span id="id10">[<a class="reference internal" href="zreferences.html#id13" title="Clive A.J. Fletcher. Computational techniques for fluid dynamics. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.">Fletcher, 1991</a>]</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-2dm">
+<span class="eqno">(213)<a class="headerlink" href="#equation-eq-k7-2dm" title="Link to this equation">#</a></span>\[
+u \, T_{x} + v \, T_{y} = D \, (T_{xx} + T_{yy}).
+\]</div>
+<p>Σε αντιστοιχία με το χωρίο επίλυσης της μονοδιάστατης εξίσωσης, εδώ το χωρίο ενδιαφέροντος θα είναι το κλειστό ορθογώνιο,</p>
+<div class="math notranslate nohighlight">
+\[
+R : = \{ (x,y) \in \mathbb{R}^{2} : x \in [0, a], y \in [0, b], b \le a&lt;1 \}.
+\]</div>
+<p>Τα αριθμητικά σχήματα που παρουσιάστηκαν κατά τη μονοδιάστατη περίπτωση γενικεύονται, με φυσικό τρόπο, και εδώ. Ενδεικτικά αναφέρουμε ότι, το σχήμα ανάντη διαφορών τροποποιείται ως,</p>
+<div class="math notranslate nohighlight">
+\[
+u_{i}^{j} \dfrac{T_{i}^{j}-T_{i-1}^{j}}{\Delta x} + v_{i}^{j}\dfrac{T_{i}^{j}-T_{i}^{j-1}}{\Delta y} = D \, \left( \dfrac{T_{i+1}^{j}-2T_{i}^{j}+T_{i-1}^{j}}{(\Delta x)^{2}} + \dfrac{T_{i}^{j+1}-2T_{i}^{j}+T_{i}^{j-1}}{(\Delta y)^{2} } \right).
+\]</div>
+<p>Σε αναλογία με το μονοδιάστατο σχήμα, εδώ το <span class="math notranslate nohighlight">\(\Delta x\)</span> είναι η απόσταση μεταξύ των διακριτών σημείων κατά τη διεύθυνση <span class="math notranslate nohighlight">\(x\)</span> και το <span class="math notranslate nohighlight">\(\Delta y\)</span> κατά τη διεύθυνση <span class="math notranslate nohighlight">\(y\)</span>, αντίστοιχα. Επιπλέον, το <span class="math notranslate nohighlight">\(i\)</span> αναπαριστά τα διακριτά σημεία (διαμέριση) κατά μήκος του <span class="math notranslate nohighlight">\([0, a]\)</span>, ενώ το <span class="math notranslate nohighlight">\(j\)</span> τα διακριτά σημεία κατά μήκος του <span class="math notranslate nohighlight">\([0, b]\)</span>.</p>
+</section>
+</section>
+<section id="id11">
+<h2>Μη μόνιμη μεταφορά και διάχυση<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Η εξίσωση <a class="reference internal" href="#equation-eq-k7-1">(211)</a> γενικεύεται αν επιπλέον θεωρήσουμε ότι η ποσότητα <span class="math notranslate nohighlight">\(T\)</span> μεταβάλλεται στην πάροδο του χρόνου, δηλαδή, <span class="math notranslate nohighlight">\(T = T(\mathbf{r}, t)\)</span>. Στην περίπτωση αυτή, το αποτέλεσμα είναι μια εξίσωση αρκετά όμοια με προηγουμένως,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-4">
+<span class="eqno">(214)<a class="headerlink" href="#equation-eq-k7-4" title="Link to this equation">#</a></span>\[
+\frac{DT}{Dt} = \frac{\partial T}{\partial t} + \mathbf{q} \cdot \nabla T = D \nabla^{2}T,
+\]</div>
+<p>όπου με <span class="math notranslate nohighlight">\(\frac{DT}{Dt}\)</span> συμβολίζουμε τον τελεστή του Stokes, <span class="math notranslate nohighlight">\(T\)</span> είναι συνάρτηση χωρικών και χρονικών μεταβλητών, συνεχής και δύο φορές διαφορίσιμη, <span class="math notranslate nohighlight">\(T = T(\mathbf{r}, t)\)</span>. Επιπλέον, <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> είναι το διάνυσμα της ταχύτητας σε κάθε σημείο του πεδίου ορισμού <span class="math notranslate nohighlight">\(R\)</span> και <span class="math notranslate nohighlight">\(D \in \mathbb{R}\)</span> είναι μια σταθερά.</p>
+<section id="id12">
+<h3>Εξίσωση μη μόνιμης μεταφοράς και διάχυσης σε μία διάσταση<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Σε πλήρη αναλογία με τη χρονοανεξάρτητη περίπτωση, θα μελετήσουμε τώρα τη χρονοεξαρτώμενη εξίσωση με <span class="math notranslate nohighlight">\(T = T(x, t)\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-3">
+<span class="eqno">(215)<a class="headerlink" href="#equation-eq-k7-3" title="Link to this equation">#</a></span>\[
+T_{t} + u \, T_{x}= D \, T_{xx},
+\]</div>
+<p>όπου εδώ έχουμε μια Μ.Δ.Ε. και όχι μία Σ.Δ.Ε. όπως στη μόνιμη περίπτωση. Αναφορικά με το χωρίο επίλυσης, αυτό τώρα θα είναι το κλειστό ορθογώνιο,</p>
+<div class="math notranslate nohighlight">
+\[
+R : = \{ (x,t) \in \mathbb{R} \times [0, \infty) : x \in [a, b], t \in [0, T]\},
+\]</div>
+<p>στο επίπεδο <span class="math notranslate nohighlight">\(xt\)</span>, με τα <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> και <span class="math notranslate nohighlight">\(T \in \mathbb{R}\)</span>, πεπερασμένα.</p>
+</section>
+<section id="id13">
+<h3>Εμπρόσθιες διαφορές στο χρόνο και κεντρικές διαφορές στο χώρο<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Η κατάσταση εδώ είναι παρόμοια με εκείνη για την εξίσωση μόνιμης μεταφοράς και διάχυσης. Η εξίσωση <a class="reference internal" href="#equation-eq-k7-3">(215)</a> τώρα έχει έναν ακόμη όρο, τον όρο της χρονικής μερικής παραγώγου, ο οποίος οδηγεί στη διακριτοποίηση,</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{T_{i}^{n+1}-T_{i}^{n}}{\Delta t} + u_{i}^{n} \dfrac{T_{i+1}^{n}-T_{i-1}^{n}}{2 \Delta x} = D \dfrac{T_{i+1}^{n}-2T_{i}^{n}+T_{i-1}^{n}}{(\Delta x)^{2}}.
+\]</div>
+<p>Εδώ τα <span class="math notranslate nohighlight">\(\Delta x\)</span> και <span class="math notranslate nohighlight">\(\Delta t\)</span> είναι η απόσταση μεταξύ των διακριτών σημείων του χώρου και του χρόνου, αντίστοιχα. Ακόμη, το <span class="math notranslate nohighlight">\(i\)</span> αναπαριστά τα διακριτά σημεία κατά μήκος της πραγματικής ευθείας στο <span class="math notranslate nohighlight">\([a, b]\)</span> και το <span class="math notranslate nohighlight">\(n\)</span> τις διακριτές χρονικές στιγμές κατά μήκος του διαστήματος <span class="math notranslate nohighlight">\([0,T]\)</span>.</p>
+</section>
+<section id="id14">
+<h3>Εμπρόσθιες διαφορές στο χρόνο και ανάντη διαφορές στο χώρο<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>Σε απόλυτη αναλογία με την περίπτωση της μόνιμης περίπτωσης, εδώ, το σχήμα των ανάντη διαφορών, δίνει το παρακάτω αριθμητικό σχήμα,</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{T_{i}^{n+1}-T_{i}^{n}}{\Delta t}+u_{i}^{n}\dfrac{T_{i}^{n}-T_{i-1}^{n}}{\Delta x}=D \, \dfrac{T_{i+1}^{n}-2T_{i}^{n}+T_{i-1}^{n}}{(\Delta x)^{2}},
+\]</div>
+<p>όπου το <span class="math notranslate nohighlight">\(\Delta x\)</span> είναι η απόσταση μεταξύ των διακριτών σημείων κατά τη διεύθυνση <span class="math notranslate nohighlight">\(x\)</span>, ενώ το <span class="math notranslate nohighlight">\(\Delta y\)</span> κατά τη διεύθυνση <span class="math notranslate nohighlight">\(y\)</span>, αντίστοιχα. Επιπλέον, το <span class="math notranslate nohighlight">\(i\)</span> αναπαριστά τα διακριτά σημεία (διαμέριση) κατά μήκος του <span class="math notranslate nohighlight">\([0, a]\)</span>, ενώ το <span class="math notranslate nohighlight">\(j\)</span> τα διακριτά σημεία κατά μήκος του <span class="math notranslate nohighlight">\([0, b]\)</span>.</p>
+</section>
+<section id="id15">
+<h3>Επέκταση στις δύο διαστάσεις<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>Στη γενικότερη περίπτωση, όπου έχουμε τόσο εξάρτηση από το χρόνο όσο και από τις συντεταγμένες <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(y\)</span>, η εξίσωση <a class="reference internal" href="#equation-eq-k7-3">(215)</a> μετατρέπεται στην,</p>
+<div class="math notranslate nohighlight" id="equation-eq-k7-2dm1">
+<span class="eqno">(216)<a class="headerlink" href="#equation-eq-k7-2dm1" title="Link to this equation">#</a></span>\[
+T_{t} + u \, T_{x} + v \, T_{y} = D \, (T_{xx} + T_{yy}).
+\]</div>
+<p>Στην προκειμένη περίπτωση, το χωρίο ενδιαφέροντος θα είναι ο κλειστός κύβος,</p>
+<div class="math notranslate nohighlight">
+\[
+R : = \{ (x,y,t) \in \mathbb{R}^{2} \times [0, \infty) : x \in [0,a], y \in [0,b], t \in [0,T], b \le a&lt;1 \}.
+\]</div>
+<p>Ενδεικτικά αναφέρουμε ότι το σχήμα εμπρόσθιων διαφορών στο χρόνο και κεντρικών διαφορών στο χώρο (FTCS), τροποποιείται τώρα ως <span id="id16">[<a class="reference internal" href="zreferences.html#id12" title="Νικόλαος Καφούσιας. Υπολογιστική ρευστοδυναμική ΙΙ. Εκδόσεις Πανεπιστημίου Πάτρας, Πάτρα, 2001.">Καφούσιας, 2001</a>]</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;\dfrac{T_{i,j}^{n+1}-T_{i,j}^{n}}{\Delta t} + u_{i,j}^{n} \dfrac{T_{i+1,j}^{n}-T_{i-1,j}^{n}}{2\Delta x}+v_{i,j}^{n} \dfrac{T_{i,j+1}^{n}-T_{i,j-1}^{n}}{2\Delta y} \\
+&amp; = D \bigg( \dfrac{T_{i+1,j}^{n}-2T_{i,j}^{n} + T_{i-1,j}^{n}}{(\Delta x)^{2}} + \dfrac{T_{i,j+1}^{n}-2T_{i,j}^{n} + T_{i,j-1}^{n}}{(\Delta y)^{2}} \bigg),
+\end{aligned}
+\end{split}\]</div>
+<p>με τα <span class="math notranslate nohighlight">\(\Delta x\)</span>, <span class="math notranslate nohighlight">\(\Delta y\)</span>, <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span> και <span class="math notranslate nohighlight">\(n\)</span> όπως ορίσθηκαν προηγουμένως.</p>
+<p><strong>Εφαρμογή 1:</strong> Εφαρμόζουμε το παραπάνω αριθμητικό σχήμα εμπρόσθιων διαφορών στο χρόνο και κεντρικών διαφορών στο χώρο (FTCS) στο χωρίο <span class="math notranslate nohighlight">\(R\)</span>, όπως αυτό περιγράφεται παραπάνω, με <span class="math notranslate nohighlight">\(a = 3\)</span>, <span class="math notranslate nohighlight">\(b = 3\)</span> και για ένα μικρό χρονικό διάστημα, <span class="math notranslate nohighlight">\(t \in [0, 1]\)</span>.</p>
+<p>Η εφαρμογή αυτού του προβλήματος θα μπορούσε να είναι η διάχυση και μεταφορά μιας χημικής ουσίας ή η διάδοση ενός ραδιενεργού ρύπου που κινείται μέσα στο χωρίο, όπως αυτή περιγράφεται μέσω της εξίσωσης μεταφοράς-διάχυσης. Εδώ η κυρίαρχη μορφή διάδοσης επιβάλουμε να είναι η μεταφορά, οπότε θεωρούμε ένα πεδίο ταχύτητας με σταθερές τιμές, για παράδειγμα <span class="math notranslate nohighlight">\(\bar q = (0.75, 0.75)\)</span> και συντελεστή διάχυσης <span class="math notranslate nohighlight">\(D = 0.05\)</span>.</p>
+<p>Υπολογισμός του αριθμού Peclet δίνει ότι ο <span class="math notranslate nohighlight">\(\operatorname{Pe} \approx 21\)</span>, όπου κανείς καταλαβαίνει ότι η μεταφορά είναι κυρίαρχη σε αυτή τη περίπτωση. Στο <a class="reference internal" href="#fig-k7-adv-dif1"><span class="std std-numref">Fig. 39</span></a> παρατηρείται ότι η αρχική συνάρτηση που είναι της μορφής <span class="math notranslate nohighlight">\(f(x,y) = e^{-10.0 \, ((x - 1)^2 + (y - 1)^2)}\)</span> μεταφέρεται προς τα πάνω και δεξιά του χωρίου, βάση του πεδίου ταχύτητας, <span class="math notranslate nohighlight">\(\bar q\)</span>, αλλά συγχρόνως διαχέεται με έναν σχετικά αργό ρυθμό μέσα στο χωρίο αναφοράς λόγω του μικρού συντελεστή διάχυσης, <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<p>Ακολουθεί ο κώδικας επίλυσης του προβλήματος.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Ορισμός των παραμέτρων</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="mi">200</span> <span class="c1"># Αριθμός σημείων στον άξονα x</span>
+<span class="n">ny</span> <span class="o">=</span> <span class="mi">200</span> <span class="c1"># Αριθμός σημείων στον άξονα y</span>
+<span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Ελάχιστη τιμή του x</span>
+<span class="n">xmax</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Μέγιστη τιμή του x</span>
+<span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Ελάχιστη τιμή του y</span>
+<span class="n">ymax</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Μέγιστη τιμή του y</span>
+<span class="n">nt</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Αριθμός χρονικών βημάτων</span>
+<span class="n">tstart</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Αρχική χρονική στιγμή</span>
+<span class="n">tend</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Τελική χρονική στιγμή</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">tend</span> <span class="o">-</span> <span class="n">tstart</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">nt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Μέγεθος χρονικού βήματος</span>
+
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="c1"># Συντελεστής διάχυσης</span>
+
+<span class="c1"># Ταχύτητα στον άξονα x</span>
+<span class="n">u_vel</span> <span class="o">=</span> <span class="mf">0.75</span>
+
+<span class="c1"># Ταχύτητα στον άξονα y</span>
+<span class="n">v_vel</span> <span class="o">=</span> <span class="mf">0.75</span>
+
+<span class="c1"># Δημιουργία του πλέγματος</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="n">ny</span><span class="p">)</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">xmax</span> <span class="o">-</span> <span class="n">xmin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">ymax</span> <span class="o">-</span> <span class="n">ymin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">ny</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Αρχική συνθήκη</span>
+<span class="n">u0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span> <span class="o">*</span> <span class="p">((</span><span class="n">X</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">Y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Αρχικοποίηση του πίνακα λύσης</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nt</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nx</span><span class="p">))</span>
+<span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">u0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Επίλυση της εξίσωσης μεταφοράς στο χρόνο χρησιμοποιώντας τη μέθοδο FTCS</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="n">u_vel</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">dx</span><span class="p">)</span> <span class="o">-</span><span class="n">v_vel</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">dy</span><span class="p">)</span> <span class="o">+</span>  <span class="n">D</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">*</span> <span class="p">((</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Προβολή της λύσης σε 4 διαφορετικές χρονικές στιγμές</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]):</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Λύση στο χρόνο t = </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">dt</span><span class="p">))</span>
+    <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Τροποποιώντας το πεδίο ταχύτητας και το συντελεστή διάχυσης θα μπορούσαμε να αλλάξουμε το αποτέλσμα του παρακάτω σχήματος. Αυτό αφήνεται ως άσκηση στον ενδιαφερόμενο αναγνώστη.</p>
+<figure class="align-default" id="fig-k7-adv-dif1">
+<img alt="_images/pic1n.svg" src="_images/pic1n.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Διάδοση ραδιενεργού ρύπου που κινείται μέσα στο χωρίο αναφοράς <span class="math notranslate nohighlight">\(R\)</span>, μέσω της εξίσωσης μεταφοράς-διάχυσης για τέσσερις χρονικές στιγμές. Εδώ η κυρίαρχη μορφή διάδοσης είναι η μεταφορά.</span><a class="headerlink" href="#fig-k7-adv-dif1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id17">
+<h2>Εφαρμογές και ασκήσεις<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<section id="langevin">
+<h3>Εξίσωση του Langevin<a class="headerlink" href="#langevin" title="Link to this heading">#</a></h3>
+<p>Η εξίσωση μεταφοράς-διάχυσης (με <span class="math notranslate nohighlight">\(R = 0\)</span>) μπορεί να θεωρηθεί ως μια στοχαστική διαφορική εξίσωση, που περιγράφει τυχαία κίνηση με διάχυση <span class="math notranslate nohighlight">\(D\)</span> και μεροληψία <span class="math notranslate nohighlight">\(q\)</span>. Για παράδειγμα, η εξίσωση μπορεί να περιγράψει την κίνηση Brown ενός μεμονωμένου σωματιδίου, όπου η μεταβλητή <span class="math notranslate nohighlight">\(T\)</span> περιγράφει την κατανομή πιθανότητας το σωματίδιο να βρίσκεται σε μια δεδομένη θέση σε μια δεδομένη χρονική στιγμή. Ο λόγος που η εξίσωση μπορεί να χρησιμοποιηθεί με αυτόν τον τρόπο είναι επειδή δεν υπάρχει καμία μαθηματική διαφορά μεταξύ της κατανομής πιθανότητας ενός μεμονωμένου σωματιδίου και του προφίλ συγκέντρωσης μιας συλλογής απείρως πολλών σωματιδίων (εφόσον τα σωματίδια δεν αλληλεπιδρούν μεταξύ τους).</p>
+<p>Η εξίσωση Langevin περιγράφει τη μεταφορά, τη διάχυση και άλλα φαινόμενα με έναν ρητά στοχαστικό τρόπο. Μια από τις απλούστερες μορφές της εξίσωσης του Langevin είναι όταν ο λεγόμενος «όρος θορύβου» μοντελοποιείται από μια συνάρτηση του Gauss. Σε αυτή την περίπτωση, η εξίσωση του Langevin είναι ακριβώς ισοδύναμη με την εξίσωση μεταφοράς και διάχυσης.</p>
+</section>
+<hr class="docutils" />
+<section id="id18">
+<h3>Οδεύοντα κύματα<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Σε μη αλληλεπιδρώντα υλικά, <span class="math notranslate nohighlight">\(D = 0\)</span> (για παράδειγμα, όταν η θερμοκρασία είναι κοντά στο απόλυτο μηδέν, το αραιωμένο αέριο έχει σχεδόν μηδενική ικανότητα διάχυσης μάζας). Επομένως η εξίσωση μεταφοράς γράφεται μαθηματικά ως,</p>
+<div class="math notranslate nohighlight">
+\[
+{\frac {\partial T}{\partial t}}+q\cdot \nabla T=0.
+\]</div>
+<p>Χρησιμοποιώντας το μετασχηματισμό του Fourier τόσο στο χρονικό όσο και στο χωρικό πεδίο, δηλαδή με τον ολοκληρωτικό πυρήνα <span class="math notranslate nohighlight">\({e^{j\omega t+j\mathbf {k} \cdot x}}\)</span>, μπορεί να προκύψει η χαρακτηριστική της εξίσωσης,</p>
+<div class="math notranslate nohighlight">
+\[
+j\omega {\tilde {T}}+q \cdot j\mathbf {k} {\tilde {T}}=0\rightarrow \omega =-\mathbf {k} \cdot q,
+\]</div>
+<p>η οποία δίνει τη γενική λύση,</p>
+<div class="math notranslate nohighlight">
+\[
+T = f( x - q t ),
+\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(f\)</span> είναι οποιαδήποτε διαφορίσιμη βαθμωτή συνάρτηση.</p>
+<div class="tip admonition">
+<p class="admonition-title">Ασκήσεις για λύση</p>
+<ol class="arabic">
+<li><p><strong>Θεωρήστε την εξίσωση μόνιμης μεταφοράς και διάχυσης:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   \nabla \cdot (-D \nabla c+\mathbf {v} c) = R.
+   \]</div>
+<ul>
+<li><p>(α) Τι περιγράφει η εξίσωση και τι εκφράζει ο κάθε της όρος;</p></li>
+<li><p>(β) Σε μία διάσταση ο τελεστής κλίσης δίνεται ως:</p>
+<div class="math notranslate nohighlight">
+\[
+     \nabla ={\frac {d}{dx}},
+     \]</div>
+<p>οπότε η εξίσωση προς επίλυση γίνεται η εξίσωση δεύτερης τάξης:</p>
+<div class="math notranslate nohighlight">
+\[
+     \frac{d}{dx}\left(-D(x){\frac {dc(x)}{dx}}+v(x)c(x)\right)=R(x).
+     \]</div>
+<p>(<span class="math notranslate nohighlight">\(i\)</span>) Επιλύστε την παραπάνω αριθμητικά μέσω των μεθόδων Euler και Runge-Kutta τέταρτης τάξης.<br />
+(<span class="math notranslate nohighlight">\(ii\)</span>) Ολοκληρώστε ως προς <span class="math notranslate nohighlight">\(x\)</span> για να καταλήξετε στην εξίσωση:</p>
+<div class="math notranslate nohighlight">
+\[
+     D(x){\frac {dc(x)}{dx}}-v(x)c(x)=-\int _{x}R(x')dx'.
+     \]</div>
+<p>Ποια η αναλυτική λύση για <span class="math notranslate nohighlight">\(D=0\)</span> και ποια για <span class="math notranslate nohighlight">\(D\neq0\)</span>;</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple" start="2">
+<li><ul class="simple">
+<li><p>(α) Μέσω της εξίσωσης γραμμικής μεταφοράς και διάχυσης δύναται να μοντελοποιηθεί η διασπορά ρύπων σε ένα ποτάμι λόγω των συνδυασμένων επιδράσεων της μεταφοράς (ταχύτητα ροής) και της διάχυσης.</p></li>
+<li><p>(β) Να επιλυθεί αριθμητικά η εξίσωση μεταφοράς και διάχυσης σε μία χωρική και δύο χωρικές διαστάσεις, χρησιμοποιώντας μεθόδους πεπερασμένων όγκων ή πεπερασμένων διαφορών. Ενσωματώστε το προφίλ της ταχύτητας ροής του ποταμού ως όρο μεταφοράς και συντελεστές διάχυσης που αντιπροσωπεύουν τη διασπορά των ρύπων. Εφαρμόστε κατάλληλες συνοριακές συνθήκες στα όρια του ποταμού.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple" start="3">
+<li><ul class="simple">
+<li><p>(α) Εφαρμόστε το σχήμα ανάντη διαφορών για την επίλυση της εξίσωσης μεταφοράς και διάχυσης, σε μία χωρική διάσταση, χρησιμοποιώντας τη Μ.Π.Δ.</p></li>
+<li><p>(β) Συγκρίνετε τις λύσεις που λαμβάνονται με τη χρήση του σχήματος ανάντη διαφορών με εκείνες που λαμβάνονται με τη χρήση κεντρικών πεπερασμένων διαφορών και άλλων αριθμητικών σχημάτων.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple" start="4">
+<li><ul class="simple">
+<li><p>(α) Διερευνήστε την ευστάθεια του σχήματος ανάντη διαφορών αναλύοντας τη συνθήκη CFL (βλέπε επίσης Κεφάλαιο 8). Διερευνήστε πώς η επιλογή του πλέγματος και του χρονικού βήματος επηρεάζει την ευστάθεια της αριθμητικής λύσης.</p></li>
+<li><p>(β) Συγκρίνετε τις αριθμητικές λύσεις με μια γνωστή αναλυτική λύση ή μια λύση που λαμβάνεται με πολύ πυκνό πλέγμα (μέθοδος ανεξαρτησίας του πλέγματος - grid independence study).</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple" start="5">
+<li><p>Επεκτείνετε το σχήμα ανάντη διαφορών για τον χειρισμό μη γραμμικών όρων μεταφοράς (π.χ. εξίσωση Burgers, βλέπε Κεφάλαιο 8). Εφαρμόστε τις απαραίτητες τροποποιήσεις και συγκρίνετε τα αποτελέσματα με εκείνα που προκύπτουν με τη χρήση γραμμικών όρων μεταφοράς.</p></li>
+</ol>
+</div>
+</section>
 </section>
 </section>
 
@@ -491,7 +806,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -500,7 +815,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Η εξίσωση Μεταφοράς</p>
+        <p class="prev-next-title">Η Εξίσωση Μεταφοράς</p>
       </div>
     </a>
     <a class="right-next"
@@ -508,7 +823,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Μη-μόνιμη Μεταφορά &amp; Διάχυση</p>
+        <p class="prev-next-title">Η εξίσωση του Burgers και η εξίσωση των Korteweg-de Vries (KdV)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -519,7 +834,9 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -527,11 +844,26 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Εξίσωση μόνιμης μεταφοράς και διάχυσης σε μια διάσταση</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Σχήμα κεντρικών πεπερασμένων διαφορών</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upwind">Σχήμα ανάντη διαφορών (upwind)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Επέκταση στις δύο διαστάσεις</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εφαρμογές &amp; ασκήσεις</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Περίληψη</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Η μόνιμη εξίσωση μεταφοράς-διάχυσης</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Εξίσωση μόνιμης μεταφοράς και διάχυσης σε μία διάσταση</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Σχήμα κεντρικών πεπερασμένων διαφορών</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Σχήμα ανάντη διαφορών</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Επέκταση στις δύο διαστάσεις</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Μη μόνιμη μεταφορά και διάχυση</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Εξίσωση μη μόνιμης μεταφοράς και διάχυσης σε μία διάσταση</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Εμπρόσθιες διαφορές στο χρόνο και κεντρικές διαφορές στο χώρο</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Εμπρόσθιες διαφορές στο χρόνο και ανάντη διαφορές στο χώρο</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Επέκταση στις δύο διαστάσεις</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Εφαρμογές και ασκήσεις</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langevin">Εξίσωση του Langevin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Οδεύοντα κύματα</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -580,8 +912,8 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
