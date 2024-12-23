@@ -1,8 +1,8 @@
 #######################################################################################
 # Book settings
-title                       : Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python   # The title of the book. Will be placed in the left navbar.
+title                       : Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python   # The title of the book. Will be placed in the left navbar.
 author                      : Αναστάσιος Ράπτης και Μιχαήλ Ξένος  # The author of the book
-copyright                   : "2021"  # Copyright year to be placed in the footer
+copyright                   : "2024"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
 only_build_toc_files        : true 
 
@@ -24,9 +24,9 @@ latex:
 html:
   use_repository_button     : true
   comments:
-    hypothesis              : true
-    utterances:
-      repo                  : raptistasos/CFD_python_GR
+    hypothesis              : false
+#     utterances:
+#       repo                  : raptistasos/CFD_python_GR
 
 parse:
   myst_url_schemes         : [mailto, http, https]
