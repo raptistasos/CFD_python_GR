@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Οι εξισώσεις Laplace και Poisson &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Οι εξισώσεις Laplace και Poisson &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python</title>
   
   
   
@@ -56,41 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "raptistasos/CFD_python_GR");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -185,8 +150,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
   
   
 </a></div>
@@ -502,7 +467,7 @@ u(0,y) &amp;= 0, \quad y \in [0, b], \\
 u(a,y) &amp;= 0, \quad y \in [0, b].
 \end{aligned}
 \end{split}\]</div>
-<p>Σχηματικά το πρόβλημα συνοριακών τιμών (Π.Σ.Τ.) αναπαρίσταται στο <a class="reference internal" href="#fig-k5-ss"><span class="std std-numref">Fig. 19</span></a>.</p>
+<p>Σχηματικά το πρόβλημα συνοριακών τιμών (Π.Σ.Τ.) αναπαρίσταται στο<code class="docutils literal notranslate"><span class="pre">fig:k5_SS</span></code>.</p>
 <figure class="align-default" id="fig-k5-ss">
 <a class="reference internal image-reference" href="_images/boundary_conditions.svg"><img alt="_images/boundary_conditions.svg" src="_images/boundary_conditions.svg" style="width: 625.9000000000001px; height: 293.70000000000005px;" /></a>
 <figcaption>
@@ -602,7 +567,7 @@ u(x,y) = \sum\limits_{n = 1}^\infty  {A_n \sin \left(\frac{n\pi x}{a}\right)\sin
 <p><span class="caption-number">Fig. 20 </span><span class="caption-text">Αναλυτική λύση της εξίσωσης Laplace στο <span class="math notranslate nohighlight">\(\Omega \subseteq \mathbb{R}^2\)</span>.</span><a class="headerlink" href="#fig-k5-5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Η γραφική παράσταση της αναλυτικής λύσης εμφανίζεται στο Σχήμα <a class="reference internal" href="#fig-k5-5"><span class="std std-numref">Fig. 20</span></a> για το ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega \subseteq \mathbb{R}^2\)</span>. Περισσότερες πληροφορίες για τη μέθοδο χωριζομένων μεταβλητών μπορούν να αναζητηθούν στο σύγγραμμα <span id="id5">[<a class="reference internal" href="zreferences.html#id28" title="Γεώργιος Δ. Ακρίβης. Μερικές διαφορικές εξισώσεις. Πανεπιστημιακές Παραδόσεις, Ιωάννινα, 2008.">Ακρίβης, 2008</a>]</span>.</p>
+<p>Η γραφική παράσταση της αναλυτικής λύσης εμφανίζεται στο <a class="reference internal" href="#fig-k5-5"><span class="std std-numref">Σχήμα 20</span></a> για το ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega \subseteq \mathbb{R}^2\)</span>. Περισσότερες πληροφορίες για τη μέθοδο χωριζομένων μεταβλητών μπορούν να αναζητηθούν στο σύγγραμμα <span id="id5">[<a class="reference internal" href="zreferences.html#id28" title="Γεώργιος Δ. Ακρίβης. Μερικές διαφορικές εξισώσεις. Πανεπιστημιακές Παραδόσεις, Ιωάννινα, 2008.">Ακρίβης, 2008</a>]</span>.</p>
 </section>
 <section id="poisson">
 <h3>Αναλυτική λύση της εξίσωσης Poisson σε ορθογώνιο χωρίο<a class="headerlink" href="#poisson" title="Link to this heading">#</a></h3>
@@ -715,7 +680,7 @@ u(x,y) = \sum\limits_{n = 1}^\infty  {A_n \sin \left(\frac{{n\pi x}}{a}\right)\s
 \[
 a_n  = \frac{2}{a}\int\limits_0^a {f(x)} \sin \left(\frac{{n\pi x}}{a}\right)dx.
 \]</div>
-<p>Η γραφική παράσταση της αναλυτικής λύσης εμφανίζεται στο Σχήμα <a class="reference internal" href="#fig-k5-anal-poisson"><span class="std std-numref">Fig. 21</span></a> για το ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega \subseteq \mathbb{R}^2\)</span>. Περισσότερες πληροφορίες μπορούν να αναζητηθούν στα συγγράμματα <span id="id6">[<a class="reference internal" href="zreferences.html#id28" title="Γεώργιος Δ. Ακρίβης. Μερικές διαφορικές εξισώσεις. Πανεπιστημιακές Παραδόσεις, Ιωάννινα, 2008.">Ακρίβης, 2008</a>, <a class="reference internal" href="zreferences.html#id31" title="Ευγενία Ν. Πετροπούλου. Διαφορικές εξισώσεις και εφαρμογές αυτών. Με στοιχεία θεωρίας πινάκων, ειδικών συναρτήσεων και ολοκληρωτικών μετασχηματισμών. Εκδόσεις Gotsis, Πάτρα, 2017.">Πετροπούλου, 2017</a>]</span>.</p>
+<p>Η γραφική παράσταση της αναλυτικής λύσης εμφανίζεται στο <a class="reference internal" href="#fig-k5-anal-poisson"><span class="std std-numref">Σχήμα 21</span></a> για το ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega \subseteq \mathbb{R}^2\)</span>. Περισσότερες πληροφορίες μπορούν να αναζητηθούν στα συγγράμματα <span id="id6">[<a class="reference internal" href="zreferences.html#id28" title="Γεώργιος Δ. Ακρίβης. Μερικές διαφορικές εξισώσεις. Πανεπιστημιακές Παραδόσεις, Ιωάννινα, 2008.">Ακρίβης, 2008</a>, <a class="reference internal" href="zreferences.html#id31" title="Ευγενία Ν. Πετροπούλου. Διαφορικές εξισώσεις και εφαρμογές αυτών. Με στοιχεία θεωρίας πινάκων, ειδικών συναρτήσεων και ολοκληρωτικών μετασχηματισμών. Εκδόσεις Gotsis, Πάτρα, 2017.">Πετροπούλου, 2017</a>]</span>.</p>
 <figure class="align-default" id="fig-k5-anal-poisson">
 <a class="reference internal image-reference" href="_images/analytical_Poisson.png"><img alt="_images/analytical_Poisson.png" src="_images/analytical_Poisson.png" style="height: 350px;" /></a>
 <figcaption>
@@ -748,7 +713,7 @@ a_n  = \frac{2}{a}\int\limits_0^a {f(x)} \sin \left(\frac{{n\pi x}}{a}\right)dx.
 \Omega  = \left\{ \left( x, y \right) \in \mathbb{R}^2 : 0 \le x \le a, \,\, 0 \le y \le b \right\}.
 \]</div>
 <p>Αρχικά η εφαρμογή της μεθόδου περιλαμβάνει την επιλογή του υπολογιστικού πλέγματος. Δημιουργούμε έναν ομοιόμορφο διαμερισμό κατά μήκος των αξόνων <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(y\)</span> σε <span class="math notranslate nohighlight">\(I = [0, α]\)</span> και <span class="math notranslate nohighlight">\(J = [0, b]\)</span> ίσα τμήματα, αντίστοιχα. Τα μήκη των ευθύγραμμων τμημάτων κατά μήκος των αξόνων <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(y\)</span> έχουν μήκος <span class="math notranslate nohighlight">\(\Delta x =\frac{a}{I}\)</span> και <span class="math notranslate nohighlight">\(\Delta y =\frac{b}{J}\)</span>. Τα σημεία που ορίζουν τους κόμβους κατά μήκος των αξόνων <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(y\)</span> προσδιορίζονται από τις σχέσεις <span class="math notranslate nohighlight">\(x_i  = x_0  + i\Delta x\)</span>, <span class="math notranslate nohighlight">\(i=0, 1, 2, \dots, I\)</span> και <span class="math notranslate nohighlight">\(y_j  = y_0  + j\Delta y\)</span>, <span class="math notranslate nohighlight">\(j=0, 1, 2, \dots, J\)</span>, αντίστοιχα.</p>
-<p>Από τα σημεία <span class="math notranslate nohighlight">\(x_i\)</span> και <span class="math notranslate nohighlight">\(y_j\)</span> φέρνουμε παράλληλες προς τους άξονες <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(y\)</span>, αντίστοιχα, με αποτέλεσμα το συνεχές πεδίο ορισμού να αντικατασταθεί από το υπολογιστικό πλέγμα που απαρτίζεται από <span class="math notranslate nohighlight">\(I \times J\)</span> ίσα ορθογώνια, οι κορυφές των οποίων ονομάζονται κόμβοι και αποτελούν τα δομικά στοιχεία του πλέγματος, όπως φαίνεται στο Σχήμα <a class="reference internal" href="#fig-k5-plegma"><span class="std std-numref">Fig. 22</span></a>.</p>
+<p>Από τα σημεία <span class="math notranslate nohighlight">\(x_i\)</span> και <span class="math notranslate nohighlight">\(y_j\)</span> φέρνουμε παράλληλες προς τους άξονες <span class="math notranslate nohighlight">\(x\)</span> και <span class="math notranslate nohighlight">\(y\)</span>, αντίστοιχα, με αποτέλεσμα το συνεχές πεδίο ορισμού να αντικατασταθεί από το υπολογιστικό πλέγμα που απαρτίζεται από <span class="math notranslate nohighlight">\(I \times J\)</span> ίσα ορθογώνια, οι κορυφές των οποίων ονομάζονται κόμβοι και αποτελούν τα δομικά στοιχεία του πλέγματος, όπως φαίνεται στο <a class="reference internal" href="#fig-k5-plegma"><span class="std std-numref">Σχήμα 22</span></a>.</p>
 <figure class="align-default" id="fig-k5-plegma">
 <a class="reference internal image-reference" href="_images/computational_grid_nodes.svg"><img alt="_images/computational_grid_nodes.svg" src="_images/computational_grid_nodes.svg" style="width: 524.4px; height: 440.4px;" /></a>
 <figcaption>
@@ -767,7 +732,7 @@ a_n  = \frac{2}{a}\int\limits_0^a {f(x)} \sin \left(\frac{{n\pi x}}{a}\right)dx.
 -\frac{{u_{i - 1,j}  - 2u_{i,j}  + u_{i + 1,j} }}{{\Delta x^2 }} - \frac{{u_{i,j - 1}  - 2u_{i,j}  + u_{i,j + 1} }}{{\Delta y^2 }} = g_{i,j} ,
 \]</div>
 <p>για <span class="math notranslate nohighlight">\(i = 1, 2, \dots , I-1\)</span> και <span class="math notranslate nohighlight">\(j = 1, 2, \dots , J-1\)</span>, όπου <span class="math notranslate nohighlight">\(g_{i, j}\)</span> είναι <span class="math notranslate nohighlight">\(g(x_i, y_j )\)</span>.</p>
-<p>Η παραπάνω εξίσωση ονομάζεται εξίσωση πεπερασμένων διαφορών πέντε σημείων, αφού η καθεμιά από τις αλγεβρικές εξισώσεις που προκύπτουν περιλαμβάνει την ποσότητα <span class="math notranslate nohighlight">\(u\)</span> σε πέντε κόμβους, γύρω από τον κόμβο (<span class="math notranslate nohighlight">\(i, j\)</span>) και τους τέσσερις γειτονικούς του (<span class="math notranslate nohighlight">\(i \, \pm \, 1, j\)</span>) και (<span class="math notranslate nohighlight">\(i, j \, \pm \, 1\)</span>). Μια σχηματική αναπαράσταση της μεθόδου απεικονίζεται στο Σχήμα <a class="reference internal" href="#fig-k5-2"><span class="std std-numref">Fig. 23</span></a>.</p>
+<p>Η παραπάνω εξίσωση ονομάζεται εξίσωση πεπερασμένων διαφορών πέντε σημείων, αφού η καθεμιά από τις αλγεβρικές εξισώσεις που προκύπτουν περιλαμβάνει την ποσότητα <span class="math notranslate nohighlight">\(u\)</span> σε πέντε κόμβους, γύρω από τον κόμβο (<span class="math notranslate nohighlight">\(i, j\)</span>) και τους τέσσερις γειτονικούς του (<span class="math notranslate nohighlight">\(i \, \pm \, 1, j\)</span>) και (<span class="math notranslate nohighlight">\(i, j \, \pm \, 1\)</span>). Μια σχηματική αναπαράσταση της μεθόδου απεικονίζεται στο <a class="reference internal" href="#fig-k5-2"><span class="std std-numref">Σχήμα 23</span></a>.</p>
 <figure class="align-default" id="fig-k5-2">
 <a class="reference internal image-reference" href="_images/FD_scheme.svg"><img alt="_images/FD_scheme.svg" src="_images/FD_scheme.svg" style="width: 453.7px; height: 442.0px;" /></a>
 <figcaption>
@@ -826,7 +791,7 @@ a_n  = \frac{2}{a}\int\limits_0^a {f(x)} \sin \left(\frac{{n\pi x}}{a}\right)dx.
 <p class="admonition-title">Παρατήρηση</p>
 <p>Μια βασική διαφορά ανάμεσα στη Μ.Π.Ο. και στη Μ.Π.Δ. είναι ότι στις πεπερασμένες διαφορές η λύση βασίζεται μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους του πλέγματος, ενώ στη Μ.Π.Ο. η λύση βασίζεται όχι μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους αλλά και σε συνεχείς υποθετικές κατανομές ανάμεσα στους κόμβους <span id="id14">[<a class="reference internal" href="zreferences.html#id13" title="Clive A.J. Fletcher. Computational techniques for fluid dynamics. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.">Fletcher, 1991</a>, <a class="reference internal" href="zreferences.html#id110" title="Suhas Patankar. Numerical heat transfer and fluid flow. Taylor &amp; Francis, 2018.">Patankar, 2018</a>]</span>.</p>
 </div>
-<p>Η σχηματική αναπαράσταση των όγκων αναφοράς για καρτεσιανό δομημένο πλέγμα φαίνεται στο Σχήμα <a class="reference internal" href="#fig-k5-cv"><span class="std std-numref">Fig. 24</span></a>.</p>
+<p>Η σχηματική αναπαράσταση των όγκων αναφοράς για καρτεσιανό δομημένο πλέγμα φαίνεται στο <a class="reference internal" href="#fig-k5-cv"><span class="std std-numref">Σχήμα 24</span></a>.</p>
 <p>Εφαρμόζοντας τη Μ.Π.Ο. για την επίλυση του προβλήματος συνοριακών τιμών έχουμε,</p>
 <div class="math notranslate nohighlight" id="equation-eq-k5-2-2">
 <span class="eqno">(130)<a class="headerlink" href="#equation-eq-k5-2-2" title="Link to this equation">#</a></span>\[
@@ -922,7 +887,7 @@ C = A \otimes B = \left[ {\begin{array}{*{20}c}
 \nabla^2 u =  u_{xx}+u_{yy} = g(x,y),
 \]</div>
 <p>για τη συνάρτηση <span class="math notranslate nohighlight">\(u = u(x, y)\)</span> σε μια κλειστή ορθογώνια περιοχή <span class="math notranslate nohighlight">\(\Omega\)</span>, με την υπόθεση ότι οι τιμές της <span class="math notranslate nohighlight">\(u\)</span> είναι γνωστές στο σύνορο <span class="math notranslate nohighlight">\(\Gamma\)</span>.</p>
-<p>Το εφαρμοζόμενο αριθμητικό σχήμα και το υπολογιστικό πλέγμα στο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> παρουσιάζονται στα Σχήματα <a class="reference internal" href="#fig-k5-2"><span class="std std-numref">Fig. 23</span></a> και <a class="reference internal" href="#fig-k5-plegma"><span class="std std-numref">Fig. 22</span></a>. Χρησιμοποιούμε το συμβολισμό <span class="math notranslate nohighlight">\((i, j)\)</span>, <span class="math notranslate nohighlight">\(1 \le i \le I\)</span> και <span class="math notranslate nohighlight">\(1 \le j \le J\)</span> για να δηλώσουμε το σημείο τομής των ευθειών <span class="math notranslate nohighlight">\(x_i\)</span> και <span class="math notranslate nohighlight">\(y_j\)</span>. Προσεγγίζουμε την εξίσωση <a class="reference internal" href="#equation-eq-k5-poi1">(132)</a> με μια εξίσωση Π.Δ. σε κάθε εσωτερικό σημείο <span class="math notranslate nohighlight">\((i, j)\)</span>. Οπότε, χρησιμοποιώντας κεντρικές Π.Δ. για τις <span class="math notranslate nohighlight">\(u_{xx}\)</span> και <span class="math notranslate nohighlight">\(u_{yy}\)</span> με σφάλματα αποκοπής <span class="math notranslate nohighlight">\(O(\Delta x)^2\)</span> και <span class="math notranslate nohighlight">\(O(\Delta y)^2\)</span>, αντίστοιχα, δηλαδή,</p>
+<p>Το εφαρμοζόμενο αριθμητικό σχήμα και το υπολογιστικό πλέγμα στο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> παρουσιάζονται στα <a class="reference internal" href="#fig-k5-2"><span class="std std-numref">Σχήματα 23</span></a> και <a class="reference internal" href="#fig-k5-plegma"><span class="std std-numref">Fig. 22</span></a>. Χρησιμοποιούμε το συμβολισμό <span class="math notranslate nohighlight">\((i, j)\)</span>, <span class="math notranslate nohighlight">\(1 \le i \le I\)</span> και <span class="math notranslate nohighlight">\(1 \le j \le J\)</span> για να δηλώσουμε το σημείο τομής των ευθειών <span class="math notranslate nohighlight">\(x_i\)</span> και <span class="math notranslate nohighlight">\(y_j\)</span>. Προσεγγίζουμε την εξίσωση <a class="reference internal" href="#equation-eq-k5-poi1">(132)</a> με μια εξίσωση Π.Δ. σε κάθε εσωτερικό σημείο <span class="math notranslate nohighlight">\((i, j)\)</span>. Οπότε, χρησιμοποιώντας κεντρικές Π.Δ. για τις <span class="math notranslate nohighlight">\(u_{xx}\)</span> και <span class="math notranslate nohighlight">\(u_{yy}\)</span> με σφάλματα αποκοπής <span class="math notranslate nohighlight">\(O(\Delta x)^2\)</span> και <span class="math notranslate nohighlight">\(O(\Delta y)^2\)</span>, αντίστοιχα, δηλαδή,</p>
 <div class="math notranslate nohighlight" id="equation-eq-k5-poi2">
 <span class="eqno">(133)<a class="headerlink" href="#equation-eq-k5-poi2" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{gathered}
@@ -1117,7 +1082,7 @@ x^{(k)} = x^{(k-1)} + a_k p^{(k)}, \quad r^{(k)} = b - Ax^{(k)} = r^{(k-1)} - a_
 <h2>Μέθοδος των γενικευμένων καμπυλόγραμμων συντεταγμένων για την εξίσωση Laplace<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
 <section id="id36">
 <h3>Εισαγωγικές έννοιες στην θεωρία καμπυλόγραμμων συντεταγμένων<a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
-<p>Ο υπολογισμός των πεδίων ροής και πίεσης γύρω από πολύπλοκα γεωμετρικά σχήματα (π.χ., αεροσκάφη, αυτοκίνητα κ.λπ.) περιλαμβάνει υπολογιστικά πλέγματα που είναι πολλές φορές δύσκολο να περιγραφούν μέσω του καρτεσιανού συστήματος συντεταγμένων <span id="id37">[<a class="reference internal" href="zreferences.html#id13" title="Clive A.J. Fletcher. Computational techniques for fluid dynamics. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.">Fletcher, 1991</a>]</span>. Οι νόμοι διατήρησης, καθώς και οι συνοριακές συνθήκες σε Μ.Π.Δ. και Μ.Π.Ο., απαιτούν μια περίπλοκη επεξεργασία των δεδομένων σε τοπικές γραμμές πλέγματος που μπορεί να οδηγεί σε απώλεια ακρίβειας στην υπολογιστική λύση. Οι παραπάνω δυσκολίες οδηγούν στην εισαγωγή ενός τοπικού μετασχηματισμού από τον φυσικό χώρο <span class="math notranslate nohighlight">\((x, y, z)\)</span> σε έναν γενικευμένο καμπυλόγραμμο χώρο συντεταγμένων <span class="math notranslate nohighlight">\((\xi, \eta, \zeta)\)</span>, όπως φαίνεται χαρακτηριστικά στο <a class="reference internal" href="#fig-k5-gcc1"><span class="std std-numref">Fig. 25</span></a>.</p>
+<p>Ο υπολογισμός των πεδίων ροής και πίεσης γύρω από πολύπλοκα γεωμετρικά σχήματα (π.χ., αεροσκάφη, αυτοκίνητα κ.λπ.) περιλαμβάνει υπολογιστικά πλέγματα που είναι πολλές φορές δύσκολο να περιγραφούν μέσω του καρτεσιανού συστήματος συντεταγμένων <span id="id37">[<a class="reference internal" href="zreferences.html#id13" title="Clive A.J. Fletcher. Computational techniques for fluid dynamics. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.">Fletcher, 1991</a>]</span>. Οι νόμοι διατήρησης, καθώς και οι συνοριακές συνθήκες σε Μ.Π.Δ. και Μ.Π.Ο., απαιτούν μια περίπλοκη επεξεργασία των δεδομένων σε τοπικές γραμμές πλέγματος που μπορεί να οδηγεί σε απώλεια ακρίβειας στην υπολογιστική λύση. Οι παραπάνω δυσκολίες οδηγούν στην εισαγωγή ενός τοπικού μετασχηματισμού από τον φυσικό χώρο <span class="math notranslate nohighlight">\((x, y, z)\)</span> σε έναν γενικευμένο καμπυλόγραμμο χώρο συντεταγμένων <span class="math notranslate nohighlight">\((\xi, \eta, \zeta)\)</span>, όπως φαίνεται χαρακτηριστικά στο <a class="reference internal" href="#fig-k5-gcc1"><span class="std std-numref">Σχήμα 25</span></a>.</p>
 <p>Η χρήση γενικευμένων συντεταγμένων υποδηλώνει ότι μια παραμορφωμένη περιοχή στο φυσικό χώρο μετασχηματίζεται σε μια ορθογώνια περιοχή στο χώρο γενικευμένων συντεταγμένων. Οι εξισώσεις εκφράζονται με όρους γενικευμένων συντεταγμένων και η διακριτοποίηση μεταφέρεται στο χώρο των γενικευμένων συντεταγμένων.</p>
 <figure class="align-default" id="fig-k5-gcc1">
 <a class="reference internal image-reference" href="_images/GCC1.svg"><img alt="_images/GCC1.svg" src="_images/GCC1.svg" style="width: 639.6px; height: 109.2px;" /></a>
@@ -1130,7 +1095,7 @@ x^{(k)} = x^{(k-1)} + a_k p^{(k)}, \quad r^{(k)} = b - Ax^{(k)} = r^{(k-1)} - a_
 <hr class="docutils" />
 <section id="id39">
 <h3>Μετρικές του μετασχηματισμού, Ιακωβιανή ορίζουσα<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
-<p>Έστω ότι υπάρχει μια μοναδική, μονότιμη σχέση (1-1 και επί) μεταξύ των γενικευμένων και των φυσικών συντεταγμένων (<a class="reference internal" href="#fig-k5-gcc2"><span class="std std-numref">Fig. 26</span></a>), η οποία μπορεί να γραφεί ως:</p>
+<p>Έστω ότι υπάρχει μια μοναδική, μονότιμη σχέση (1-1 και επί) μεταξύ των γενικευμένων και των φυσικών συντεταγμένων (<a class="reference internal" href="#fig-k5-gcc2"><span class="std std-numref">Σχήμα 26</span></a>), η οποία μπορεί να γραφεί ως:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -1402,7 +1367,7 @@ r \cos \theta &amp; r \sin \theta \\
 </section>
 <section id="id44">
 <h3>Αριθμητικός μετασχηματισμός καμπυλόγραμμων συντεταγμένων<a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
-<p>Εάν δεν υπάρχει αναλυτική σχέση για τη μετατροπή του χωρίου των <span class="math notranslate nohighlight">\((x, y)\)</span> στο χωρίο των <span class="math notranslate nohighlight">\((\xi, \eta)\)</span> όπως παρουσιάζεται στο Σχήμα <a class="reference internal" href="#fig-k5-gcc3"><span class="std std-numref">Fig. 27</span></a>, μπορούμε να χρησιμοποιήσουμε την έννοια των προσεγγιστικών μετρικών του μετασχηματισμού. Χρησιμοποιούμε πεπερασμένες διαφορές για να περιγράψουμε τις μετρικές του μετασχηματισμού σε ένα σημείο <span class="math notranslate nohighlight">\(P\)</span> του πεδίου ορισμού. Όπως φαίνεται χαρακτηριστικά στο Σχήμα <a class="reference internal" href="#fig-k5-gcc3"><span class="std std-numref">Fig. 27</span></a>, με χρήση κεντρικών πεπερασμένων διαφορών <span id="id45">[<a class="reference internal" href="zreferences.html#id13" title="Clive A.J. Fletcher. Computational techniques for fluid dynamics. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.">Fletcher, 1991</a>, <a class="reference internal" href="zreferences.html#id16" title="Wei Shyy, H.S. Udaykumar, Madhukar M. Rao, and Richard W. Smith. Computational fluid dynamics with moving boundaries. Courier Corporation, 2012.">Shyy <em>et al.</em>, 2012</a>]</span>:</p>
+<p>Εάν δεν υπάρχει αναλυτική σχέση για τη μετατροπή του χωρίου των <span class="math notranslate nohighlight">\((x, y)\)</span> στο χωρίο των <span class="math notranslate nohighlight">\((\xi, \eta)\)</span> όπως παρουσιάζεται στο <a class="reference internal" href="#fig-k5-gcc3"><span class="std std-numref">Σχήμα 27</span></a>, μπορούμε να χρησιμοποιήσουμε την έννοια των προσεγγιστικών μετρικών του μετασχηματισμού. Χρησιμοποιούμε πεπερασμένες διαφορές για να περιγράψουμε τις μετρικές του μετασχηματισμού σε ένα σημείο <span class="math notranslate nohighlight">\(P\)</span> του πεδίου ορισμού. Όπως φαίνεται χαρακτηριστικά στο <a class="reference internal" href="#fig-k5-gcc3"><span class="std std-numref">Σχήμα 27</span></a>, με χρήση κεντρικών πεπερασμένων διαφορών <span id="id45">[<a class="reference internal" href="zreferences.html#id13" title="Clive A.J. Fletcher. Computational techniques for fluid dynamics. Volume 1. Springer-Verlag Berlin Heidelberg New York, 2 edition, 1991.">Fletcher, 1991</a>, <a class="reference internal" href="zreferences.html#id16" title="Wei Shyy, H.S. Udaykumar, Madhukar M. Rao, and Richard W. Smith. Computational fluid dynamics with moving boundaries. Courier Corporation, 2012.">Shyy <em>et al.</em>, 2012</a>]</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-gcc-eq7">
 <span class="eqno">(160)<a class="headerlink" href="#equation-eq-gcc-eq7" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
@@ -1535,7 +1500,7 @@ y_\eta  &amp;= \frac{\partial y}{\partial \eta} \approx \frac{y_{j,k+1} - y_{j,k
 </section>
 <section id="id49">
 <h2>Γενικευμένες συντεταγμένες και η μέθοδος πεπερασμένων όγκων<a class="headerlink" href="#id49" title="Link to this heading">#</a></h2>
-<p>Το Σχήμα <a class="reference internal" href="#fig-k5-gcc4"><span class="std std-numref">Fig. 28</span></a> είναι μια τοπική αναπαράσταση του πλέγματος στη Μ.Π.Ο. από το φυσικό διδιάστατο χωρίο στο μετασχηματισμένο-κανονικοποιημένο χωρίο.</p>
+<p>Το <a class="reference internal" href="#fig-k5-gcc4"><span class="std std-numref">Σχήμα 28</span></a> είναι μια τοπική αναπαράσταση του πλέγματος στη Μ.Π.Ο. από το φυσικό διδιάστατο χωρίο στο μετασχηματισμένο-κανονικοποιημένο χωρίο.</p>
 <figure class="align-default" id="fig-k5-gcc4">
 <img alt="_images/GCC4.svg" src="_images/GCC4.svg" />
 <figcaption>
@@ -1590,7 +1555,7 @@ S_T = - \left. \frac{q_2}{\left| J^{-1} \right|} \frac{\partial T}{\partial \eta
 - \left. \frac{q_2}{\left| J^{-1} \right|} \frac{\partial T}{\partial \xi} \right|_n
 + \left. \frac{q_2}{\left| J^{-1} \right|} \frac{\partial T}{\partial \xi} \right|_s.
 \]</div>
-<p>Ο πρώτος όρος της εξίσωσης <a class="reference internal" href="#equation-eq-gcc-eq12">(168)</a>, μπορεί να διακριτοποιηθεί όπως φαίνεται στην παρακάτω σχέση, εξίσωση <a class="reference internal" href="#equation-eq-gcc-eq13">(169)</a>, και αυτό απαιτεί περισσότερα σημεία διακριτοποίησης για τις εξισώσεις διαφορών που προκύπτουν από την διαδικασία ολοκλήρωσης, βλέπε επίσης σχήμα <a class="reference internal" href="#fig-k5-gcc4"><span class="std std-numref">Fig. 28</span></a>.</p>
+<p>Ο πρώτος όρος της εξίσωσης <a class="reference internal" href="#equation-eq-gcc-eq12">(168)</a>, μπορεί να διακριτοποιηθεί όπως φαίνεται στην παρακάτω σχέση, εξίσωση <a class="reference internal" href="#equation-eq-gcc-eq13">(169)</a>, και αυτό απαιτεί περισσότερα σημεία διακριτοποίησης για τις εξισώσεις διαφορών που προκύπτουν από την διαδικασία ολοκλήρωσης, βλέπε επίσης <a class="reference internal" href="#fig-k5-gcc4"><span class="std std-numref">Σχήμα 28</span></a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-gcc-eq13">
 <span class="eqno">(169)<a class="headerlink" href="#equation-eq-gcc-eq13" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
@@ -1623,7 +1588,7 @@ q_2 = x_\xi \, x_\eta + y_\xi y_\eta = 0 ,
 </section>
 <section id="id53">
 <h2>Παράδειγμα ενός πολύ απλού υπολογιστικού πλέγματος<a class="headerlink" href="#id53" title="Link to this heading">#</a></h2>
-<p>Θεωρούμε ένα πολύ απλό πλέγμα που αποτελείται από μόνο τρεις όγκους διαφορετικού μήκους ο καθένας, όπως χαρακτηριστικά φαίνεται στο σχήμα <a class="reference internal" href="#fig-k5-gcc5"><span class="std std-numref">Fig. 29</span></a>. Τα διαφορετικά μεγέθη πεπερασμένων όγκων επιλέχθηκαν σκόπιμα για να καταδειχθεί η εγκυρότητα του μετασχηματισμού των καμπυλόγραμμων συντεταγμένων μέσω αυτού του απλού παραδείγματος.</p>
+<p>Θεωρούμε ένα πολύ απλό πλέγμα που αποτελείται από μόνο τρεις όγκους διαφορετικού μήκους ο καθένας, όπως χαρακτηριστικά φαίνεται στο <a class="reference internal" href="#fig-k5-gcc5"><span class="std std-numref">Σχήμα 29</span></a>. Τα διαφορετικά μεγέθη πεπερασμένων όγκων επιλέχθηκαν σκόπιμα για να καταδειχθεί η εγκυρότητα του μετασχηματισμού των καμπυλόγραμμων συντεταγμένων μέσω αυτού του απλού παραδείγματος.</p>
 <p>Η μέθοδος των γενικευμένων συντεταγμένων όπως παρουσιάζεται στην εξίσωση <a class="reference internal" href="#equation-eq-gcc-eq14">(170)</a> είναι η μονοδιάστατη εκδοχή της εξίσωσης <a class="reference internal" href="#equation-eq-gcc-eq11b">(165)</a> που αναλύσαμε στην προηγούμενη ενότητα</p>
 <div class="math notranslate nohighlight" id="equation-eq-gcc-eq14">
 <span class="eqno">(170)<a class="headerlink" href="#equation-eq-gcc-eq14" title="Link to this equation">#</a></span>\[
@@ -1663,7 +1628,7 @@ q_2 = x_\xi \, x_\eta + y_\xi y_\eta = 0 ,
     + \left. \frac{q_1}{\left| J^{-1} \right|} \right|_W \right).
 \end{aligned}
 \end{split}\]</div>
-<p>Επιβάλλουμε σταθερές τιμές για τη θερμοκρασία στα σημεία <span class="math notranslate nohighlight">\(E\)</span> και <span class="math notranslate nohighlight">\(W\)</span> και θα υπολογίσουμε τη θερμοκρασία στο σημείο <span class="math notranslate nohighlight">\(P\)</span>. Οι μετρικές του μετασχηματισμού για κάθε όγκο αναφοράς φαίνονται στον Πίνακα <a class="reference internal" href="#tab-k5-2"><span class="std std-numref">Table 1</span></a>.</p>
+<p>Επιβάλλουμε σταθερές τιμές για τη θερμοκρασία στα σημεία <span class="math notranslate nohighlight">\(E\)</span> και <span class="math notranslate nohighlight">\(W\)</span> και θα υπολογίσουμε τη θερμοκρασία στο σημείο <span class="math notranslate nohighlight">\(P\)</span>. Οι μετρικές του μετασχηματισμού για κάθε όγκο αναφοράς φαίνονται στον <a class="reference internal" href="#tab-k5-2"><span class="std std-numref">Πίνακα 1</span></a>.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-k5-2">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Μετρικές του μετασχηματισμού για το απλό παράδειγμα τριών Π.Ο.</span><a class="headerlink" href="#tab-k5-2" title="Link to this table">#</a></caption>
 <thead>
@@ -1885,7 +1850,7 @@ u = \frac{\partial \psi}{\partial y} \qquad \text{και} \qquad v = - \frac{\pa
 </div>
 </div>
 <p>Σε αυτό το πρόγραμμα, μόλις τελειώνει κάθε επανάληψη και υπολογίζεται μια καινούργια τιμή της <span class="math notranslate nohighlight">\(\psi\)</span>, υπολογίζουμε την απόλυτη τιμή της διαφοράς της <span class="math notranslate nohighlight">\(\psi\)</span> από την προηγούμενη τιμή της, στο αντίστοιχο σημείο. Η διαφορά αυτή προστίθεται στην τιμή μιας μεταβλητής που εισάγεται στον κώδικα, της οποίας η τιμή στην έναρξη κάθε επανάληψης είναι μηδενική. Τελικά ορίζουμε την απόλυτη τιμή της διαφοράς, <span class="math notranslate nohighlight">\(\psi^{(n+1)}_{i, j} - \psi^{(n)}_{i, j}\)</span> να είναι μικρότερη ή ίση του <span class="math notranslate nohighlight">\(10^{-5}\)</span> σε κάθε σημείο. Επίσης, για την περίπτωση που θέλουμε να σταματήσουμε την επαναληπτική διαδικασία, θέτουμε μέγιστο αριθμό επαναλήψεων ίσο με <span class="math notranslate nohighlight">\(200\)</span>, και τότε, ακόμα και αν δεν έχει επιτευχθεί η απαιτούμενη ακρίβεια, η αριθμητική διαδικασία να σταματάει.</p>
-<p>Στο Σχήμα <a class="reference internal" href="#fig-k5-fdp"><span class="std std-numref">Fig. 30</span></a> παρουσιάζονται οι τιμές της ροϊκής συνάρτησης <span class="math notranslate nohighlight">\(\psi = c\)</span>, για διάφορες τιμές του <span class="math notranslate nohighlight">\(c\)</span>, όπου παρουσιάζεται ο τρόπος με τον οποίο διαχέεται η στροβιλότητα μέσα στο πλαίσιο γύρω από το στρόβιλο στο σημείο <span class="math notranslate nohighlight">\((1, 1)\)</span>.</p>
+<p>Στο <a class="reference internal" href="#fig-k5-fdp"><span class="std std-numref">Σχήμα 30</span></a> παρουσιάζονται οι τιμές της ροϊκής συνάρτησης <span class="math notranslate nohighlight">\(\psi = c\)</span>, για διάφορες τιμές του <span class="math notranslate nohighlight">\(c\)</span>, όπου παρουσιάζεται ο τρόπος με τον οποίο διαχέεται η στροβιλότητα μέσα στο πλαίσιο γύρω από το στρόβιλο στο σημείο <span class="math notranslate nohighlight">\((1, 1)\)</span>.</p>
 <figure class="align-default" id="fig-k5-fdp">
 <img alt="_images/Poisson_Liebmann.svg" src="_images/Poisson_Liebmann.svg" />
 <figcaption>
@@ -2036,7 +2001,7 @@ u^{(k+1)}_{i,j} = u^{(k)}_{i,j} + \omega \, r_{i,j},
 </div>
 </div>
 <p>Σε αυτό το πρόγραμμα, μόλις τελειώνει κάθε επανάληψη και υπολογίζεται μια καινούργια τιμή της <span class="math notranslate nohighlight">\(\psi\)</span>, υπολογίζουμε την απόλυτη τιμή της διαφοράς της <span class="math notranslate nohighlight">\(\psi\)</span> από την προηγούμενη τιμή της, στο αντίστοιχο σημείο. Η διαφορά αυτή προστίθεται στην τιμή μιας μεταβλητής που εισάγεται στον κώδικα, της οποίας η τιμή στην έναρξη κάθε επανάληψης είναι μηδενική. Τελικά ορίζουμε την απόλυτη τιμή της διαφοράς, <span class="math notranslate nohighlight">\(\psi^{(n+1)}_{i, j} - \psi^{(n)}_{i, j}\)</span> να είναι μικρότερη ή ίση του <span class="math notranslate nohighlight">\(10^{-3}\)</span> σε κάθε σημείο. Επίσης, για την περίπτωση που θέλουμε να σταματήσουμε την επαναληπτική διαδικασία, θέτουμε μέγιστο αριθμό επαναλήψεων ίσο με <span class="math notranslate nohighlight">\(500\)</span>, και τότε, ακόμα και αν δεν έχει επιτευχθεί η απαιτούμενη ακρίβεια, η αριθμητική διαδικασία να σταματάει. Για το παρόν πρόβλημα η SOR χρειάστηκε μόλις 40 επαναλήψεις για την απαιτούμενη ακρίβεια σε αντιδιαστολή με την μέθοδο του Liebmann (προηγούμενο παράδειγμα) όπου χρειάστηκαν 273 επαναλήψεις και περισσότερος υπολογιστικός χρόνος για τον υπολογισμό της αριθμητικής λύσης με την απαιτούμενη ακρίβεια.</p>
-<p>Στο Σχήμα <a class="reference internal" href="#fig-k5-fdp2"><span class="std std-numref">Fig. 31</span></a> παρουσιάζονται οι τιμές της ροϊκής συνάρτησης <span class="math notranslate nohighlight">\(\psi = c\)</span>, για διάφορες τιμές του <span class="math notranslate nohighlight">\(c\)</span>, απ’ όπου φαίνεται ο τρόπος με τον οποίο διαχέεται η στροβιλότητα μέσα στο πλαίσιο γύρω από το στρόβιλο στο σημείο <span class="math notranslate nohighlight">\((-0.5, 1.5)\)</span>.</p>
+<p>Στο <a class="reference internal" href="#fig-k5-fdp2"><span class="std std-numref">Σχήμα 31</span></a> παρουσιάζονται οι τιμές της ροϊκής συνάρτησης <span class="math notranslate nohighlight">\(\psi = c\)</span>, για διάφορες τιμές του <span class="math notranslate nohighlight">\(c\)</span>, απ’ όπου φαίνεται ο τρόπος με τον οποίο διαχέεται η στροβιλότητα μέσα στο πλαίσιο γύρω από το στρόβιλο στο σημείο <span class="math notranslate nohighlight">\((-0.5, 1.5)\)</span>.</p>
 <figure class="align-default" id="fig-k5-fdp2">
 <img alt="_images/Poisson_SOR.svg" src="_images/Poisson_SOR.svg" />
 <figcaption>
@@ -2075,7 +2040,7 @@ u_{xx}  + u_{yy} = 0 ,
 \end{array}} \right],
 \end{split}\]</div>
 <p>όπου <span class="math notranslate nohighlight">\(P = \operatorname{trid} \left( - \alpha, \, {2\left(\frac{{\alpha ^2  + 1}}{\alpha }\right)}, \, - \alpha \right)\)</span> και <span class="math notranslate nohighlight">\(I\)</span> ο μοναδιαίος πίνακας. Ο πίνακας <span class="math notranslate nohighlight">\(A\)</span> είναι block διαγώνιος, συμμετρικός και θετικά ορισμένος.</p>
-<p>Για συμμετρικά υπολογιστικά πλέγματα συγκρίνουμε την αναλυτική και την αριθμητική λύση που πήραμε για την εξίσωση Laplace με τη Μ.Π.Ο. Στον Πίνακα <a class="reference internal" href="#tab-k5-1"><span class="std std-numref">Table 2</span></a> παρουσιάζουμε το μέγιστο σφάλμα αποκοπής (<span class="math notranslate nohighlight">\(\text{σ.α.}\)</span>), δηλαδή τη μέγιστη διαφορά μεταξύ της αναλυτικής και της αριθμητικής λύσης, <span class="math notranslate nohighlight">\(\text{σ.α.} = \left\| x - \bar x\right\|_{\infty}\)</span>, όπου <span class="math notranslate nohighlight">\(x\)</span> η αναλυτική λύση και <span class="math notranslate nohighlight">\(\bar x\)</span> η αριθμητική λύση. Επίσης παρουσιάζεται ο αριθμός των επαναλήψεων σε κάθε εφαρμογή των μεθόδων απότομης καθόδου, συζυγών κλίσεων και της γενικευμένης μεθόδου ελαχίστων υπολοίπων. Το σφάλμα αυτό περιλαμβάνει τόσο το σφάλμα προσέγγισης όσο και το σφάλμα αποκοπής. Το σφάλμα προσέγγισης επηρεάζει το αποτέλεσμα κατά το μεγαλύτερο ποσοστό. Ο αριθμός επαναλήψεων στον αριθμητικό κώδικα έχουμε επιβάλλει να είναι το πολύ <span class="math notranslate nohighlight">\(n \times m\)</span> επαναλήψεις. Οπότε και αυτό αποτελεί ένα κριτήριο τερματισμού της διαδικασίας. Στον Πίνακα <a class="reference internal" href="#tab-k5-1"><span class="std std-numref">Table 2</span></a> παρουσιάζονται τα αποτελέσματα για την εξίσωση Laplace και για την Μ.Π.Ο. Η επαναληπτική διαδικασία ολοκληρώνεται όταν ικανοποιείται το κριτήριο σύγκλισης <span class="math notranslate nohighlight">\(\left\| {x ^{(n + 1)}  - x ^{(n)} } \right\|_2 &lt; \varepsilon\)</span>, όπου <span class="math notranslate nohighlight">\(\varepsilon = 10^{-20}\)</span>.</p>
+<p>Για συμμετρικά υπολογιστικά πλέγματα συγκρίνουμε την αναλυτική και την αριθμητική λύση που πήραμε για την εξίσωση Laplace με τη Μ.Π.Ο. Στον <a class="reference internal" href="#tab-k5-1"><span class="std std-numref">Πίνακα 2</span></a> παρουσιάζουμε το μέγιστο σφάλμα αποκοπής (<span class="math notranslate nohighlight">\(\text{σ.α.}\)</span>), δηλαδή τη μέγιστη διαφορά μεταξύ της αναλυτικής και της αριθμητικής λύσης, <span class="math notranslate nohighlight">\(\text{σ.α.} = \left\| x - \bar x\right\|_{\infty}\)</span>, όπου <span class="math notranslate nohighlight">\(x\)</span> η αναλυτική λύση και <span class="math notranslate nohighlight">\(\bar x\)</span> η αριθμητική λύση. Επίσης παρουσιάζεται ο αριθμός των επαναλήψεων σε κάθε εφαρμογή των μεθόδων απότομης καθόδου, συζυγών κλίσεων και της γενικευμένης μεθόδου ελαχίστων υπολοίπων. Το σφάλμα αυτό περιλαμβάνει τόσο το σφάλμα προσέγγισης όσο και το σφάλμα αποκοπής. Το σφάλμα προσέγγισης επηρεάζει το αποτέλεσμα κατά το μεγαλύτερο ποσοστό. Ο αριθμός επαναλήψεων στον αριθμητικό κώδικα έχουμε επιβάλλει να είναι το πολύ <span class="math notranslate nohighlight">\(n \times m\)</span> επαναλήψεις. Οπότε και αυτό αποτελεί ένα κριτήριο τερματισμού της διαδικασίας. Στον Πίνακα <a class="reference internal" href="#tab-k5-1"><span class="std std-numref">Πίνακα 2</span></a> παρουσιάζονται τα αποτελέσματα για την εξίσωση Laplace και για την Μ.Π.Ο. Η επαναληπτική διαδικασία ολοκληρώνεται όταν ικανοποιείται το κριτήριο σύγκλισης <span class="math notranslate nohighlight">\(\left\| {x ^{(n + 1)}  - x ^{(n)} } \right\|_2 &lt; \varepsilon\)</span>, όπου <span class="math notranslate nohighlight">\(\varepsilon = 10^{-20}\)</span>.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-k5-1">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">Αριθμητικά αποτελέσματα για τα συμμετρικά υπολογιστικά πλέγματα για τη μέθοδο των συζυγών κλίσεων, όπου η διακριτοποίηση έγινε με τη Μ.Π.Ο.</span><a class="headerlink" href="#tab-k5-1" title="Link to this table">#</a></caption>
 <thead>
@@ -2099,7 +2064,7 @@ u_{xx}  + u_{yy} = 0 ,
 </tbody>
 </table>
 </div>
-<p>Τα αποτελέσματα που προκύπτουν με διακριτοποίηση του προβλήματος με τη Μ.Π.Ο. παρουσιάζονται στο Σχήμα <a class="reference internal" href="#fig-k5-fvl"><span class="std std-numref">Fig. 32</span></a>. Από το Σχήμα <a class="reference internal" href="#fig-k5-fvl"><span class="std std-numref">Fig. 32</span></a> παρατηρούμε ότι τα αποτελέσματα που δίνουν οι αριθμητικές μέθοδοι είναι εξίσου ικανοποιητικά με την αναλυτική λύση, όπως επίσης φαίνεται στον Πίνακα <a class="reference internal" href="#tab-k5-1"><span class="std std-numref">Table 2</span></a>.</p>
+<p>Τα αποτελέσματα που προκύπτουν με διακριτοποίηση του προβλήματος με τη Μ.Π.Ο. παρουσιάζονται στο <a class="reference internal" href="#fig-k5-fvl"><span class="std std-numref">Σχήμα 32</span></a>. Από το <a class="reference internal" href="#fig-k5-fvl"><span class="std std-numref">Σχήμα 32</span></a> παρατηρούμε ότι τα αποτελέσματα που δίνουν οι αριθμητικές μέθοδοι είναι εξίσου ικανοποιητικά με την αναλυτική λύση, όπως επίσης φαίνεται στον <a class="reference internal" href="#tab-k5-1"><span class="std std-numref">Πίνακα 2</span></a>.</p>
 <figure class="align-default" id="fig-k5-fvl">
 <a class="reference internal image-reference" href="_images/FV_Laplace_50x50_grid.png"><img alt="_images/FV_Laplace_50x50_grid.png" src="_images/FV_Laplace_50x50_grid.png" style="height: 350px;" /></a>
 <figcaption>
@@ -2272,7 +2237,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
 
   <p class="copyright">
     
-      © Copyright 2021.
+      © Copyright 2024.
       <br/>
     
   </p>

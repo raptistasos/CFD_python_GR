@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Η Εξίσωση Μεταφοράς - Διάχυσης &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Η Εξίσωση Μεταφοράς - Διάχυσης &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python</title>
   
   
   
@@ -56,41 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "raptistasos/CFD_python_GR");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -185,8 +150,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
   
   
 </a></div>
@@ -618,7 +583,7 @@ R : = \{ (x,y,t) \in \mathbb{R}^{2} \times [0, \infty) : x \in [0,a], y \in [0,b
 <p>με τα <span class="math notranslate nohighlight">\(\Delta x\)</span>, <span class="math notranslate nohighlight">\(\Delta y\)</span>, <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span> και <span class="math notranslate nohighlight">\(n\)</span> όπως ορίσθηκαν προηγουμένως.</p>
 <p><strong>Εφαρμογή 1:</strong> Εφαρμόζουμε το παραπάνω αριθμητικό σχήμα εμπρόσθιων διαφορών στο χρόνο και κεντρικών διαφορών στο χώρο (FTCS) στο χωρίο <span class="math notranslate nohighlight">\(R\)</span>, όπως αυτό περιγράφεται παραπάνω, με <span class="math notranslate nohighlight">\(a = 3\)</span>, <span class="math notranslate nohighlight">\(b = 3\)</span> και για ένα μικρό χρονικό διάστημα, <span class="math notranslate nohighlight">\(t \in [0, 1]\)</span>.</p>
 <p>Η εφαρμογή αυτού του προβλήματος θα μπορούσε να είναι η διάχυση και μεταφορά μιας χημικής ουσίας ή η διάδοση ενός ραδιενεργού ρύπου που κινείται μέσα στο χωρίο, όπως αυτή περιγράφεται μέσω της εξίσωσης μεταφοράς-διάχυσης. Εδώ η κυρίαρχη μορφή διάδοσης επιβάλουμε να είναι η μεταφορά, οπότε θεωρούμε ένα πεδίο ταχύτητας με σταθερές τιμές, για παράδειγμα <span class="math notranslate nohighlight">\(\bar q = (0.75, 0.75)\)</span> και συντελεστή διάχυσης <span class="math notranslate nohighlight">\(D = 0.05\)</span>.</p>
-<p>Υπολογισμός του αριθμού Peclet δίνει ότι ο <span class="math notranslate nohighlight">\(\operatorname{Pe} \approx 21\)</span>, όπου κανείς καταλαβαίνει ότι η μεταφορά είναι κυρίαρχη σε αυτή τη περίπτωση. Στο <a class="reference internal" href="#fig-k7-adv-dif1"><span class="std std-numref">Fig. 39</span></a> παρατηρείται ότι η αρχική συνάρτηση που είναι της μορφής <span class="math notranslate nohighlight">\(f(x,y) = e^{-10.0 \, ((x - 1)^2 + (y - 1)^2)}\)</span> μεταφέρεται προς τα πάνω και δεξιά του χωρίου, βάση του πεδίου ταχύτητας, <span class="math notranslate nohighlight">\(\bar q\)</span>, αλλά συγχρόνως διαχέεται με έναν σχετικά αργό ρυθμό μέσα στο χωρίο αναφοράς λόγω του μικρού συντελεστή διάχυσης, <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<p>Υπολογισμός του αριθμού Peclet δίνει ότι ο <span class="math notranslate nohighlight">\(\operatorname{Pe} \approx 21\)</span>, όπου κανείς καταλαβαίνει ότι η μεταφορά είναι κυρίαρχη σε αυτή τη περίπτωση. Στο <a class="reference internal" href="#fig-k7-adv-dif1"><span class="std std-numref">Σχήμα 39</span></a> παρατηρείται ότι η αρχική συνάρτηση που είναι της μορφής <span class="math notranslate nohighlight">\(f(x,y) = e^{-10.0 \, ((x - 1)^2 + (y - 1)^2)}\)</span> μεταφέρεται προς τα πάνω και δεξιά του χωρίου, βάση του πεδίου ταχύτητας, <span class="math notranslate nohighlight">\(\bar q\)</span>, αλλά συγχρόνως διαχέεται με έναν σχετικά αργό ρυθμό μέσα στο χωρίο αναφοράς λόγω του μικρού συντελεστή διάχυσης, <span class="math notranslate nohighlight">\(D\)</span>.</p>
 <p>Ακολουθεί ο κώδικας επίλυσης του προβλήματος.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -888,7 +853,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
 
   <p class="copyright">
     
-      © Copyright 2021.
+      © Copyright 2024.
       <br/>
     
   </p>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Βασικές αριθμητικές μέθοδοι για προβλήματα Ρευστοδυναμικής &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python</title>
   
   
   
@@ -56,41 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "raptistasos/CFD_python_GR");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -185,8 +150,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
   
   
 </a></div>
@@ -459,7 +424,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="id4">
 <h3>Βασικοί ορισμοί και έννοιες<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>Η βασική ιδέα της Μ.Π.Δ. για την αριθμητική επίλυση Μ.Δ.Ε. είναι η μετατροπή του συνεχούς προβλήματος σε διακριτό, το οποίο μπορεί να επιλυθεί με τη βοήθεια Η/Υ. Αρχικά, το συνεχές χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span>, όπου ορίζεται η άγνωστη συνάρτηση, διακριτοποιείται σε ένα σύνολο κομβικών σημείων (grid points) <span class="math notranslate nohighlight">\(P_{i,j}\)</span>, γνωστό ως υπολογιστικό πλέγμα. Στη συνέχεια, η Μ.Δ.Ε. προσεγγίζεται με μια εξίσωση διαφορών σε κάθε κομβικό σημείο. Η διαδικασία διακριτοποίησης, δηλαδή η προσέγγιση των παραγώγων της συνάρτησης <span class="math notranslate nohighlight">\(u\)</span> μέσω Π.Δ. στα κομβικά σημεία του υπολογιστικού πλέγματος, καθώς και η εφαρμογή των αντίστοιχων συνθηκών, μετατρέπει το αρχικό πρόβλημα σε ένα σύστημα αλγεβρικών εξισώσεων. Η μορφή του συστήματος αυτού (γραμμικό ή μη γραμμικό) εξαρτάται από τη φύση της αρχικής Μ.Δ.Ε.</p>
-<p>Ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> δύο μεταβλητών, <span class="math notranslate nohighlight">\(u = u(x,y)\)</span>, η οποία ορίζεται στο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του Σχήματος <a class="reference internal" href="#fig-k3-2"><span class="std std-numref">Fig. 5</span></a>. Η συνάρτηση αυτή ικανοποιεί την εξίσωση:</p>
+<p>Ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u\)</span> δύο μεταβλητών, <span class="math notranslate nohighlight">\(u = u(x,y)\)</span>, η οποία ορίζεται στο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του <a class="reference internal" href="#fig-k3-2"><span class="std std-numref">Σχήματος 5</span></a>. Η συνάρτηση αυτή ικανοποιεί την εξίσωση:</p>
 <div class="math notranslate nohighlight" id="equation-eq-k3-1">
 <span class="eqno">(32)<a class="headerlink" href="#equation-eq-k3-1" title="Link to this equation">#</a></span>\[
 L(u) = f(x,y), \,\,\,\, f \in \Omega,
@@ -484,7 +449,7 @@ L(u) = f(x,y), \,\,\,\, f \in \Omega,
 </section>
 <section id="id7">
 <h2>Βασικά σχήματα της Μ.Π.Δ.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
-<p>Για την εφαρμογή των αριθμητικών σχημάτων ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u = u(x,y)\)</span> δύο μεταβλητών που ικανοποιεί κάποια Μ.Δ.Ε. σε ένα ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του επιπέδου <span class="math notranslate nohighlight">\(xy\)</span>. Ένα παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> φαίνεται στο παρακάτω σχήμα, Σχήμα <a class="reference internal" href="#fig-k3-fd"><span class="std std-numref">Fig. 6</span></a>. Τα διάφορα σημεία του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> και του συνόρου <span class="math notranslate nohighlight">\(\partial \Omega\)</span> προσδιορίζονται τώρα από τα κομβικά σημεία <span class="math notranslate nohighlight">\((i,j)\)</span> σημεία του υπολογιστικού πλέγματος.</p>
+<p>Για την εφαρμογή των αριθμητικών σχημάτων ας θεωρήσουμε μια συνάρτηση <span class="math notranslate nohighlight">\(u = u(x,y)\)</span> δύο μεταβλητών που ικανοποιεί κάποια Μ.Δ.Ε. σε ένα ορθογώνιο χωρίο <span class="math notranslate nohighlight">\(\Omega\)</span> του επιπέδου <span class="math notranslate nohighlight">\(xy\)</span>. Ένα παράδειγμα της διακριτοποίησης του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> φαίνεται στο παρακάτω σχήμα, <a class="reference internal" href="#fig-k3-fd"><span class="std std-numref">Σχήμα 6</span></a>. Τα διάφορα σημεία του χωρίου <span class="math notranslate nohighlight">\(\Omega\)</span> και του συνόρου <span class="math notranslate nohighlight">\(\partial \Omega\)</span> προσδιορίζονται τώρα από τα κομβικά σημεία <span class="math notranslate nohighlight">\((i,j)\)</span> σημεία του υπολογιστικού πλέγματος.</p>
 <figure class="align-default" id="fig-k3-fd">
 <a class="reference internal image-reference" href="_images/computational_grid.svg"><img alt="_images/computational_grid.svg" src="_images/computational_grid.svg" style="width: 662.4px; height: 504.0px;" /></a>
 <figcaption>
@@ -798,7 +763,7 @@ u_j^{n+1} = u_j ^n + k \frac{\Delta t}{(\Delta x)^2} (u_{j+1} ^{n} - 2 u_j ^n + 
 <h2>Μέθοδος των πεπερασμένων όγκων<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <p>Η Μ.Π.Ο. αποτελεί την κύρια μέθοδο διακριτοποίησης για την επίλυση προβλημάτων Υπολογιστικής Ρευστομηχανικής. Τα κύρια πλεονεκτήματα της Μ.Π.Ο. είναι ότι: (α) είναι ολοκληρωτική μέθοδος και υπερτερεί σε σχέση με άλλες μεθόδους, όπως η Μ.Π.Δ., (β) βρίσκει εφαρμογή σε κάθε τύπο υπολογιστικού πλέγματος, καθώς και σε πολύπλοκες γεωμετρικές δομές <span id="id15">[<a class="reference internal" href="zreferences.html#id110" title="Suhas Patankar. Numerical heat transfer and fluid flow. Taylor &amp; Francis, 2018.">Patankar, 2018</a>]</span>.</p>
 <p>Η μέθοδος εφαρμόζεται με το χωρισμό αρχικά του πεδίου ορισμού σε μικρότερα χωρία, δηλαδή σε πεπερασμένους όγκους αναφοράς, έτσι ώστε κάθε υπολογιστικός κόμβος του πλέγματος να περιβάλλεται από έναν όγκο αναφοράς. Στη συνέχεια, η Μ.Δ.Ε. ολοκληρώνεται στον όγκο αναφοράς. Τα ολοκληρώματα υπολογίζονται αναλυτικά με την υπόθεση ότι οι τιμές της άγνωστης εξαρτημένης μεταβλητής, π.χ. η <span class="math notranslate nohighlight">\(u(x,y)\)</span>, είναι σταθερές ή μεταβάλλονται γραμμικά σε κάθε όγκο αναφοράς. Οι αλγεβρικές εξισώσεις που προκύπτουν ονομάζονται εξισώσεις πεπερασμένων όγκων και το σύστημα μπορεί να επιλυθεί με χρήση άμεσων ή επαναληπτικών τεχνικών επίλυσης αλγεβρικών συστημάτων. Η μεθοδολογία και ο τρόπος διατύπωσης της μεθόδου συνδέονται άμεσα με τη φυσική του προβλήματος και κατ’ επέκταση με τη φύση της Μ.Δ.Ε.</p>
-<p>Θεωρούμε ότι οι εξισώσεις πεπερασμένων όγκων, δηλαδή οι εξισώσεις διαφορών που προκύπτουν από τη διακριτοποίηση, ικανοποιούν τις ίδιες φυσικές αρχές και τους νόμους που ικανοποιούν οι διαφορικές εξισώσεις από τις οποίες έχουν προκύψει. Μια βασική διαφορά ανάμεσα στις Μ.Π.Ο. και Μ.Π.Δ. είναι ότι στις πεπερασμένες διαφορές η λύση βασίζεται μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους του πλέγματος, ενώ στους πεπερασμένους όγκους η λύση βασίζεται όχι μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους, αλλά και σε συνεχείς υποθετικές κατανομές μεταξύ των κόμβων. Στο <a class="reference internal" href="#fig-k3-cv"><span class="std std-numref">Fig. 7</span></a> φαίνεται η σχηματική αναπαράσταση των όγκων αναφοράς για καρτεσιανό δομημένο πλέγμα.</p>
+<p>Θεωρούμε ότι οι εξισώσεις πεπερασμένων όγκων, δηλαδή οι εξισώσεις διαφορών που προκύπτουν από τη διακριτοποίηση, ικανοποιούν τις ίδιες φυσικές αρχές και τους νόμους που ικανοποιούν οι διαφορικές εξισώσεις από τις οποίες έχουν προκύψει. Μια βασική διαφορά ανάμεσα στις Μ.Π.Ο. και Μ.Π.Δ. είναι ότι στις πεπερασμένες διαφορές η λύση βασίζεται μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους του πλέγματος, ενώ στους πεπερασμένους όγκους η λύση βασίζεται όχι μόνο στις τιμές της εξαρτημένης μεταβλητής στους κόμβους, αλλά και σε συνεχείς υποθετικές κατανομές μεταξύ των κόμβων. Στο <a class="reference internal" href="#fig-k3-cv"><span class="std std-numref">Σχήμα 7</span></a> φαίνεται η σχηματική αναπαράσταση των όγκων αναφοράς για καρτεσιανό δομημένο πλέγμα.</p>
 <p>Για να περιγράψουμε και να κατανοήσουμε τη Μ.Π.Ο., θα εφαρμόσουμε τη μέθοδο για τη διακριτοποίηση μιας σχετικά απλής Μ.Δ.Ε., της διδιάστατης εξίσωσης Poisson, όπου <span class="math notranslate nohighlight">\(u(x,y) \in \Omega \subseteq \mathbb{R}^2\)</span> και η <span class="math notranslate nohighlight">\(f(x,y)\)</span> είναι μια συνεχής συνάρτηση με πεπερασμένο αριθμό ασυνεχειών:</p>
 <div class="math notranslate nohighlight" id="equation-eq-k3-laplace">
 <span class="eqno">(77)<a class="headerlink" href="#equation-eq-k3-laplace" title="Link to this equation">#</a></span>\[
@@ -903,7 +868,7 @@ u_j^{n+1} = u_j ^n + k \frac{\Delta t}{(\Delta x)^2} (u_{j+1} ^{n} - 2 u_j ^n + 
 \[
 {{\hat U}_t} = - a\frac{i}{2}k{e^{ - \lambda t}}F({({F^{ - 1}}({e^{\lambda t}}\hat U))^2}),
 \]</div>
-<p>όπου <span class="math notranslate nohighlight">\(F\)</span> είναι ο τελεστής του μετασχηματισμού Fourier. Για συγκεκριμένες τιμές των παραμέτρων του προβλήματος, π.χ., <span class="math notranslate nohighlight">\(a = 1.0\)</span>, <span class="math notranslate nohighlight">\(b = -0.05\)</span>, <span class="math notranslate nohighlight">\(c = 0.001\)</span> και αρχική συνθήκη <span class="math notranslate nohighlight">\(u = {e^{ - 2{x^2}}}\)</span>, παίρνουμε το αποτέλεσμα του Σχήματος <a class="reference internal" href="#fig-k3-s0"><span class="std std-numref">Fig. 8</span></a>.</p>
+<p>όπου <span class="math notranslate nohighlight">\(F\)</span> είναι ο τελεστής του μετασχηματισμού Fourier. Για συγκεκριμένες τιμές των παραμέτρων του προβλήματος, π.χ., <span class="math notranslate nohighlight">\(a = 1.0\)</span>, <span class="math notranslate nohighlight">\(b = -0.05\)</span>, <span class="math notranslate nohighlight">\(c = 0.001\)</span> και αρχική συνθήκη <span class="math notranslate nohighlight">\(u = {e^{ - 2{x^2}}}\)</span>, παίρνουμε το αποτέλεσμα του <a class="reference internal" href="#fig-k3-s0"><span class="std std-numref">Σχήματος 8</span></a>.</p>
 <figure class="align-default" id="fig-k3-s0">
 <img alt="_images/S0.png" src="_images/S0.png" />
 <figcaption>
@@ -939,7 +904,7 @@ u_j^{n+1} = u_j ^n + k \frac{\Delta t}{(\Delta x)^2} (u_{j+1} ^{n} - 2 u_j ^n + 
 <span class="eqno">(84)<a class="headerlink" href="#equation-eq-k3-ex1d" title="Link to this equation">#</a></span>\[
 u_{i+1 , j} - 4 u_{i , j} + u_{i-1 , j} + u_{i , j+1} + u_{i, j-1} = 0 ,
 \]</div>
-<p class="sd-card-text">με <span class="math notranslate nohighlight">\(\text{σ.α.}\)</span> της τάξης του <span class="math notranslate nohighlight">\(h^2\)</span>. Το υπολογιστικό πλέγμα της αναπαράστασης αυτής φαίνεται στο Σχήμα <a class="reference internal" href="#fig-k3-ex1"><span class="std std-numref">Fig. 9</span></a>.</p>
+<p class="sd-card-text">με <span class="math notranslate nohighlight">\(\text{σ.α.}\)</span> της τάξης του <span class="math notranslate nohighlight">\(h^2\)</span>. Το υπολογιστικό πλέγμα της αναπαράστασης αυτής φαίνεται στο <a class="reference internal" href="#fig-k3-ex1"><span class="std std-numref">Σχήμα 9</span></a>.</p>
 <figure class="align-default" id="fig-k3-ex1">
 <a class="reference internal image-reference" href="_images/FD_central_space_Laplace.svg"><img alt="_images/FD_central_space_Laplace.svg" src="_images/FD_central_space_Laplace.svg" style="width: 502.5px; height: 340.5px;" /></a>
 <figcaption>
@@ -994,7 +959,7 @@ u(x + \Delta x, y + \Delta y) = u(x , y) + \frac{\partial u}{\partial x} \Delta 
 <span class="eqno">(92)<a class="headerlink" href="#equation-eq-k3-ex2h" title="Link to this equation">#</a></span>\[
 \frac{\partial^2 u}{\partial x \partial y}\bigg|_{(i , j)} = \frac{u_{i + 1 , j + 1} - u_{i + 1 , j - 1} - u_{i - 1 , j + 1} + u_{i - 1 , j - 1}}{4 (\Delta y)^2} + O(\Delta x)^2 + O(\Delta y)^2    
 \]</div>
-<p class="sd-card-text">Στο Σχήμα <a class="reference internal" href="#fig-k3-ex2"><span class="std std-numref">Fig. 10</span></a> παρουσιάζεται η αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με τη μέθοδο των κεντρικών Π.Δ. στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>. Μέσα στους κύκλους αναγράφονται οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</p>
+<p class="sd-card-text">Στο <a class="reference internal" href="#fig-k3-ex2"><span class="std std-numref">Σχήμα 10</span></a> παρουσιάζεται η αναπαράσταση του υπολογιστικού πλέγματος της <span class="math notranslate nohighlight">\(\frac{\partial^2 u}{\partial x \partial y}\)</span> με τη μέθοδο των κεντρικών Π.Δ. στο κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>. Μέσα στους κύκλους αναγράφονται οι συντελεστές της συνάρτησης <span class="math notranslate nohighlight">\(u(x, y)\)</span> γύρω από το κομβικό σημείο <span class="math notranslate nohighlight">\((i , j)\)</span>.</p>
 <figure class="align-default" id="fig-k3-ex2">
 <a class="reference internal image-reference" href="_images/FD_second_derivative.svg"><img alt="_images/FD_second_derivative.svg" src="_images/FD_second_derivative.svg" style="width: 535.5px; height: 340.5px;" /></a>
 <figcaption>
@@ -1283,7 +1248,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
 
   <p class="copyright">
     
-      © Copyright 2021.
+      © Copyright 2024.
       <br/>
     
   </p>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Εισαγωγή στη γλώσσα προγραμματισμού Python &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python</title>
+    <title>Εισαγωγή στη γλώσσα προγραμματισμού Python &#8212; Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python</title>
   
   
   
@@ -56,41 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "raptistasos/CFD_python_GR");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -183,8 +148,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της γλώσσας προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Εισαγωγή στην Υπολογιστική Ρευστοδυναμική μέσω της Γλώσσας Προγραμματισμού Python - Home"/>
   
   
 </a></div>
@@ -489,7 +454,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyterlab</span></code></p>
 <p>Για την εκκίνηση του JupyterLab, πλοηγούμαστε αρχικά στον επιθυμητό φάκελο και εκτελούμε την εντολή:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">jupyter</span> <span class="pre">lab</span></code></p>
-<p>Ως διαδικτυακή εφαρμογή, το JupyterLab ανοίγει σε μια νέα καρτέλα του προκαθορισμένου περιηγητή διαδικτύου (browser), όπως το Google Chrome ή το Mozilla Firefox (δεν είναι απαραίτητη η σύνδεση στο διαδίκτυο). Στο αριστερό πάνελ του JupyterLab, είναι εμφανής η λίστα των αρχείων και των υποφακέλων που βρίσκονται στο φάκελο όπου εκτελέσαμε την εντολή εκκίνησης του JupyterLab. Για τη δημιουργία ενός νέου Jupyter notebook, επιλέγουμε το σύμβολο <em>+</em> στο επάνω αριστερά μέρος του JupyterLab και έπειτα επιλέγουμε <em>Python 3</em> κάτω από την υποκεφαλίδα <em>Notebook</em> στο κυρίως παράθυρο της εφαρμογής. Παρατηρούμε στο αριστερό πάνελ τη δημιουργία ενός νέου αρχείου με την κατάληξη <em>.ipynb</em> που είναι η προκαθορισμένη κατάληξη των αρχείων Jupyter notebooks, όπως ενδεικτικά παρουσιάζεται και στο <a class="reference internal" href="#chapter1-figure1"><span class="std std-numref">Fig. 1</span></a>. Η λειτουργικότητά τους είναι εφάμιλλη με τα notebooks του Mathematica, καθώς τα κελιά εκτελούνται πατώντας shift + enter και επιτρέπουν από τον πειραματισμό με μικρής έκτασης κώδικες μέχρι την ανάπτυξη ολόκληρων πακέτων λογισμικού. Για να τερματίσουμε το JupyterLab, αρκεί να κλείσουμε το τερματικό από το οποίο το είχαμε εκκινήσει.</p>
+<p>Ως διαδικτυακή εφαρμογή, το JupyterLab ανοίγει σε μια νέα καρτέλα του προκαθορισμένου περιηγητή διαδικτύου (browser), όπως το Google Chrome ή το Mozilla Firefox (δεν είναι απαραίτητη η σύνδεση στο διαδίκτυο). Στο αριστερό πάνελ του JupyterLab, είναι εμφανής η λίστα των αρχείων και των υποφακέλων που βρίσκονται στο φάκελο όπου εκτελέσαμε την εντολή εκκίνησης του JupyterLab. Για τη δημιουργία ενός νέου Jupyter notebook, επιλέγουμε το σύμβολο <em>+</em> στο επάνω αριστερά μέρος του JupyterLab και έπειτα επιλέγουμε <em>Python 3</em> κάτω από την υποκεφαλίδα <em>Notebook</em> στο κυρίως παράθυρο της εφαρμογής. Παρατηρούμε στο αριστερό πάνελ τη δημιουργία ενός νέου αρχείου με την κατάληξη <em>.ipynb</em> που είναι η προκαθορισμένη κατάληξη των αρχείων Jupyter notebooks, όπως ενδεικτικά παρουσιάζεται και στο <a class="reference internal" href="#chapter1-figure1"><span class="std std-numref">Σχήμα 1</span></a>. Η λειτουργικότητά τους είναι εφάμιλλη με τα notebooks του Mathematica, καθώς τα κελιά εκτελούνται πατώντας shift + enter και επιτρέπουν από τον πειραματισμό με μικρής έκτασης κώδικες μέχρι την ανάπτυξη ολόκληρων πακέτων λογισμικού. Για να τερματίσουμε το JupyterLab, αρκεί να κλείσουμε το τερματικό από το οποίο το είχαμε εκκινήσει.</p>
 <figure class="align-default" id="chapter1-figure1">
 <img alt="_images/jupyterlab.png" src="_images/jupyterlab.png" />
 <figcaption>
@@ -766,7 +731,7 @@ there are 8 women in the lab
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="c1"># τυπώνει &lt;class &#39;tuple&#39;&gt; (*@(πλειάδα)@*)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="c1"># τυπώνει &lt;class &#39;tuple&#39;&gt; (πλειάδα)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -954,8 +919,8 @@ positive
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0. 0.]
  [0. 0.]] [[1. 1.]] [[1. 0.]
- [0. 1.]] [[0.67510801 0.47415845]
- [0.53343075 0.84213065]]
+ [0. 1.]] [[0.76300258 0.85820266]
+ [0.05760746 0.24641838]]
 </pre></div>
 </div>
 </div>
@@ -1243,7 +1208,7 @@ By Αναστάσιος Ράπτης και Μιχαήλ Ξένος
 
   <p class="copyright">
     
-      © Copyright 2021.
+      © Copyright 2024.
       <br/>
     
   </p>
